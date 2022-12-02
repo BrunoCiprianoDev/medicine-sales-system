@@ -1,7 +1,7 @@
 /*Main container*/
 .MainContainer {
     height: 100%;
-    width: max-content;
+    width: 17em;
 }
 
 /*Container of options*/
@@ -11,19 +11,51 @@
 }
 
 .NavContainer p {
+    color: black;
+    width: 100%;
     font-size: 1.2em;
-    padding-right: 1em;
     padding-left: 1em;
 }
 
 /*Component option*/
 .NavLink {
+    border: 1px dashed red;
     display: flex;
     align-items: center;
     text-decoration: none;
 }
 
+.NavLink button {
+    display: none;
+ }
+
+ .NavLink:hover button {
+    display: inline;
+    border-style: none;
+    position: relative;
+    height: max-content;
+    width: max-content;
+ }
+
+ .NavLink button img{
+    width: 2em;
+    height: 2em;
+ }
+
+
 .NavLink img {
     display: inline;
     height: 3em;
+}
+
+@media screen and (max-width: 1000px){
+    .MainContainer {
+        display: flex;
+        height: 100%;
+        width: max-content;
+    }
+    .NavContainer p {
+        display: none;
+    }
+    
 }

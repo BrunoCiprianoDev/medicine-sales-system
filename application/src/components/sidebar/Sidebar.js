@@ -3,7 +3,7 @@ import {React, useState} from 'react'
 //CSS
 import styles from './Sidebar.module.css'
 import iconFoto from '../../assets/icon-foto.png'
-
+import addIcon from '../../assets/icon-add.png'
 //Router 
 import { NavLink } from 'react-router-dom'
 
@@ -37,6 +37,7 @@ const Sidebar = () => {
                 onClick={()=>setOption(parameter.value)}>
                 <img src={parameter.icon}/>
                 <p>{parameter.name}</p>
+                <button onClick={()=>alert('New')}><img src={addIcon}/></button>
               </NavLink>
             ))
           }
