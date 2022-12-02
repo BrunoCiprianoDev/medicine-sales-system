@@ -1,0 +1,29 @@
+/*Main container*/
+.MainContainer {
+    height: 100%;
+    width: max-content;
+}
+
+/*Container of options*/
+.NavContainer {
+    display: grid;
+    height: 100%;
+}
+
+.NavContainer p {
+    font-size: 1.2em;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+/*Component option*/
+.NavLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.NavLink img {
+    display: inline;
+    height: 3em;
+}

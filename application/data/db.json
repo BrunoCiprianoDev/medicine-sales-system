@@ -1,0 +1,60 @@
+{
+    "funcionarios":
+    [
+        {
+            "id": 1,
+            "nome": "Funcionario um",
+            "cpf": "848.523.477.20",
+            "dt_nascimento": "14/02/2000",
+            "cep": "--.---.---",
+            "uf": "Minas Gerais",
+            "cidade": "Juiz de Fora",
+            "bairro": "Bairro de JF",
+            "logradouro": "Av. juiz",
+            "numero": "Funcionario um",
+            "complemento": "302",
+            "telefone_um": "(32)98867-0548",
+            "telefone_dois": "(00)00000-0000",
+            "email": "emailUmFuncionario@email.com",
+            "dt_admissao": "00/00/0000",
+            "funcao": "GERENTE"
+          },
+          {
+            "id": 2,
+            "nome": "Funcionario Dois",
+            "cpf": "899.766.544.10",
+            "dt_nascimento": "14/02/2000",
+            "cep": "36.090.450",
+            "uf": "Minas Gerais",
+            "cidade": "Juiz de Fora",
+            "bairro": "Bairro de JF",
+            "logradouro": "Av. juiz",
+            "numero": "Funcionario Dois",
+            "complemento": "302",
+            "telefone_um": "(00)00000-0000",
+            "telefone_dois": "(00)00000-0000",
+            "email": "email31312Funcionario@email.com",
+            "dt_admissao": "00/00/0000",
+            "funcao": "VENDEDOR"
+          },
+          {
+            "id": 3,
+            "nome": "Funcionario Tres",
+            "cpf": "999.888.777.66",
+            "dt_nascimento": "14/02/2000",
+            "cep": "36.090.450",
+            "uf": "Minas Gerais",
+            "cidade": "Juiz de Fora",
+            "bairro": "Bairro de JF",
+            "logradouro": "Av. juiz",
+            "numero": "Funcionario Tres",
+            "complemento": "302",
+            "telefone_um": "(00)00000-0000",
+            "telefone_dois": "(00)00000-0000",
+            "email": "emailUmFuncionario@email.com",
+            "dt_admissao": "00/00/0000",
+            "funcao": "VENDEDOR"
+          }
+
+    ]
+}

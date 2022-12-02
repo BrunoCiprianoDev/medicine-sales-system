@@ -1,0 +1,38 @@
+.App {
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: max-content  auto;
+  grid-template-rows: minmax(4em, 10%) auto minmax(2em, 5%);
+  grid-template-areas: "sidebar header "
+                       "sidebar contend"
+                       "sidebar footer";
+}
+
+.Header {
+  border: 1px dashed black;
+  box-sizing:border-box;
+  grid-area: header;
+  width: 100%;
+}
+
+.Sidebar {
+  grid-area: sidebar;
+  height: 100%;
+  border: 1px dashed black;
+  box-sizing:border-box;
+
+}
+
+.Contend {
+  border: 1px dashed black;
+  box-sizing:border-box;
+  grid-area: contend;
+}
+
+.Footer {
+  grid-area: footer;
+  box-sizing:border-box;
+  border: 1px dashed black;
+}
