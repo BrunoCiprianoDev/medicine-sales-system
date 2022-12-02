@@ -1,0 +1,18 @@
+.MainContainer {
+    border: 1px dashed blue;
+    height: 100%;
+}
+
+.HeaderList {
+    border: 1px dashed green;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2em;
+}
+
+.ElementData {
+    display: flex;
+    justify-content: center;
+    border: 1px dashed red;
+    width: 20%;
+}

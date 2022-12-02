@@ -9,7 +9,7 @@ import { NavLink } from 'react-router-dom'
 
 const parameters = [
   {id: 1, name: 'Home', to: '/', value:'Home', icon:iconFoto},
-  {id: 2, name: 'Funcionários', to: '/', value:'FUNCIONARIOS', icon:iconFoto},
+  {id: 2, name: 'Funcionários', to:"/funcionarios", value:'FUNCIONARIOS', icon:iconFoto},
   {id: 3, name: 'Categorias', to: '/', value:'CATEGORIAS', icon:iconFoto},
   {id: 4, name: 'Mercadorias', to: '/', value:'MERCADORIAS', icon:iconFoto},
   {id: 5, name: 'Fornecedores', to: '/', value:'FORNECEDORES', icon:iconFoto},

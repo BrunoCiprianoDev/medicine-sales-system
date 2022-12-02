@@ -6,6 +6,7 @@
 }
 
 .FormContainer {
+    border: 1px dashed black;
     display: flex;
     width: 50%;
     height: 50%;
