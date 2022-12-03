@@ -1,18 +1,57 @@
 .MainContainer {
-    border: 1px dashed blue;
-    height: 100%;
+    grid-area: list;
 }
 
 .HeaderList {
-    border: 1px dashed green;
     display: flex;
     justify-content: space-around;
     font-size: 1.2em;
+    color: black;
+    font-weight: bold;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+}
+
+.ListComponent {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.1em;
+    margin-top: 1px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
 }
 
 .ElementData {
     display: flex;
     justify-content: center;
-    border: 1px dashed red;
     width: 20%;
+    height: 100%;
+    text-align: center;
+    word-break: break-all;
 }
+
+.buttonDetalhe {
+    margin-left: 2em;
+    border-radius: 3px;
+    background-color: rgba(0, 42, 82, 0.897);
+    border-style: none;
+}
+
+.buttonDeletar {
+    margin-left: 2em;
+    border-radius: 3px;
+    background-color:  #e20000;
+    border-style: none;
+}
+
+.ElementData button img {
+    padding-top: 2px;
+    width: 2em;
+}
+
+.PaginationArea {
+   box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75) ;
+}
+
+

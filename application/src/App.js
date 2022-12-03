@@ -22,7 +22,6 @@ function App() {
             <Route path="/funcionarios" element={<Funcionarios/>}/>
           </Routes>
         </div>
-        <div className='Footer'><Footer/></div>
       </BrowserRouter>
     </div>
   );

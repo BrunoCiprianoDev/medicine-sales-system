@@ -1,12 +1,12 @@
 .MainContainer {
     display: flex;
-    justify-content: center;
     align-items: center;
     height: 100%;
 }
 
 .FormContainer {
-    border: 1px dashed black;
+    margin-right: auto ;
+    margin-left: 12%;
     display: flex;
     width: 50%;
     height: 50%;
@@ -16,7 +16,7 @@
     width: 80%;
     font-size: 1.2em;
     border-style: none;
-    border-bottom: 1px solid rgb(156, 156, 156);
+    border-bottom: 2px solid rgba(0, 26, 49, 0.897);
 }
 
 .FormContainer input:focus {
@@ -27,9 +27,25 @@
     width: 20%;
     border-style: none;
     background-color: white;
-    border-bottom: 1px solid rgb(156, 156, 156);
+    border-bottom: 2px solid rgba(0, 26, 49, 0.897);
 }
 
 .FormContainer button img { 
     width: 1.5em;
+}
+
+.buttonNew {
+    background-color: white;
+    align-items: center;
+    border-style: none;
+    display: flex;
+    font-size: 1em;
+    font-weight: bold;
+    width: max-content;
+    margin-left: 5%;
+}
+
+.buttonNew img {
+    width: 2em;
+    padding-right: 0.5em;
 }
