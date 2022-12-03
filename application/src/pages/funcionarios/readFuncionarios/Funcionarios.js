@@ -1,11 +1,12 @@
 import {React, useState} from 'react'
 import styles from './Funcionarios.module.css'
-import { useFetch } from '../../hooks/useFetch'
-import Loading from '../../components/loading/Loading';
-import PaginationComponent from '../../components/paginationComponent/PaginationComponent';
+import { useFetch } from '../../../hooks/useFetch'
+import Loading from '../../../components/loading/Loading';
+import PaginationComponent from '../../../components/paginationComponent/PaginationComponent';
+import {useNavigate, useSearchParams } from 'react-router-dom';
 
-import iconeDeletar from '../../assets/icon-deletar.png'
-import iconeDetalhe from '../../assets/icon-detalhe.png'
+import iconeDeletar from '../../../assets/icon-deletar.png'
+import iconeDetalhe from '../../../assets/icon-detalhe.png'
 
 const url = "http://localhost:3000/funcionarios";
 
@@ -20,7 +21,10 @@ const parameters = [
 
 export const Funcionarios = () => {
 
-  const {data: funcionarios, httpConfig, loading, error} = useFetch(url)
+  const navigate = useNavigate();
+  let [searchParams] = useSearchParams();
+  const {data: funcionarios, httpConfig, loading, error} = useFetch(
+    searchParams ? url+"?"+searchParams : url)
   
   //Pagination  
   const [itensPerPage, setItemPerPage] = useState(8);
@@ -54,11 +58,11 @@ export const Funcionarios = () => {
             <div className={styles.ElementData}>{funcionario.email}</div>
             <div className={styles.ElementData}>{funcionario.funcao}</div>
             <div className={styles.ElementData}>
-              <button className={styles.buttonDetalhe}>
-                <img src={iconeDetalhe}/>
+              <button className={styles.buttonDetalhe} onClick={()=>(navigate('/funcionarios/'+funcionario.id))}>
+                <img src={iconeDetalhe} alt=''/>
               </button>
               <button className={styles.buttonDeletar} onClick={()=>handleRemove(funcionario.id)}>
-                <img src={iconeDeletar} />
+                <img src={iconeDeletar} alt=''/>
               </button>
             </div>
           </div>

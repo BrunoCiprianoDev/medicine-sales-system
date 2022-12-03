@@ -1,0 +1,61 @@
+.FormContainer {
+    min-width: 600px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    column-gap: 5%;
+    row-gap: 4em;
+    padding-top: 2em;
+    padding-left: 10%;
+}
+
+.FormContainer div{
+    display: grid;
+}
+
+.FormContainer label {
+    font-weight: bold;
+    text-shadow: 2px 1px 4px rgba(0,0,0,0.24);
+    color: rgb(97 97 97);
+}
+
+.FormContainer input {
+    height: 1.5em;
+    border-style: none;
+    border-bottom: 2px solid rgba(0, 26, 49, 0.897);
+    background-color: white;
+    margin-right: 2px;
+    width: 100%;
+    font-size: 1em;
+ }
+
+.FormContainer input[type=date] {
+    height: 1.7em;
+    border-style: none;
+    border-bottom: 2px solid rgba(0, 26, 49, 0.897);
+    background-color: white;
+    margin-right: 2px;
+    width: 100%;
+    font-size: 1em;
+}
+
+.FormContainer input:focus {
+    outline: none;
+    border-bottom: 2px solid  #e20000;
+}
+
+ .FormContainer button {
+    box-shadow: -1px 5px 10px rgba(0, 0, 0, 0.45);
+    background-color: rgba(0, 42, 82, 0.897);
+    border-style: none;
+    border-radius: 2px;
+    height: 3em;
+    width: 102%;
+    font-size: 1em;
+    color: white;
+ }
+
+ .FormContainer button:hover {
+    background-color: rgba(0, 26, 49, 0.897);
+    color:white;
+ }

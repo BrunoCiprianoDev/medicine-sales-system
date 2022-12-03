@@ -2,20 +2,20 @@
   "funcionarios": [
     {
       "id": 1,
-      "nome": "Funcionario um",
+      "nome": "Maria Tavares Souza",
       "cpf": "848.523.477.20",
-      "dt_nascimento": "14/02/2000",
-      "cep": "--.---.---",
+      "dt_nascimento": "1998-02-17",
+      "cep": "36.090.450",
       "uf": "Minas Gerais",
       "cidade": "Juiz de Fora",
       "bairro": "Bairro de JF",
       "logradouro": "Av. juiz",
-      "numero": "Funcionario um",
+      "numero": "Maria Tavares Souza",
       "complemento": "302",
       "telefone_um": "(32)98867-0548",
       "telefone_dois": "(00)00000-0000",
       "email": "emailUmFuncionario@email.com",
-      "dt_admissao": "00/00/0000",
+      "dt_admissao": "2020-06-20",
       "funcao": "GERENTE"
     },
     {
@@ -197,6 +197,24 @@
       "email": "emailUmFuncionario@email.com",
       "dt_admissao": "00/00/0000",
       "funcao": "VENDEDOR"
+    },
+    {
+      "nome": "Bruno Cipriano Ribeiro",
+      "cpf": "130.799.444.55",
+      "dt_nascimento": "1997-02-14",
+      "cep": "36090330",
+      "uf": "MG",
+      "cidade": "Juiz de Fora",
+      "bairro": "Fabrica",
+      "logradouro": "Av.São Tomé",
+      "numero": "485",
+      "complemento": "ap.385",
+      "telefone_um": "(32)9888-2545",
+      "telefone_dois": "(32)3222-2521",
+      "email": "cipriano990@gmail.com",
+      "dt_admissao": "2022-12-02",
+      "funcao": "GERENTE",
+      "id": 12
     }
   ]
 }

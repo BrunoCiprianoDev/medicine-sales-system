@@ -1,0 +1,44 @@
+.MainContainer {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 2em;
+    padding-top: 2em;
+    padding-left: 10%;
+}
+
+.MainContainer label {
+    font-size: 1.2em;
+}
+
+.MainContainer p {
+    font-size: 1.1em;
+    font-weight: bold;
+    text-shadow: 2px 1px 4px rgba(0,0,0,0.24);
+    color: rgba(0, 26, 49, 0.897);
+}
+
+.MainContainer input[type='text'] {
+  display: flex;
+  border-style: none;
+  background-color: white;
+  text-shadow: 2px 1px 4px rgba(0,0,0,0.24); 
+  border-bottom: 1px solid rgba(0, 26, 49, 0.897);
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.MainContainer input:focus {
+    background-color: white;
+    outline: none;
+}
+
+.MainContainer input[type='submit'] {
+    display: flex;
+    border: none;
+    margin-top: 6px;
+    background-color: rgba(0, 42, 82, 0.897);
+    box-shadow: -1px 5px 10px rgba(0, 0, 0, 0.45);
+    color: white;
+    font-size: 1em;
+  }

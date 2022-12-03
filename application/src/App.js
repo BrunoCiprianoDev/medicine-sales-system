@@ -4,10 +4,11 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 //Components
 import Sidebar from './components/sidebar/Sidebar';
 import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
 
 //Pages
-import { Funcionarios } from './pages/funcionarios/Funcionarios';
+import { Funcionarios } from './pages/funcionarios/readFuncionarios/Funcionarios';
+import FormFuncionarios from './pages/funcionarios/createFuncionarios/FormFuncionarios';
+import UpdateFuncionarios from './pages/funcionarios/updateFuncionarios/UpdateFuncionarios';
 
 
 
@@ -20,6 +21,9 @@ function App() {
         <div className='Contend'>
           <Routes>
             <Route path="/funcionarios" element={<Funcionarios/>}/>
+            <Route path="/funcionarios/search" element={<Funcionarios/>}/>
+            <Route path="/funcionarios/form" element={<FormFuncionarios/>}/>
+            <Route path="/funcionarios/:id" element={<UpdateFuncionarios/>}/>
           </Routes>
         </div>
       </BrowserRouter>

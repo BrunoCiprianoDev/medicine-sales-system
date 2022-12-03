@@ -1,5 +1,5 @@
-import {React, useState} from 'react'
-
+import {React, useContext} from 'react'
+import {OptionContext} from '../../context/OptionContext'
 //CSS
 import styles from './Sidebar.module.css'
 import iconeHome from '../../assets/icon-home.png'
@@ -15,7 +15,7 @@ import iconeRelatorios from '../../assets/icon-relatorio.png'
 import iconeNotificacoes from '../../assets/icon-notificacao.png'
 import iconeCategoria from '../../assets/icon-categoria.png'
 //Router 
-import { NavLink, useNavigate} from 'react-router-dom'
+import { NavLink} from 'react-router-dom'
 
 
 const parameters = [
@@ -35,9 +35,8 @@ const parameters = [
 
 const Sidebar = () => {
 
-  const navigate = useNavigate();
-  const {option, setOption} = useState('');
-
+  const {option, setOption} = useContext(OptionContext);
+ 
   return (
     <div className={styles['MainContainer']}>
       <nav className={styles['NavContainer']}>
@@ -45,10 +44,10 @@ const Sidebar = () => {
             parameters.map((parameter)=>(
               <NavLink 
                 key={parameter.id}
-                className={styles.NavLink} 
+                className={option === parameter.value ? styles.NavLinkActive : styles.NavLink} 
                 to={parameter.to} 
                 onClick={()=>setOption(parameter.value)}>
-                <img src={parameter.icon}/>
+                <img src={parameter.icon} alt=''/>
                 <p>{parameter.name}</p>
              </NavLink>
             ))

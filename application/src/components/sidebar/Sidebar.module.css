@@ -28,7 +28,7 @@
 }
 
 .NavLink:hover {
-    background-color:  rgba(0, 26, 49, 0.897);
+    background-color:  rgba(0, 41, 77, 0.897);
 }
 
  .NavLink button img{
@@ -36,8 +36,21 @@
     height: 2em;
  }
 
+ .NavLinkActive {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 4px;
+    background-color:  rgba(0, 26, 49, 0.897);
+ }
+
 
 .NavLink img {
+    display: inline;
+    height: 2em;
+}
+
+.NavLinkActive img {
     display: inline;
     height: 2em;
 }

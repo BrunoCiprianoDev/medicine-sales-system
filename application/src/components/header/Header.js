@@ -1,17 +1,39 @@
-import React from 'react'
+import {React, useState} from 'react'
+import { useNavigate } from 'react-router-dom';
+import { useOptionContext } from '../../hooks/useOptionContext';
 
 // CSS
 import styles from './Header.module.css'
 import iconSearch from '../../assets/icon-search.png'
 import iconAdicionar from '../../assets/icon-adicionar.png';
 
+
 const Header = () => {
+
+  const [query, setQuery] = useState('');
+  const navigate = useNavigate();
+  const {option} = useOptionContext();
+
+
+  const handleFormSelector = () => {
+    if(option === 'FUNCIONARIOS'){
+      navigate("/funcionarios/form");
+    }
+  }
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if(option === 'FUNCIONARIOS'){
+      navigate("/funcionarios/search?q="+query);
+      setQuery('');
+    }
+  }
   return (
     <div className={styles.MainContainer}>
-        <button className={styles.buttonNew}><img src={iconAdicionar} /> Adicionar</button>
-        <form className={styles.FormContainer}>
-          <input type="text" placeholder='search area'/>
-          <button type='submit'><img src={iconSearch}/></button>
+        <button className={styles.buttonNew} onClick={()=>handleFormSelector()}><img src={iconAdicionar} alt=''/> Adicionar</button>
+        <form onSubmit={handleSearch} className={styles.FormContainer}>
+          <input type="text" onChange={(e)=>setQuery(e.target.value)} value={query} placeholder='Pesquisar'/>
+          <button type='submit'><img src={iconSearch} alt=''/></button>
         </form>
         
     </div>
