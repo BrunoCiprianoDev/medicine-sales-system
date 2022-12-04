@@ -244,5 +244,23 @@
       "classificacao": "Antitérmico",
       "id": 2
     }
+  ],
+  "fornecedores": [
+    {
+      "id": 1,
+      "nome": "Neo Quimica",
+      "cnpj": "00.000.000/0000-00",
+      "crt": "1",
+      "cep": "########",
+      "cidade": "Juiz de Fora",
+      "uf": "MG",
+      "bairro": "Distrito Industrial",
+      "logradouro": "Rua A206",
+      "numero": "1035",
+      "complemento": "complemento",
+      "telefone_um": "(00)00000-0000",
+      "telefone_dois": "(32)3222-2521",
+      "email": "neoquimica@gmail.com"
+    }
   ]
 }
