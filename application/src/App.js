@@ -21,7 +21,8 @@ function App() {
             <Route path="/funcionarios/" element={<ListFuncionarios filter={false}/>}/>
             <Route path="/funcionarios/search/" element={<ListFuncionarios filter={true}/>}/>
             <Route path="/funcionarios/form" element={<FormFuncionarios edit={false}/>}/>
-            <Route path="/funcionarios/:id" element={<FormFuncionarios edit={true}/>}/>
+            <Route path="/funcionarios/:id" element={<UpdateFuncionarios />}/>
+            <Route path='/funcionarios/edit/:id' element={<FormFuncionarios edit={true}/>}/>
           </Routes>
         </div>
       </BrowserRouter>

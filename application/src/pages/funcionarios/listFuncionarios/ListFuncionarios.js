@@ -20,7 +20,6 @@ export const ListFuncionarios = ({filter}) => {
 
   const navigate = useNavigate();
   let [searchParams] = useSearchParams();
-  console.log(searchParams)
   const {data, httpConfig, loading, error} = useFetch(
     filter ? url+"?"+searchParams : url)
   
