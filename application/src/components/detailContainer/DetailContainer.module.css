@@ -1,4 +1,4 @@
-.MainContainer {
+.BodyData {
     position: relative;
     display: grid;
     grid-template-columns: auto auto auto;
@@ -7,18 +7,18 @@
     padding-left: 10%;
 }
 
-.MainContainer label {
+.BodyData label {
     font-size: 1.2em;
 }
 
-.MainContainer p {
+.BodyData p {
     font-size: 1.1em;
     font-weight: bold;
     text-shadow: 2px 1px 4px rgba(0,0,0,0.24);
     color: rgba(0, 26, 49, 0.897);
 }
 
-.MainContainer input[type='text'] {
+.BodyData input[type='text'] {
   display: flex;
   border-style: none;
   background-color: white;
@@ -28,12 +28,12 @@
   font-size: 1em;
 }
 
-.MainContainer input:focus {
+.BodyData input:focus {
     background-color: white;
     outline: none;
 }
 
-.MainContainer input[type='submit'] {
+.BodyData input[type='submit'] {
     display: flex;
     border: none;
     margin-top: 6px;
@@ -43,19 +43,25 @@
     font-size: 1em;
   }
 
-  .ButtonEdit {
-    margin-left: 46%;
+  .ButtonArea button {
+    margin-top: 1em;
+    margin-left: 40%;
     box-shadow: -1px 5px 10px rgba(0, 0, 0, 0.45);
     background-color: rgba(0, 42, 82, 0.897);
     border-style: none;
     border-radius: 2px;
     height: 3em;
-    width: 10em;
+    width: 20em;
     font-size: 1em;
     color: white;
   }
 
-  .ButtonEdit:hover {
+  .ButtonArea button:hover {
     background-color: rgba(0, 26, 49, 0.897);
     color:white;
+  }
+
+  .ButtonArea {
+    display: flex;
+    flex-direction: column;
   }
