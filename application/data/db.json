@@ -230,5 +230,19 @@
       "funcao": "VENDEDOR",
       "id": 17
     }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "tipo": "Medicamento",
+      "classe": "A",
+      "classificacao": "Antibiotico"
+    },
+    {
+      "tipo": "Livre",
+      "classe": "B",
+      "classificacao": "Antitérmico",
+      "id": 2
+    }
   ]
 }

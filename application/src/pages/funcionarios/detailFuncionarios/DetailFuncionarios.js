@@ -22,7 +22,7 @@ const parameters = [
   {id: 15, name: 'Função', value: 'funcao'}
 ]
 
-const UpdateFuncionarios = () => {
+const DetailFuncionarios = () => {
 
     const {id} = useParams();
     const url = "http://localhost:3000/funcionarios/"+id;
@@ -33,6 +33,10 @@ const UpdateFuncionarios = () => {
       navigate('/funcionarios/edit/'+id);
     }
 
+    const handleBack = () => {
+      navigate('/funcionarios/');
+    }
+
   return (
     <DetailContainer
       loading={loading}
@@ -40,9 +44,10 @@ const UpdateFuncionarios = () => {
       parameters={parameters}
       data={data}
       handleEdit={handleEdit}
+      handleBack={handleBack}
       id={id}         
     />
   )
 }
 
-export default UpdateFuncionarios
+export default DetailFuncionarios

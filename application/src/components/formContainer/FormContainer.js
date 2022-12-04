@@ -2,7 +2,7 @@ import React from 'react'
 import Loading from '../loading/Loading'
 import styles from './FormContainer.module.css'
 
-const FormContainer = ({loading, error, parameters, register, onSubmit, handleSubmit}) => {
+const FormContainer = ({loading, error, parameters, register, onSubmit, handleSubmit, handleBack}) => {
   return (
     <div className={styles.MainContainer}>
     {loading && <Loading/>}
@@ -17,8 +17,9 @@ const FormContainer = ({loading, error, parameters, register, onSubmit, handleSu
             </div>
            ))}
         </div>
-        <div className={styles.SubmitArea}><input type="submit" value='Salvar'/></div>       
+        <div className={styles.SubmitArea}><input type="submit" value='Salvar'/></div>   
       </form>
+      <div className={styles.SubmitArea}><button onClick={()=>(handleBack())}>Voltar</button></div>
     </div>
   )
 }

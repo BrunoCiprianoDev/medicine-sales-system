@@ -1,7 +1,6 @@
 import {React} from 'react'
 import { useFetch } from '../../../hooks/useFetch'
 import {useNavigate, useSearchParams } from 'react-router-dom';
-
 import ListContainer from '../../../components/listContainer/ListContainer';
 
 const url = "http://localhost:3000/funcionarios/";

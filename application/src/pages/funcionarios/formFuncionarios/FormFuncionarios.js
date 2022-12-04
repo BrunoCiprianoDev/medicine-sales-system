@@ -2,7 +2,7 @@ import {React, useState} from 'react'
 import {useForm} from "react-hook-form";
 import { useFetch } from '../../../hooks/useFetch';
 import FormContainer from '../../../components/formContainer/FormContainer';
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 const parameters = [
   {id: 1, name:'nome', label:'Nome', type: 'text'},
@@ -23,7 +23,7 @@ const parameters = [
 
 const FormFuncionarios = ({edit}) => {
 
-
+const navigate = useNavigate();
 const {id} = useParams();
 const [url] = useState(edit ?  "http://localhost:3000/funcionarios/"+id  :  "http://localhost:3000/funcionarios/")
 const{register, handleSubmit, reset, setValue} = useForm();
@@ -73,6 +73,10 @@ const onSubmit = (e) => {
   }
 }
 
+const handleBack = () => {
+    navigate('/funcionarios/');
+}
+
 return (
       <FormContainer 
         loading={loading}
@@ -81,6 +85,7 @@ return (
         register={register} 
         onSubmit={onSubmit}
         handleSubmit={handleSubmit}
+        handleBack={handleBack}
         />
   )
 }

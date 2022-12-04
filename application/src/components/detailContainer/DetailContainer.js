@@ -8,6 +8,7 @@ const DetailContainer = (
     error,
     data,
     handleEdit,
+    handleBack,
     id}
 ) => {
   return (
@@ -20,7 +21,8 @@ const DetailContainer = (
                 <p>{data && data[parameter.value]}</p>   
             </div>
         ))}
-        <button className={styles.ButtonEdit} onClick={()=>(handleEdit(id))}>Editar</button>      
+        <button className={styles.ButtonEdit} onClick={()=>(handleEdit(id))}>Editar</button>
+        <button className={styles.ButtonEdit} onClick={()=>(handleBack())}>Voltar</button>      
     </div>
   )
 }

@@ -18,13 +18,19 @@ const Header = () => {
   const handleFormSelector = () => {
     if(option === 'FUNCIONARIOS'){
       navigate("/funcionarios/form");
+    } else if(option === 'CATEGORIAS'){
+      navigate("/categorias/form");
     }
+
   }
 
   const handleSearch = (e) => {
     e.preventDefault();
     if(option === 'FUNCIONARIOS'){
       navigate("/funcionarios/search?q="+query);
+      setQuery('');
+    } else if (option === 'CATEGORIAS'){
+      navigate("/categorias/search?q="+query);
       setQuery('');
     }
   }

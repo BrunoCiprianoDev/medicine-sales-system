@@ -68,3 +68,20 @@
     background-color: rgba(0, 26, 49, 0.897);
     color:white;
  }
+
+ .MainContainer button {
+    box-shadow: -1px 5px 10px rgba(0, 0, 0, 0.45);
+    background-color: rgba(0, 42, 82, 0.897);
+    border-style: none;
+    border-radius: 2px;
+    height: 3em;
+    width: 20%;
+    margin-top: 1em;
+    font-size: 1em;
+    color: white;
+ }
+
+ .MainContainer button:hover {
+    background-color: rgba(0, 26, 49, 0.897);
+    color:white;
+ }

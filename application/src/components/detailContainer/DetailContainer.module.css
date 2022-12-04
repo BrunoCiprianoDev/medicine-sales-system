@@ -44,13 +44,13 @@
   }
 
   .ButtonEdit {
-    margin-left: 90%;
+    margin-left: 46%;
     box-shadow: -1px 5px 10px rgba(0, 0, 0, 0.45);
     background-color: rgba(0, 42, 82, 0.897);
     border-style: none;
     border-radius: 2px;
     height: 3em;
-    width: 40%;
+    width: 10em;
     font-size: 1em;
     color: white;
   }
