@@ -262,5 +262,15 @@
       "telefone_dois": "(32)3222-2521",
       "email": "neoquimica@gmail.com"
     }
+  ],
+  "clientes": [
+    {
+      "nome": "Sonia Almeida Simas",
+      "cpf": "848.523.477.20",
+      "dt_nascimento": "1987-02-14",
+      "telefone": "(32)3222-9781",
+      "email": "simas_almeida@gmail.com",
+      "id": 1
+    }
   ]
 }

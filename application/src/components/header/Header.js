@@ -22,6 +22,8 @@ const Header = () => {
       navigate("/categorias/form");
     } else if (option === 'FORNECEDORES') {
       navigate('/fornecedores/form');
+    } else if (option === 'CLIENTES') {
+      navigate('/clientes/form');
     }
 
   }
@@ -36,6 +38,9 @@ const Header = () => {
       setQuery('');
     } else if (option === 'FORNECEDORES') {
       navigate("/fornecedores/search?q="+query);
+      setQuery('');
+    } else if (option === 'CLIENTES') {
+      navigate("/clientes/search?q="+query);
       setQuery('');
     }
   }

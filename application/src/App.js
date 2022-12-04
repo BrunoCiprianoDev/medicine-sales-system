@@ -20,6 +20,12 @@ import ListFornecedores from './pages/fornecedores/listFornecedores/ListForneced
 import FormFornecedores from './pages/fornecedores/formFornecedores/FormFornecedores';
 import DetailFornecedores from './pages/fornecedores/detailFornecedores/DetailFornecedores';
 
+//Pages/Clientes
+import ListClientes from './pages/clientes/listClientes/ListClientes';
+import FormClientes from './pages/clientes/formClientes/FormClientes';
+import DetailClientes from './pages/clientes/detailClientes/DetailClientes';
+
+
 function App() {
   return (
     <div className="App"> 
@@ -45,6 +51,12 @@ function App() {
             <Route path='/fornecedores/form' element={<FormFornecedores edit={false}/>}/>
             <Route path='/fornecedores/:id' element={<DetailFornecedores/>}/>
             <Route path='/fornecedores/edit/:id' element={<FormFornecedores edit={true}/>}/>
+          
+            <Route path='/clientes/' element={<ListClientes filter={false}/>}/>
+            <Route path='/clientes/search/' element={<ListClientes filter={true}/>}/>
+            <Route path='/clientes/form' element={<FormClientes edit={false}/>}/>
+            <Route path='/clientes/:id' element={<DetailClientes/>}/>
+            <Route path='/clientes/edit/:id' element={<FormClientes edit={true}/>}/>
           </Routes>
         </div>
       </BrowserRouter>
