@@ -1,3 +1,9 @@
+.SubmitArea {
+    display: flex;
+    justify-content: center;
+}
+
+/*Body forms*/
 .FormContainer {
     min-width: 600px;
     position: relative;
@@ -7,6 +13,7 @@
     row-gap: 4em;
     padding-top: 2em;
     padding-left: 10%;
+    padding-bottom: 2em;
 }
 
 .FormContainer div{
@@ -44,18 +51,20 @@
     border-bottom: 2px solid  #e20000;
 }
 
- .FormContainer button {
+/*Button Enviar*/
+.SubmitArea input[type=submit] {
     box-shadow: -1px 5px 10px rgba(0, 0, 0, 0.45);
     background-color: rgba(0, 42, 82, 0.897);
     border-style: none;
     border-radius: 2px;
     height: 3em;
-    width: 102%;
+    width: 20%;
     font-size: 1em;
     color: white;
- }
+}
 
- .FormContainer button:hover {
+
+ .SubmitArea input[type=submit]:hover {
     background-color: rgba(0, 26, 49, 0.897);
     color:white;
  }

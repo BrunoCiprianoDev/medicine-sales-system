@@ -2,11 +2,9 @@ import {React, useState, useEffect} from 'react'
 import styles from './UpdateFuncionarios.module.css'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
-import Loading from '../../../components/loading/Loading'
 
 const UpdateFuncionarios = () => {
 
-    const [loading, setLoading] = useState(false);
     const {id} = useParams();
     const url = "http://localhost:3000/funcionarios/"+id;
     const [editar, setEditar] = useState('');
@@ -67,7 +65,9 @@ const UpdateFuncionarios = () => {
           email:emailLocal,
           dt_admissao:dt_admissaoLocal,
           funcao:funcaoLocal 
-        }).then((response) => {})
+        }).then((response) => {
+          alert(response)
+        })
         setEditar('');
       }
 

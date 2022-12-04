@@ -18,6 +18,7 @@ export const useFetch = (url) => {
   // 9 - desafio
   const [itemId, setItemId] = useState(null);
 
+
   const httpConfig = (data, method) => {
     if (method === "POST") {
       setConfig({
@@ -36,10 +37,19 @@ export const useFetch = (url) => {
           "Content-Type": "application/json",
         },
       });
-
       setMethod("DELETE");
       setItemId(data);
+    } else if (method === "PATCH") {
+      setConfig({
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+      setMethod('PATCH');
     }
+    
   };
 
   useEffect(() => {
@@ -97,13 +107,18 @@ export const useFetch = (url) => {
         const json = await res.json();
 
         setCallFetch(json); 
+      } else if (method === "PATCH") {
+        let fetchOptions = [url, config];
+        const res = await fetch(...fetchOptions);
+        const json = await res.json();
+        setCallFetch(json);
       }
     };
 
     httpRequest();
   }, [config]);
 
-  console.log(config);
+  //console.log(config);
 
   return { data, httpConfig, loading, error };
 };

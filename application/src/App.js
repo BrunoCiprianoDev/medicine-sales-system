@@ -6,11 +6,9 @@ import Sidebar from './components/sidebar/Sidebar';
 import Header from './components/header/Header';
 
 //Pages
-import { Funcionarios } from './pages/funcionarios/readFuncionarios/Funcionarios';
-import FormFuncionarios from './pages/funcionarios/createFuncionarios/FormFuncionarios';
+import {ListFuncionarios}  from './pages/funcionarios/listFuncionarios/ListFuncionarios';
+import FormFuncionarios from './pages/funcionarios/formFuncionarios/FormFuncionarios';
 import UpdateFuncionarios from './pages/funcionarios/updateFuncionarios/UpdateFuncionarios';
-
-
 
 function App() {
   return (
@@ -20,10 +18,10 @@ function App() {
        <div className='Sidebar'><Sidebar/></div>
         <div className='Contend'>
           <Routes>
-            <Route path="/funcionarios" element={<Funcionarios/>}/>
-            <Route path="/funcionarios/search" element={<Funcionarios/>}/>
-            <Route path="/funcionarios/form" element={<FormFuncionarios/>}/>
-            <Route path="/funcionarios/:id" element={<UpdateFuncionarios/>}/>
+            <Route path="/funcionarios/" element={<ListFuncionarios filter={false}/>}/>
+            <Route path="/funcionarios/search/" element={<ListFuncionarios filter={true}/>}/>
+            <Route path="/funcionarios/form" element={<FormFuncionarios edit={false}/>}/>
+            <Route path="/funcionarios/:id" element={<FormFuncionarios edit={true}/>}/>
           </Routes>
         </div>
       </BrowserRouter>
