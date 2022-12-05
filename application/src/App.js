@@ -26,8 +26,11 @@ import FormClientes from './pages/clientes/formClientes/FormClientes';
 import DetailClientes from './pages/clientes/detailClientes/DetailClientes';
 
 //Pages/Mercadorias
-import ListMercadorias from './pages/mercadorias/listMercadorias/ListMercadorias';
+import ListProdutos from './pages/mercadorias/listMercadorias/ListMercadorias';
 import DepartamentosMercadorias from './pages/mercadorias/departamentosMercadorias/DepartamentosMercadorias';
+import FormMercadorias from './pages/mercadorias/formMercadorias/FormMercadorias';
+import DetailMercadorias from './pages/mercadorias/detailMercadorias/DetailMercadorias';
+
 function App() {
   return (
     <div className="App"> 
@@ -61,7 +64,9 @@ function App() {
             <Route path='/clientes/edit/:id' element={<FormClientes edit={true}/>}/>
 
             <Route path='/mercadorias/' element={<DepartamentosMercadorias/>}/>
-
+            <Route path='/listMercadorias/search/' element={<ListProdutos/>}/>
+            <Route path='mercadorias/detail/:id/search/' element={<DetailMercadorias/>}/>
+            <Route path='/mercadorias/edit/:id/search/' element={<FormMercadorias edit={true}/>}/>
           </Routes>
         </div>
       </BrowserRouter>

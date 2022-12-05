@@ -12,7 +12,10 @@ const FormContainer = ({loading, error, parameters, register, onSubmit, handleSu
           {parameters.map((parameter)=>(
             <div key={parameter.id}>
               <label>{parameter.label}
-                <input name={parameter.name}  {...register(parameter.name)} type={parameter.type} required/>
+                {parameter.type === 'text' && <input name={parameter.name}  {...register(parameter.name)} type={parameter.type} required/>}
+                {parameter.type === 'date' && <input name={parameter.name}  {...register(parameter.name)} type={parameter.type} required/>}
+                {parameter.type === 'textarea' && <input name={parameter.name}  {...register(parameter.name)} type={parameter.type} required/>}
+                {parameter.type === 'number' && <input name={parameter.name}  {...register(parameter.name)} type={parameter.type} step='.01' required/>}
               </label>
             </div>
            ))}
