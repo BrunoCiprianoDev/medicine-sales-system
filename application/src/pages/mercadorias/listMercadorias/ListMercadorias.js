@@ -4,7 +4,7 @@ import {useNavigate, useSearchParams } from 'react-router-dom';
 import ListContainer from '../../../components/listContainer/ListContainer';
 import styles from './ListMercadorias.module.css';
 
-const url = "http://localhost:3000/produtos/";
+const url = "http://localhost:3000/mercadorias/";
 
 const parameters = [
   {id: 1, value: "Nome", attribute:'nome'},

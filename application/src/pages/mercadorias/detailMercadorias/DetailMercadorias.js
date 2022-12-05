@@ -21,7 +21,7 @@ const DetailMercadorias = () => {
 
     let [searchParams] = useSearchParams();
     const {id} = useParams();
-    const url = "http://localhost:3000/produtos/"+id;
+    const url = "http://localhost:3000/mercadorias/"+id;
     const {data, loading, error} = useFetch(url);
     const navigate = useNavigate();
 

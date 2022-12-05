@@ -21,7 +21,7 @@ const FormMercadorias = ({edit}) => {
 
     const navigate = useNavigate();
     const {id} = useParams();
-    const [url] = useState(edit ?  "http://localhost:3000/produtos/"+id  :  "http://localhost:3000/produtos/")
+    const [url] = useState(edit ?  "http://localhost:3000/mercadorias/"+id  :  "http://localhost:3000/mercadorias/")
     const{register, handleSubmit, reset, setValue} = useForm();
     const {data, httpConfig, loading, error} = useFetch(url);
     console.log(id);

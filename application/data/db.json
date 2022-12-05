@@ -273,7 +273,7 @@
       "id": 1
     }
   ],
-  "produtos": [
+  "mercadorias": [
     {
       "id": 1,
       "nome": "Shampoo",
@@ -617,6 +617,83 @@
       "nome": "Barra de chocolates",
       "codigo": "000000000",
       "departamento": "OUTROS",
+      "categoria_id": 1,
+      "estoque_minimo": 150,
+      "estoque_maximo": 300,
+      "estoque_atual": 300,
+      "valor_venda": 27.99,
+      "temp_armazenamento": 22,
+      "descricao": ""
+    },
+    {
+      "id": 29,
+      "nome": "Barra de chocolates",
+      "codigo": "000000000",
+      "departamento": "OUTROS",
+      "categoria_id": 1,
+      "estoque_minimo": 150,
+      "estoque_maximo": 300,
+      "estoque_atual": 300,
+      "valor_venda": 27.99,
+      "temp_armazenamento": 22,
+      "descricao": ""
+    },{
+      "id": 30,
+      "nome": "Dipirona",
+      "codigo": "000000000",
+      "departamento": "MEDICAMENTO",
+      "categoria_id": 1,
+      "estoque_minimo": 150,
+      "estoque_maximo": 300,
+      "estoque_atual": 300,
+      "valor_venda": 27.99,
+      "temp_armazenamento": 22,
+      "descricao": ""
+    },
+    {
+      "id": 31,
+      "nome": "Neosoro",
+      "codigo": "000000000",
+      "departamento": "MEDICAMENTO",
+      "categoria_id": 1,
+      "estoque_minimo": 150,
+      "estoque_maximo": 300,
+      "estoque_atual": 300,
+      "valor_venda": 27.99,
+      "temp_armazenamento": 22,
+      "descricao": ""
+    },
+    {
+      "id": 32,
+      "nome": "Dorflex",
+      "codigo": "000000000",
+      "departamento": "MEDICAMENTO",
+      "categoria_id": 1,
+      "estoque_minimo": 150,
+      "estoque_maximo": 300,
+      "estoque_atual": 300,
+      "valor_venda": 27.99,
+      "temp_armazenamento": 22,
+      "descricao": ""
+    },
+    {
+      "id": 33,
+      "nome": "Estomasil",
+      "codigo": "000000000",
+      "departamento": "MEDICAMENTO",
+      "categoria_id": 1,
+      "estoque_minimo": 150,
+      "estoque_maximo": 300,
+      "estoque_atual": 300,
+      "valor_venda": 27.99,
+      "temp_armazenamento": 22,
+      "descricao": ""
+    },
+    {
+      "id": 34,
+      "nome": "Hipertensivo",
+      "codigo": "000000000",
+      "departamento": "MEDICAMENTO",
       "categoria_id": 1,
       "estoque_minimo": 150,
       "estoque_maximo": 300,

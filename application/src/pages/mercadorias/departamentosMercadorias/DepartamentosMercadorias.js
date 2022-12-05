@@ -25,7 +25,7 @@ const DepartamentosMercadorias = () => {
         </div>
         <div className={styles.ContainerDepartment}>
             <div className={styles.ContainerMenu}>
-                <button onClick={()=>(handleSearchList())}><img src={iconeMedicamentos} alt="" />Medicamento</button>
+                <button onClick={()=>(handleSearchList('MEDICAMENTO'))}><img src={iconeMedicamentos} alt="" />Medicamento</button>
                 <button onClick={()=>(handleSearchList('DERMATOLOGICO'))}><img src={iconeCosmeticos} alt="" />Dermatologia</button>
                 <button onClick={()=>(handleSearchList('GERIATRIA'))}><img src={iconeIdoso} alt="" />Geriatria</button>
                 <button onClick={()=>(handleSearchList('BELEZA'))}><img src={iconeBeleza} alt="" />Beleza</button>
