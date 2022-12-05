@@ -7,11 +7,11 @@ const url = "http://localhost:3000/clientes/";
 
 
 const parameters = [
-    {id: 1, value: "Nome", attribute:'nome'},
-    {id: 2, value: "CPF", attribute:'cpf'},
-    {id: 3, value: "Data nascimento", attribute:'dt_nascimento'},
-    {id: 4, value: "Telefone", attribute:'telefone'},
-    {id: 5, value: "E-mail", attribute:'email'},
+    {id: 1, label: "Nome", attribute:'nome'},
+    {id: 2, label: "CPF", attribute:'cpf'},
+    {id: 3, label: "Data nascimento", attribute:'dt_nascimento'},
+    {id: 4, label: "Telefone", attribute:'telefone'},
+    {id: 5, label: "E-mail", attribute:'email'},
 ] 
 
 const ListClientes

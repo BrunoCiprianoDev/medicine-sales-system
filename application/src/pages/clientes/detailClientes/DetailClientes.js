@@ -4,11 +4,11 @@ import { useFetch } from '../../../hooks/useFetch'
 import DetailContainer from '../../../components/detailContainer/DetailContainer'
 
 const parameters = [
-    {id: 1, name: 'Nome', value: 'nome'},
-    {id: 2, name: 'CPF', value: 'cpf'},
-    {id: 3, name: 'Data nascimento', value: 'dt_nascimento'},
-    {id: 4, name: 'Telefone', value: 'telefone'},
-    {id: 5, name: 'Email', value: 'email'},
+    {id: 1, label: 'Nome', value: 'nome'},
+    {id: 2, label: 'CPF', value: 'cpf'},
+    {id: 3, label: 'Data nascimento', value: 'dt_nascimento'},
+    {id: 4, label: 'Telefone', value: 'telefone'},
+    {id: 5, label: 'Email', value: 'email'},
   ]
 
 const DetailClientes

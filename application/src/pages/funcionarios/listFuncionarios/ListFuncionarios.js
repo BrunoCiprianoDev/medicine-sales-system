@@ -6,13 +6,13 @@ import ListContainer from '../../../components/listContainer/ListContainer';
 const url = "http://localhost:3000/funcionarios/";
 
 const parameters = [
-    {id: 1, value: "Nome", attribute:'nome'},
-    {id: 2, value: "CPF", attribute:'cpf'},
-    {id: 3, value: "Data nascimento", attribute:'dt_nascimento'},
-    {id: 4, value: "Telefone 1", attribute:'telefone_um'},
-    {id: 5, value: "Telefone 2", attribute:'telefone_dois'},
-    {id: 6, value: "E-mails", attribute:'email'},
-    {id: 7, value: "Função", attribute:'funcao'}
+    {id: 1, label: "Nome", attribute:'nome'},
+    {id: 2, label: "CPF", attribute:'cpf'},
+    {id: 3, label: "Data nascimento", attribute:'dt_nascimento'},
+    {id: 4, label: "Telefone 1", attribute:'telefone_um'},
+    {id: 5, label: "Telefone 2", attribute:'telefone_dois'},
+    {id: 6, label: "E-mails", attribute:'email'},
+    {id: 7, label: "Função", attribute:'funcao'}
 ]
 
 export const ListFuncionarios = ({filter}) => {

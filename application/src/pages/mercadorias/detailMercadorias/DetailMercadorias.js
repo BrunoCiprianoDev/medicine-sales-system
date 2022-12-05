@@ -5,16 +5,16 @@ import DetailContainer from '../../../components/detailContainer/DetailContainer
 
 
 const parameters = [
-    {id: 1, value:'nome', name:'Nome', type: 'text'},
-    {id: 2, value:'codigo', name:'Código', type: 'text' },
-    {id: 4, value:'departamento', name:'Departamento', type: 'text' },
-    {id: 5, value:'categoria_id', name:'Categoria', type: 'text' },
-    {id: 6, value:'estoque_minimo', name:'Estoque minimo', type: 'text' },
-    {id: 7, value:'estoque_maximo', name:'Estoque máximo', type: 'text' },
-    {id: 8, value:'estoque_atual', name:'Estoque atual', type: 'text' },
-    {id: 9, value:'valor_venda', name:'Valor de venda', type: 'number' },
-    {id: 10, value:'temp_armazenamento', name:'Temperatura armazenamento', type: 'text' },
-    {id: 11, value:'descricao', name:'Descricao', type: 'textarea' },
+    {id: 1, value:'nome', label:'Nome', type: 'text'},
+    {id: 2, value:'codigo', label:'Código', type: 'text' },
+    {id: 4, value:'departamento', label:'Departamento', type: 'text' },
+    {id: 5, value:'categoria_id', label:'Categoria', type: 'text' },
+    {id: 6, value:'estoque_minimo', label:'Estoque minimo', type: 'text' },
+    {id: 7, value:'estoque_maximo', label:'Estoque máximo', type: 'text' },
+    {id: 8, value:'estoque_atual', label:'Estoque atual', type: 'text' },
+    {id: 9, value:'valor_venda', label:'Valor de venda', type: 'number' },
+    {id: 10, value:'temp_armazenamento', label:'Temperatura armazenamento', type: 'text' },
+    {id: 11, value:'descricao', label:'Descricao', type: 'textarea' },
   ]
 
 const DetailMercadorias = () => {

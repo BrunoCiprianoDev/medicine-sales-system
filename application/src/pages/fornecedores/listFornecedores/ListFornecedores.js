@@ -7,11 +7,11 @@ const url = "http://localhost:3000/fornecedores/";
 
 
 const parameters = [
-    {id: 1, value: "Nome", attribute:'nome'},
-    {id: 2, value: "CNPJ", attribute:'cnpj'},
-    {id: 4, value: "Telefone 1", attribute:'telefone_um'},
-    {id: 5, value: "Telefone 2", attribute:'telefone_dois'},
-    {id: 6, value: "Email", attribute:'email'}
+    {id: 1, label: "Nome", attribute:'nome'},
+    {id: 2, label: "CNPJ", attribute:'cnpj'},
+    {id: 4, label: "Telefone 1", attribute:'telefone_um'},
+    {id: 5, label: "Telefone 2", attribute:'telefone_dois'},
+    {id: 6, label: "Email", attribute:'email'}
 ]
 
 const ListFornecedores = ({filter}) => {

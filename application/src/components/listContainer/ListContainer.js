@@ -26,7 +26,7 @@ const ListContainer = ({
     <div className={styles.MainContainer}>
         <div className={styles.HeaderList}>
             {parameters.map((parameter)=>(
-                <div key={parameter.id} className={styles.ElementData}>{parameter.value}</div>
+                <div key={parameter.id} className={styles.ElementData}>{parameter.label}</div>
             ))}
             <div className={styles.ElementData}></div>
         </div>

@@ -7,9 +7,9 @@ const url = "http://localhost:3000/categorias/";
 
 
 const parameters = [
-    {id: 1, value: "Tipo", attribute:'tipo'},
-    {id: 2, value: "Classe", attribute:'classe'},
-    {id: 3, value: "Classificação", attribute:'classificacao'},
+    {id: 1, label: "Tipo", attribute:'tipo'},
+    {id: 2, label: "Classe", attribute:'classe'},
+    {id: 3, label: "Classificação", attribute:'classificacao'},
 ]
 
 const ListCategorias = ({filter}) => {

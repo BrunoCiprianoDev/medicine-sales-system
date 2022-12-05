@@ -5,21 +5,21 @@ import DetailContainer from '../../../components/detailContainer/DetailContainer
 
 
 const parameters = [
-  {id: 1, name: 'Nome', value: 'nome'},
-  {id: 2, name: 'CPF', value: 'cpf'},
-  {id: 3, name: 'Data nascimento', value: 'dt_nascimento'},
-  {id: 4, name: 'CEP', value: 'cep'},
-  {id: 5, name: 'UF', value: 'uf'},
-  {id: 6, name: 'Cidade', value: 'cidade'},
-  {id: 7, name: 'Bairro', value: 'bairro'},
-  {id: 8, name: 'Logradouro', value: 'logradouro'},
-  {id: 9, name: 'Número', value: 'numero'},
-  {id: 10, name: 'Complemetno', value: 'complemento'},
-  {id: 11, name: 'Telefone 1', value: 'telefone_um'},
-  {id: 12, name: 'Telefone 2', value: 'telefone_dois'},
-  {id: 13, name: 'E-mail', value: 'email'},
-  {id: 14, name: 'Data admissão', value: 'dt_admissao'},
-  {id: 15, name: 'Função', value: 'funcao'}
+  {id: 1, label: 'Nome', value: 'nome'},
+  {id: 2, label: 'CPF', value: 'cpf'},
+  {id: 3, label: 'Data nascimento', value: 'dt_nascimento'},
+  {id: 4, label: 'CEP', value: 'cep'},
+  {id: 5, label: 'UF', value: 'uf'},
+  {id: 6, label: 'Cidade', value: 'cidade'},
+  {id: 7, label: 'Bairro', value: 'bairro'},
+  {id: 8, label: 'Logradouro', value: 'logradouro'},
+  {id: 9, label: 'Número', value: 'numero'},
+  {id: 10, label: 'Complemetno', value: 'complemento'},
+  {id: 11, label: 'Telefone 1', value: 'telefone_um'},
+  {id: 12, label: 'Telefone 2', value: 'telefone_dois'},
+  {id: 13, label: 'E-mail', value: 'email'},
+  {id: 14, label: 'Data admissão', value: 'dt_admissao'},
+  {id: 15, label: 'Função', value: 'funcao'}
 ]
 
 const DetailFuncionarios = () => {

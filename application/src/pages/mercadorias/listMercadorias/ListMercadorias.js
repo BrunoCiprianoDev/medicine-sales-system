@@ -7,12 +7,12 @@ import styles from './ListMercadorias.module.css';
 const url = "http://localhost:3000/mercadorias/";
 
 const parameters = [
-  {id: 1, value: "Nome", attribute:'nome'},
-  {id: 2, value: "Código", attribute:'codigo'},
-  {id: 3, value: "Estoque", attribute:'estoque_atual'},
-  {id: 4, value: "Estoque minmo", attribute:'estoque_minimo'},
-  {id: 5, value: "Estoque maximo", attribute:'estoque_maximo'},
-  {id: 6, value: "Valor ", attribute:'valor_venda'}
+  {id: 1, label: "Nome", attribute:'nome'},
+  {id: 2, label: "Código", attribute:'codigo'},
+  {id: 3, label: "Estoque", attribute:'estoque_atual'},
+  {id: 4, label: "Estoque minmo", attribute:'estoque_minimo'},
+  {id: 5, label: "Estoque maximo", attribute:'estoque_maximo'},
+  {id: 6, label: "Valor ", attribute:'valor_venda'}
 ]
 
 const ListMercadorias = () => {

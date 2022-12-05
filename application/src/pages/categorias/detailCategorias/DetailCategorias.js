@@ -4,9 +4,9 @@ import { useFetch } from '../../../hooks/useFetch'
 import DetailContainer from '../../../components/detailContainer/DetailContainer'
 
 const parameters = [
-    {id: 1, name: 'Tipo', value: 'tipo'},
-    {id: 2, name: 'Classe', value: 'classe'},
-    {id: 3, name: 'Classificação', value: 'classificacao'},
+    {id: 1, label: 'Tipo', value: 'tipo'},
+    {id: 2, label: 'Classe', value: 'classe'},
+    {id: 3, label: 'Classificação', value: 'classificacao'},
   ]
 
 const DetailCategorias = () => {

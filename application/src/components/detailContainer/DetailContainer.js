@@ -18,7 +18,7 @@ const DetailContainer = (
         {loading && <Loading/>}
         {parameters && parameters.map((parameter)=>(
             <div key={parameter.id}>
-                <label>{parameter.name}</label>
+                <label>{parameter.label}</label>
                 <p>{data && data[parameter.value]}</p>   
             </div>
         ))}       
