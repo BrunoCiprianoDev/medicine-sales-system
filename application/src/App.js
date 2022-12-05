@@ -25,7 +25,9 @@ import ListClientes from './pages/clientes/listClientes/ListClientes';
 import FormClientes from './pages/clientes/formClientes/FormClientes';
 import DetailClientes from './pages/clientes/detailClientes/DetailClientes';
 
-
+//Pages/Mercadorias
+import ListMercadorias from './pages/mercadorias/listMercadorias/ListMercadorias';
+import DepartamentosMercadorias from './pages/mercadorias/departamentosMercadorias/DepartamentosMercadorias';
 function App() {
   return (
     <div className="App"> 
@@ -57,6 +59,9 @@ function App() {
             <Route path='/clientes/form' element={<FormClientes edit={false}/>}/>
             <Route path='/clientes/:id' element={<DetailClientes/>}/>
             <Route path='/clientes/edit/:id' element={<FormClientes edit={true}/>}/>
+
+            <Route path='/mercadorias/' element={<DepartamentosMercadorias/>}/>
+
           </Routes>
         </div>
       </BrowserRouter>
