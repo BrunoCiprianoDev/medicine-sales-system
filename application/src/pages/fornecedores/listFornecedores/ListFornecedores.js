@@ -37,7 +37,8 @@ const ListFornecedores = ({filter}) => {
       parameters={parameters}
       handleRemove={handleRemove}
       handleEdit={handleEdit}
-      data={data}     
+      data={data}   
+      editable='true'  
     />
   )
 }

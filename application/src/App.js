@@ -31,6 +31,10 @@ import DepartamentosMercadorias from './pages/mercadorias/departamentosMercadori
 import FormMercadorias from './pages/mercadorias/formMercadorias/FormMercadorias';
 import DetailMercadorias from './pages/mercadorias/detailMercadorias/DetailMercadorias';
 
+//Consultar preco
+import ConsultarPrecos from './pages/consultarprecos/formConsultarPrecos/ConsultarPrecos';
+import ListConsultarPrecos from './pages/consultarprecos/listConsultarPrecos/ListConsultarPrecos';
+
 function App() {
   return (
     <div className="App"> 
@@ -68,6 +72,9 @@ function App() {
             <Route path='mercadorias/detail/:id/search/' element={<DetailMercadorias/>}/>
             <Route path='/mercadorias/edit/:id/search/' element={<FormMercadorias edit={true}/>}/>
             <Route path='/mercadorias/form/' element={<FormMercadorias edit={false}/>}/>
+          
+            <Route path='/consultas/' element={<ConsultarPrecos/>}/>
+            <Route path='/consulta/search/' element={<ListConsultarPrecos/>}/>
           </Routes>
         </div>
       </BrowserRouter>

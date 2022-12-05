@@ -13,6 +13,7 @@ const ListContainer = ({
     handleRemove,
     handleEdit,
     data,
+    editable,
 }) => {
   
   const [itensPerPage, setItemPerPage] = useState(8);
@@ -39,10 +40,10 @@ const ListContainer = ({
                   {item[parameter.attribute]}
                 </div>
               ))}
-            <ButtonsList 
+            {editable && <ButtonsList 
               handleRemove={handleRemove} 
               handleEdit={handleEdit} 
-              id={item.id}/>
+              id={item.id}/>}
           </div>
           ))}
           <div className={styles.PaginationArea}>

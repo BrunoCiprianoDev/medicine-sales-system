@@ -1,3 +1,7 @@
+.Disable {
+    display: none;
+}
+
 .MainContainer {
     display: flex;
     align-items: center;

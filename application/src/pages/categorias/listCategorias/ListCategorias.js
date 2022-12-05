@@ -35,7 +35,8 @@ const ListCategorias = ({filter}) => {
       parameters={parameters}
       handleRemove={handleRemove}
       handleEdit={handleEdit}
-      data={data}     
+      data={data}  
+      editable='true'   
     />
   )
 }

@@ -50,13 +50,12 @@ const Header = () => {
     }
   }
   return (
-    <div className={styles.MainContainer}>
+    <div className={option !== 'CONSULTAR_PRECO' ? styles.MainContainer : styles.Disable}>
         <button className={styles.buttonNew} onClick={()=>handleFormSelector()}><img src={iconAdicionar} alt=''/> Adicionar</button>
         <form onSubmit={handleSearch} className={styles.FormContainer}>
           <input type="text" onChange={(e)=>setQuery(e.target.value)} value={query} placeholder='Pesquisar'/>
           <button type='submit'><img src={iconSearch} alt=''/></button>
-        </form>
-        
+        </form>     
     </div>
   )
 }
