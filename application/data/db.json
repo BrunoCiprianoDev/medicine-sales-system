@@ -355,14 +355,14 @@
       "id": 11,
       "nome": "Energetico",
       "codigo": "000000000",
-      "departamento": "SUPLEMENTOS",
+      "departamento": "OUTROS",
       "categoria_id": 1,
       "estoque_minimo": 150,
       "estoque_maximo": 300,
       "estoque_atual": 300,
       "valor_venda": 27.99,
       "temp_armazenamento": 22,
-      "descricao": ""
+      "descricao": "Suplemento energetico"
     },
     {
       "id": 12,
