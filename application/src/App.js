@@ -67,6 +67,7 @@ function App() {
             <Route path='/listMercadorias/search/' element={<ListProdutos/>}/>
             <Route path='mercadorias/detail/:id/search/' element={<DetailMercadorias/>}/>
             <Route path='/mercadorias/edit/:id/search/' element={<FormMercadorias edit={true}/>}/>
+            <Route path='/mercadorias/form/' element={<FormMercadorias edit={false}/>}/>
           </Routes>
         </div>
       </BrowserRouter>

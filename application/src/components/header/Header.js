@@ -24,6 +24,8 @@ const Header = () => {
       navigate('/fornecedores/form');
     } else if (option === 'CLIENTES') {
       navigate('/clientes/form');
+    }else if (option === 'MERCADORIAS') {
+      navigate('/mercadorias/form');
     }
 
   }
@@ -41,6 +43,9 @@ const Header = () => {
       setQuery('');
     } else if (option === 'CLIENTES') {
       navigate("/clientes/search?q="+query);
+      setQuery('');
+    } else if (option === 'MERCADORIAS') {
+      navigate("/listMercadorias/search?q="+query);
       setQuery('');
     }
   }
