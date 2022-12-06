@@ -16,6 +16,7 @@ const FormContainer = ({loading, error, parameters, register, onSubmit, handleSu
                 {parameter.type === 'date' && <input name={parameter.attribute}  {...register(parameter.attribute)} type={parameter.type} required/>}
                 {parameter.type === 'textarea' && <input name={parameter.attribute}  {...register(parameter.attribute)} type={parameter.type} required/>}
                 {parameter.type === 'number' && <input name={parameter.attribute}  {...register(parameter.attribute)} type={parameter.type} step='.01' required/>}
+                {parameter.type === 'password' && <input name={parameter.attribute}  {...register(parameter.attribute)} type={parameter.type} required/>}
               </label>
             </div>
            ))}

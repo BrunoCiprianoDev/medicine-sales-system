@@ -18,7 +18,8 @@ const parameters = [
   {id: 12, attribute:'telefone_dois', label:'Telefone dois', type: 'text'},
   {id: 13, attribute:'email', label:'E-mail', type: 'text'},
   {id: 14, attribute:'dt_admissao', label:'Data admissão', type: 'date'},
-  {id: 15, attribute:'funcao', label:'Função:', type: 'text'}
+  {id: 15, attribute:'funcao', label:'Função:', type: 'text'},
+  {id: 16, attribute: 'senha', label: 'Senha', type: 'password'}
 ]
 
 const FormFuncionarios = ({edit}) => {
