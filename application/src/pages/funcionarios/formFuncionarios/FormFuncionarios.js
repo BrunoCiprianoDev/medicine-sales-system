@@ -30,7 +30,6 @@ const [url] = useState(edit ?  "http://localhost:3000/funcionarios/"+id  :  "htt
 const{register, handleSubmit, reset, setValue} = useForm();
 const {data, httpConfig, loading, error} = useFetch(url);
 
-
 if(edit){
   setValue('nome', data && data.nome);
   setValue('cpf', data && data.cpf);
@@ -46,8 +45,8 @@ if(edit){
   setValue('dt_admissao', data && data.dt_admissao);
   setValue('email', data && data.email);
   setValue('funcao', data && data.funcao);
+  setValue('senha', data && data.senha);
 }
-
 
 const onSubmit = (e) => {
     if(!edit){
@@ -87,7 +86,7 @@ return (
         onSubmit={onSubmit}
         handleSubmit={handleSubmit}
         handleBack={handleBack}
-        />
+      />
   )
 }
 

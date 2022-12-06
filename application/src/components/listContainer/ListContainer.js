@@ -29,7 +29,7 @@ const ListContainer = ({
             {parameters.map((parameter)=>(
                 <div key={parameter.id} className={styles.ElementData}>{parameter.label}</div>
             ))}
-            <div className={styles.ElementData}></div>
+            {editable && <div className={styles.ElementData}></div>}
         </div>
           {error && <p>Falha ao carregar dados....</p>}
           {loading && <Loading/>}

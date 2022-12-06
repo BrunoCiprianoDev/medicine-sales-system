@@ -16,7 +16,8 @@
       "telefone_dois": "(00)00000-0000",
       "email": "emailUmFuncionario@email.com",
       "dt_admissao": "2020-06-20",
-      "funcao": "GERENTE"
+      "funcao": "GERENTE",
+      "senha": "123213123"
     },
     {
       "id": 2,
@@ -141,7 +142,8 @@
       "email": "ribeiro991@gmail.com",
       "dt_admissao": "2020-12-03",
       "funcao": "VENDEDOR",
-      "id": 15
+      "id": 15,
+      "senha": "2775515"
     },
     {
       "nome": "Bruno Gentil",
@@ -588,33 +590,33 @@
     {
       "id": 30,
       "nome": "Dipirona",
-      "codigo": "000000000",
+      "codigo": "101101",
       "departamento": "MEDICAMENTO",
-      "categoria_id": 1,
-      "estoque_minimo": 150,
+      "categoria_id": "1",
+      "estoque_minimo": "150.0",
       "estoque_maximo": 300,
       "estoque_atual": 300,
       "valor_venda": 27.99,
       "temp_armazenamento": 22,
-      "descricao": ""
+      "descricao": "Remédio Dipirona"
     },
     {
       "id": 31,
       "nome": "Neosoro",
-      "codigo": "000000000",
+      "codigo": "102102",
       "departamento": "MEDICAMENTO",
-      "categoria_id": 1,
+      "categoria_id": "1",
       "estoque_minimo": 150,
       "estoque_maximo": 300,
       "estoque_atual": 300,
       "valor_venda": 27.99,
       "temp_armazenamento": 22,
-      "descricao": ""
+      "descricao": "Remédio Neosoro"
     },
     {
       "id": 32,
       "nome": "Dorflex",
-      "codigo": "000000000",
+      "codigo": "103103",
       "departamento": "MEDICAMENTO",
       "categoria_id": 1,
       "estoque_minimo": 150,
@@ -627,7 +629,7 @@
     {
       "id": 33,
       "nome": "Estomasil",
-      "codigo": "000000000",
+      "codigo": "104104",
       "departamento": "MEDICAMENTO",
       "categoria_id": 1,
       "estoque_minimo": 150,
@@ -640,7 +642,7 @@
     {
       "id": 34,
       "nome": "Hipertensivo",
-      "codigo": "000000000",
+      "codigo": "105105",
       "departamento": "MEDICAMENTO",
       "categoria_id": 1,
       "estoque_minimo": 150,
