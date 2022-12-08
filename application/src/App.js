@@ -34,7 +34,7 @@ import DetailMercadorias from './pages/mercadorias/detailMercadorias/DetailMerca
 //Consultar preco
 import ConsultarPrecos from './pages/consultarprecos/formConsultarPrecos/ConsultarPrecos';
 import ListConsultarPrecos from './pages/consultarprecos/listConsultarPrecos/ListConsultarPrecos';
-import Cadastro from './pages/cadastros/Cadastro'
+
 function App() {
   return (
     <div className="App"> 
@@ -43,7 +43,6 @@ function App() {
        <div className='Sidebar'><Sidebar/></div>
         <div className='Contend'>
           <Routes>
-            <Route path="/cadastro/" element={<Cadastro/>}/>
             <Route path="/funcionarios/" element={<ListFuncionarios filter={false}/>}/>
             <Route path="/funcionarios/search/" element={<ListFuncionarios filter={true}/>}/>
             <Route path="/funcionarios/form" element={<FormFuncionarios edit={false}/>}/>

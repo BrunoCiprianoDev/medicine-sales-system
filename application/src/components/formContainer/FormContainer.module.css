@@ -85,3 +85,18 @@
     background-color: rgba(0, 26, 49, 0.897);
     color:white;
  }
+
+ .MainContainer select {
+    display: block;
+    width: 100%;
+    height: 2.1em;
+    color:rgba(0, 42, 82, 0.897);
+    border-style: none;
+    border-bottom: 2px solid rgba(0, 26, 49, 0.897);
+ }
+
+ .MainContainer select:focus {
+    outline: none;
+    border-bottom: 2px solid #e20000;
+ 
+ }

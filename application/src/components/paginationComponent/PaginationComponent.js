@@ -27,9 +27,3 @@ const PaginationComponent = ({setCurrentPage, currentPage, setItemPerPage, itens
 }
 
 export default PaginationComponent
-
-/* <div className={styles.PagesArea}>
-        {Array.from(Array(pages), (item, index)=>{
-            return <button key={index} value={index} onClick={(e)=>setCurrentPage(Number(e.target.value))}>{index}</button>
-        })}
-    </div> */

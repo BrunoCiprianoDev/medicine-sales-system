@@ -651,6 +651,19 @@
       "valor_venda": 27.99,
       "temp_armazenamento": 22,
       "descricao": ""
+    },
+    {
+      "nome": "Batata frita",
+      "codigo": "113113",
+      "departamento": "OUTROS",
+      "categoria_id": "1",
+      "estoque_minimo": "150",
+      "estoque_maximo": "300",
+      "estoque_atual": "300",
+      "valor_venda": "10.50",
+      "temp_armazenamento": "22",
+      "descricao": "Batatas fritas genericas",
+      "id": 35
     }
   ]
 }
