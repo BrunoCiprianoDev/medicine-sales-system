@@ -1,16 +1,44 @@
 import React from 'react'
 import Loading from '../loading/Loading'
 import styles from './FormContainer.module.css'
+import {useForm} from "react-hook-form";
+import { useFetch } from '../../hooks/useFetch';
+import { useNavigate} from 'react-router-dom'
 
 const FormContainer = ({
-      loading, 
-      error, 
-      parameters, 
-      register, 
-      onSubmit, 
-      handleSubmit, 
-      handleBack
+      parameters,
+      url,
+      urlBack,
+      edit
   }) => {
+
+    const navigate = useNavigate();
+    const {data, httpConfig, loading, error} = useFetch(url);
+    const{register, handleSubmit, reset, setValue} = useForm();
+
+    if(edit){
+      parameters.map((parameter)=>(
+        setValue(parameter.attribute, data && data[parameter.attribute])
+      ))
+    }
+       
+    const onSubmit = (e) => {
+        if(!edit){
+        httpConfig(e, "POST");
+        parameters.map((parameter)=>(
+          reset(formValues=>({
+            ...formValues,
+            [parameter.attribute]:''
+          }))
+        ))
+      } else {
+        httpConfig(e, 'PATCH')
+      }
+    }
+    
+  const handleBack = () => {
+    navigate(urlBack);
+  }
 
   return (
     <div className={styles.MainContainer}>

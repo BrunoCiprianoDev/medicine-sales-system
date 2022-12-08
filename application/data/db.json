@@ -2,10 +2,10 @@
   "funcionarios": [
     {
       "id": 1,
-      "nome": "Maria Moura",
+      "nome": "Maria Moura Heliar",
       "cpf": "848.523.477.20",
       "dt_nascimento": "1998-02-17",
-      "cep": "36.090.451",
+      "cep": "36.090.452",
       "uf": "Minas Gerais",
       "cidade": "Juiz de Fora",
       "bairro": "Bairro de JF",
@@ -240,6 +240,12 @@
       "classe": "funciona",
       "classificacao": "logo",
       "id": 7
+    },
+    {
+      "tipo": "123",
+      "classe": "123123",
+      "classificacao": "123123",
+      "id": 8
     }
   ],
   "fornecedores": [
