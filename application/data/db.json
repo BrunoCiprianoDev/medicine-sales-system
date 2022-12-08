@@ -9,7 +9,7 @@
       "uf": "Minas Gerais",
       "cidade": "Juiz de Fora",
       "bairro": "Bairro de JF",
-      "logradouro": "Av. juiz",
+      "logradouro": "Av. juiza",
       "numero": "Maria Tavares Souza",
       "complemento": "302",
       "telefone_um": "(32)98867-0548",
@@ -178,6 +178,24 @@
       "dt_admissao": "2015-02-12",
       "funcao": "VENDEDOR",
       "id": 17
+    },
+    {
+      "nome": "Joao Rio Novo",
+      "cpf": "848.523.477.20",
+      "dt_nascimento": "1998-02-23",
+      "cep": "36.090.450",
+      "cidade": "Juiz de Fora",
+      "bairro": "Fabrica",
+      "logradouro": "12313",
+      "numero": "456",
+      "complemento": "302",
+      "telefone_um": "(32)9888-2545",
+      "telefone_dois": "(00)00000-0000",
+      "email": "cipriano990@gmail.com",
+      "dt_admissao": "2015-02-14",
+      "funcao": "VENDEDOR",
+      "senha": "848325",
+      "id": 18
     }
   ],
   "categorias": [
@@ -192,6 +210,36 @@
       "classe": "B",
       "classificacao": "Antitérmico",
       "id": 2
+    },
+    {
+      "tipo": "Remedio",
+      "classe": "B",
+      "classificacao": "Antibiotico",
+      "id": 3
+    },
+    {
+      "tipo": "Medicamento",
+      "classe": "C",
+      "classificacao": "Livre",
+      "id": 4
+    },
+    {
+      "tipo": "Remedio",
+      "classe": "B",
+      "classificacao": "Antibiotico",
+      "id": 5
+    },
+    {
+      "tipo": "Remedio",
+      "classe": "B",
+      "classificacao": "Antibiotico",
+      "id": 6
+    },
+    {
+      "tipo": "TEste 02",
+      "classe": "funciona",
+      "classificacao": "logo",
+      "id": 7
     }
   ],
   "fornecedores": [

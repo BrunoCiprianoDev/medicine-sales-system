@@ -11,6 +11,7 @@ const FormContainer = ({
       handleSubmit, 
       handleBack
   }) => {
+
   return (
     <div className={styles.MainContainer}>
     {loading && <Loading/>}
@@ -37,9 +38,13 @@ const FormContainer = ({
             </div>
            ))}
         </div>
-        <div className={styles.SubmitArea}><input type="submit" value='Salvar'/></div>   
+        <div className={styles.SubmitArea}>
+          <input type="submit" value='Salvar'/>
+        </div>
       </form>
-      <div className={styles.SubmitArea}><button onClick={()=>(handleBack())}>Voltar</button></div>
+      <div className={styles.SubmitArea}>
+        <button onClick={()=>(handleBack())}>Voltar</button>
+      </div>
     </div>
   )
 }

@@ -3,29 +3,8 @@ import {useForm} from "react-hook-form";
 import { useFetch } from '../../../hooks/useFetch';
 import FormContainer from '../../../components/formContainer/FormContainer';
 import { useNavigate, useParams } from 'react-router-dom'
+import {parameters} from '../parameters/FuncionariosPR.js'
 
-const parameters = [
-  {id: 1, attribute:'nome', label:'Nome', type: 'text'},
-  {id: 2, attribute:'cpf', label:'CPF', type: 'text' },
-  {id: 3, attribute:'dt_nascimento', label:'Data nascimento', type: 'date' },
-  {id: 4, attribute:'cep', label:'CEP', type: 'text'},
-  {id: 5, attribute:'cidade', label:'Cidade', type: 'text'},
-  {id: 6, attribute:'bairro', label:'Bairro', type: 'text'},
-  {id: 7, attribute:'logradouro', label:'Logradouro', type: 'text'},
-  {id: 8, attribute:'numero', label:'Número', type: 'text' },
-  {id: 10, attribute:'complemento', label:'Complemento', type: 'text'},
-  {id: 11, attribute:'telefone_um', label:'Telefone um', type: 'text'},
-  {id: 12, attribute:'telefone_dois', label:'Telefone dois', type: 'text'},
-  {id: 13, attribute:'email', label:'E-mail', type: 'text'},
-  {id: 14, attribute:'dt_admissao', label:'Data admissão', type: 'date'},
-  {id: 15, attribute:'funcao', label:'Função:', type: 'select', 
-    options: [
-      {id: 1, value: 'GERENTE'},
-      {id: 2, value: 'VENDEDOR'}
-    ]
-  },
-  {id: 16, attribute: 'senha', label: 'Senha', type: 'password'}
-]
 
 const FormFuncionarios = ({edit}) => {
 
@@ -36,21 +15,9 @@ const{register, handleSubmit, reset, setValue} = useForm();
 const {data, httpConfig, loading, error} = useFetch(url);
 
 if(edit){
-  setValue('nome', data && data.nome);
-  setValue('cpf', data && data.cpf);
-  setValue('dt_nascimento', data && data.dt_nascimento);
-  setValue('cep', data && data.cep);
-  setValue('cidade', data && data.cidade);
-  setValue('bairro', data && data.bairro);
-  setValue('logradouro', data && data.logradouro);
-  setValue('numero', data && data.numero);
-  setValue('complemento', data && data.complemento);
-  setValue('telefone_um', data && data.telefone_um);
-  setValue('telefone_dois', data && data.telefone_dois);
-  setValue('dt_admissao', data && data.dt_admissao);
-  setValue('email', data && data.email);
-  setValue('funcao', data && data.funcao);
-  setValue('senha', data && data.senha);
+  parameters.map((parameter)=>(
+    setValue(parameter.attribute, data && data[parameter.attribute])
+  ))
 }
 
 const onSubmit = (e) => {
@@ -72,7 +39,7 @@ const onSubmit = (e) => {
       dt_admissao:'',
       email:'',
       funcao:''
-    }))
+    }));
   } else {
     httpConfig(e, 'PATCH')
   }

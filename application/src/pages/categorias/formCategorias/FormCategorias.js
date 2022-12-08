@@ -31,9 +31,9 @@ const FormCategorias = ({edit}) => {
         httpConfig(e, "POST");
         reset(formValues=>({
           ...formValues,
-          tipo:'',
-          classe:'',
-          classificacao:'',
+          [parameters[0].attribute]:'',
+          [parameters[1].attribute]:'',
+          [parameters[2].attribute]:'',
         }))
       } else {
         httpConfig(e, 'PATCH')
