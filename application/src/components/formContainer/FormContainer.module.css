@@ -100,3 +100,15 @@
     border-bottom: 2px solid #e20000;
  
  }
+
+ .MainContainer textarea {
+    display: flex;
+    width: 100%;
+    border: 2px solid rgba(0, 26, 49, 0.897);
+    scrollbar-color: rgba(0, 26, 49, 0.897);
+ }
+
+ .MainContainer textarea:focus {
+    outline: none;
+    border: 2px solid #e20000;
+ }

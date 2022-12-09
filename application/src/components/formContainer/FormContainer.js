@@ -12,29 +12,29 @@ const FormContainer = ({
       edit
   }) => {
 
-    const navigate = useNavigate();
-    const {data, httpConfig, loading, error} = useFetch(url);
-    const{register, handleSubmit, reset, setValue} = useForm();
+  const navigate = useNavigate();
+  const {data, httpConfig, loading, error} = useFetch(url);
+  const{register, handleSubmit, reset, setValue} = useForm();
 
-    if(edit){
-      parameters.map((parameter)=>(
-        setValue(parameter.attribute, data && data[parameter.attribute])
-      ))
-    }
+  if(edit){
+    parameters.map((parameter)=>(
+      setValue(parameter.attribute, data && data[parameter.attribute])
+    ))
+  }
        
-    const onSubmit = (e) => {
-        if(!edit){
-        httpConfig(e, "POST");
-        parameters.map((parameter)=>(
-          reset(formValues=>({
-            ...formValues,
-            [parameter.attribute]:''
-          }))
-        ))
-      } else {
-        httpConfig(e, 'PATCH')
-      }
+  const onSubmit = (e) => {
+      if(!edit){
+      httpConfig(e, "POST");
+      parameters.map((parameter)=>(
+        reset(formValues=>({
+          ...formValues,
+          [parameter.attribute]:''
+        }))
+      ))
+    } else {
+      httpConfig(e, 'PATCH')
     }
+  }
     
   const handleBack = () => {
     navigate(urlBack);
@@ -49,10 +49,22 @@ const FormContainer = ({
           {parameters.map((parameter)=>(
             <div key={parameter.id}>
               <label>{parameter.label}
-                {parameter.type !== 'select' && 
+                {parameter.type === 'text' && 
+                  <input name={parameter.attribute}  
+                    {...register(parameter.attribute)} 
+                    type={parameter.type} 
+                  />
+                }
+                {parameter.type === 'number' && 
                   <input name={parameter.attribute}  
                     {...register(parameter.attribute)} 
                     type={parameter.type} step='.01' required
+                  />
+                }
+                {parameter.type === 'textarea' && 
+                  <textarea name={parameter.attribute}  
+                    {...register(parameter.attribute)} 
+                    type={parameter.type} rows='10'
                   />
                 }
                 {parameter.type === 'select' && 

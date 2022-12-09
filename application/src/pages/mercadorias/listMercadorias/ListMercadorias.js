@@ -22,7 +22,7 @@ const ListMercadorias = () => {
   const {data, httpConfig, loading, error} = useFetch(url+"?"+searchParams)
 
   const handleEdit = (id) => {
-    navigate('/mercadorias/detail/'+id+'/search?'+searchParams)
+    navigate('/mercadorias/detail/'+id)
   }
   
   const handleRemove = (id) => {

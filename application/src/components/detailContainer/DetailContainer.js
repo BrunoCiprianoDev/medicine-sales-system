@@ -1,16 +1,27 @@
 import React from 'react'
 import Loading from '../loading/Loading'
 import styles from './DetailContainer.module.css'
+import { useNavigate} from 'react-router-dom'
+import { useFetch } from '../../hooks/useFetch'
 
-const DetailContainer = (
-    {parameters,
-    loading,
-    error,
-    data,
-    handleEdit,
-    handleBack,
-    id}
-) => {
+const DetailContainer = ({
+  parameters,
+  url,
+  urlHandleEdit,
+  urlHandleBack
+}) => {
+
+  const navigate = useNavigate();
+  const {data, loading, error} = useFetch(url);
+
+  const handleEdit = () => {
+    navigate(urlHandleEdit);
+  }
+
+  const handleBack = () => {
+    navigate(urlHandleBack);
+  }
+
   return (
     <div className={styles.MainContainer}>
       <div className={styles['BodyData']}>
@@ -24,7 +35,7 @@ const DetailContainer = (
         ))}       
       </div>
       <div className={styles.ButtonArea}>
-          <button onClick={()=>(handleEdit(id))}>Editar</button>
+          <button onClick={()=>(handleEdit())}>Editar</button>
           <button onClick={()=>(handleBack())}>Voltar</button>      
         </div>
     </div>

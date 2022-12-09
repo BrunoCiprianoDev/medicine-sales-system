@@ -1,6 +1,5 @@
 import {React} from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
-import { useFetch } from '../../../hooks/useFetch'
+import { useParams } from 'react-router-dom'
 import DetailContainer from '../../../components/detailContainer/DetailContainer'
 
 
@@ -26,26 +25,15 @@ const DetailFuncionarios = () => {
 
     const {id} = useParams();
     const url = "http://localhost:3000/funcionarios/"+id;
-    const {data, loading, error} = useFetch(url);
-    const navigate = useNavigate();
-
-    const handleEdit = (id) => {
-      navigate('/funcionarios/edit/'+id);
-    }
-
-    const handleBack = () => {
-      navigate('/funcionarios/');
-    }
+    const urlHandleEdit = '/funcionarios/edit/'+id;
+    const urlHandleBack = '/funcionarios/'
 
   return (
-    <DetailContainer
-      loading={loading}
-      error={error}
+     <DetailContainer
       parameters={parameters}
-      data={data}
-      handleEdit={handleEdit}
-      handleBack={handleBack}
-      id={id}         
+      url={url}
+      urlHandleEdit={urlHandleEdit}
+      urlHandleBack={urlHandleBack}
     />
   )
 }
