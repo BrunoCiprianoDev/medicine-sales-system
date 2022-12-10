@@ -10,11 +10,12 @@ const FormVendas = () => {
   const [cliente, setCliente] = useState('');
   const urlFuncionarios = "http://localhost:3000/funcionarios";
   const [funcionarios, setFuncionarios] = useState('');
-
+  const date = Date();
 
   return (
     <div className={styles.MainContainer}>
         <div className={styles.LeftArea}>
+        <div>{date}</div>
           <InputAutoComplete 
             title={'Funcionario:'}
             url={urlFuncionarios} 
@@ -27,6 +28,7 @@ const FormVendas = () => {
             setSubmitData={setCliente} 
             submitData={cliente}
           />
+
         </div>
         <div className={styles.RightArea}>
 
