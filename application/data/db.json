@@ -256,8 +256,8 @@
   ],
   "clientes": [
     {
-      "nome": "UM",
-      "cpf": "848.523.477.20",
+      "nome": "Jordana Silva",
+      "cpf": "833.444.567.22",
       "dt_nascimento": "1987-02-14",
       "telefone": "(32)3222-9781",
       "email": "simas_almeida@gmail.com",
@@ -294,7 +294,8 @@
       "telefone": "(32)3222-9781",
       "email": "simas_almeida@gmail.com",
       "id": 5
-    },{
+    },
+    {
       "nome": "Seis",
       "cpf": "848.523.477.20",
       "dt_nascimento": "1987-02-14",

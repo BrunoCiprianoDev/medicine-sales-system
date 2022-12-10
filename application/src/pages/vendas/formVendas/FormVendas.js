@@ -1,30 +1,35 @@
 import React from 'react'
 import { useState } from 'react'
-import { useFetch } from '../../../hooks/useFetch'
+//import { useFetch } from '../../../hooks/useFetch'
 import styles from './FormVendas.module.css'
-
-
+import InputAutoComplete from '../../../components/inputAutoComplete/InputAutoComplete'
 
 const FormVendas = () => {
 
-  const urlClientes = ("http://localhost:3000/clientes")
-  const [inputSearch, setInputSearch] = useState('');
-  const {data} = useFetch(urlClientes+'?q='+inputSearch)
-  const currentItens = (data && data.slice(0, 5));
+  const urlCliente = "http://localhost:3000/clientes";
+  const [cliente, setCliente] = useState('');
+  const urlFuncionarios = "http://localhost:3000/funcionarios";
+  const [funcionarios, setFuncionarios] = useState('');
+
 
   return (
     <div className={styles.MainContainer}>
-        <div className={styles.ContainerForm}>
-                <form >
-                    <label className={styles.InputArea}>
-                        <input type="text" value={inputSearch} onChange={(e)=>setInputSearch(e.target.value)} />
-                        {inputSearch !== '' && 
-                        currentItens.map((teste)=>(
-                            <p className={styles.AutoComplete} key={teste.id}>{teste.nome}</p>
-                        ))}
-                    </label>
-                    <input type="submit" />
-                </form>
+        <div className={styles.LeftArea}>
+          <InputAutoComplete 
+            title={'Funcionario:'}
+            url={urlFuncionarios} 
+            setSubmitData={setFuncionarios} 
+            submitData={funcionarios}
+          />
+          <InputAutoComplete 
+            title={'Cliente:'}
+            url={urlCliente} 
+            setSubmitData={setCliente} 
+            submitData={cliente}
+          />
+        </div>
+        <div className={styles.RightArea}>
+
         </div>
     </div>
   )
