@@ -48,8 +48,14 @@ const FormContainer = ({
         <div  className={styles['FormContainer']}>
           {parameters.map((parameter)=>(
             <div key={parameter.id}>
-              <label>{parameter.label}
+              <label>{parameter.label}         
                 {parameter.type === 'text' && 
+                  <input name={parameter.attribute}  
+                    {...register(parameter.attribute)} 
+                    type={parameter.type} 
+                  />
+                }
+                 {parameter.type === 'date' && 
                   <input name={parameter.attribute}  
                     {...register(parameter.attribute)} 
                     type={parameter.type} 
@@ -65,6 +71,12 @@ const FormContainer = ({
                   <textarea name={parameter.attribute}  
                     {...register(parameter.attribute)} 
                     type={parameter.type} rows='10'
+                  />
+                }
+                {parameter.type === 'password' && 
+                  <input name={parameter.attribute}  
+                    {...register(parameter.attribute)} 
+                    type={parameter.type} 
                   />
                 }
                 {parameter.type === 'select' && 

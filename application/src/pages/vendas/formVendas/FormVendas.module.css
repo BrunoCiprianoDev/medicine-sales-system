@@ -1,0 +1,21 @@
+.MainContainer {
+    display: flex;
+    flex-direction: column;
+    border: 1px dashed rgb(0, 255, 34);
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.ContainerForm {
+    border: 1px dashed red;
+}
+
+.ContainerForm form {
+    border: 1px dashed rgb(0, 0, 0);  
+    width: 50%;
+}
+
+.InputArea {
+    width: 100%;
+    color: red
+}

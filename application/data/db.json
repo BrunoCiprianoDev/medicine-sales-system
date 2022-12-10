@@ -234,18 +234,6 @@
       "classe": "B",
       "classificacao": "Antibiotico",
       "id": 6
-    },
-    {
-      "tipo": "TEste 02",
-      "classe": "funciona",
-      "classificacao": "logo",
-      "id": 7
-    },
-    {
-      "tipo": "123",
-      "classe": "123123",
-      "classificacao": "123123",
-      "id": 8
     }
   ],
   "fornecedores": [
@@ -268,12 +256,51 @@
   ],
   "clientes": [
     {
-      "nome": "Sonia Almeida Simas",
+      "nome": "UM",
       "cpf": "848.523.477.20",
       "dt_nascimento": "1987-02-14",
       "telefone": "(32)3222-9781",
       "email": "simas_almeida@gmail.com",
       "id": 1
+    },
+    {
+      "nome": "Dois",
+      "cpf": "848.523.477.20",
+      "dt_nascimento": "1987-02-14",
+      "telefone": "(32)3222-9781",
+      "email": "simas_almeida@gmail.com",
+      "id": 2
+    },
+    {
+      "nome": "Tres",
+      "cpf": "848.523.477.20",
+      "dt_nascimento": "1987-02-14",
+      "telefone": "(32)3222-9781",
+      "email": "simas_almeida@gmail.com",
+      "id": 3
+    },
+    {
+      "nome": "Quatro",
+      "cpf": "848.523.477.20",
+      "dt_nascimento": "1987-02-14",
+      "telefone": "(32)3222-9781",
+      "email": "simas_almeida@gmail.com",
+      "id": 4
+    },
+    {
+      "nome": "Cinco",
+      "cpf": "848.523.477.20",
+      "dt_nascimento": "1987-02-14",
+      "telefone": "(32)3222-9781",
+      "email": "simas_almeida@gmail.com",
+      "id": 5
+    },{
+      "nome": "Seis",
+      "cpf": "848.523.477.20",
+      "dt_nascimento": "1987-02-14",
+      "telefone": "(32)3222-9781",
+      "email": "simas_almeida@gmail.com",
+      "id": 6
     }
   ],
   "mercadorias": [

@@ -35,6 +35,10 @@ import DetailMercadorias from './pages/mercadorias/detailMercadorias/DetailMerca
 import ConsultarPrecos from './pages/consultarprecos/formConsultarPrecos/ConsultarPrecos';
 import ListConsultarPrecos from './pages/consultarprecos/listConsultarPrecos/ListConsultarPrecos';
 
+
+//Vendas
+import FormVendas from './pages/vendas/formVendas/FormVendas';
+
 function App() {
   return (
     <div className="App"> 
@@ -75,6 +79,8 @@ function App() {
 
             <Route path='/consultas/' element={<ConsultarPrecos/>}/>
             <Route path='/consulta/search/' element={<ListConsultarPrecos/>}/>
+          
+            <Route path='/vendas/form/' element={<FormVendas/>}/>
           </Routes>
         </div>
       </BrowserRouter>

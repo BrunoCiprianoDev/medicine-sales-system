@@ -13,7 +13,7 @@ const parameters = [
   {id: 7, label: 'Bairro', attribute: 'bairro'},
   {id: 8, label: 'Logradouro', attribute: 'logradouro'},
   {id: 9, label: 'Número', attribute: 'numero'},
-  {id: 10, label: 'Complemetno', attribute: 'complemento'},
+  {id: 10, label: 'Complemento', attribute: 'complemento'},
   {id: 11, label: 'Telefone 1', attribute: 'telefone_um'},
   {id: 12, label: 'Telefone 2', attribute: 'telefone_dois'},
   {id: 13, label: 'E-mail', attribute: 'email'},
