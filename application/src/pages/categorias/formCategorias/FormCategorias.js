@@ -1,13 +1,7 @@
 import {React, useState} from 'react'
 import FormContainer from '../../../components/formContainer/FormContainer';
 import { useParams } from 'react-router-dom'
-
-
-const parameters = [
-    {id: 1, attribute:'tipo', label:'Tipo', type: 'text'},
-    {id: 2, attribute:'classe', label:'Classes', type: 'text' },
-    {id: 3, attribute:'classificacao', label:'Classificação', type: 'text' },
-  ]
+import { parameters } from '../parameters/pr_categoria';
 
 const FormCategorias = ({edit}) => {
 

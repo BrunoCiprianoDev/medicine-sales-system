@@ -2,20 +2,13 @@ import React from 'react'
 import { useFetch } from '../../../hooks/useFetch'
 import {useNavigate, useSearchParams } from 'react-router-dom';
 import ListContainer from '../../../components/listContainer/ListContainer';
+import { parameters } from '../parameters/pr_fornecedor';
 
 const url = "http://localhost:3000/fornecedores/";
 
-
-const parameters = [
-    {id: 1, label: "Nome", attribute:'nome'},
-    {id: 2, label: "CNPJ", attribute:'cnpj'},
-    {id: 4, label: "Telefone 1", attribute:'telefone_um'},
-    {id: 5, label: "Telefone 2", attribute:'telefone_dois'},
-    {id: 6, label: "Email", attribute:'email'}
-]
-
 const ListFornecedores = ({filter}) => {
 
+    const useParameters = parameters.slice(0, 2).concat(parameters.slice(9,12));
     const navigate = useNavigate();
     let [searchParams] = useSearchParams();
     const {data, httpConfig, loading, error} = useFetch(
@@ -34,7 +27,7 @@ const ListFornecedores = ({filter}) => {
     <ListContainer
       loading={loading}
       error={error}
-      parameters={parameters}
+      parameters={useParameters}
       handleRemove={handleRemove}
       handleEdit={handleEdit}
       data={data}   

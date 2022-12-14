@@ -2,15 +2,9 @@ import React from 'react'
 import { useFetch } from '../../../hooks/useFetch'
 import {useNavigate, useSearchParams } from 'react-router-dom';
 import ListContainer from '../../../components/listContainer/ListContainer';
+import { parameters } from '../parameters/pr_categoria';
 
 const url = "http://localhost:3000/categorias/";
-
-
-const parameters = [
-    {id: 1, label: "Tipo", attribute:'tipo'},
-    {id: 2, label: "Classe", attribute:'classe'},
-    {id: 3, label: "Classificação", attribute:'classificacao'},
-]
 
 const ListCategorias = ({filter}) => {
 
@@ -26,8 +20,7 @@ const ListCategorias = ({filter}) => {
     const handleRemove = (id) => {
       httpConfig(id, "DELETE");
     }
-  
-    console.log(data)
+
   return (
     <ListContainer
       loading={loading}

@@ -1,12 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import DetailContainer from '../../../components/detailContainer/DetailContainer'
-
-const parameters = [
-    {id: 1, label: 'Tipo', attribute: 'tipo'},
-    {id: 2, label: 'Classe', attribute: 'classe'},
-    {id: 3, label: 'Classificação', attribute: 'classificacao'},
-  ]
+import { parameters } from '../parameters/pr_categoria'
 
 const DetailCategorias = () => {
 

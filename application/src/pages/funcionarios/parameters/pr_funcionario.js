@@ -12,7 +12,7 @@ export const parameters = [
     {id: 12, attribute:'telefone_dois', label:'Telefone dois', type: 'text'},
     {id: 13, attribute:'email', label:'E-mail', type: 'text'},
     {id: 14, attribute:'dt_admissao', label:'Data admissão', type: 'date'},
-    {id: 15, attribute:'funcao', label:'Função:', type: 'select', 
+    {id: 15, attribute:'funcao', label:'Função', type: 'select', 
       options: [
         {id: 1, value: 'GERENTE'},
         {id: 2, value: 'VENDEDOR'}

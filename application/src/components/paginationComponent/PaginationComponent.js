@@ -3,8 +3,6 @@ import styles from './PaginationComponent.module.css'
 
 const PaginationComponent = ({setCurrentPage, currentPage, setItemPerPage, itensPerPage, pages}) => {
 
-
-
   return (
     <div className={styles.PagesArea}>
       <select value={itensPerPage} onChange={(e)=>setItemPerPage(Number(e.target.value))}>
@@ -14,14 +12,15 @@ const PaginationComponent = ({setCurrentPage, currentPage, setItemPerPage, itens
         <option value={10}>10</option>
       </select>
       {Array.from(Array(pages), (item, index)=>{
-        return <button 
-                  key={index} 
-                  value={index} 
-                  className={currentPage === index ? styles.buttonActive : styles.buttonDefault}
-                  onClick={(e)=>setCurrentPage(Number(e.target.value))}>
-                  {index}
-                </button>
-        })}
+        return( 
+          <button 
+            key={index} 
+            value={index} 
+            className={currentPage === index ? styles.buttonActive : styles.buttonDefault}
+            onClick={(e)=>setCurrentPage(Number(e.target.value))}>
+            {index+1}
+          </button>
+        )})}
     </div>
   )
 }
