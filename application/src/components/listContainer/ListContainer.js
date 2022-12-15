@@ -4,24 +4,39 @@ import ButtonsList from '../buttonLists/ButtonsList'
 import Loading from '../loading/Loading'
 import PaginationComponent from '../paginationComponent/PaginationComponent'
 import { useState } from 'react'
-
+import { useFetch } from '../../hooks/useFetch'
+import {useNavigate, useSearchParams } from 'react-router-dom';
 
 const ListContainer = ({
-    loading,
-    error,
+    url,
     parameters,
-    handleRemove,
-    handleEdit,
-    data,
+    handleEditUrl,
+    filter,
     editable,
 }) => {
+
+
+  const navigate = useNavigate();
+  let [searchParams] = useSearchParams();
+  const {data, httpConfig, loading, error} = useFetch(
+    filter ? url+"?"+searchParams : url)
+
+  const handleEdit = (id) => {
+    navigate(handleEditUrl+id)
+  }
   
+  const handleRemove = (id) => {
+    httpConfig(id, "DELETE");
+  }
+  
+  //Params from pagination
   const [itensPerPage, setItemPerPage] = useState(8);
   const [currentPage, setCurrentPage] = useState(0);
   const pages = Math.ceil(data && data.length / itensPerPage);
   const startIndex = currentPage * itensPerPage;
   const endIndex = startIndex + itensPerPage;
   const currentItens = (data && data.slice(startIndex, endIndex));
+
 
   return (
     <div className={styles.MainContainer}>
