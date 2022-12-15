@@ -196,6 +196,24 @@
       "funcao": "VENDEDOR",
       "senha": "848325",
       "id": 18
+    },
+    {
+      "nome": "",
+      "cpf": "",
+      "dt_nascimento": "",
+      "cep": "",
+      "cidade": "",
+      "bairro": "",
+      "logradouro": "",
+      "numero": "",
+      "complemento": "",
+      "telefone_um": "",
+      "telefone_dois": "",
+      "email": "",
+      "dt_admissao": "",
+      "funcao": "GERENTE",
+      "senha": "",
+      "id": 19
     }
   ],
   "categorias": [

@@ -15,7 +15,6 @@ const ListContainer = ({
     editable,
 }) => {
 
-
   const navigate = useNavigate();
   let [searchParams] = useSearchParams();
   const {data, httpConfig, loading, error} = useFetch(
@@ -36,7 +35,6 @@ const ListContainer = ({
   const startIndex = currentPage * itensPerPage;
   const endIndex = startIndex + itensPerPage;
   const currentItens = (data && data.slice(startIndex, endIndex));
-
 
   return (
     <div className={styles.MainContainer}>

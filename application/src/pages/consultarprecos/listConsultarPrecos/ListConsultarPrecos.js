@@ -1,34 +1,29 @@
 import React from 'react'
-import { useFetch } from '../../../hooks/useFetch'
 import {useNavigate, useSearchParams } from 'react-router-dom';
 import ListContainer from '../../../components/listContainer/ListContainer';
 import styles from './ListConsultarPrecos.module.css'
+import { parameters } from '../../mercadorias/parameters/pr_mercadorias';
 
-const url = "http://localhost:3000/mercadorias/";
-
-
-const parameters = [
-    {id: 1, label: "Nome", attribute:'nome'},
-    {id: 2, label: "Código", attribute:'codigo'},
-    {id: 3, label: "Estoque", attribute:'estoque_atual'},
-    {id: 6, label: "Valor ", attribute:'valor_venda'}
-  ]
-
-
-const ListConsultarPrecos = () => {
+const ListConsultarPrecos = ({filter}) => {
 
     const navigate = useNavigate();
     let [searchParams] = useSearchParams();
-    const {data, loading, error} = useFetch(url+"?"+searchParams)
+    const useParameters = parameters.slice(0,2).concat(parameters.slice(5,8));
+    const url = "http://localhost:3000/mercadorias/?"+searchParams;
     
   return (
     <div className={styles.MainContainer}>
-        <button className={styles.ButtonNavigate} onClick={()=>navigate('/consultas/')}>Nova Consulta</button>
+        <button 
+          className={styles.ButtonNavigate} 
+          onClick={()=>navigate('/consultas/')}>
+            Nova Consulta
+        </button>
         <ListContainer
-        loading={loading}
-        error={error}
-        parameters={parameters}
-        data={data}     
+          url={url}
+          parameters={useParameters}
+          handleEditUrl={'/mercadorias/detail/'} 
+          filter={filter}
+          editable={false}    
         />
     </div>
   )
