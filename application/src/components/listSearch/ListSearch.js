@@ -8,9 +8,16 @@ const ListSearch = ({url, list, setList}) => {
     const {data} = useFetch(url+'?q='+inputSearch);
     const currentItens = (data && data.slice(0, 8));
 
-    const handleList = (item) => {
-        setList(arr =>[...arr, item]);
-        console.log('Lista de compras:'+list)
+
+    const handleList = (element) => {
+        if(!list.find(e=>e.item === element)){
+          setList(arr =>[...arr, {item: element,  quant: 1}]);
+        } else {
+          let localObject = list.find(e=>e.item === element)
+          let index = list.indexOf(localObject);
+          localObject.quant = localObject.quant+1;
+          setList(arr=>[arr[index] = localObject]);
+        }
       }
     
     return (

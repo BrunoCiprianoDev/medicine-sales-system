@@ -15,6 +15,12 @@ const FormVendas = () => {
   const [listaMercadorias, setListMercadorias] = useState([])
   
   //Const listSearch
+  const removeElement = (elemento) => {
+    setListMercadorias(listaMercadorias => listaMercadorias.filter(e => e !== elemento));
+  }
+
+
+
 
   return (
     <div className={styles.MainContainer}>
@@ -44,7 +50,10 @@ const FormVendas = () => {
         </div>
         <div className={styles.RightArea}>
           {listaMercadorias && listaMercadorias.map((elemento)=>(
-            <p >{elemento.nome}</p>
+            <div key={elemento.item.id}>
+              <button onClick={()=>removeElement(elemento)}>-</button>
+              {elemento.item.id+')'+elemento.item.nome+' '+elemento.quant}           
+            </div>
           ))}
         </div>
     </div>
