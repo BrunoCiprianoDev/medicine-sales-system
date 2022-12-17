@@ -5,7 +5,7 @@ import { useFetch } from '../../hooks/useFetch'
 
 const ListSearch = ({url, list, setList}) => {
     const [inputSearch, setInputSearch] = useState('');
-    const {data} = useFetch(url+'?q='+inputSearch);
+    const {data, error} = useFetch(url+'?q='+inputSearch);
     const currentItens = (data && data.slice(0, 14));
 
     const handleList = (element) => {
@@ -23,6 +23,7 @@ const ListSearch = ({url, list, setList}) => {
           <label>Nome</label>
           <label>Preço</label>
         </div>
+          {error && <h4>Falha ao carregar dados...</h4>}
           {currentItens && currentItens.map((item)=>(
             <div key={item.id} className={styles.ElementList} onClick={()=>handleList(item)}>
               <label>{item.nome}</label>

@@ -765,5 +765,45 @@
       "descricao": "Batatas fritas genericas",
       "id": 35
     }
+  ],
+  "vendas": [
+    {
+      "id": 1671289411000
+    },
+    {
+      "id": 1671289722000
+    },
+    {
+      "id": 1671289824000
+    },
+    {
+      "id": 1671289853000
+    },
+    {
+      "id": 1671289860000
+    },
+    {
+      "id": 1671290574000
+    }
+  ],
+  "itensVenda": [
+    {
+      "idVenda": 1671289722000,
+      "idItem": 1,
+      "quantidade": 1,
+      "id": 1
+    },
+    {
+      "idVenda": 1671290574000,
+      "idItem": 2,
+      "quantidade": 1,
+      "id": 2
+    },
+    {
+      "idVenda": 1671290574000,
+      "idItem": 1,
+      "quantidade": 1,
+      "id": 3
+    }
   ]
 }
