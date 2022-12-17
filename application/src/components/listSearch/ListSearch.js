@@ -6,18 +6,12 @@ import { useFetch } from '../../hooks/useFetch'
 const ListSearch = ({url, list, setList}) => {
     const [inputSearch, setInputSearch] = useState('');
     const {data} = useFetch(url+'?q='+inputSearch);
-    const currentItens = (data && data.slice(0, 8));
-
+    const currentItens = (data && data.slice(0, 14));
 
     const handleList = (element) => {
-        if(!list.find(e=>e.item === element)){
-          setList(arr =>[...arr, {item: element,  quant: 1}]);
-        } else {
-          let localObject = list.find(e=>e.item === element)
-          let index = list.indexOf(localObject);
-          localObject.quant = localObject.quant+1;
-          setList(arr=>[arr[index] = localObject]);
-        }
+        if(!list.find(e=>e.item.id === element.id)){
+          setList(arr =>[...arr, { item: element,  quant: 1}]);
+        } 
       }
     
     return (

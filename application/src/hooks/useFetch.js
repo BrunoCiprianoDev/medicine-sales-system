@@ -80,6 +80,6 @@ export const useFetch = (url) => {
       }
     };
     httpRequest();
-  }, [config]);
+  }, [config, itemId, method, url]);
   return { data, httpConfig, loading, error };
 };

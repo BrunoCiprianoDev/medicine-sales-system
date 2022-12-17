@@ -1,9 +1,12 @@
 import React from 'react'
 import { useState } from 'react'
+
 //import { useFetch } from '../../../hooks/useFetch'
 import styles from './FormVendas.module.css'
 import InputAutoComplete from '../../../components/inputAutoComplete/InputAutoComplete'
 import ListSearch from '../../../components/listSearch/ListSearch'
+import ListSelect from '../../../components/listSelect/ListSelect'
+import { useEffect } from 'react'
 const FormVendas = () => {
 
   const date = Date();
@@ -13,13 +16,14 @@ const FormVendas = () => {
   const [funcionarios, setFuncionarios] = useState('');
   const urlMercadorias = "http://localhost:3000/mercadorias";
   const [listaMercadorias, setListMercadorias] = useState([])
+  const [totalValue, setTotalValue] = useState(0);
   
-  //Const listSearch
-  const removeElement = (elemento) => {
-    setListMercadorias(listaMercadorias => listaMercadorias.filter(e => e !== elemento));
-  }
-
-
+  useEffect(() => {
+    setTotalValue(0)
+    listaMercadorias.map((e)=>(
+        setTotalValue(t=> t+(parseFloat(e.item.valor_venda*e.quant)))
+      ));
+  },[listaMercadorias]);
 
 
   return (
@@ -49,12 +53,17 @@ const FormVendas = () => {
           </div>
         </div>
         <div className={styles.RightArea}>
-          {listaMercadorias && listaMercadorias.map((elemento)=>(
-            <div key={elemento.item.id}>
-              <button onClick={()=>removeElement(elemento)}>-</button>
-              {elemento.item.id+')'+elemento.item.nome+' '+elemento.quant}           
-            </div>
-          ))}
+        <div className={styles.topListSelect}> 
+          <h2>Valor total: R${totalValue.toFixed(2)}</h2>
+          <div>
+            <button className={styles.buttonConclude}>Concluir venda</button>
+            <button className={styles.buttonCancel}>Cancelar venda</button>
+          </div>
+        </div>
+          <ListSelect 
+            setList={setListMercadorias} 
+            list={listaMercadorias}
+          />           
         </div>
     </div>
   )

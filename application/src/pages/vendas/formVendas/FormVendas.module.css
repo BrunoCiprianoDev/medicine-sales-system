@@ -22,10 +22,15 @@
 
 .RightArea {
     grid-area: rightArea;
+    margin: 0.5em;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
 }
 
+
+/*List rightArea*/
 .DateArea{
+    background-color: rgba(0, 26, 49, 0.897);
+    color: white;
     margin: 0.5em;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
 }
@@ -40,3 +45,31 @@
     flex-direction: column;
 }
 
+.topListSelect {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.buttonConclude {
+    margin-right: 1em;
+    background-color: rgb(0, 150, 0);
+    height: 2.5em;
+    border-style: none;
+    color: white
+}
+
+.buttonConclude:hover {
+    background-color: rgb(0, 95, 0);
+}
+
+.buttonCancel {
+    background-color: red;
+    height: 2.5em;
+    border-style: none;    
+    color: white
+}
+
+.buttonCancel:hover {
+    background-color: rgb(122, 0, 0);
+}
