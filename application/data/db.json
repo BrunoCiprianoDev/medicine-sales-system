@@ -3,7 +3,7 @@
     {
       "id": 1,
       "nome": "Maria Moura Heliar",
-      "cpf": "848.523.477.20",
+      "cpf": "848.523.477.21",
       "dt_nascimento": "1998-02-17",
       "cep": "36.090.452",
       "uf": "Minas Gerais",
@@ -22,7 +22,7 @@
     {
       "id": 2,
       "nome": "João Jericho",
-      "cpf": "899.766.544.10",
+      "cpf": "899.766.544.22",
       "dt_nascimento": "1997-02-14",
       "cep": "36.090.450",
       "uf": "Minas Gerais",
@@ -40,7 +40,7 @@
     {
       "id": 3,
       "nome": "Maria Antonieta de Las Neves",
-      "cpf": "999.888.777.66",
+      "cpf": "999.888.777.24",
       "dt_nascimento": "14/02/2000",
       "cep": "36.090.450",
       "uf": "Minas Gerais",
@@ -76,7 +76,7 @@
     {
       "id": 5,
       "nome": "Viviane Bortoni",
-      "cpf": "999.888.777.66",
+      "cpf": "999.888.777.02",
       "dt_nascimento": "14/02/2000",
       "cep": "36.090.450",
       "uf": "Minas Gerais",
@@ -92,26 +92,8 @@
       "funcao": "VENDEDOR"
     },
     {
-      "nome": "Bruno Cipriano Ribeiro",
-      "cpf": "130.799.444.55",
-      "dt_nascimento": "1997-02-14",
-      "cep": "36090330",
-      "uf": "MG",
-      "cidade": "Juiz de Fora",
-      "bairro": "Fabrica",
-      "logradouro": "Av.São Tomé",
-      "numero": "485",
-      "complemento": "ap.385",
-      "telefone_um": "(32)9888-2545",
-      "telefone_dois": "(32)3222-2521",
-      "email": "cipriano990@gmail.com",
-      "dt_admissao": "2022-12-02",
-      "funcao": "VENDEDOR",
-      "id": 12
-    },
-    {
       "nome": "Sonia Maria Rodrigues",
-      "cpf": "777.554.254.10",
+      "cpf": "777.554.254.12",
       "dt_nascimento": "1980-05-12",
       "cep": "36090450",
       "uf": "MG",
@@ -126,94 +108,6 @@
       "dt_admissao": "2020-12-03",
       "funcao": "VENDEDOR",
       "id": 13
-    },
-    {
-      "nome": "Rafael Cipriano Ribeiro",
-      "cpf": "848.567.991",
-      "dt_nascimento": "2006-06-24",
-      "cep": "36090330",
-      "cidade": "Juiz de Fora",
-      "bairro": "Fabrica",
-      "logradouro": "123",
-      "numero": "12313",
-      "complemento": "12313",
-      "telefone_um": "(32)9888-2545",
-      "telefone_dois": "(32)3222-2521",
-      "email": "ribeiro991@gmail.com",
-      "dt_admissao": "2020-12-03",
-      "funcao": "VENDEDOR",
-      "id": 15,
-      "senha": "2775515"
-    },
-    {
-      "nome": "Bruno Gentil",
-      "cpf": "132.799.444.55",
-      "dt_nascimento": "123123-03-12",
-      "cep": "36.090.450",
-      "cidade": "Barroso",
-      "bairro": "Bairro de JF",
-      "logradouro": "Av. juiz",
-      "numero": "Maria Tavares Souza",
-      "complemento": "12313",
-      "telefone_um": "(32)98867-0548",
-      "telefone_dois": "(00)00000-0000",
-      "email": "cipriano990@gmail.com",
-      "dt_admissao": "1231-03-12",
-      "funcao": "VENDEDOR",
-      "id": 16
-    },
-    {
-      "nome": "Jonny Dimitri ",
-      "cpf": "848.523.477.20",
-      "dt_nascimento": "2000-02-02",
-      "cep": "36.090.450",
-      "cidade": "Juiz de Fora",
-      "bairro": "Bairro de JF",
-      "logradouro": "Av. juiz",
-      "numero": "João Anésio",
-      "complemento": "ap.385",
-      "telefone_um": "(32)98867-0548",
-      "telefone_dois": "(00)00000-0000",
-      "email": "Dimitri120@gmail.com",
-      "dt_admissao": "2015-02-12",
-      "funcao": "VENDEDOR",
-      "id": 17
-    },
-    {
-      "nome": "Joao Rio Novo",
-      "cpf": "848.523.477.20",
-      "dt_nascimento": "1998-02-23",
-      "cep": "36.090.450",
-      "cidade": "Juiz de Fora",
-      "bairro": "Fabrica",
-      "logradouro": "12313",
-      "numero": "456",
-      "complemento": "302",
-      "telefone_um": "(32)9888-2545",
-      "telefone_dois": "(00)00000-0000",
-      "email": "cipriano990@gmail.com",
-      "dt_admissao": "2015-02-14",
-      "funcao": "VENDEDOR",
-      "senha": "848325",
-      "id": 18
-    },
-    {
-      "nome": "",
-      "cpf": "",
-      "dt_nascimento": "",
-      "cep": "",
-      "cidade": "",
-      "bairro": "",
-      "logradouro": "",
-      "numero": "",
-      "complemento": "",
-      "telefone_um": "",
-      "telefone_dois": "",
-      "email": "",
-      "dt_admissao": "",
-      "funcao": "GERENTE",
-      "senha": "",
-      "id": 19
     }
   ],
   "categorias": [
@@ -280,46 +174,6 @@
       "telefone": "(32)3222-9781",
       "email": "simas_almeida@gmail.com",
       "id": 1
-    },
-    {
-      "nome": "Dois",
-      "cpf": "848.523.477.20",
-      "dt_nascimento": "1987-02-14",
-      "telefone": "(32)3222-9781",
-      "email": "simas_almeida@gmail.com",
-      "id": 2
-    },
-    {
-      "nome": "Tres",
-      "cpf": "848.523.477.20",
-      "dt_nascimento": "1987-02-14",
-      "telefone": "(32)3222-9781",
-      "email": "simas_almeida@gmail.com",
-      "id": 3
-    },
-    {
-      "nome": "Quatro",
-      "cpf": "848.523.477.20",
-      "dt_nascimento": "1987-02-14",
-      "telefone": "(32)3222-9781",
-      "email": "simas_almeida@gmail.com",
-      "id": 4
-    },
-    {
-      "nome": "Cinco",
-      "cpf": "848.523.477.20",
-      "dt_nascimento": "1987-02-14",
-      "telefone": "(32)3222-9781",
-      "email": "simas_almeida@gmail.com",
-      "id": 5
-    },
-    {
-      "nome": "Seis",
-      "cpf": "848.523.477.20",
-      "dt_nascimento": "1987-02-14",
-      "telefone": "(32)3222-9781",
-      "email": "simas_almeida@gmail.com",
-      "id": 6
     }
   ],
   "mercadorias": [
@@ -768,42 +622,104 @@
   ],
   "vendas": [
     {
-      "id": 1671289411000
+      "id": 1671806509000,
+      "funcionario": {
+        "cpf": "848.523.477.21",
+        "nome": "Maria Moura Heliar"
+      },
+      "cliente": {
+        "cpf": "833.444.567.22",
+        "nome": "Jordana Silva"
+      },
+      "itensVenda": [
+        {
+          "id": 5,
+          "nome": "Bronzeador",
+          "valor_venda": 27.99,
+          "codigo": "000000000",
+          "quant": 1
+        },
+        {
+          "id": 7,
+          "nome": "Cicatrizante",
+          "valor_venda": 27.99,
+          "codigo": "000000000",
+          "quant": 1
+        },
+        {
+          "id": 9,
+          "nome": "Maquiagem",
+          "valor_venda": 27.99,
+          "codigo": "000000000",
+          "quant": 1
+        }
+      ]
     },
     {
-      "id": 1671289722000
+      "id": 1671813686000,
+      "funcionario": {
+        "cpf": "899.766.544.22",
+        "nome": "João Jericho"
+      },
+      "cliente": {},
+      "itensVenda": [
+        {
+          "id": 1,
+          "nome": "Shampoo",
+          "valor_venda": 27.99,
+          "codigo": "000000000",
+          "quant": 1
+        },
+        {
+          "id": 3,
+          "nome": "Sabonete",
+          "valor_venda": 27.99,
+          "codigo": "000000000",
+          "quant": 1
+        },
+        {
+          "id": 7,
+          "nome": "Cicatrizante",
+          "valor_venda": 27.99,
+          "codigo": "000000000",
+          "quant": 4
+        }
+      ]
     },
     {
-      "id": 1671289824000
-    },
-    {
-      "id": 1671289853000
-    },
-    {
-      "id": 1671289860000
-    },
-    {
-      "id": 1671290574000
-    }
-  ],
-  "itensVenda": [
-    {
-      "idVenda": 1671289722000,
-      "idItem": 1,
-      "quantidade": 1,
-      "id": 1
-    },
-    {
-      "idVenda": 1671290574000,
-      "idItem": 2,
-      "quantidade": 1,
-      "id": 2
-    },
-    {
-      "idVenda": 1671290574000,
-      "idItem": 1,
-      "quantidade": 1,
-      "id": 3
+      "id": 1671814179000,
+      "funcionario": {},
+      "cliente": {},
+      "itensVenda": [
+        {
+          "id": 2,
+          "nome": "Condicionador",
+          "valor_venda": 27.99,
+          "codigo": "000000000",
+          "quant": 1
+        },
+        {
+          "id": 4,
+          "nome": "Protetor solar",
+          "valor_venda": "27.99",
+          "codigo": "000000000",
+          "quant": 1
+        },
+        {
+          "id": 10,
+          "nome": "Limpaza de pele",
+          "valor_venda": 27.99,
+          "codigo": "000000000",
+          "quant": 1
+        },
+        {
+          "id": 11,
+          "nome": "Energetico",
+          "valor_venda": 27.99,
+          "codigo": "000000000",
+          "quant": 1
+        }
+      ]
     }
   ]
 }

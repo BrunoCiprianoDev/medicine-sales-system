@@ -28,8 +28,8 @@ const InputAutoComplete = ({title, url, submitData, setSubmitData}) => {
                   <input type="text" value={inputSearch} onChange={(e)=>setInputSearch(e.target.value)} />
                   <div className={styles.SugestionBox}>
                     {inputSearch !== '' && 
-                      currentItens.map((teste)=>(
-                        <label className={styles.AutoComplete} onClick={()=>setInputSearch(teste.cpf)} key={teste.id}>{teste.cpf}</label>
+                      currentItens.map((item)=>(
+                        <label className={styles.AutoComplete} onClick={()=>setInputSearch(item.cpf)} key={item.id}>{item.cpf}</label>
                     ))}
                   </div>
               </div>

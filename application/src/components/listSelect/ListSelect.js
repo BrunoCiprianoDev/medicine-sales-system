@@ -38,11 +38,11 @@ const ListSelect = ({list, setList}) => {
         <div></div>
       </div>    
       {currentItens && currentItens.map((elemento)=>(
-          <div key={elemento.item.id} className={styles.ComponenteList}>
-            <div>{elemento.item.nome}</div>
-            <div>{elemento.item.valor_venda}</div>
+          <div key={elemento.id} className={styles.ComponenteList}>
+            <div>{elemento.nome}</div>
+            <div>{elemento.valor_venda}</div>
             <div>{elemento.quant}</div>   
-            <div>{(elemento.quant*elemento.item.valor_venda).toFixed(2)}</div>         
+            <div>{(elemento.quant*elemento.valor_venda).toFixed(2)}</div>         
             <div className={styles.ButtonBox}>
               <button onClick={()=>removeElement(elemento)} className={styles.buttonRemove}>-</button>
               <button onClick={()=>addElement(elemento)} className={styles.buttonAdd}>+</button>  

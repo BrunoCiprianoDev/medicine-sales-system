@@ -38,6 +38,7 @@ import ListConsultarPrecos from './pages/consultarprecos/listConsultarPrecos/Lis
 
 //Vendas
 import FormVendas from './pages/vendas/formVendas/FormVendas';
+import ListVendas from './pages/vendas/listVendas/ListVendas';
 
 function App() {
   return (
@@ -80,6 +81,7 @@ function App() {
             <Route path='/consultas/' element={<ConsultarPrecos/>}/>
             <Route path='/consulta/search/' element={<ListConsultarPrecos/>}/>
           
+            <Route path='/vendas/' element={<ListVendas/>}/>
             <Route path='/vendas/form/' element={<FormVendas/>}/>
           </Routes>
         </div>

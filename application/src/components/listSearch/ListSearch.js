@@ -9,8 +9,14 @@ const ListSearch = ({url, list, setList}) => {
     const currentItens = (data && data.slice(0, 14));
 
     const handleList = (element) => {
-        if(!list.find(e=>e.item.id === element.id)){
-          setList(arr =>[...arr, { item: element,  quant: 1}]);
+        if(!list.find(e=>e.id === element.id)){
+          setList(arr =>[...arr, {
+            id: element.id,
+            nome: element.nome,
+            valor_venda: element.valor_venda,
+            codigo: element.codigo,  
+            quant: 1
+          }]);
         } 
       }
     

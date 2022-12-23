@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from 'react'
-import axios from 'axios'
 import { useFetch } from '../../../hooks/useFetch'
 import styles from './FormVendas.module.css'
 import InputAutoComplete from '../../../components/inputAutoComplete/InputAutoComplete'
@@ -10,10 +9,9 @@ import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Loading from '../../../components/loading/Loading'
 
-
 const FormVendas = () => {
 
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
   const [url] = useState("http://localhost:3000/vendas")
   const {httpConfig, loading} = useFetch(url);
    
@@ -29,37 +27,30 @@ const FormVendas = () => {
   useEffect(() => {
     setTotalValue(0)
     listaMercadorias.map((e)=>(
-        setTotalValue(t=> t+(parseFloat(e.item.valor_venda*e.quant)))
+        setTotalValue(t=> t+(parseFloat(e.valor_venda*e.quant)))
       ));
   },[listaMercadorias]);
 
 
   const handleConclude = () =>{
-    /* Foi necessário o uso de useFetch e Axios juntos para simular 
-    esse tipo de requisição.*/
+
     let idVenda = Date.parse(date);
-    let venda = {
+    let vendas = {
       id: idVenda,
-      funcionario: funcionarios.id,
-      cliente: cliente.id,
+      funcionario:{
+        cpf: funcionarios.cpf,
+        nome: funcionarios.nome
+     },
+      cliente: {
+        cpf: cliente.cpf,
+        nome: cliente.nome
+      },
+      itensVenda: listaMercadorias
     } 
-    httpConfig(venda, 'POST')
-    listaMercadorias.map((mercadoria)=>(
-      insertMercadoria(idVenda, mercadoria)
-    )) 
-    alert('Venda concluída!')
+    httpConfig(vendas, 'POST')
     setListMercadorias([])
+    alert('Venda concluída!')
   }
-
-  const insertMercadoria = (idVenda, mercadoria) =>{
-    const item ={
-      idVenda: idVenda,
-      idItem: mercadoria.item.id,
-      quantidade: mercadoria.quant
-    }
-    axios.post('http://localhost:3000/itensVenda/', item).then((response) => {}); 
-  }
-
 
   return (
     <div className={styles.MainContainer}>
@@ -92,7 +83,7 @@ const FormVendas = () => {
           <h2>Valor total: R${totalValue.toFixed(2)}</h2>
           {!loading && <div>
             <button className={styles.buttonConclude} onClick={()=>handleConclude()}>Concluir venda</button>
-            <button className={styles.buttonCancel}>Cancelar venda</button>
+            <button className={styles.buttonCancel} onClick={()=>navigate('/vendas/')}>Cancelar venda</button>
           </div>}
           {loading && <Loading/>}
         </div>
