@@ -27,17 +27,19 @@
 
 /*List vendas*/
 .ListHeader {
+    justify-content: space-around;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     background-color: rgba(0, 26, 49, 0.897);
-    color: white;
     border-bottom: 2px solid red;
+    padding-top: 0.5em;
+    color: white;
 }
 
 .ListHeader div {
     width: 6em;
     text-align: center;
+    height: 2em;
 }
 
 .ComponentList {
@@ -49,6 +51,19 @@
     height: max-content;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
     align-items: center;
+}
+
+.ComponentListSelect {
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    margin: 0.5em;
+    height: max-content;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    align-items: center;
+    background-color: red;
+    color: white;
 }
 
 .ComponentList button {
@@ -77,3 +92,10 @@
     text-align: center;
 }
 
+.ComponentListSelect div {
+    padding-top: 0.3em;
+    text-align: center;
+    height: 100%;
+    width: 30%;
+    text-align: center;
+}

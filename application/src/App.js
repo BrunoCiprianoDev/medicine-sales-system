@@ -81,7 +81,8 @@ function App() {
             <Route path='/consultas/' element={<ConsultarPrecos/>}/>
             <Route path='/consulta/search/' element={<ListConsultarPrecos/>}/>
           
-            <Route path='/vendas/' element={<ListVendas/>}/>
+            <Route path='/vendas/' element={<ListVendas filter={false}/>}/>
+            <Route path='/vendas/search/' element={<ListVendas filter={true}/>}/>
             <Route path='/vendas/form/' element={<FormVendas/>}/>
           </Routes>
         </div>

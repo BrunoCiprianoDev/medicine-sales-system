@@ -31,12 +31,18 @@ const FormVendas = () => {
       ));
   },[listaMercadorias]);
 
-
   const handleConclude = () =>{
+    const dateConclude = new Date();
+    let idVenda = Date.parse(dateConclude);
+    let day = dateConclude.getDate().toString().padStart(2, '0');
+    let month = (dateConclude.getMonth()+1).toString().padStart(2, '0');
+    let year = dateConclude.getFullYear();
+    let data = day+'/'+month+'/'+year;
 
-    let idVenda = Date.parse(date);
     let vendas = {
       id: idVenda,
+      data: data,
+      total: totalValue,
       funcionario:{
         cpf: funcionarios.cpf,
         nome: funcionarios.nome

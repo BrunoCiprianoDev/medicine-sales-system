@@ -622,73 +622,13 @@
   ],
   "vendas": [
     {
-      "id": 1671806509000,
+      "id": 1671906390000,
+      "data": "24/12/2022",
+      "total": 55.98,
       "funcionario": {
-        "cpf": "848.523.477.21",
-        "nome": "Maria Moura Heliar"
+        "cpf": "999.888.777.24",
+        "nome": "Maria Antonieta de Las Neves"
       },
-      "cliente": {
-        "cpf": "833.444.567.22",
-        "nome": "Jordana Silva"
-      },
-      "itensVenda": [
-        {
-          "id": 5,
-          "nome": "Bronzeador",
-          "valor_venda": 27.99,
-          "codigo": "000000000",
-          "quant": 1
-        },
-        {
-          "id": 7,
-          "nome": "Cicatrizante",
-          "valor_venda": 27.99,
-          "codigo": "000000000",
-          "quant": 1
-        },
-        {
-          "id": 9,
-          "nome": "Maquiagem",
-          "valor_venda": 27.99,
-          "codigo": "000000000",
-          "quant": 1
-        }
-      ]
-    },
-    {
-      "id": 1671813686000,
-      "funcionario": {
-        "cpf": "899.766.544.22",
-        "nome": "João Jericho"
-      },
-      "cliente": {},
-      "itensVenda": [
-        {
-          "id": 1,
-          "nome": "Shampoo",
-          "valor_venda": 27.99,
-          "codigo": "000000000",
-          "quant": 1
-        },
-        {
-          "id": 3,
-          "nome": "Sabonete",
-          "valor_venda": 27.99,
-          "codigo": "000000000",
-          "quant": 1
-        },
-        {
-          "id": 7,
-          "nome": "Cicatrizante",
-          "valor_venda": 27.99,
-          "codigo": "000000000",
-          "quant": 4
-        }
-      ]
-    },
-    {
-      "id": 1671814179000,
-      "funcionario": {},
       "cliente": {},
       "itensVenda": [
         {
@@ -699,84 +639,11 @@
           "quant": 1
         },
         {
-          "id": 4,
-          "nome": "Protetor solar",
-          "valor_venda": "27.99",
-          "codigo": "000000000",
-          "quant": 1
-        },
-        {
-          "id": 10,
-          "nome": "Limpaza de pele",
-          "valor_venda": 27.99,
-          "codigo": "000000000",
-          "quant": 1
-        },
-        {
-          "id": 11,
-          "nome": "Energetico",
-          "valor_venda": 27.99,
-          "codigo": "000000000",
-          "quant": 1
-        }
-      ]
-    },
-    {
-      "id": 1671815206000,
-      "funcionario": {},
-      "cliente": {},
-      "itensVenda": [
-        {
-          "id": 4,
-          "nome": "Protetor solar",
-          "valor_venda": "27.99",
-          "codigo": "000000000",
-          "quant": 1
-        },
-        {
-          "id": 7,
-          "nome": "Cicatrizante",
-          "valor_venda": 27.99,
-          "codigo": "000000000",
-          "quant": 1
-        },
-        {
-          "id": 10,
-          "nome": "Limpaza de pele",
-          "valor_venda": 27.99,
-          "codigo": "000000000",
-          "quant": 1
-        },
-        {
-          "id": 12,
-          "nome": "Whey",
-          "valor_venda": 27.99,
-          "codigo": "000000000",
-          "quant": 1
-        },
-        {
-          "id": 9,
-          "nome": "Maquiagem",
-          "valor_venda": 27.99,
-          "codigo": "000000000",
-          "quant": 1
-        }
-      ]
-    },
-    {
-      "id": 1671889688000,
-      "funcionario": {
-        "cpf": "999.888.777.24",
-        "nome": "Maria Antonieta de Las Neves"
-      },
-      "cliente": {},
-      "itensVenda": [
-        {
           "id": 1,
           "nome": "Shampoo",
           "valor_venda": 27.99,
           "codigo": "000000000",
-          "quant": 2
+          "quant": 1
         }
       ]
     }

@@ -7,8 +7,6 @@ import styles from './Header.module.css'
 import iconSearch from '../../assets/icon-search.png'
 import iconAdicionar from '../../assets/icon-adicionar.png';
 
-
-
 const Header = () => {
 
   const [query, setQuery] = useState('');
@@ -60,8 +58,12 @@ const Header = () => {
     } else if (option === 'MERCADORIAS') {
       navigate("/listMercadorias/search?q="+query);
       setQuery('');
+    } else if (option === 'VENDAS') {
+      navigate("/vendas/search?q="+query);
+      setQuery('');
     }
   }
+  
   return (
     <div className={styles.MainContainer}>
         {addOptionVisible && <button className={styles.buttonNew} onClick={()=>handleFormSelector()}><img src={iconAdicionar} alt=''/> Adicionar</button>}
