@@ -7,10 +7,14 @@
     grid-template-areas: "leftArea rightArea";
 }
 
+.MainContainer h3 {
+    margin-left: 1em;
+}
+
 .ListVendas {
     margin: 0.5em;
     grid-area: leftArea;
-    font-size: 1.5em;
+    font-size: 1.2em;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
 }
 
@@ -28,6 +32,7 @@
     justify-content: space-around;
     background-color: rgba(0, 26, 49, 0.897);
     color: white;
+    border-bottom: 2px solid red;
 }
 
 .ListHeader div {
@@ -43,6 +48,20 @@
     margin: 0.5em;
     height: max-content;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    align-items: center;
+}
+
+.ComponentList button {
+    border-style: none;
+    background-color: red;
+    color: white;
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    border-radius: 0.15em;
+}
+
+.ComponentList button:hover {
+    background-color: rgb(177, 0, 0);
 }
 
 .ComponentList:hover {

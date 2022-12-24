@@ -27,7 +27,7 @@ const parameters = [
   {id: 6, name: 'Compras', to: '/', value:'COMPRAS', icon:iconeCompras},
   {id: 7, name: 'Estoque', to: '/', value:'ESTOQUE', icon:iconeEstoque},
   {id: 8, name: 'Consultar preço', to: '/consultas/', value:'CONSULTAR_PRECO', icon:iconePreco},
-  {id: 9, name: 'Vendas', to: '/vendas/form', value:'VENDAS', icon:iconeVendas},
+  {id: 9, name: 'Vendas', to: '/vendas/', value:'VENDAS', icon:iconeVendas},
   {id: 10, name: 'Clientes', to: '/clientes', value:'CLIENTES', icon:iconeClientes},
   {id: 11, name: 'Relatórios', to: '/', value:'RELATORIOS', icon:iconeRelatorios},
   {id: 12, name: 'Notificações', to: '/', value:'NOTIFICACOES', icon:iconeNotificacoes},

@@ -720,6 +720,65 @@
           "quant": 1
         }
       ]
+    },
+    {
+      "id": 1671815206000,
+      "funcionario": {},
+      "cliente": {},
+      "itensVenda": [
+        {
+          "id": 4,
+          "nome": "Protetor solar",
+          "valor_venda": "27.99",
+          "codigo": "000000000",
+          "quant": 1
+        },
+        {
+          "id": 7,
+          "nome": "Cicatrizante",
+          "valor_venda": 27.99,
+          "codigo": "000000000",
+          "quant": 1
+        },
+        {
+          "id": 10,
+          "nome": "Limpaza de pele",
+          "valor_venda": 27.99,
+          "codigo": "000000000",
+          "quant": 1
+        },
+        {
+          "id": 12,
+          "nome": "Whey",
+          "valor_venda": 27.99,
+          "codigo": "000000000",
+          "quant": 1
+        },
+        {
+          "id": 9,
+          "nome": "Maquiagem",
+          "valor_venda": 27.99,
+          "codigo": "000000000",
+          "quant": 1
+        }
+      ]
+    },
+    {
+      "id": 1671889688000,
+      "funcionario": {
+        "cpf": "999.888.777.24",
+        "nome": "Maria Antonieta de Las Neves"
+      },
+      "cliente": {},
+      "itensVenda": [
+        {
+          "id": 1,
+          "nome": "Shampoo",
+          "valor_venda": 27.99,
+          "codigo": "000000000",
+          "quant": 2
+        }
+      ]
     }
   ]
 }
