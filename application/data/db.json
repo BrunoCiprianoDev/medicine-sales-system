@@ -16,7 +16,7 @@
       "telefone_dois": "(00)00000-0000",
       "email": "emailUmFuncionario@email.com",
       "dt_admissao": "2020-06-20",
-      "funcao": "GERENTE",
+      "funcao": "VENDEDOR",
       "senha": "123213123"
     },
     {
@@ -59,7 +59,7 @@
       "id": 4,
       "nome": "Rafael Cardoso",
       "cpf": "999.888.777.66",
-      "dt_nascimento": "14/02/2000",
+      "dt_nascimento": "1997-02-14",
       "cep": "36.090.450",
       "uf": "Minas Gerais",
       "cidade": "Juiz de Fora",
@@ -71,7 +71,8 @@
       "telefone_dois": "(00)00000-0000",
       "email": "emailUmFuncionario@email.com",
       "dt_admissao": "00/00/0000",
-      "funcao": "VENDEDOR"
+      "funcao": "VENDEDOR",
+      "cnpf": "780.630.790.26"
     },
     {
       "id": 5,
@@ -624,7 +625,7 @@
     {
       "id": 1671906390000,
       "data": "24/12/2022",
-      "total": 55.98,
+      "total": 83.97,
       "funcionario": {
         "cpf": "999.888.777.24",
         "nome": "Maria Antonieta de Las Neves"
@@ -636,8 +637,79 @@
           "nome": "Condicionador",
           "valor_venda": 27.99,
           "codigo": "000000000",
+          "quant": 2
+        },
+        {
+          "id": 1,
+          "nome": "Shampoo",
+          "valor_venda": 27.99,
+          "codigo": "000000000",
+          "quant": 2
+        }
+      ]
+    },
+    {
+      "id": 1671909416000,
+      "data": "24/12/2022",
+      "total": 83.97,
+      "funcionario": {
+        "cpf": "899.766.544.22",
+        "nome": "João Jericho"
+      },
+      "cliente": {},
+      "itensVenda": [
+        {
+          "id": 3,
+          "nome": "Sabonete",
+          "valor_venda": 27.99,
+          "codigo": "000000000",
+          "quant": 0
+        },
+        {
+          "id": 4,
+          "nome": "Protetor solar",
+          "valor_venda": "27.99",
+          "codigo": "000000000",
+          "quant": 2
+        }
+      ]
+    },
+    {
+      "id": 1671971371000,
+      "data": "25/12/2022",
+      "total": 55.98,
+      "funcionario": {
+        "cpf": "848.523.477.21",
+        "nome": "Maria Moura Heliar"
+      },
+      "cliente": {},
+      "itensVenda": [
+        {
+          "id": 2,
+          "nome": "Condicionador",
+          "valor_venda": 27.99,
+          "codigo": "000000000",
           "quant": 1
         },
+        {
+          "id": 3,
+          "nome": "Sabonete",
+          "valor_venda": 27.99,
+          "codigo": "000000000",
+          "quant": 2
+        }
+      ]
+    },
+    {
+      "id": 1671971564000,
+      "data": "25/12/2022",
+      "total": 27.99,
+      "funcionario": {
+        "cpf": "848.523.477.21",
+        "nome": "Maria Moura Heliar"
+      },
+      "cliente": {},
+      "itensVenda": [
         {
           "id": 1,
           "nome": "Shampoo",

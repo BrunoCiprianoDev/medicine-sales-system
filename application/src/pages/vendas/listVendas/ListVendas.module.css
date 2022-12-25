@@ -48,7 +48,7 @@
     flex-direction: row;
     justify-content:space-around;
     margin: 0.5em;
-    height: max-content;
+    height: 3em;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
     align-items: center;
 }
@@ -59,24 +59,50 @@
     flex-direction: row;
     justify-content:space-around;
     margin: 0.5em;
-    height: max-content;
+    height: 3em;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
     align-items: center;
     background-color: red;
     color: white;
 }
 
-.ComponentList button {
+.HeaderListItens {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.HeaderListItens h3{
+    margin-right: 2em;
+}
+
+.buttonRemove {
     border-style: none;
-    background-color: red;
+    background-color: rgb(201, 2, 2);
     color: white;
     font-size: 1.2em;
+    width: 1.5em;
     margin-bottom: 0.2em;
     border-radius: 0.15em;
 }
 
-.ComponentList button:hover {
-    background-color: rgb(177, 0, 0);
+.buttonRemove:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+.buttonAdd {
+    border-style: none;
+    background-color: rgb(0, 177, 38);
+    color: white;
+    width: 1.5em;
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    border-radius: 0.15em;
+    margin: 0.1em
+}
+
+.buttonAdd:hover {
+    background-color: rgb(3, 255, 58);
 }
 
 .ComponentList:hover {

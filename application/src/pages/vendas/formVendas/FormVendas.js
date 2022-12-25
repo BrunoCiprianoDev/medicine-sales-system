@@ -52,10 +52,18 @@ const FormVendas = () => {
         nome: cliente.nome
       },
       itensVenda: listaMercadorias
-    } 
-    httpConfig(vendas, 'POST')
-    setListMercadorias([])
-    alert('Venda concluída!')
+    }
+    if(funcionarios){
+      if(listaMercadorias.length !== 0){
+        httpConfig(vendas, 'POST')
+        setListMercadorias([])
+        alert('Venda concluída!')
+      } else {
+        alert('Não foi possivel concluir a venda, porque lista de itens está vazia!')
+      }      
+    } else {
+      alert('Vendedor não foi identificado!')
+    }   
   }
 
   return (
