@@ -21,9 +21,9 @@
 
 .HeaderList label{
     margin: 0.5em;
-    width: 7em;
+    width: 8em;
+    text-align: center;
 }
-
 
 .ElementList {
     font-size: 0.8em;
@@ -35,13 +35,16 @@
 }
 
 .ElementList:hover{
-    background-color: rgba(0, 26, 49, 0.897);
-    color: white;
+    border-right: 5px solid red;
+    border-left: 5px solid red;
+    font-weight: bold;
+    color: red;
 }
 
 .ElementList label{
     padding-bottom: 0.3em;
     margin-top: 0.5em;
-    width: 7em;
+    width: 8em;
+    text-align: center;
 }
 

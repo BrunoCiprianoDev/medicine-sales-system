@@ -40,6 +40,10 @@ import ListConsultarPrecos from './pages/consultarprecos/listConsultarPrecos/Lis
 import FormVendas from './pages/vendas/formVendas/FormVendas';
 import ListVendas from './pages/vendas/listVendas/ListVendas';
 
+//Estoque
+import FormEstoque from './pages/estoque/formEstoque/FormEstoque';
+
+
 function App() {
   return (
     <div className="App"> 
@@ -84,6 +88,8 @@ function App() {
             <Route path='/vendas/' element={<ListVendas filter={false}/>}/>
             <Route path='/vendas/search/' element={<ListVendas filter={true}/>}/>
             <Route path='/vendas/form/' element={<FormVendas/>}/>
+
+            <Route path='/estoque/form/' element={<FormEstoque/>}/>
           </Routes>
         </div>
       </BrowserRouter>

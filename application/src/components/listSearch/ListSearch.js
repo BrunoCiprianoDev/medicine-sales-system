@@ -27,7 +27,7 @@ const ListSearch = ({url, list, setList}) => {
         </form>
         <div className={styles.HeaderList}>
           <label>Nome</label>
-          <label>Preço</label>
+          <label>Preço de venda</label>
         </div>
           {error && <h4>Falha ao carregar dados...</h4>}
           {currentItens && currentItens.map((item)=>(

@@ -153,7 +153,7 @@
     {
       "id": 1,
       "nome": "Neo Quimica",
-      "cnpj": "00.000.000/0000-00",
+      "cnpj": "03.778.130/0001-48",
       "crt": "1",
       "cep": "########",
       "cidade": "Juiz de Fora",
@@ -175,13 +175,21 @@
       "telefone": "(32)3222-9781",
       "email": "simas_almeida@gmail.com",
       "id": 1
+    },
+    {
+      "nome": "Monteiro Lobato",
+      "cpf": "848.567.991",
+      "dt_nascimento": "1965-01-15",
+      "telefone": "(32)3222-9781",
+      "email": "monteiro@gmail.com",
+      "id": 2
     }
   ],
   "mercadorias": [
     {
       "id": 1,
       "nome": "Shampoo",
-      "codigo": "000000000",
+      "codigo": "7896714231100",
       "departamento": "HIGIENE",
       "categoria_id": 1,
       "estoque_minimo": 150,
@@ -194,7 +202,7 @@
     {
       "id": 2,
       "nome": "Condicionador",
-      "codigo": "000000000",
+      "codigo": "7896714231101",
       "departamento": "HIGIENE",
       "categoria_id": 1,
       "estoque_minimo": 150,
@@ -207,7 +215,7 @@
     {
       "id": 3,
       "nome": "Sabonete",
-      "codigo": "000000000",
+      "codigo": "7896714231102",
       "departamento": "HIGIENE",
       "categoria_id": 1,
       "estoque_minimo": 150,
@@ -220,7 +228,7 @@
     {
       "id": 4,
       "nome": "Protetor solar",
-      "codigo": "000000000",
+      "codigo": "7896714231103",
       "departamento": "DERMATOLOGICO",
       "categoria_id": "1",
       "estoque_minimo": 150,
@@ -233,7 +241,7 @@
     {
       "id": 5,
       "nome": "Bronzeador",
-      "codigo": "000000000",
+      "codigo": "7896714231104",
       "departamento": "DERMATOLOGICO",
       "categoria_id": "1",
       "estoque_minimo": 150,
@@ -246,7 +254,7 @@
     {
       "id": 6,
       "nome": "Hidratante",
-      "codigo": "000000000",
+      "codigo": "7896714231105",
       "departamento": "DERMATOLOGICO",
       "categoria_id": 1,
       "estoque_minimo": 150,
@@ -259,7 +267,7 @@
     {
       "id": 7,
       "nome": "Cicatrizante",
-      "codigo": "000000000",
+      "codigo": "7896714231106",
       "departamento": "DERMATOLOGICO",
       "categoria_id": 1,
       "estoque_minimo": 150,
@@ -272,7 +280,7 @@
     {
       "id": 8,
       "nome": "Esmalte",
-      "codigo": "000000000",
+      "codigo": "7896714231107",
       "departamento": "BELEZA",
       "categoria_id": 1,
       "estoque_minimo": 150,
@@ -285,7 +293,7 @@
     {
       "id": 9,
       "nome": "Maquiagem",
-      "codigo": "000000000",
+      "codigo":  "7896714231108",
       "departamento": "BELEZA",
       "categoria_id": "1",
       "estoque_minimo": 150,
@@ -298,7 +306,7 @@
     {
       "id": 10,
       "nome": "Limpaza de pele",
-      "codigo": "000000000",
+      "codigo": "7896714231109",
       "departamento": "BELEZA",
       "categoria_id": 1,
       "estoque_minimo": 150,
@@ -311,7 +319,7 @@
     {
       "id": 11,
       "nome": "Energetico",
-      "codigo": "000000000",
+      "codigo": "7896714231110",
       "departamento": "OUTROS",
       "categoria_id": 1,
       "estoque_minimo": 150,
@@ -324,7 +332,7 @@
     {
       "id": 12,
       "nome": "Whey",
-      "codigo": "000000000",
+      "codigo": "7896714231111",
       "departamento": "SUPLEMENTOS",
       "categoria_id": 1,
       "estoque_minimo": 150,
@@ -337,7 +345,7 @@
     {
       "id": 13,
       "nome": "Isotonico",
-      "codigo": "000000000",
+      "codigo": "7896714231112",
       "departamento": "SUPLEMENTOS",
       "categoria_id": 1,
       "estoque_minimo": 150,
@@ -350,7 +358,7 @@
     {
       "id": 14,
       "nome": "Barra de cereais",
-      "codigo": "000000000",
+      "codigo": "7896714231113",
       "departamento": "SUPLEMENTOS",
       "categoria_id": 1,
       "estoque_minimo": 150,
@@ -363,7 +371,7 @@
     {
       "id": 15,
       "nome": "Complexo de vitaminas",
-      "codigo": "000000000",
+      "codigo": "7896714231114",
       "departamento": "SUPLEMENTOS",
       "categoria_id": 1,
       "estoque_minimo": 150,
@@ -376,7 +384,7 @@
     {
       "id": 16,
       "nome": "Vitamina b12",
-      "codigo": "000000000",
+      "codigo": "7896714231115",
       "departamento": "SUPLEMENTOS",
       "categoria_id": 1,
       "estoque_minimo": 150,
@@ -389,7 +397,7 @@
     {
       "id": 17,
       "nome": "Fraldas geriatricas M",
-      "codigo": "000000000",
+      "codigo":  "7896714231116",
       "departamento": "GERIATRIA",
       "categoria_id": "1",
       "estoque_minimo": 150,
@@ -402,7 +410,7 @@
     {
       "id": 18,
       "nome": "Fixador de dentaduras",
-      "codigo": "000000000",
+      "codigo": "7896714231117",
       "departamento": "GERIATRIA",
       "categoria_id": "2",
       "estoque_minimo": 150,
@@ -415,7 +423,7 @@
     {
       "id": 19,
       "nome": "Suplemento de calcio",
-      "codigo": "000000000",
+      "codigo": "7896714231118",
       "departamento": "GERIATRIA",
       "categoria_id": 1,
       "estoque_minimo": 150,
@@ -428,7 +436,7 @@
     {
       "id": 20,
       "nome": "Fralda infantil",
-      "codigo": "000000000",
+      "codigo": "7896714231119",
       "departamento": "INFANTIL",
       "categoria_id": 1,
       "estoque_minimo": 150,
@@ -441,7 +449,7 @@
     {
       "id": 21,
       "nome": "Pasta de dente infantil",
-      "codigo": "000000000",
+      "codigo": "7896714231120",
       "departamento": "INFANTIL",
       "categoria_id": 1,
       "estoque_minimo": 150,
@@ -454,7 +462,7 @@
     {
       "id": 22,
       "nome": "Lenços umedecidos",
-      "codigo": "000000000",
+      "codigo": "7896714231121",
       "departamento": "INFANTIL",
       "categoria_id": 1,
       "estoque_minimo": 150,
@@ -467,7 +475,7 @@
     {
       "id": 23,
       "nome": "Pasta de dente infantil 2",
-      "codigo": "000000000",
+      "codigo": "7896714231122",
       "departamento": "INFANTIL",
       "categoria_id": 1,
       "estoque_minimo": 150,
@@ -480,7 +488,7 @@
     {
       "id": 24,
       "nome": "Desodorante",
-      "codigo": "000000000",
+      "codigo": "7896714231123",
       "departamento": "HIGIENE",
       "categoria_id": 1,
       "estoque_minimo": 150,
@@ -493,7 +501,7 @@
     {
       "id": 25,
       "nome": "Cartão Steam",
-      "codigo": "000000000",
+      "codigo": "7896714231124",
       "departamento": "OUTROS",
       "categoria_id": 1,
       "estoque_minimo": 150,
@@ -506,7 +514,7 @@
     {
       "id": 26,
       "nome": "Refrigerante",
-      "codigo": "000000000",
+      "codigo": "7896714231125",
       "departamento": "OUTROS",
       "categoria_id": 1,
       "estoque_minimo": 150,
@@ -519,7 +527,7 @@
     {
       "id": 28,
       "nome": "Barra de chocolates",
-      "codigo": "000000000",
+      "codigo": "7896714231126",
       "departamento": "OUTROS",
       "categoria_id": 1,
       "estoque_minimo": 150,
@@ -532,7 +540,7 @@
     {
       "id": 29,
       "nome": "Barra de chocolates",
-      "codigo": "000000000",
+      "codigo": "7896714231127",
       "departamento": "OUTROS",
       "categoria_id": 1,
       "estoque_minimo": 150,
@@ -545,7 +553,7 @@
     {
       "id": 30,
       "nome": "Dipirona",
-      "codigo": "101101",
+      "codigo": "7896714231128",
       "departamento": "MEDICAMENTO",
       "categoria_id": "1",
       "estoque_minimo": "150.0",
@@ -558,7 +566,7 @@
     {
       "id": 31,
       "nome": "Neosoro",
-      "codigo": "102102",
+      "codigo": "7896714231129",
       "departamento": "MEDICAMENTO",
       "categoria_id": "1",
       "estoque_minimo": 150,
@@ -571,7 +579,7 @@
     {
       "id": 32,
       "nome": "Dorflex",
-      "codigo": "103103",
+      "codigo": "7896714231131",
       "departamento": "MEDICAMENTO",
       "categoria_id": 1,
       "estoque_minimo": 150,
@@ -584,7 +592,7 @@
     {
       "id": 33,
       "nome": "Estomasil",
-      "codigo": "104104",
+      "codigo": "7896714231132",
       "departamento": "MEDICAMENTO",
       "categoria_id": 1,
       "estoque_minimo": 150,
@@ -597,7 +605,7 @@
     {
       "id": 34,
       "nome": "Hipertensivo",
-      "codigo": "105105",
+      "codigo": "7896714231133",
       "departamento": "MEDICAMENTO",
       "categoria_id": 1,
       "estoque_minimo": 150,
@@ -609,7 +617,7 @@
     },
     {
       "nome": "Batata frita",
-      "codigo": "113113",
+      "codigo": "7896714231134",
       "departamento": "OUTROS",
       "categoria_id": "1",
       "estoque_minimo": "150",
@@ -621,11 +629,12 @@
       "id": 35
     }
   ],
+  "compras": [],
   "vendas": [
     {
       "id": 1671906390000,
       "data": "24/12/2022",
-      "total": 83.97,
+      "total": 139.95,
       "funcionario": {
         "cpf": "999.888.777.24",
         "nome": "Maria Antonieta de Las Neves"
@@ -637,7 +646,7 @@
           "nome": "Condicionador",
           "valor_venda": 27.99,
           "codigo": "000000000",
-          "quant": 2
+          "quant": 4
         },
         {
           "id": 1,
@@ -651,7 +660,7 @@
     {
       "id": 1671909416000,
       "data": "24/12/2022",
-      "total": 83.97,
+      "total": 27.99,
       "funcionario": {
         "cpf": "899.766.544.22",
         "nome": "João Jericho"
@@ -670,7 +679,7 @@
           "nome": "Protetor solar",
           "valor_venda": "27.99",
           "codigo": "000000000",
-          "quant": 2
+          "quant": 0
         }
       ]
     },
@@ -716,6 +725,28 @@
           "valor_venda": 27.99,
           "codigo": "000000000",
           "quant": 1
+        }
+      ]
+    },
+    {
+      "id": 1671979245000,
+      "data": "25/12/2022",
+      "total": 55.98,
+      "funcionario": {
+        "cpf": "999.888.777.24",
+        "nome": "Maria Antonieta de Las Neves"
+      },
+      "cliente": {
+        "cpf": "848.567.991",
+        "nome": "Monteiro Lobato"
+      },
+      "itensVenda": [
+        {
+          "id": 1,
+          "nome": "Shampoo",
+          "valor_venda": 27.99,
+          "codigo": "000000000",
+          "quant": 2
         }
       ]
     }

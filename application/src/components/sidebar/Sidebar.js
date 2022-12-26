@@ -9,7 +9,6 @@ import iconeMercadorias from '../../assets/icon-mercadorias.png'
 import iconeFornecedores from '../../assets/icon-fornecedores.png'
 import iconeEstoque from '../../assets/icon-estoque.png'
 import iconePreco from '../../assets/icon-preco.png'
-import iconeCompras from '../../assets/icon-compras.png'
 import iconeClientes from '../../assets/icon-clientes.png'
 import iconeRelatorios from '../../assets/icon-relatorio.png'
 import iconeNotificacoes from '../../assets/icon-notificacao.png'
@@ -24,8 +23,7 @@ const parameters = [
   {id: 3, name: 'Categorias', to: '/categorias', value:'CATEGORIAS', icon:iconeCategoria},
   {id: 4, name: 'Mercadorias', to: '/mercadorias', value:'MERCADORIAS', icon:iconeMercadorias},
   {id: 5, name: 'Fornecedores', to: '/fornecedores', value:'FORNECEDORES', icon:iconeFornecedores},
-  {id: 6, name: 'Compras', to: '/', value:'COMPRAS', icon:iconeCompras},
-  {id: 7, name: 'Estoque', to: '/', value:'ESTOQUE', icon:iconeEstoque},
+  {id: 7, name: 'Estoque', to: '/estoque/form', value:'ESTOQUE', icon:iconeEstoque},
   {id: 8, name: 'Consultar preço', to: '/consultas/', value:'CONSULTAR_PRECO', icon:iconePreco},
   {id: 9, name: 'Vendas', to: '/vendas/', value:'VENDAS', icon:iconeVendas},
   {id: 10, name: 'Clientes', to: '/clientes', value:'CLIENTES', icon:iconeClientes},

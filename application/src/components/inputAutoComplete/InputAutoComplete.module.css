@@ -35,7 +35,7 @@
 .InputForm input[type='text'] {
     height: 1.5em;
     border-style: none;
-    border-bottom: 2px solid rgba(0, 26, 49, 0.897);
+    border-bottom: 1px solid rgba(0, 26, 49, 0.897);
     width: 12em;
 }
 
@@ -47,7 +47,7 @@
     height: max-content;
     border-left: 1px solid rgb(209, 209, 209);
     border-right: 1px solid rgb(209, 209, 209);
-    border-bottom: 2px solid rgba(0, 26, 49, 0.897);
+    border-bottom: 1px solid rgba(0, 26, 49, 0.897);
 }
 
 .SugestionBox label {

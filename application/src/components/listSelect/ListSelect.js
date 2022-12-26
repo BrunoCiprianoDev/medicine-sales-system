@@ -32,7 +32,7 @@ const ListSelect = ({list, setList}) => {
     <div className={styles.MainContainer}>
       <div className={styles.HeaderList}>
         <div>Nome</div>
-        <div>Valor</div>  
+        <div>Valor</div> 
         <div>Unidade</div>    
         <div>Total Item</div>
         <div></div>

@@ -32,6 +32,7 @@ const ListVendas = ({filter}) => {
   const [listItensVenda, setListItensVenda] = useState([]);
   const [vendaSelect, setVendaSelect] = useState('');
   const [totalValue, setTotalValue] = useState(0);
+
  //Params from list vendas
  const [itensPerPageVendas, setItemPerPageVendas] = useState(10);
  const [currentPageVendas, setCurrentPageVendas] = useState(0);
@@ -68,12 +69,10 @@ const ListVendas = ({filter}) => {
     )
  }
 
-
  const onClickVenda= (venda, listItensVenda) =>{
   setListItensVenda(listItensVenda);
   setVendaSelect(venda)
  }
-
 
  const handleDeleteItem = (item) =>{
   if(item.quant > 0){
@@ -129,8 +128,7 @@ const ListVendas = ({filter}) => {
         <div className={styles.HeaderListItens}>
           <h3>ITENS DA VENDA</h3>
           <h3>Total: R${totalValue}</h3>
-        </div>
-        
+        </div>      
           <div className={styles.ListHeader}>
             {parametersItensVenda.map((parameter)=>(
               <div key={parameter.id}>

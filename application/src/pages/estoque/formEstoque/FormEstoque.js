@@ -1,27 +1,26 @@
 import React from 'react'
 import { useState } from 'react'
 import { useFetch } from '../../../hooks/useFetch'
-import styles from './FormVendas.module.css'
+import styles from './FormEstoque.module.css'
 import InputAutoComplete from '../../../components/inputAutoComplete/InputAutoComplete'
-import ListSearch from '../../../components/listSearch/ListSearch'
-import ListSelect from '../../../components/listSelect/ListSelect'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import Loading from '../../../components/loading/Loading'
+import CircleBar from '../../../components/circleBar/CircleBar'
 
-const FormVendas = () => {
+const FormEstoque = () => {
 
   const navigate = useNavigate();
   const [url] = useState("http://localhost:3000/vendas")
   const {httpConfig, loading} = useFetch(url);
    
   const date = Date();
-  const urlCliente = "http://localhost:3000/clientes";
-  const [cliente, setCliente] = useState('');
+  const urlFornecedor = "http://localhost:3000/fornecedores";
+  const [fornecedor, setFornecedor] = useState('');
   const urlFuncionarios = "http://localhost:3000/funcionarios";
   const [funcionarios, setFuncionarios] = useState('');
   const urlMercadorias = "http://localhost:3000/mercadorias";
-  const [listaMercadorias, setListMercadorias] = useState([])
+  const [listaMercadorias, setListMercadorias] = useState([]);
+  const [mercadoria, setMercadoria] = useState('')
   const [totalValue, setTotalValue] = useState(0);
   
   useEffect(() => {
@@ -47,9 +46,9 @@ const FormVendas = () => {
         cpf: funcionarios.cpf,
         nome: funcionarios.nome
      },
-      cliente: {
-        cpf: cliente.cpf,
-        nome: cliente.nome
+      fornecedor: {
+        cnpj: fornecedor.cnpj,
+        nome: fornecedor.nome
       },
       itensVenda: listaMercadorias
     }
@@ -65,6 +64,8 @@ const FormVendas = () => {
       alert('Vendedor não foi identificado!')
     }   
   }
+ 
+  const [percentage, setPercentage] = useState(85)
 
   return (
     <div className={styles.MainContainer}>
@@ -76,40 +77,42 @@ const FormVendas = () => {
                 url={urlFuncionarios} 
                 setSubmitData={setFuncionarios} 
                 submitData={funcionarios}
-                parameter = {{attribute: 'cpf', label: 'cpf'}} 
+                parameter = {{attribute: 'cpf', label: 'cpf'}}  
               />
               <InputAutoComplete 
-                title={'Cliente:'}
-                url={urlCliente} 
-                setSubmitData={setCliente} 
-                submitData={cliente}
-                parameter = {{attribute: 'cpf', label: 'cpf'}} 
+                title={'Fornecedor:'}
+                url={urlFornecedor} 
+                setSubmitData={setFornecedor} 
+                submitData={fornecedor}
+                parameter = {{attribute: 'cnpj', label: 'CNPJ'}}  
+              />
+               <InputAutoComplete 
+                title={'Mercadoria:'}
+                url={urlMercadorias} 
+                setSubmitData={setMercadoria} 
+                submitData={mercadoria}
+                parameter = {{attribute: 'codigo', label: 'Código'}}  
               />
           </div>
           <div className={styles.ListSearch}>
-            <ListSearch 
-              url={urlMercadorias}
-              setList={setListMercadorias}
-              list={listaMercadorias}
-            />
+            <div className={styles.DetailMercadoria}>
+              <div className={styles.ListInfo}>  
+                <div>Detalhes:</div>          
+                <label>{mercadoria.nome}</label>
+                <label>{mercadoria.departamento}</label>
+                <label>R${mercadoria.valor_venda}</label>
+              </div>
+              <div className={styles.AreaBar}>
+                <h2>Nivel atual do estoque:</h2>
+                <CircleBar  percentage={percentage} circleWidth='280'/>
+              </div>
+            </div>
           </div>
         </div>
-        <div className={styles.RightArea}>
-        <div className={styles.topListSelect}> 
-          <h2>Valor total: R${totalValue.toFixed(2)}</h2>
-          {!loading && <div>
-            <button className={styles.buttonConclude} onClick={()=>handleConclude()}>Concluir venda</button>
-            <button className={styles.buttonCancel} onClick={()=>navigate('/vendas/')}>Cancelar venda</button>
-          </div>}
-          {loading && <Loading/>}
-        </div>
-          <ListSelect 
-            setList={setListMercadorias} 
-            list={listaMercadorias}
-          />           
+        <div className={styles.RightArea}>         
         </div>
     </div>
   )
 }
 
-export default FormVendas
+export default FormEstoque

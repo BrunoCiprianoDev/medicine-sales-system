@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useFetch } from '../../hooks/useFetch';
 import styles from './InputAutoComplete.module.css'
 
-const InputAutoComplete = ({title, url, submitData, setSubmitData}) => {
+const InputAutoComplete = ({title, url, submitData, setSubmitData, parameter}) => {
 
     const [inputSearch, setInputSearch] = useState('');
     const {data} = useFetch(url+'?q='+inputSearch)
@@ -29,7 +29,11 @@ const InputAutoComplete = ({title, url, submitData, setSubmitData}) => {
                   <div className={styles.SugestionBox}>
                     {inputSearch !== '' && 
                       currentItens.map((item)=>(
-                        <label className={styles.AutoComplete} onClick={()=>setInputSearch(item.cpf)} key={item.id}>{item.cpf}</label>
+                        <label 
+                          className={styles.AutoComplete} 
+                          onClick={()=>setInputSearch(item[parameter.attribute])} 
+                          key={item.id}>{item[parameter.attribute]}
+                        </label>
                     ))}
                   </div>
               </div>
@@ -37,7 +41,7 @@ const InputAutoComplete = ({title, url, submitData, setSubmitData}) => {
           </form>}
           {submitData !== '' && <div className={styles.InsertArea}>
             <div className={styles.DataInsertArea}>
-              <p>CPF:{submitData.cpf}</p>
+              <p>{parameter.label+': '+submitData[parameter.attribute]}</p>
               <p>NOME:{submitData.nome}</p>
             </div>
             <button onClick={()=>setSubmitData('')}>Edit</button>
