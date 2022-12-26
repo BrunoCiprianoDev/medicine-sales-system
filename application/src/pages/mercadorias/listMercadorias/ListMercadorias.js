@@ -3,11 +3,12 @@ import {useSearchParams } from 'react-router-dom';
 import ListContainer from '../../../components/listContainer/ListContainer';
 import styles from './ListMercadorias.module.css';
 import { parameters } from '../parameters/pr_mercadorias';
+import { urlServer } from '../../../serverConfig';
 
 const ListMercadorias = ({filter}) => {
 
   let [searchParams] = useSearchParams();
-  const url = "http://localhost:5000/mercadorias/?"+searchParams;
+  const url = urlServer+"/mercadorias/?"+searchParams;
   const useParameters = parameters.slice(0,2).concat(parameters.slice(5,8));
 
   return (

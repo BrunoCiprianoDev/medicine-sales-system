@@ -1,10 +1,11 @@
 import React from 'react'
 import ListContainer from '../../../components/listContainer/ListContainer';
+import { urlServer } from '../../../serverConfig';
 import { parameters } from '../parameters/pr_categoria';
 
 const ListCategorias = ({filter}) => {
 
-  const url = "http://localhost:5000/categorias/";
+  const url = urlServer+"/categorias/";
 
   return (
     <ListContainer

@@ -3,17 +3,18 @@ import { useState } from 'react'
 import { useFetch } from '../../../hooks/useFetch'
 import styles from './FormEstoque.module.css'
 import InputAutoComplete from '../../../components/inputAutoComplete/InputAutoComplete'
+import { urlServer } from '../../../serverConfig';
 //import CircleBar from '../../../components/circleBar/CircleBar'
 import {useForm} from "react-hook-form";
 
 const FormEstoque = () => {
 
   const date = Date();
-  const urlFornecedor = "http://localhost:5000/fornecedores";
+  const urlFornecedor = urlServer+"/fornecedores";
   const [fornecedor, setFornecedor] = useState('');
-  const urlMercadorias = "http://localhost:5000/mercadorias";
+  const urlMercadorias = urlServer+"/mercadorias";
   const [mercadoria, setMercadoria] = useState('');
-  const [url, setUrl] = useState("http://localhost:5000/mercadorias/")
+  const [url, setUrl] = useState(urlServer+"/mercadorias/")
   const {httpConfig} = useFetch(url);
   const{register, handleSubmit} = useForm(); 
   const [totalUnidades, setTotalUnidades] = useState('')

@@ -8,19 +8,20 @@ import ListSelect from '../../../components/listSelect/ListSelect'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Loading from '../../../components/loading/Loading'
+import { urlServer } from '../../../serverConfig'
 
 const FormVendas = () => {
 
   const navigate = useNavigate();
-  const [url] = useState("http://localhost:5000/vendas")
+  const [url] = useState(urlServer+"/vendas")
   const {httpConfig, loading} = useFetch(url);
    
   const date = Date();
-  const urlCliente = "http://localhost:5000/clientes";
+  const urlCliente = urlServer+"/clientes";
   const [cliente, setCliente] = useState('');
-  const urlFuncionarios = "http://localhost:5000/funcionarios";
+  const urlFuncionarios = urlServer+"/funcionarios";
   const [funcionarios, setFuncionarios] = useState('');
-  const urlMercadorias = "http://localhost:5000/mercadorias";
+  const urlMercadorias = urlServer+"/mercadorias";
   const [listaMercadorias, setListMercadorias] = useState([])
   const [totalValue, setTotalValue] = useState(0);
   

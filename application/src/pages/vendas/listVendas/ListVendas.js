@@ -6,6 +6,7 @@ import PaginationComponent from '../../../components/paginationComponent/Paginat
 import Loading from '../../../components/loading/Loading'
 import {useSearchParams } from 'react-router-dom';
 import { useEffect } from 'react'
+import { urlServer } from '../../../serverConfig'
 
 const ListVendas = ({filter}) => {
 
@@ -24,7 +25,7 @@ const ListVendas = ({filter}) => {
   ]
 
   let [searchParams] = useSearchParams();
-  const url = "http://localhost:5000/vendas/";
+  const url = urlServer+"/vendas/";
   const [patchUrl, setPatchUrl] = useState(url)
   const {httpConfig} = useFetch(patchUrl);
   const {data, loading, error} = useFetch(

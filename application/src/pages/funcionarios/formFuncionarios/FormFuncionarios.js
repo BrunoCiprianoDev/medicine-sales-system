@@ -2,11 +2,11 @@ import {React, useState} from 'react'
 import FormContainer from '../../../components/formContainer/FormContainer';
 import {useParams } from 'react-router-dom'
 import {parameters} from '../parameters/pr_funcionario'
-
+import { urlServer } from '../../../serverConfig';
 const FormFuncionarios = ({edit}) => {
 
 const {id} = useParams();
-const [url] = useState(edit ?  "http://localhost:5000/funcionarios/"+id  :  "http://localhost:5000/funcionarios/")
+const [url] = useState(edit ?  urlServer+"/funcionarios/"+id  :  urlServer+"/funcionarios/")
 const urlBack = '/funcionarios/'
 
 return (

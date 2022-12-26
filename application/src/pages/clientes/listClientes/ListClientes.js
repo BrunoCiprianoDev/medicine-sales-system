@@ -1,10 +1,10 @@
 import React from 'react'
 import ListContainer from '../../../components/listContainer/ListContainer';
 import {parameters} from '../parameters/pr_clientes'
-
+import { urlServer } from '../../../serverConfig';
 const ListClientes = ({filter}) => {
  
-  const url = "http://localhost:5000/clientes/";
+  const url = urlServer+"/clientes/";
 
   return (
     <ListContainer
