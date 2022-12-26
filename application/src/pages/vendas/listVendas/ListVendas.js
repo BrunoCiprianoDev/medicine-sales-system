@@ -24,7 +24,7 @@ const ListVendas = ({filter}) => {
   ]
 
   let [searchParams] = useSearchParams();
-  const url = "http://localhost:3000/vendas/";
+  const url = "http://localhost:5000/vendas/";
   const [patchUrl, setPatchUrl] = useState(url)
   const {httpConfig} = useFetch(patchUrl);
   const {data, loading, error} = useFetch(

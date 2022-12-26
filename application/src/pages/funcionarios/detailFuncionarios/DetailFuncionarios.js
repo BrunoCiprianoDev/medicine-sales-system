@@ -7,7 +7,7 @@ const DetailFuncionarios = () => {
 
     const useParameters = parameters.slice(0,14)
     const {id} = useParams();
-    const url = "http://localhost:3000/funcionarios/"+id;
+    const url = "http://localhost:5000/funcionarios/"+id;
     const urlHandleEdit = '/funcionarios/edit/'+id;
     const urlHandleBack = '/funcionarios/'
 

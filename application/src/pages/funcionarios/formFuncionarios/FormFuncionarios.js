@@ -6,7 +6,7 @@ import {parameters} from '../parameters/pr_funcionario'
 const FormFuncionarios = ({edit}) => {
 
 const {id} = useParams();
-const [url] = useState(edit ?  "http://localhost:3000/funcionarios/"+id  :  "http://localhost:3000/funcionarios/")
+const [url] = useState(edit ?  "http://localhost:5000/funcionarios/"+id  :  "http://localhost:5000/funcionarios/")
 const urlBack = '/funcionarios/'
 
 return (

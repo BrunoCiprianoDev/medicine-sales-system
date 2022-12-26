@@ -6,7 +6,7 @@ import { parameters } from '../parameters/pr_mercadorias';
 const FormMercadorias = ({edit}) => {
 
   const {id} = useParams();
-  const url= (edit ?  "http://localhost:3000/mercadorias/"+id  :  "http://localhost:3000/mercadorias/");
+  const url= (edit ?  "http://localhost:5000/mercadorias/"+id  :  "http://localhost:5000/mercadorias/");
   const urlBack= '/mercadorias/';
 
     return (

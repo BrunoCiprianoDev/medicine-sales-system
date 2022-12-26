@@ -4,7 +4,7 @@ import { parameters } from '../parameters/pr_categoria';
 
 const ListCategorias = ({filter}) => {
 
-  const url = "http://localhost:3000/categorias/";
+  const url = "http://localhost:5000/categorias/";
 
   return (
     <ListContainer

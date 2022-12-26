@@ -73,3 +73,8 @@
 .buttonCancel:hover {
     background-color: rgb(122, 0, 0);
 }
+
+.HeaderArea {
+    display: flex;
+    flex-direction: row;
+}

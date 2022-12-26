@@ -194,10 +194,19 @@
       "categoria_id": 1,
       "estoque_minimo": 150,
       "estoque_maximo": 300,
-      "estoque_atual": 300,
+      "estoque_atual": 2,
       "valor_venda": 27.99,
       "temp_armazenamento": 22,
-      "descricao": ""
+      "descricao": "",
+      "lotes": [
+        {
+          "id": "12-12211-02-12",
+          "fornecedor": "03.778.130/0001-48",
+          "lote": "12",
+          "validade": "12211-02-12",
+          "unidades": 2
+        }
+      ]
     },
     {
       "id": 2,
@@ -207,10 +216,24 @@
       "categoria_id": 1,
       "estoque_minimo": 150,
       "estoque_maximo": 300,
-      "estoque_atual": 300,
+      "estoque_atual": 2,
       "valor_venda": 27.99,
       "temp_armazenamento": 22,
-      "descricao": ""
+      "descricao": "",
+      "lotes": [
+        {
+          "id": "255444-",
+          "lote": "255444",
+          "validade": "",
+          "unidades": 2
+        },
+        {
+          "id": "255444-11211-02-01",
+          "lote": "255444",
+          "validade": "11211-02-01",
+          "unidades": 2
+        }
+      ]
     },
     {
       "id": 3,
@@ -219,7 +242,7 @@
       "departamento": "HIGIENE",
       "categoria_id": 1,
       "estoque_minimo": 150,
-      "estoque_maximo": 300,
+      "estoque_maximo": 301,
       "estoque_atual": 300,
       "valor_venda": 27.99,
       "temp_armazenamento": 22,
@@ -246,7 +269,7 @@
       "categoria_id": "1",
       "estoque_minimo": 150,
       "estoque_maximo": 300,
-      "estoque_atual": 300,
+      "estoque_atual": 100,
       "valor_venda": 27.99,
       "temp_armazenamento": 22,
       "descricao": "Isso é um bronzeador"
@@ -293,7 +316,7 @@
     {
       "id": 9,
       "nome": "Maquiagem",
-      "codigo":  "7896714231108",
+      "codigo": "7896714231108",
       "departamento": "BELEZA",
       "categoria_id": "1",
       "estoque_minimo": 150,
@@ -397,7 +420,7 @@
     {
       "id": 17,
       "nome": "Fraldas geriatricas M",
-      "codigo":  "7896714231116",
+      "codigo": "7896714231116",
       "departamento": "GERIATRIA",
       "categoria_id": "1",
       "estoque_minimo": 150,

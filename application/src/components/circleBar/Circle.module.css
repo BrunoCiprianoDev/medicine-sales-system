@@ -10,10 +10,3 @@
     stroke-linecap:square;
     stroke-linejoin: round;
 }
-
-.circleText {
-    font-size: 3em;
-    font-weight: bold;
-    background-color: rgba(0, 26, 49, 0.897)
-}
-

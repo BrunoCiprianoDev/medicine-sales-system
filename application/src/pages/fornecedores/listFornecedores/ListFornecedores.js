@@ -4,7 +4,7 @@ import { parameters } from '../parameters/pr_fornecedor';
 
 const ListFornecedores = ({filter}) => {
 
-  const url = "http://localhost:3000/fornecedores/";
+  const url = "http://localhost:5000/fornecedores/";
   const useParameters = parameters.slice(0, 2).concat(parameters.slice(10,12));
 
   return (

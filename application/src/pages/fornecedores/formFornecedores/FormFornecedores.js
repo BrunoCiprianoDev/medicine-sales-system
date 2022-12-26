@@ -6,7 +6,7 @@ import {parameters} from '../parameters/pr_fornecedor'
 const FormFornecedores = ({edit}) => {
 
     const {id} = useParams();
-    const [url] = useState(edit ?  "http://localhost:3000/fornecedores/"+id  :  "http://localhost:3000/fornecedores/")
+    const [url] = useState(edit ?  "http://localhost:5000/fornecedores/"+id  :  "http://localhost:5000/fornecedores/")
     const urlBack= '/fornecedores/'
 
   return (

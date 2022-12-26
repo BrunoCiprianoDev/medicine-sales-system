@@ -12,15 +12,15 @@ import Loading from '../../../components/loading/Loading'
 const FormVendas = () => {
 
   const navigate = useNavigate();
-  const [url] = useState("http://localhost:3000/vendas")
+  const [url] = useState("http://localhost:5000/vendas")
   const {httpConfig, loading} = useFetch(url);
    
   const date = Date();
-  const urlCliente = "http://localhost:3000/clientes";
+  const urlCliente = "http://localhost:5000/clientes";
   const [cliente, setCliente] = useState('');
-  const urlFuncionarios = "http://localhost:3000/funcionarios";
+  const urlFuncionarios = "http://localhost:5000/funcionarios";
   const [funcionarios, setFuncionarios] = useState('');
-  const urlMercadorias = "http://localhost:3000/mercadorias";
+  const urlMercadorias = "http://localhost:5000/mercadorias";
   const [listaMercadorias, setListMercadorias] = useState([])
   const [totalValue, setTotalValue] = useState(0);
   

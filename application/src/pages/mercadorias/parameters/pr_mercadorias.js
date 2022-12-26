@@ -16,8 +16,7 @@ export const parameters = [
     {id: 5, attribute:'categoria_id', label:'Categoria', type: 'number' },
     {id: 6, attribute:'estoque_minimo', label:'Estoque minimo', type: 'text' },
     {id: 7, attribute:'estoque_maximo', label:'Estoque máximo', type: 'text' },
-    {id: 8, attribute:'estoque_atual', label:'Estoque atual', type: 'text' },
-    {id: 9, attribute:'valor_venda', label:'Valor de venda', type: 'number' },
-    {id: 10, attribute:'temp_armazenamento', label:'Temperatura armazenamento', type: 'text' },
-    {id: 11, attribute:'descricao', label:'Descricao', type: 'textarea' },
+    {id: 8, attribute:'valor_venda', label:'Valor de venda', type: 'number' },
+    {id: 9, attribute:'temp_armazenamento', label:'Temperatura armazenamento', type: 'text' },
+    {id: 10, attribute:'descricao', label:'Descricao', type: 'textarea' }
   ]

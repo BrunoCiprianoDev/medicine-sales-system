@@ -6,7 +6,7 @@ import { parameters } from '../parameters/pr_clientes'
 const FormClientes = ({edit}) => {
 
     const {id} = useParams();
-    const [url] = useState(edit ?  "http://localhost:3000/clientes/"+id  :  "http://localhost:3000/clientes/")
+    const [url] = useState(edit ?  "http://localhost:5000/clientes/"+id  :  "http://localhost:5000/clientes/")
     const urlBack= '/clientes/'
 
   return (

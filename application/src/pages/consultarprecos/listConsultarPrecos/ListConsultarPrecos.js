@@ -9,7 +9,7 @@ const ListConsultarPrecos = ({filter}) => {
     const navigate = useNavigate();
     let [searchParams] = useSearchParams();
     const useParameters = parameters.slice(0,2).concat(parameters.slice(5,8));
-    const url = "http://localhost:3000/mercadorias/?"+searchParams;
+    const url = "http://localhost:5000/mercadorias/?"+searchParams;
     
   return (
     <div className={styles.MainContainer}>

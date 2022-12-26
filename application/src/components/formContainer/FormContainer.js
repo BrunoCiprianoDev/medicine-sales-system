@@ -48,7 +48,7 @@ const FormContainer = ({
         <div  className={styles['FormContainer']}>
           {parameters.map((parameter)=>(
             <div key={parameter.id}>
-              <label>{parameter.label}         
+              <label>{parameter.label}        
                 {parameter.type === 'text' && 
                   <input name={parameter.attribute}  
                     {...register(parameter.attribute)} 

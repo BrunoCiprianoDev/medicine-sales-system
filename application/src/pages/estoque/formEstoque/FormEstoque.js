@@ -1,84 +1,72 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { useFetch } from '../../../hooks/useFetch'
 import styles from './FormEstoque.module.css'
 import InputAutoComplete from '../../../components/inputAutoComplete/InputAutoComplete'
-import { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
-import CircleBar from '../../../components/circleBar/CircleBar'
+//import CircleBar from '../../../components/circleBar/CircleBar'
+import {useForm} from "react-hook-form";
 
 const FormEstoque = () => {
 
-  const navigate = useNavigate();
-  const [url] = useState("http://localhost:3000/vendas")
-  const {httpConfig, loading} = useFetch(url);
-   
   const date = Date();
-  const urlFornecedor = "http://localhost:3000/fornecedores";
+  const urlFornecedor = "http://localhost:5000/fornecedores";
   const [fornecedor, setFornecedor] = useState('');
-  const urlFuncionarios = "http://localhost:3000/funcionarios";
-  const [funcionarios, setFuncionarios] = useState('');
-  const urlMercadorias = "http://localhost:3000/mercadorias";
-  const [listaMercadorias, setListMercadorias] = useState([]);
-  const [mercadoria, setMercadoria] = useState('')
-  const [totalValue, setTotalValue] = useState(0);
-  
-  useEffect(() => {
-    setTotalValue(0)
-    listaMercadorias.map((e)=>(
-        setTotalValue(t=> t+(parseFloat(e.valor_venda*e.quant)))
-      ));
-  },[listaMercadorias]);
+  const urlMercadorias = "http://localhost:5000/mercadorias";
+  const [mercadoria, setMercadoria] = useState('');
+  const [url, setUrl] = useState("http://localhost:5000/mercadorias/")
+  const {httpConfig} = useFetch(url);
+  const{register, handleSubmit} = useForm(); 
+  const [totalUnidades, setTotalUnidades] = useState('')
 
-  const handleConclude = () =>{
-    const dateConclude = new Date();
-    let idVenda = Date.parse(dateConclude);
-    let day = dateConclude.getDate().toString().padStart(2, '0');
-    let month = (dateConclude.getMonth()+1).toString().padStart(2, '0');
-    let year = dateConclude.getFullYear();
-    let data = day+'/'+month+'/'+year;
-
-    let vendas = {
-      id: idVenda,
-      data: data,
-      total: totalValue,
-      funcionario:{
-        cpf: funcionarios.cpf,
-        nome: funcionarios.nome
-     },
-      fornecedor: {
-        cnpj: fornecedor.cnpj,
-        nome: fornecedor.nome
-      },
-      itensVenda: listaMercadorias
-    }
-    if(funcionarios){
-      if(listaMercadorias.length !== 0){
-        httpConfig(vendas, 'POST')
-        setListMercadorias([])
-        alert('Venda concluída!')
-      } else {
-        alert('Não foi possivel concluir a venda, porque lista de itens está vazia!')
-      }      
+  const onSubmit = (e) => {
+      setUrl("http://localhost:3000/mercadorias/"+mercadoria.id);
+      if(!mercadoria.lotes){ 
+        // Função para simular o relacionamento entre tabelas[mercadorias/lotes]
+        const mercadoriaUpdate = {
+          id: mercadoria.id,
+          nome: mercadoria.nome,
+          departamento: mercadoria.departamento,
+          categoria_id: mercadoria.categoria_id,
+          estoque_minimo: mercadoria.estoque_minimo,
+          estoque_maximo: mercadoria.estoque_maximo,
+          estoque_atual: parseInt(e.unidades),
+          valor_venda: mercadoria.valor_venda,
+          temp_armazenamento: mercadoria.temp_armazenamento,
+          descricao: mercadoria.descricao,
+          lotes: [{id: e.lote+'-'+e.validade, 
+            fornecedor:fornecedor.cnpj, 
+            lote: e.lote,validade: e.validade, 
+            unidades: parseInt(e.unidades)}]
+        }
+        httpConfig(mercadoriaUpdate, 'PATCH')
     } else {
-      alert('Vendedor não foi identificado!')
-    }   
+       const lote = {
+        id:  e.lote+'-'+e.validade,
+        fornecedor: fornecedor.cnpj,
+        lote: e.lote,
+        validade: e.validade,
+        unidades: parseInt(e.unidades)
+      }
+      const listLote = mercadoria.lotes;
+      listLote.push(lote)
+      setMercadoria(prevState => ({ ...prevState, lotes: listLote, unidades:totalUnidades}));
+      httpConfig(mercadoria, 'PATCH')
+    }
   }
- 
-  const [percentage, setPercentage] = useState(85)
+
+  useEffect(() => {
+    setTotalUnidades(0)
+    mercadoria.lotes && mercadoria.lotes.map((lote)=>(
+      setTotalUnidades(t=> t+(parseInt(lote.unidades)))
+    ))
+  },[mercadoria]);
+
 
   return (
     <div className={styles.MainContainer}>
         <div className={styles.LeftArea}> 
           <div className={styles.HeaderLeftArea}>
-              <div className={styles.DateArea}>{date}</div>
-              <InputAutoComplete 
-                title={'Funcionario:'}
-                url={urlFuncionarios} 
-                setSubmitData={setFuncionarios} 
-                submitData={funcionarios}
-                parameter = {{attribute: 'cpf', label: 'cpf'}}  
-              />
+            <div className={styles.DateArea}>{date}</div>
               <InputAutoComplete 
                 title={'Fornecedor:'}
                 url={urlFornecedor} 
@@ -102,15 +90,45 @@ const FormEstoque = () => {
                 <label>{mercadoria.departamento}</label>
                 <label>R${mercadoria.valor_venda}</label>
               </div>
-              <div className={styles.AreaBar}>
-                <h2>Nivel atual do estoque:</h2>
-                <CircleBar  percentage={percentage} circleWidth='280'/>
+              <div className={styles.loteArea}>
+                <form onSubmit={handleSubmit(onSubmit)}>
+                  <label>Número do lote:
+                    <input type="text" {...register('lote')}/>
+                  </label>
+                  <label>Quantidade:
+                    <input type="number" {...register('unidades')}/>
+                  </label>
+                  <label>Validade:
+                    <input type="date" {...register('validade')}/>
+                  </label>
+                  <input type="submit" value={'Inserir lote'} />
+                </form>
               </div>
             </div>
           </div>
         </div>
-        <div className={styles.RightArea}>         
-        </div>
+        <div className={styles.RightArea}> 
+        <h1>Lotes cadastrados</h1><h2>Unidades disponiveis:{totalUnidades}</h2>
+        <div className={styles.ListContainer}>
+          <div className={styles.HeaderList}>
+              <div><p>Lote</p></div>
+              <div><p>Fornecedor</p></div>
+              <div><p>Validade</p></div>
+              <div><p>Quantidade</p></div>
+              <div></div>
+          </div>
+          {/*<CircleBar  percentage={10} circleWidth='80' paramRadius={30} profile={8} numberSize={'0.8em'}/> */}
+          {mercadoria.lotes && mercadoria.lotes.map((lote)=>(
+            <div key={lote.id} className={styles.lotListComponent}>
+              <div><p>{lote.lote}</p></div>
+              <div><p>{lote.fornecedor}</p></div>
+              <div><p>{lote.validade}</p></div>
+              <div><p>{lote.unidades}</p></div>
+              <div><button>X</button></div>
+            </div>
+            ))}    
+          </div>
+        </div> 
     </div>
   )
 }

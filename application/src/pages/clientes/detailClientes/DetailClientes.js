@@ -6,7 +6,7 @@ import { parameters } from '../parameters/pr_clientes'
 const DetailClientes = () => {
 
   const {id} = useParams();
-  const url = "http://localhost:3000/clientes/"+id;
+  const url = "http://localhost:5000/clientes/"+id;
   const urlHandleEdit = '/clientes/edit/'+id;
   const urlHandleBack = '/clientes/'
 

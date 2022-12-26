@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from './Circle.module.css'
 
-const CircleBar = ({percentage, circleWidth}) => {
-    const radius = 125;
+const CircleBar = ({percentage, circleWidth, paramRadius, profile, numberSize}) => {
+    const radius = paramRadius;
     const dashArray = radius* Math.PI*2
     const dashOffset = dashArray - (dashArray * percentage)/100
 
@@ -16,14 +16,14 @@ const CircleBar = ({percentage, circleWidth}) => {
             <circle 
                 cx={circleWidth/2} 
                 cy={circleWidth/2} 
-                strokeWidth='28px' 
+                strokeWidth={profile}
                 r={radius}
                 className={styles['circle-background']}     
             />
             <circle 
                 cx={circleWidth/2} 
                 cy={circleWidth/2} 
-                strokeWidth='28px' 
+                strokeWidth={profile} 
                 r={radius}
                 className={styles['circle-progress'] }   
                 style={{
@@ -33,7 +33,14 @@ const CircleBar = ({percentage, circleWidth}) => {
                 }
                 transform={`rotate(-90 ${circleWidth/2} ${circleWidth/2})`}
             />
-            <text x='37%' y='50%' dy='0.3em' textAncor='middle' className={styles.circleText}>
+            <text 
+                x='37%' 
+                y='50%' 
+                dy='0.3em' 
+                style={{
+                    fontWeight:'bold',
+                    fontSize: numberSize
+                }}>
                 {percentage}%
             </text>
         </svg>

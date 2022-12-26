@@ -4,7 +4,7 @@ import {parameters} from '../parameters/pr_clientes'
 
 const ListClientes = ({filter}) => {
  
-  const url = "http://localhost:3000/clientes/";
+  const url = "http://localhost:5000/clientes/";
 
   return (
     <ListContainer

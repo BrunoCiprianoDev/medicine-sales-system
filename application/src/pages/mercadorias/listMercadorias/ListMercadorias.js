@@ -7,7 +7,7 @@ import { parameters } from '../parameters/pr_mercadorias';
 const ListMercadorias = ({filter}) => {
 
   let [searchParams] = useSearchParams();
-  const url = "http://localhost:3000/mercadorias/?"+searchParams;
+  const url = "http://localhost:5000/mercadorias/?"+searchParams;
   const useParameters = parameters.slice(0,2).concat(parameters.slice(5,8));
 
   return (
