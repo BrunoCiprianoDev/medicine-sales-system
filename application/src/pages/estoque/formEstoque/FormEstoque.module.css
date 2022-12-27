@@ -3,7 +3,7 @@
     box-sizing: border-box;
     height: 100%;
     display: grid;
-    grid-template-columns: minmax(25em, 40%) auto;
+    grid-template-columns: minmax(25em, 40%) minmax(30em, auto);
     grid-template-rows: 1fr;
     grid-template-areas: "leftArea rightArea";
 }
@@ -95,6 +95,7 @@
 .ListInfo label {
     font-weight: bold;
     text-align: center;
+    word-break: break-all;
 }
 
 .loteArea {
@@ -187,6 +188,8 @@
     display: flex;
     height: 3em;
     width: 100%;
+    font-weight: bold;
+    word-break: break-all;
  }
 
  .HeaderList div {
@@ -218,6 +221,8 @@
 
 .lotListComponent p {
     text-align: center;
+    font-weight: bold;
+    word-break: break-all;
 }
 
 .RightArea h1 {

@@ -1,11 +1,27 @@
 import React from 'react'
+import { useEffect } from 'react';
+import { useState } from 'react';
 import styles from './Circle.module.css'
 
-const CircleBar = ({percentage, circleWidth, paramRadius, profile, numberSize}) => {
+const CircleBar = ({percentage, circleWidth, paramRadius, profile, numberSize, disableText}) => {
     const radius = paramRadius;
     const dashArray = radius* Math.PI*2
     const dashOffset = dashArray - (dashArray * percentage)/100
 
+    const [color, setColor] = useState('green')
+    
+    useEffect(() => { 
+        if(percentage>100){
+            setColor('blue')
+        } else if(percentage>70){
+            setColor('green')
+        } else if(percentage<=70 && percentage>=30){
+            setColor('yellow')
+        } else if(percentage<30){
+            setColor('red')
+        }
+      },[percentage]);
+    
   return (
     <div className={styles.MainContainer}>
         <svg 
@@ -28,12 +44,12 @@ const CircleBar = ({percentage, circleWidth, paramRadius, profile, numberSize}) 
                 className={styles['circle-progress'] }   
                 style={{
                     strokeDasharray: dashArray,
-                    strokeDashoffset: dashOffset, 
-                }
-                }
+                    strokeDashoffset: dashOffset,
+                    stroke: color,
+                }}
                 transform={`rotate(-90 ${circleWidth/2} ${circleWidth/2})`}
             />
-            <text 
+            {!disableText && <text 
                 x='37%' 
                 y='50%' 
                 dy='0.3em' 
@@ -41,8 +57,8 @@ const CircleBar = ({percentage, circleWidth, paramRadius, profile, numberSize}) 
                     fontWeight:'bold',
                     fontSize: numberSize
                 }}>
-                {percentage}%
-            </text>
+                { percentage+'%'}
+            </text>}
         </svg>
     </div>
   )

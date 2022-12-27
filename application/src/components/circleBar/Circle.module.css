@@ -1,12 +1,12 @@
 
 .circle-background {
     fill: none;
-    stroke: rgb(199, 199, 199);
+    stroke: rgb(223, 223, 223);
 }
 
 .circle-progress {
     fill: none;
-    stroke: green;
     stroke-linecap:square;
     stroke-linejoin: round;
+
 }

@@ -4,7 +4,6 @@ import { useFetch } from '../../../hooks/useFetch'
 import styles from './FormEstoque.module.css'
 import InputAutoComplete from '../../../components/inputAutoComplete/InputAutoComplete'
 import { urlServer } from '../../../serverConfig';
-//import CircleBar from '../../../components/circleBar/CircleBar'
 import {useForm} from "react-hook-form";
 
 const FormEstoque = () => {
@@ -20,7 +19,7 @@ const FormEstoque = () => {
   const [totalUnidades, setTotalUnidades] = useState('')
 
   const onSubmit = (e) => {
-      setUrl("http://localhost:3000/mercadorias/"+mercadoria.id);
+      setUrl(urlServer+"/mercadorias/"+mercadoria.id);
       if(!mercadoria.lotes){ 
         // Função para simular o relacionamento entre tabelas[mercadorias/lotes]
         const mercadoriaUpdate = {
@@ -36,7 +35,7 @@ const FormEstoque = () => {
           descricao: mercadoria.descricao,
           lotes: [{id: e.lote+'-'+e.validade, 
             fornecedor:fornecedor.cnpj, 
-            lote: e.lote,validade: e.validade, 
+            lote: e.lote,validade: e.validade, valor_custo: parseFloat(e.custo), 
             unidades: parseInt(e.unidades)}]
         }
         httpConfig(mercadoriaUpdate, 'PATCH')
@@ -46,6 +45,7 @@ const FormEstoque = () => {
         fornecedor: fornecedor.cnpj,
         lote: e.lote,
         validade: e.validade,
+        valor_custo: parseFloat(e.custo),
         unidades: parseInt(e.unidades)
       }
       const listLote = mercadoria.lotes;
@@ -88,8 +88,8 @@ const FormEstoque = () => {
               <div className={styles.ListInfo}>  
                 <div>Detalhes:</div>          
                 <label>{mercadoria.nome}</label>
-                <label>{mercadoria.departamento}</label>
-                <label>R${mercadoria.valor_venda}</label>
+                <label>Estoque minimo: {mercadoria.estoque_minimo}</label>
+                <label>Estoque maximo: {mercadoria.estoque_maximo}</label>
               </div>
               <div className={styles.loteArea}>
                 <form onSubmit={handleSubmit(onSubmit)}>
@@ -102,6 +102,9 @@ const FormEstoque = () => {
                   <label>Validade:
                     <input type="date" {...register('validade')}/>
                   </label>
+                  <label>Custo por unidade:
+                    <input type="number" {...register('custo')} step='0.01'/>
+                  </label>
                   <input type="submit" value={'Inserir lote'} />
                 </form>
               </div>
@@ -109,7 +112,7 @@ const FormEstoque = () => {
           </div>
         </div>
         <div className={styles.RightArea}> 
-        <h1>Lotes cadastrados</h1><h2>Unidades disponiveis:{totalUnidades}</h2>
+        <div><h1>Lotes cadastrados</h1><h2>Unidades disponiveis:{totalUnidades}</h2></div>
         <div className={styles.ListContainer}>
           <div className={styles.HeaderList}>
               <div><p>Lote</p></div>
@@ -118,7 +121,6 @@ const FormEstoque = () => {
               <div><p>Quantidade</p></div>
               <div></div>
           </div>
-          {/*<CircleBar  percentage={10} circleWidth='80' paramRadius={30} profile={8} numberSize={'0.8em'}/> */}
           {mercadoria.lotes && mercadoria.lotes.map((lote)=>(
             <div key={lote.id} className={styles.lotListComponent}>
               <div><p>{lote.lote}</p></div>
@@ -135,3 +137,5 @@ const FormEstoque = () => {
 }
 
 export default FormEstoque
+
+

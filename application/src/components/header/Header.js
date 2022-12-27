@@ -38,7 +38,9 @@ const Header = () => {
       navigate('/mercadorias/form');
     }else if (option === 'VENDAS') {
       navigate('vendas/form')
-    }
+    } else if (option === 'ESTOQUE') {
+      navigate('estoque/form')
+    } 
   }
 
   const handleSearch = (e) => {
@@ -60,6 +62,9 @@ const Header = () => {
       setQuery('');
     } else if (option === 'VENDAS') {
       navigate("/vendas/search?q="+query);
+      setQuery('');
+    } else if (option === 'ESTOQUE') {
+      navigate("/estoque/search?q="+query);
       setQuery('');
     }
   }

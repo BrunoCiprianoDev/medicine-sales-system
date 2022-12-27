@@ -178,7 +178,7 @@
     },
     {
       "nome": "Monteiro Lobato",
-      "cpf": "848.567.991",
+      "cpf": "848.567.991.26",
       "dt_nascimento": "1965-01-15",
       "telefone": "(32)3222-9781",
       "email": "monteiro@gmail.com",
@@ -204,7 +204,16 @@
           "fornecedor": "03.778.130/0001-48",
           "lote": "12",
           "validade": "12211-02-12",
+          "valor_custo": 1.59,
           "unidades": 2
+        },
+        {
+          "id": "255444-2025-03-14",
+          "fornecedor": "03.778.130/0001-48",
+          "lote": "255444",
+          "validade": "2025-03-14",
+          "valor_custo": 1.59,
+          "unidades": 80
         }
       ]
     },
@@ -243,10 +252,19 @@
       "categoria_id": 1,
       "estoque_minimo": 150,
       "estoque_maximo": 301,
-      "estoque_atual": 300,
+      "estoque_atual": 120,
       "valor_venda": 27.99,
       "temp_armazenamento": 22,
-      "descricao": ""
+      "descricao": "",
+      "lotes": [
+        {
+          "id": "112323012-2023-02-14",
+          "fornecedor": "03.778.130/0001-48",
+          "lote": "112323012",
+          "validade": "2023-02-14",
+          "unidades": 120
+        }
+      ]
     },
     {
       "id": 4,
@@ -256,10 +274,20 @@
       "categoria_id": "1",
       "estoque_minimo": 150,
       "estoque_maximo": 300,
-      "estoque_atual": "3001",
+      "estoque_atual": 170,
       "valor_venda": "27.99",
       "temp_armazenamento": 22,
-      "descricao": "Isso é um protetor solar "
+      "descricao": "Isso é um protetor solar ",
+      "lotes": [
+        {
+          "id": "255443-",
+          "fornecedor": "03.778.130/0001-48",
+          "lote": "255443",
+          "validade": "",
+          "valor_custo": 5.69,
+          "unidades": 170
+        }
+      ]
     },
     {
       "id": 5,
@@ -683,7 +711,7 @@
     {
       "id": 1671909416000,
       "data": "24/12/2022",
-      "total": 27.99,
+      "total": 0,
       "funcionario": {
         "cpf": "899.766.544.22",
         "nome": "João Jericho"
@@ -702,7 +730,7 @@
           "nome": "Protetor solar",
           "valor_venda": "27.99",
           "codigo": "000000000",
-          "quant": 0
+          "quant": 1
         }
       ]
     },

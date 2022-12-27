@@ -42,7 +42,7 @@ import ListVendas from './pages/vendas/listVendas/ListVendas';
 
 //Estoque
 import FormEstoque from './pages/estoque/formEstoque/FormEstoque';
-
+import ListEstoque from './pages/estoque/listEstoque/ListEstoque';
 
 function App() {
   return (
@@ -90,6 +90,8 @@ function App() {
             <Route path='/vendas/form/' element={<FormVendas/>}/>
 
             <Route path='/estoque/form/' element={<FormEstoque/>}/>
+            <Route path='estoque/' element={<ListEstoque filter={false}/>}/>
+            <Route path='estoque/search/' element={<ListEstoque filter={true}/>}/>
           </Routes>
         </div>
       </BrowserRouter>
