@@ -1,18 +1,20 @@
 .ButtonNavigate {
-    box-shadow: -1px 5px 10px rgba(0, 0, 0, 0.45);
-    background-color: rgba(0, 42, 82, 0.897);
+    cursor: pointer;
+    background-color: rgb(219, 2, 2);
     border-style: none;
     border-radius: 2px;
     height: 2em;
-    width: 10   em;
-    margin-left: auto;
+    width: 10em;
+    margin-left: 0.1em;
+    margin-bottom: 0.2em;
     margin-right: auto;
     margin-top: 1em;
     font-size: 1em;
     color: white;
+    font-weight: bold;
 }
 
 .ButtonNavigate:hover {
-    background-color: rgba(0, 26, 49, 0.897);
+    background-color: rgb(172, 0, 0);
     color:white;
 }

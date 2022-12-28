@@ -16,7 +16,7 @@ const ListConsultarPrecos = ({filter}) => {
         <button 
           className={styles.ButtonNavigate} 
           onClick={()=>navigate('/consultas/')}>
-            Nova Consulta
+          {'<< Nova Consulta'}
         </button>
         <ListContainer
           url={url}

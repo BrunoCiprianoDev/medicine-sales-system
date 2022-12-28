@@ -13,11 +13,11 @@ const CircleBar = ({percentage, circleWidth, paramRadius, profile, numberSize, d
     useEffect(() => { 
         if(percentage>100){
             setColor('blue')
-        } else if(percentage>70){
+        } else if(percentage>50){
             setColor('green')
-        } else if(percentage<=70 && percentage>=30){
+        } else if(percentage<=50 && percentage>=20){
             setColor('yellow')
-        } else if(percentage<30){
+        } else if(percentage<20){
             setColor('red')
         }
       },[percentage]);

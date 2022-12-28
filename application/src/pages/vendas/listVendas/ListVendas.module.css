@@ -21,7 +21,7 @@
 .ListItens {
     margin: 0.5em;
     grid-area: rightArea;
-    font-size: 1.2em; 
+    font-size: 1.0em; 
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
 }
 
@@ -44,6 +44,7 @@
 }
 
 .ComponentList {
+    cursor: pointer;
     font-size: 0.8em;
     display: flex;
     flex-direction: row;
@@ -53,21 +54,20 @@
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
     align-items: center;
     word-break: break-all;
+    padding: 0.2em;
 }
 
 .ComponentListSelect {
+    cursor: pointer;
     font-size: 0.8em;
     display: flex;
     flex-direction: row;
     justify-content:space-around;
     margin: 0.5em;
-    height: 3em;
-    border-right: 5px solid red;
-    border-left: 5px solid red;
     font-weight: bold;
-    color: red;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
     align-items: center;
+    word-break: break-all;
 }
 
 .HeaderListItens {
@@ -82,6 +82,7 @@
 }
 
 .buttonRemove {
+    cursor: pointer;
     border-style: none;
     background-color: rgb(201, 2, 2);
     color: white;
@@ -96,6 +97,7 @@
 }
 
 .buttonAdd {
+    cursor: pointer;
     border-style: none;
     background-color: rgb(0, 177, 38);
     color: white;
@@ -111,9 +113,6 @@
 }
 
 .ComponentList:hover {
-    border-right: 5px solid rgb(1, 7, 87);
-    border-left: 5px solid rgb(1, 7, 87);
-    font-weight: bold;
     color: rgb(1,7,87);
 }
 
@@ -131,5 +130,6 @@
     height: 100%;
     width: 30%;
     text-align: center;
+    padding: 0.5em;
 
 }

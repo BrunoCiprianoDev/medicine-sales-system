@@ -26,19 +26,18 @@
 }
 
 .ElementList {
+    cursor: pointer;
     font-size: 0.8em;
     display: flex;
     flex-direction: row;
     justify-content:space-around;
     margin: 0.5em;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    padding: 0.2em;
 }
 
 .ElementList:hover{
-    border-right: 5px solid red;
-    border-left: 5px solid red;
     font-weight: bold;
-    color: red;
 }
 
 .ElementList label{

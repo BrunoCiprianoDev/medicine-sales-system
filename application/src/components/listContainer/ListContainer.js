@@ -65,7 +65,9 @@ const ListContainer = ({
               currentPage={currentPage}
               setItemPerPage={setItemPerPage} 
               itensPerPage={itensPerPage}
-              pages={pages}/>
+              pages={pages}
+              pagination={'desable'}
+              />
           </div>
       </div>
   )

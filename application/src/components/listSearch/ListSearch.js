@@ -15,7 +15,8 @@ const ListSearch = ({url, list, setList}) => {
             nome: element.nome,
             valor_venda: element.valor_venda,
             codigo: element.codigo,  
-            quant: 1
+            quant: 1,
+            quant_edit: 1
           }]);
         } 
       }

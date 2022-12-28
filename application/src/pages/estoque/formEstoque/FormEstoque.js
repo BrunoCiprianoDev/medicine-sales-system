@@ -19,7 +19,7 @@ const FormEstoque = () => {
   const [totalUnidades, setTotalUnidades] = useState('')
 
   const onSubmit = (e) => {
-      setUrl(urlServer+"/mercadorias/"+mercadoria.id);
+    if(mercadoria && fornecedor) {
       if(!mercadoria.lotes){ 
         // Função para simular o relacionamento entre tabelas[mercadorias/lotes]
         const mercadoriaUpdate = {
@@ -29,15 +29,17 @@ const FormEstoque = () => {
           categoria_id: mercadoria.categoria_id,
           estoque_minimo: mercadoria.estoque_minimo,
           estoque_maximo: mercadoria.estoque_maximo,
-          estoque_atual: parseInt(e.unidades),
           valor_venda: mercadoria.valor_venda,
           temp_armazenamento: mercadoria.temp_armazenamento,
           descricao: mercadoria.descricao,
           lotes: [{id: e.lote+'-'+e.validade, 
             fornecedor:fornecedor.cnpj, 
-            lote: e.lote,validade: e.validade, valor_custo: parseFloat(e.custo), 
+            lote: e.lote,
+            validade: e.validade, 
+            valor_custo: parseFloat(e.custo), 
             unidades: parseInt(e.unidades)}]
         }
+        setMercadoria(mercadoriaUpdate)
         httpConfig(mercadoriaUpdate, 'PATCH')
     } else {
        const lote = {
@@ -50,17 +52,29 @@ const FormEstoque = () => {
       }
       const listLote = mercadoria.lotes;
       listLote.push(lote)
-      setMercadoria(prevState => ({ ...prevState, lotes: listLote, unidades:totalUnidades}));
-      httpConfig(mercadoria, 'PATCH')
+      setMercadoria(prevState => ({ ...prevState, lotes: listLote}));
+    }
+    }else {
+      alert('Erro! Existem campos que não foram preenchidos')
     }
   }
 
-  useEffect(() => {
-    setTotalUnidades(0)
+  const loteRemove = (lote) => {
+      setMercadoria(prevState => ({ ...prevState, lotes: prevState.lotes.filter(e => e.id !== lote.id)}));
+  }
+
+  useEffect(() => { 
+    setTotalUnidades(0);
+    mercadoria && setUrl(urlServer+"/mercadorias/"+mercadoria.id);
+    mercadoria && httpConfig(mercadoria, 'PATCH')
     mercadoria.lotes && mercadoria.lotes.map((lote)=>(
       setTotalUnidades(t=> t+(parseInt(lote.unidades)))
     ))
-  },[mercadoria]);
+  },[mercadoria]); 
+  /*WARNING: HttpConfig deve ser chamado apenas uma vez quando ocorre qualquer alteração no
+  estado do state 'mercadoria', por isso NÃO pode ser incluido no array de dependencias desse
+  useEffect.*/
+
 
 
   return (
@@ -68,20 +82,20 @@ const FormEstoque = () => {
         <div className={styles.LeftArea}> 
           <div className={styles.HeaderLeftArea}>
             <div className={styles.DateArea}>{date}</div>
-              <InputAutoComplete 
+            <InputAutoComplete 
                 title={'Fornecedor:'}
                 url={urlFornecedor} 
                 setSubmitData={setFornecedor} 
                 submitData={fornecedor}
                 parameter = {{attribute: 'cnpj', label: 'CNPJ'}}  
               />
-               <InputAutoComplete 
+             <InputAutoComplete 
                 title={'Mercadoria:'}
                 url={urlMercadorias} 
                 setSubmitData={setMercadoria} 
                 submitData={mercadoria}
                 parameter = {{attribute: 'codigo', label: 'Código'}}  
-              />
+              />             
           </div>
           <div className={styles.ListSearch}>
             <div className={styles.DetailMercadoria}>
@@ -94,16 +108,16 @@ const FormEstoque = () => {
               <div className={styles.loteArea}>
                 <form onSubmit={handleSubmit(onSubmit)}>
                   <label>Número do lote:
-                    <input type="text" {...register('lote')}/>
+                    <input type="text" {...register('lote')} required/>
                   </label>
                   <label>Quantidade:
-                    <input type="number" {...register('unidades')}/>
+                    <input type="number" {...register('unidades')}  required/>
                   </label>
                   <label>Validade:
-                    <input type="date" {...register('validade')}/>
+                    <input type="date" {...register('validade')}  required/>
                   </label>
                   <label>Custo por unidade:
-                    <input type="number" {...register('custo')} step='0.01'/>
+                    <input type="number" {...register('custo')} step='0.01'  required/>
                   </label>
                   <input type="submit" value={'Inserir lote'} />
                 </form>
@@ -112,7 +126,7 @@ const FormEstoque = () => {
           </div>
         </div>
         <div className={styles.RightArea}> 
-        <div><h1>Lotes cadastrados</h1><h2>Unidades disponiveis:{totalUnidades}</h2></div>
+        <div><h1>Lotes cadastrados</h1><h2>Estoque atual: {totalUnidades}</h2></div>
         <div className={styles.ListContainer}>
           <div className={styles.HeaderList}>
               <div><p>Lote</p></div>
@@ -127,7 +141,12 @@ const FormEstoque = () => {
               <div><p>{lote.fornecedor}</p></div>
               <div><p>{lote.validade}</p></div>
               <div><p>{lote.unidades}</p></div>
-              <div><button>X</button></div>
+              <div>
+                <button 
+                  onClick={()=>loteRemove(lote)}
+                  className={styles.LoteDelete}
+                >X</button>
+              </div>
             </div>
             ))}    
           </div>

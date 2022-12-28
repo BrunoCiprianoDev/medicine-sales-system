@@ -16,7 +16,8 @@ const ListSelect = ({list, setList}) => {
 
 
     const removeElement = (elemento) => {
-        elemento.quant--;    
+        elemento.quant--;  
+        elemento.quant_edit--;  
         if(elemento.quant === 0){
           setList(list => list.filter(e => e !== elemento));
         }
@@ -25,6 +26,7 @@ const ListSelect = ({list, setList}) => {
     
       const addElement = (elemento) => {
         elemento.quant++;
+        elemento.quant_edit++; 
         setList(arr=>[...arr])
       }
     

@@ -20,8 +20,9 @@ const ListVendas = ({filter}) => {
     {id:1, attribute: 'codigo', label: "Código"},
     {id:2, attribute: 'nome', label: 'Nome'},
     {id:3, attribute: 'valor_venda', label: 'Valor'},
-    {id: 4, attribute: 'quant', label: 'Quantidade'},
-    {id: 5, attribute: 'total', label: 'Total'}
+    {id: 4, attribute: 'quant', label: 'Quant'},
+    {id: 5, attribute: 'quant_edit', label: 'Quant atual'},
+    {id: 6, attribute: 'total', label: 'Total'}
   ]
 
   let [searchParams] = useSearchParams();
@@ -53,7 +54,7 @@ const ListVendas = ({filter}) => {
  useEffect(() => {
   setTotalValue(0)
   listItensVenda.map((e)=>(
-      setTotalValue(t=> t+(parseFloat(e.valor_venda*e.quant)))
+      setTotalValue(t=> t+(parseFloat(e.valor_venda*e.quant_edit)))
     ));
 },[listItensVenda]);
 
@@ -77,7 +78,8 @@ const ListVendas = ({filter}) => {
 
  const handleDeleteItem = (item) =>{
   if(item.quant > 0){
-    item.quant--;
+    item.quant_edit--;
+    item.edit = true;
     vendaSelect.total=totalValue
   }
    setPatchUrl(url+vendaSelect.id)
@@ -86,7 +88,8 @@ const ListVendas = ({filter}) => {
  }
 
  const handleAddElement = (item) =>{
-   item.quant++;
+   item.quant_edit++;
+   item.edit = true;
    vendaSelect.total=totalValue
    setPatchUrl(url+vendaSelect.id)
    httpConfig(vendaSelect, 'PATCH')
@@ -144,7 +147,8 @@ const ListVendas = ({filter}) => {
                   <div>{item.nome}</div>
                   <div>R${item.valor_venda}</div>
                   <div>{item.quant}</div>
-                  <div>R${item.quant*item.valor_venda}</div>
+                  <div>{item.quant_edit}</div>
+                  <div>R${item.quant_edit*item.valor_venda}</div>
                 <div>
                   <button onClick={()=>handleDeleteItem(item)} className={styles.buttonRemove}>-</button>
                   <button onClick={()=>handleAddElement(item)} className={styles.buttonAdd}>+</button> 

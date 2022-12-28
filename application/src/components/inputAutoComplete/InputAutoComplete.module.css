@@ -20,6 +20,7 @@
 }
 
 .ContainerForm input[type='submit'] {
+    cursor: pointer;
     height: 1.9em;
     background-color: rgba(0, 42, 82, 0.897);
     border-style: none;
@@ -69,6 +70,7 @@
 
 
 .InsertArea button {
+    cursor: pointer;
     margin-top: 2em;
     width: 4em;
     height: 2em;
