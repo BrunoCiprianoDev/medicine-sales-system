@@ -7,6 +7,9 @@ import Loading from '../../../components/loading/Loading'
 import {useSearchParams } from 'react-router-dom';
 import { useEffect } from 'react'
 import { urlServer } from '../../../serverConfig'
+import iconeDeletar from '../../../assets/icon-deletar.png'
+import iconeDetalhe from '../../../assets/icon-detalhe.png'
+import { CompleteDataFormat } from '../../../components/dataFormater/DataFormater'
 
 const ListVendas = ({filter}) => {
 
@@ -20,8 +23,9 @@ const ListVendas = ({filter}) => {
     {id:1, attribute: 'codigo', label: "Código"},
     {id:2, attribute: 'nome', label: 'Nome'},
     {id:3, attribute: 'valor_venda', label: 'Valor'},
-    {id: 4, attribute: 'quant', label: 'Quantidade'},
-    {id: 5, attribute: 'total', label: 'Total'}
+    {id: 4, attribute: 'quant', label: 'Quant'},
+    {id: 5, attribute: 'quant_edit', label: 'Quant atual'},
+    {id: 6, attribute: 'total', label: 'Total'}
   ]
 
   let [searchParams] = useSearchParams();
@@ -35,7 +39,7 @@ const ListVendas = ({filter}) => {
   const [totalValue, setTotalValue] = useState(0);
 
  //Params from list vendas
- const [itensPerPageVendas, setItemPerPageVendas] = useState(10);
+ const [itensPerPageVendas, setItemPerPageVendas] = useState(7);
  const [currentPageVendas, setCurrentPageVendas] = useState(0);
  const pagesVendas = Math.ceil(data && data.length / itensPerPageVendas);
  const startIndexVendas = currentPageVendas * itensPerPageVendas;
@@ -53,22 +57,9 @@ const ListVendas = ({filter}) => {
  useEffect(() => {
   setTotalValue(0)
   listItensVenda.map((e)=>(
-      setTotalValue(t=> t+(parseFloat(e.valor_venda*e.quant)))
+      setTotalValue(t=> t+(parseFloat(e.valor_venda*e.quant_edit)))
     ));
 },[listItensVenda]);
-
-  const dataConverter = (timestamp) => {
-    const date = new Date(timestamp);
-    const day = date.getDate().toString().padStart(2, '0');
-    const month = (date.getMonth()+1).toString().padStart(2, '0');
-    const year = date.getFullYear();
-    const hours = date.getHours();
-    const minutes = date.getMinutes()
-    return(
-      day+'/'+month+'/'+year+
-      '('+hours+':'+(minutes<10 ? '0'+minutes : minutes)+')'
-    )
- }
 
  const onClickVenda= (venda, listItensVenda) =>{
   setListItensVenda(listItensVenda);
@@ -76,8 +67,9 @@ const ListVendas = ({filter}) => {
  }
 
  const handleDeleteItem = (item) =>{
-  if(item.quant > 0){
-    item.quant--;
+  if(item.quant_edit > 0){
+    item.quant_edit--;
+    item.edit = true;
     vendaSelect.total=totalValue
   }
    setPatchUrl(url+vendaSelect.id)
@@ -86,11 +78,18 @@ const ListVendas = ({filter}) => {
  }
 
  const handleAddElement = (item) =>{
-   item.quant++;
-   vendaSelect.total=totalValue
-   setPatchUrl(url+vendaSelect.id)
-   httpConfig(vendaSelect, 'PATCH')
-   setListItensVenda(arr=>[...arr])
+   if(item.quant_edit<item.quant){
+    item.quant_edit++;
+    item.edit = true;
+    vendaSelect.total=totalValue
+    setPatchUrl(url+vendaSelect.id)
+    httpConfig(vendaSelect, 'PATCH')
+    setListItensVenda(arr=>[...arr])
+   }
+ }
+
+ const deleteVenda = (venda) =>{
+  httpConfig(venda.id,'DELETE')
  }
 
   return (
@@ -103,17 +102,27 @@ const ListVendas = ({filter}) => {
                 {parameter.attribute}
               </div>
             ))}
+            <div></div>
           </div>
             {loading && <Loading/>}
             {error && <p>Error ao carregar dados!</p>}
             {currentItensVendas && currentItensVendas.map((venda)=>(
               <div key={venda.id}
                   className={vendaSelect.id === venda.id ? styles.ComponentListSelect : styles.ComponentList} 
-                  onClick={()=>onClickVenda(venda, venda.itensVenda)}
                 >
-                <div>{dataConverter(venda.id)}</div>
+                <div>{CompleteDataFormat(venda.id)}</div>
                 <div>{venda.funcionario.nome}</div>
                 <div>{venda.cliente.nome}</div>
+                <div>
+                  <div className={styles.ElementData}>
+                      <button className={styles.buttonDetalhe} onClick={()=>onClickVenda(venda, venda.itensVenda)}>
+                        <img src={iconeDetalhe} alt=''/>
+                      </button>
+                        <button className={styles.buttonDeletar} onClick={()=>(deleteVenda(venda))}>
+                      <img src={iconeDeletar} alt=''/>
+                    </button>
+                    </div>
+                </div>
               </div>        
             ))}
             <PaginationComponent
@@ -144,7 +153,8 @@ const ListVendas = ({filter}) => {
                   <div>{item.nome}</div>
                   <div>R${item.valor_venda}</div>
                   <div>{item.quant}</div>
-                  <div>R${item.quant*item.valor_venda}</div>
+                  <div>{item.quant_edit}</div>
+                  <div>R${item.quant_edit*item.valor_venda}</div>
                 <div>
                   <button onClick={()=>handleDeleteItem(item)} className={styles.buttonRemove}>-</button>
                   <button onClick={()=>handleAddElement(item)} className={styles.buttonAdd}>+</button> 
