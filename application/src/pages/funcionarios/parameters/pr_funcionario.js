@@ -19,4 +19,4 @@ export const parameters = [
       ]
     },
     {id: 16, attribute: 'senha', label: 'Senha', type: 'password'}
-  ]
+]
