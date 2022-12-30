@@ -43,6 +43,8 @@ import ListVendas from './pages/vendas/listVendas/ListVendas';
 //Estoque
 import FormEstoque from './pages/estoque/formEstoque/FormEstoque';
 import ListEstoque from './pages/estoque/listEstoque/ListEstoque';
+import DetailEstoque from './pages/estoque/detailEstoque/DetailEstoque';
+import Dashboard from './pages/dashboard/Dashboard';
 
 function App() {
   return (
@@ -52,6 +54,8 @@ function App() {
        <div className='Sidebar'><Sidebar/></div>
         <div className='Contend'>
           <Routes>
+            <Route path="/" element={<Dashboard/>}/>
+
             <Route path="/funcionarios/" element={<ListFuncionarios filter={false}/>}/>
             <Route path="/funcionarios/search/" element={<ListFuncionarios filter={true}/>}/>
             <Route path="/funcionarios/form" element={<FormFuncionarios edit={false}/>}/>
@@ -90,8 +94,9 @@ function App() {
             <Route path='/vendas/form/' element={<FormVendas/>}/>
 
             <Route path='/estoque/form/' element={<FormEstoque/>}/>
-            <Route path='estoque/' element={<ListEstoque filter={false}/>}/>
-            <Route path='estoque/search/' element={<ListEstoque filter={true}/>}/>
+            <Route path='/estoque/' element={<ListEstoque filter={false}/>}/>
+            <Route path='/estoque/search/' element={<ListEstoque filter={true}/>}/>
+            <Route path='/estoque/detail/:id' element={<DetailEstoque/>}/>
           </Routes>
         </div>
       </BrowserRouter>
