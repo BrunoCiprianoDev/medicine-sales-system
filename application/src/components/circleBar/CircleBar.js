@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
 import styles from './Circle.module.css'
+ 
 
 const CircleBar = ({percentage, circleWidth, paramRadius, profile, numberSize, disableText}) => {
     const radius = paramRadius;
