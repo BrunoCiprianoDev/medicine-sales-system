@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './DepartamentosMercadorias.module.css'
-
 import iconeInfantil from '../../../assets/icon-infantil.png'
 import iconeHigiene from '../../../assets/icon-higiene.png'
 import iconeCosmeticos from '../../../assets/icon-cosmeticos.png'
@@ -15,7 +14,7 @@ const DepartamentosMercadorias = () => {
   const navigate = useNavigate();
 
   const handleSearchList = (query) => {
-    navigate("/listMercadorias/search?q="+query);
+    navigate("/listMercadorias/search?departamento_like="+query);
   }  
 
   return (
