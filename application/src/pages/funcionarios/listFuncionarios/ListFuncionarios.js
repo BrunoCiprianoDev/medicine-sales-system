@@ -10,6 +10,7 @@ export const ListFuncionarios = ({filter}) => {
   
   return (
     <ListContainer
+      title={'Funcionarios'}
       url={url}
       parameters={useParameters}
       handleEditUrl={'/funcionarios/'} 
