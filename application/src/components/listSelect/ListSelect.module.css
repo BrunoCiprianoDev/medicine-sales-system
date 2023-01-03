@@ -1,4 +1,6 @@
 .MainContainer {
+    display: flex;
+    flex-direction: column;
 }
 
 .HeaderList {
@@ -8,61 +10,12 @@
     background-color: rgba(0, 26, 49, 0.897);
     border-bottom: 2px solid red;
     padding-top: 0.5em;
+    font-weight: bold;
     color: white;
+
 }
 
 .HeaderList div {
     text-align: center;
     width: 7em;
-    height: 2em;
-}
-
-.ComponenteList {
-    justify-content: space-around;
-    display: flex;
-    flex-direction: row;
-    margin: 0.5em;
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
-}
-
-.ComponenteList div {
-    text-align: center;
-    width: 7em;
-    height: 2em;
-    padding-bottom: 0.3em;
-}
-
-.buttonAdd {
-    border-style: none;
-    background-color: rgb(0, 177, 38);
-    color: white;
-    width: 1.5em;
-    font-size: 1.2em;
-    margin-bottom: 0.2em;
-    border-radius: 0.15em;
-    margin: 0.1em
-    
-}
-
-.buttonAdd:hover {
-    background-color: rgb(3, 255, 58);
-}
-
-.buttonRemove {
-    margin-top: 0.3em;
-    border-style: none;
-    background-color: rgb(201, 2, 2);
-    color: white;
-    font-size: 1.2em;
-    width: 1.5em;
-    margin-bottom: 0.2em;
-    border-radius: 0.15em;
-}
-
-.buttonRemove:hover {
-    background-color: rgb(122, 0, 0);
-}
-
-.ButtonBox {
-
 }

@@ -1,0 +1,56 @@
+.ComponenteList {
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    margin: 0.2em;
+    min-height: 4em;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+}
+
+.ComponenteList div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 20%;
+    padding-bottom: 0.3em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.buttonAdd {
+    cursor: pointer;
+    border-style: none;
+    background-color: rgb(0, 177, 38);
+    color: white;
+    width: 1.8em;
+    height: 1.5em;
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    border-radius: 0.15em;
+    margin-left: 0.2em;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.buttonAdd:hover {
+    background-color: rgb(3, 255, 58);
+}
+
+.buttonRemove {
+    cursor: pointer;
+    border-style: none;
+    background-color: rgb(201, 2, 2);
+    color: white;
+    font-size: 1.2em;
+    width: 1.8em;
+    height: 1.5em;
+    margin-bottom: 0.2em;
+    border-radius: 0.15em;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.buttonRemove:hover {
+    background-color: rgb(122, 0, 0);
+}

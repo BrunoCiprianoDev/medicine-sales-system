@@ -3,6 +3,7 @@ import React from 'react'
 import { useState } from 'react';
 import PaginationComponent from '../paginationComponent/PaginationComponent';
 import styles from './ListSelect.module.css'
+import ListSelectComponent from './ListSelectComponent';
 
 const ListSelect = ({list, setList}) => {
     
@@ -16,7 +17,8 @@ const ListSelect = ({list, setList}) => {
 
 
     const removeElement = (elemento) => {
-        elemento.quant--;    
+        elemento.quant--;  
+        elemento.quant_edit--;  
         if(elemento.quant === 0){
           setList(list => list.filter(e => e !== elemento));
         }
@@ -25,6 +27,7 @@ const ListSelect = ({list, setList}) => {
     
       const addElement = (elemento) => {
         elemento.quant++;
+        elemento.quant_edit++; 
         setList(arr=>[...arr])
       }
     
@@ -38,16 +41,11 @@ const ListSelect = ({list, setList}) => {
         <div></div>
       </div>    
       {currentItens && currentItens.map((elemento)=>(
-          <div key={elemento.id} className={styles.ComponenteList}>
-            <div>{elemento.nome}</div>
-            <div>{elemento.valor_venda}</div>
-            <div>{elemento.quant}</div>   
-            <div>{(elemento.quant*elemento.valor_venda).toFixed(2)}</div>         
-            <div className={styles.ButtonBox}>
-              <button onClick={()=>removeElement(elemento)} className={styles.buttonRemove}>-</button>
-              <button onClick={()=>addElement(elemento)} className={styles.buttonAdd}>+</button>  
-            </div>        
-          </div>
+          <ListSelectComponent 
+            key={elemento.id}
+            elemento={elemento} 
+            removeElement={removeElement} 
+            addElement={addElement}/>
         ))}
         <div>
           <PaginationComponent
