@@ -1,67 +1,73 @@
 /*Main container*/
 .MainContainer {
+    transition: 0.2s;
+    z-index: 100;
+    position: fixed;
     background-color: rgba(0, 42, 82, 0.897);
     height: 100%;
-    width: 16em;
+    width: 3em;
     box-shadow: 2px 1px 5px 0px rgba(0,0,0,0.75);
 }
 
-/*Container of options*/
-.NavContainer {
-    display: grid;
-    height: 100%;
+.NavLink p {
+    display: flex;
+    visibility: hidden;
 }
 
-.NavContainer p {
+.MainContainer:hover {
+    transition: 0.2s;
+    width: 15em;
+}
+
+.MainContainer:hover p {
+    display: flex;
+    visibility: visible;
     color: white;
     width: 100%;
     font-size: 1.2em;
     padding-left: 1em;
+    transition-delay: 0.1s;
 }
 
-/*Component option*/
+/*Container of options*/
+.NavContainer {
+    display: flex;
+    flex-direction: column;
+}
+
 .NavLink {
     display: flex;
     align-items: center;
     text-decoration: none;
     padding: 4px;
+    height: 4em;
 }
 
 .NavLink:hover {
-    background-color:  rgba(0, 41, 77, 0.897);
+    background-color: rgba(0, 42, 82, 0.897);
 }
 
- .NavLink button img{
+.NavLink button img{
     width: 2em;
     height: 2em;
  }
-
- .NavLinkActive {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    padding: 4px;
-    background-color:  rgba(0, 26, 49, 0.897);
- }
-
 
 .NavLink img {
     display: inline;
     height: 2em;
 }
 
-.NavLinkActive img {
-    display: inline;
-    height: 2em;
-}
-
-@media screen and (max-width: 1000px){
-    .MainContainer {
-        display: flex;
+@media screen and (max-width: 800px) {
+    .MainContainer:hover{
+        z-index: 100;
+        position: fixed;
+        background-color: rgba(0, 42, 82, 0.897);
         height: 100%;
-        width: max-content;
-    }
-    .NavContainer p {
+        width: 3em;
+        box-shadow: 2px 1px 5px 0px rgba(0,0,0,0.75);
+    } 
+    
+    .MainContainer:hover p {
         display: none;
     }
     
