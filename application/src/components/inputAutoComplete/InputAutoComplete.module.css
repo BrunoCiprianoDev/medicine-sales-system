@@ -1,80 +1,66 @@
 .ContainerForm {
-    margin: 0.5em;
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
-    padding-left: 1em;
     display: flex;
-}
-
-.ContainerForm h4{
-    width: 7em;
+    flex-direction: row;
 }
 
 .ContainerForm form {
     display: flex;
     box-sizing: border-box;
     height: max-content;
-    width: 35%;
-    margin-right: 0.5em;
-    margin-left: 1em;
-    margin-top: 1em;
 }
 
-.ContainerForm input[type='submit'] {
-    cursor: pointer;
-    height: 1.9em;
-    background-color: rgba(0, 42, 82, 0.897);
-    border-style: none;
-    color: white;
-}
-
-.InputForm {
+.InputBox {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.InputForm input[type='text'] {
+.InputComponent {
     height: 1.5em;
     border-style: none;
-    border-bottom: 1px solid rgba(0, 26, 49, 0.897);
-    width: 12em;
+    border-bottom: 2px solid rgba(0, 26, 49, 0.897);
+    background-color: white;
+    width: 100%;
+    font-size: 1em;
 }
 
-.InputForm input[type='number'] {
+.InputComponent:focus {
     outline: none;
+    border-bottom: 2px solid red;
 }
 
 .SugestionBox {
     height: max-content;
-    border-left: 1px solid rgb(209, 209, 209);
-    border-right: 1px solid rgb(209, 209, 209);
-    border-bottom: 1px solid rgba(0, 26, 49, 0.897);
+    border-bottom: 2px solid rgba(0, 26, 49, 0.897);
+    width: 100%;
 }
 
-.SugestionBox label {
-    display: block;
+.SugestionBoxNone {
+    display: none;
 }
 
-.SugestionBox label:hover {
+.LabelVerify {
+    font-size: 1em;
+    font-weight: bold;
+    color: rgb(0, 177, 0);
+}
+
+.LabelWarning {
+    font-size: 1em;
+    font-weight: bold;
     color: red;
-    border-bottom: 2px solid red;
 }
 
-.InsertArea {
+.LabelNotVerify{
+    font-size: 1em;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.AutoComplete {
     display: flex;
-    margin-top: 0.4em;
-    justify-content:space-around;
-    width: 60%;
-    height: 100%;
-}
-
-
-.InsertArea button {
-    cursor: pointer;
-    margin-top: 2em;
-    width: 4em;
-    height: 2em;
-    background-color: rgba(0, 42, 82, 0.897);
-    border-style: none;
-    color: white;
+    flex-direction: column;
+    font-weight: bold;
+    text-shadow: 2px 1px 4px rgba(0,0,0,0.24);
+    color: rgb(97 97 97);
 }

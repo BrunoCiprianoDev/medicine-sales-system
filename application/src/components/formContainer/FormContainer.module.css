@@ -20,7 +20,7 @@
     display: grid;
 }
 
-.FormContainer label {
+.LabelsForm {
     font-weight: bold;
     text-shadow: 2px 1px 4px rgba(0,0,0,0.24);
     color: rgb(97 97 97);
@@ -52,7 +52,7 @@
 }
 
 /*Button Enviar*/
-.SubmitArea input[type=submit] {
+.SubmitButton {
     cursor: pointer;
     box-shadow: -1px 5px 10px rgba(0, 0, 0, 0.45);
     background-color: rgba(0, 42, 82, 0.897);
@@ -64,13 +64,7 @@
     color: white;
 }
 
-
- .SubmitArea input[type=submit]:hover {
-    background-color: rgba(0, 26, 49, 0.897);
-    color:white;
- }
-
- .MainContainer button {
+ .ButtonBack {
     cursor: pointer;
     box-shadow: -1px 5px 10px rgba(0, 0, 0, 0.45);
     background-color: rgba(0, 42, 82, 0.897);
@@ -83,7 +77,7 @@
     color: white;
  }
 
- .MainContainer button:hover {
+ .ButtonBack:hover {
     background-color: rgba(0, 26, 49, 0.897);
     color:white;
  }
