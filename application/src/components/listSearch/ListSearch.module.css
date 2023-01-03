@@ -5,8 +5,14 @@
 
 .SearchList form input[type='text'] {
     width: 80%;
+    font-size: 1.2em;
     border-style: none;
     border-bottom: 2px solid rgba(0, 26, 49, 0.897);
+}
+
+.SearchList form input[type='text']:focus {
+    outline: none;
+    border-bottom: 2px solid red;
 }
 
 .HeaderList {
@@ -17,11 +23,12 @@
     background-color: rgba(0, 26, 49, 0.897);
     border-bottom: 2px solid red;
     color: white;
+    font-weight: bold;
 }
 
 .HeaderList label{
     margin: 0.5em;
-    width: 8em;
+    width: 1.2;
     text-align: center;
 }
 
