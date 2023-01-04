@@ -1,6 +1,16 @@
 .MainContainer {
     grid-area: list;
+    list-style: none;
+
 }
+
+.MainContainer table {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    table-layout: none;
+}
+
 
 .HeaderList {
     display: flex;
@@ -16,10 +26,14 @@
 .ListComponent {
     display: flex;
     justify-content: space-around;
-    font-size: 1.1em;
+    font-size: 1.2em;
     margin-top: 1px;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+    min-height: 4em;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    align-items: center;
+
 }
 
 .ElementData {
@@ -54,4 +68,10 @@
    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75) ;
 }
 
-
+.Title {
+    text-shadow: 1px 0px 2px rgba(0,0,0,0.75);
+    display: flex;
+    grid-area: title;
+    padding-left: 2em;
+    color: red;
+}
