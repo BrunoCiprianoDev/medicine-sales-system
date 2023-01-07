@@ -1,0 +1,103 @@
+.MainContainer {
+    box-sizing: border-box;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 90%;
+    grid-template-areas: "title""menu";
+}
+
+.ContainerTitle {
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    text-shadow: 0px 0px 3px rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: center;
+    grid-area: title;
+    color: red;
+}
+
+.ContainerDepartment{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.ContainerMenu {
+    margin-top: 5%;
+    width: 100%;
+    height: 50%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    justify-content: center;
+    grid-area: menu;
+    column-gap: 2%;
+    row-gap: 2%;
+}
+
+.ContainerMenu button{
+    cursor: pointer;
+    width: 10em;
+    height: 10em;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    background-color: rgba(0, 42, 82, 0.897);
+    color: white;
+    border-radius: 3px;
+    font-size: 1em;
+}
+
+.ContainerMenu button:hover {
+    background-color: rgba(0, 26, 49, 0.897);
+    color:white;
+}
+
+.ContainerMenu img {
+    width: 70%;
+}
+
+@media screen and (max-width: 800px) {
+    .ContainerMenu div{
+        width: 8em;
+        height: 8em;
+        background-color: blue;
+        border: 1px dashed rgb(236, 3, 3);
+    }
+
+    .ContainerMenu button{
+        width: 10em;
+        height: 10em;
+        box-shadow: -1px 5px 10px rgba(0, 0, 0, 0.45);
+        background-color: rgba(0, 42, 82, 0.897);
+        color: white;
+        border-radius: 3px;
+        font-size: 0.8em;
+    }
+
+    .ContainerMenu button:hover {
+        background-color: rgba(0, 26, 49, 0.897);
+        color:white;
+        box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    }
+}
+
+.FormContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.FormContainer button{
+    cursor: pointer;
+    width: 5em;
+    height: 5em;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    background-color: rgba(0, 42, 82, 0.897);
+    color: white;
+    border-radius: 3px;
+    font-size: 1em;
+}
+
+.FormContainer img {
+    width: 70%;
+}
