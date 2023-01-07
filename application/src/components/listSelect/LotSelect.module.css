@@ -1,0 +1,59 @@
+.BoxContainer {
+    position: absolute;
+    padding: 1em;
+    width: 40em;
+    top:20%;
+    left: 30%;
+    float: center;
+    color: white;
+    background-color: rgba(0, 26, 49, 0.897)
+}
+
+.TableContainer {
+    width: 100%;
+}
+
+.HeaderContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.Exit {
+    cursor: pointer;
+    margin-right: 1em;
+}
+
+
+.HeaderList {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2em;
+    box-shadow: 0px 0px 2px 0px rgba(255, 255, 255, 0.75);
+    background-color: red;
+    align-items: center;
+}
+
+.ListComponent {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2em;
+    min-height: 2em;
+    box-shadow: 0px 0px 2px 0px rgba(255, 255, 255, 0.75);
+    align-items: center;
+}
+
+.ListComponent:hover  {
+    background-color: red;
+}
+
+.ElementData {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    word-break: break-all;
+}
+

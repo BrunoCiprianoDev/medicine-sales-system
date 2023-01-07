@@ -1,65 +1,26 @@
 .MainContainer {
+    display: flex;
+    flex-direction: column;
 }
 
 .HeaderList {
-    justify-content: space-around;
     display: flex;
-    flex-direction: row;
-    background-color: rgba(0, 26, 49, 0.897);
-    border-bottom: 2px solid red;
+    justify-content: space-around;
+    font-size: 1.2em;
+    color: white;
+    font-weight: bold;
     padding-top: 0.5em;
-    color: white;
-}
-
-.HeaderList div {
-    text-align: center;
-    width: 7em;
-    height: 2em;
-}
-
-.ComponenteList {
-    justify-content: space-around;
-    display: flex;
-    flex-direction: row;
-    margin: 0.5em;
+    padding-bottom: 0.5em;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    background-color: rgba(0, 42, 82, 0.897);
+    border-bottom:3px solid red;
 }
 
-.ComponenteList div {
+.HeaderList th {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
     text-align: center;
-    width: 7em;
-    height: 2em;
-    padding-bottom: 0.3em;
-}
-
-.buttonAdd {
-    cursor: pointer;
-    border-style: none;
-    background-color: rgb(0, 177, 38);
-    color: white;
-    width: 1.5em;
-    font-size: 1.2em;
-    margin-bottom: 0.2em;
-    border-radius: 0.15em;
-    margin: 0.1em
-}
-
-.buttonAdd:hover {
-    background-color: rgb(3, 255, 58);
-}
-
-.buttonRemove {
-    cursor: pointer;
-    margin-top: 0.3em;
-    border-style: none;
-    background-color: rgb(201, 2, 2);
-    color: white;
-    font-size: 1.2em;
-    width: 1.5em;
-    margin-bottom: 0.2em;
-    border-radius: 0.15em;
-}
-
-.buttonRemove:hover {
-    background-color: rgb(122, 0, 0);
+    word-break: break-all;
 }

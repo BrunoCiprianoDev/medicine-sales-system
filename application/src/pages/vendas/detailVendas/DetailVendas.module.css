@@ -1,0 +1,124 @@
+.MainContainer {
+    box-sizing: border-box;
+    height: 100%;
+    display: grid;
+    grid-template-columns: minmax(25em, 20%) minmax(30em, auto);
+    grid-template-rows: 1fr;
+    grid-template-areas: "leftArea rightArea";
+}
+
+.LeftArea {
+    grid-area: leftArea;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    margin: 0.5em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.BodyData {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-top: 1em;
+}
+
+.BodyData label {
+    font-size: 1.2em;
+}
+
+.BodyData p {
+    max-width: 30em;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-shadow: 2px 1px 4px rgba(0,0,0,0.24);
+    color: rgba(0, 26, 49, 0.897);
+}
+
+.LeftArea h2 {
+    color: red;
+    margin-left: 1em;
+    text-shadow: 2px 1px 4px rgba(0,0,0,0.24);
+}
+
+
+.TextArea {
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    margin: 0.2em;
+    width: 90%;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-shadow: 2px 1px 4px rgba(0,0,0,0.24);
+    color: red;
+}
+
+.RightArea {
+    grid-area: rightArea;
+    margin: 0.5em;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+}
+
+.RightArea table {
+    width: 100%;
+}
+
+.HeaderList {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2em;
+    color: black;
+    font-weight: bold;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    background-color: rgba(0, 42, 82, 0.897);
+    border-bottom: 5px solid red;
+    color: white;
+}
+
+.HeaderList th {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    word-break: break-all;
+}
+
+
+.ButtonVoltar {
+    cursor: pointer;
+    margin-top: 1em;
+    box-shadow: -1px 5px 10px rgba(0, 0, 0, 0.45);
+    background-color: rgba(0, 42, 82, 0.897);
+    border-style: none;
+    border-radius: 2px;
+    height: 3em;
+    width: 10em;
+    font-size: 1em;
+    color: white;
+}
+
+.ListComponent {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2em;
+    margin-top: 1px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    min-height: 4em;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    align-items: center;
+
+}
+
+.ListComponent td{
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    word-break: break-all;
+}

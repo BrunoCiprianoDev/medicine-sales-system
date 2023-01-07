@@ -1,0 +1,12 @@
+.buttonDeletar {
+    cursor: pointer;
+    margin-left: 2em;
+    border-radius: 3px;
+    background-color:  #e20000;
+    border-style: none;
+}
+
+.buttonDeletar img {
+    padding-top: 2px;
+    width: 2em;
+}
