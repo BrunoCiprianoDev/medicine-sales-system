@@ -71,7 +71,7 @@
 }
 
 .HeaderList {
-    background-color: rgba(0, 26, 49, 0.897);
+    background-color: rgba(0, 42, 82, 0.897);
     border-bottom: 3px solid red;
     color: white;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
@@ -114,4 +114,32 @@
     text-align: center;
     font-weight: bold;
     word-break: break-all;
+}
+
+.buttonDeletar {
+    cursor: pointer;
+    margin-left: 1em;
+    border-radius: 3px;
+    background-color:  #e20000;
+    border-style: none;
+}
+
+.buttonDeletar img {
+    padding-top: 2px;
+    width: 2em;
+}
+
+
+.buttonDetalhe {
+    cursor: pointer;
+    margin-left: 2em;
+    border-radius: 3px;
+    background-color: rgba(5, 158, 0, 0.897);
+    border-style: none;
+}
+
+
+.buttonDetalhe img {
+    padding-top: 2px;
+    width: 2em;
 }

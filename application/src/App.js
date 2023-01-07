@@ -51,7 +51,8 @@ import ListDevolucoes from './pages/devolucoes/listDevolucoes/ListDevolucoes';
 import DetailDevolucoes from './pages/devolucoes/detailDevolucoes/DetailDevolucoes';
 
 //Dashboard
-import Dashboard from './pages/dashBoard/Dashboard';
+
+
 import LoteEdit from './pages/estoque/loteEdit/LoteEdit';
 
 //Notificacoes
@@ -74,7 +75,6 @@ function App() {
        <div className='Sidebar'><Sidebar/></div>
         <div className='Contend'>
           <Routes>
-            <Route path='/' element={<Dashboard />}/>
 
             <Route path='/funcionarios/' element={<ListFuncionarios filter={false}/>}/>
             <Route path='/funcionarios/search/' element={<ListFuncionarios filter={true}/>}/>
