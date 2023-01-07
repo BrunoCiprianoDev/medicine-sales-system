@@ -1,90 +1,92 @@
 import React from 'react'
+import { urlServer } from '../../../serverConfig';
+import {useNavigate, useSearchParams } from 'react-router-dom';
+import PaginationComponent from '../../../components/paginationComponent/PaginationComponent';
 import styles from './ListEstoque.module.css'
-import Loading from '../../../components/loading/Loading'
-import PaginationComponent from '../../../components/paginationComponent/PaginationComponent'
-import { useState } from 'react'
-import {useSearchParams } from 'react-router-dom';
-import { urlServer } from '../../../serverConfig'
-import { useFetch } from '../../../hooks/useFetch'
-import CircleBar from '../../../components/circleBar/CircleBar'
-
+import AlertError from '../../../components/alertContainer/alertError/AlertError';
+import iconeDetalhe from '../../../assets/icon-detalhe.png'
+import Loading from '../../../components/loading/Loading';
+import { useState } from 'react';
+import { useFetch } from '../../../hooks/useFetch';
+import GraphicCurrentItens from '../../../components/graphicCurrentItens/GraphicCurrentItens';
 
 const ListEstoque = ({filter}) => {
 
-const url = urlServer+"/mercadorias/";
+    const parameters = [
+        {id: 1, attribute:'nome', label:'Nome', type: 'text'},
+        {id: 2, attribute:'codigo', label:'Código', type: 'text' },
+        {id: 4, attribute:'estoque_minimo', label:'Estoque minimo', type: 'number' },
+        {id: 5, attribute:'estoque_maximo', label:'Estoque máximo', type: 'number' }
+      ]
 
-const parameters = [
-        {id: 1, attribute:'nome', label:'Nome'},
-        {id: 2, attribute:'codigo', label:'Código'},
-        {id: 3, attribute:'estoque_minimo', label:'Estoque minimo'},
-        {id: 4, attribute:'estoque_maximo', label:'Estoque máximo'},
-        {id: 5, attribute:'estoque_atual', label: 'Estoque atual'},
-        {id: 6, attribute: 'nivel', label: 'Status'}
-]
+  const urlMercadorias = urlServer+"/mercadorias/";
 
-let [searchParams] = useSearchParams();
-const {data, loading, error} = useFetch(
-filter ? url+"?"+searchParams : url)
+  const navigate = useNavigate();
+  let [searchParams] = useSearchParams();
+  const {data, loading, error} = useFetch(
+    filter ? urlMercadorias+"?"+searchParams : urlMercadorias)
 
-
-const totalUnidades = (lotes) => {
-  var unidades = 0;
-  lotes && lotes.map((lote)=>(
-    unidades+=lote.unidades
-  ))
-  return unidades;
-}
+  const handleEdit = (id) => {
+    navigate('/estoque/'+id)
+  }
 
   //Params from pagination
-  const [itensPerPage, setItemPerPage] = useState(8);
+  const [itensPerPage, setItemPerPage] = useState(7);
   const [currentPage, setCurrentPage] = useState(0);
   const pages = Math.ceil(data && data.length / itensPerPage);
   const startIndex = currentPage * itensPerPage;
   const endIndex = startIndex + itensPerPage;
   const currentItens = (data && data.slice(startIndex, endIndex));
 
-
   return (
     <div className={styles.MainContainer}>
-        <div className={styles.HeaderList}>
-            {parameters.map((parameter)=>(
-                <div key={parameter.id} className={styles.ElementData}>{parameter.label}</div>
-            ))}
-        </div>
-          {error && <p>Falha ao carregar dados....</p>}
-          {loading && <Loading/>}
-          {currentItens && currentItens.map((item)=>(
-            <div className={styles.ListComponent} key={item.id}>
-              <div className={styles.ElementData}>{item.nome}</div>
-              <div className={styles.ElementData}>{item.codigo}</div>
-              <div className={styles.ElementData}>{item.estoque_minimo}</div>
-              <div className={styles.ElementData}>{item.estoque_maximo}</div>
-              <div className={styles.ElementData}>{totalUnidades(item.lotes)}</div>
-            <div className={styles.ElementData}>
-                <CircleBar  
-                    percentage={(totalUnidades(item.lotes)/item.estoque_maximo)*100} 
-                    circleWidth='58' 
-                    paramRadius={25} 
-                    profile={7} 
-                    numberSize={'0.4em'}
-                    disableText={true}
-                />
-            </div>
-          </div>
-          ))}
-          <div className={styles.PaginationArea}>
-            <PaginationComponent 
-              setCurrentPage={setCurrentPage} 
-              currentPage={currentPage}
-              setItemPerPage={setItemPerPage} 
-              itensPerPage={itensPerPage}
-              pages={pages}
-              pagination={'desable'}
-              />
-          </div>
+      <div className={styles.Title}>
+        <h2>Mercadorias / Estoque </h2>
       </div>
+      {loading && <Loading/>}
+      {error && <AlertError>Falha no carregamento!</AlertError>}
+      <table>
+        <thead>
+        <tr className={styles.HeaderList}>
+          {parameters.map((parameter)=>(
+            <th key={parameter.id} className={styles.ElementData}>{parameter.label}</th>
+          ))}
+          <th className={styles.ElementData}>Percentual</th>
+          <th className={styles.ElementData}></th>
+        </tr>
+        </thead>
+        <tbody>
+          {currentItens && currentItens.map((item)=>(
+            <tr className={styles.ListComponent} key={item.id}>
+              {parameters.map((parameter)=>(
+                <td 
+                  key={parameter.id} 
+                  className={styles.ElementData}>
+                  {item[parameter.attribute]}
+                </td>
+              ))}
+              <GraphicCurrentItens mercadoria={item}/>
+              <td className={styles.ElementData}>
+                <button className={styles.buttonDetalhe} onClick={()=>handleEdit(item.id)}>
+                  <img src={iconeDetalhe} alt=''/>
+                </button>
+              </td>
+            </tr>
+          ))}
+      </tbody>
+      </table>
+      <div className={styles.PaginationArea}>
+        <PaginationComponent 
+          setCurrentPage={setCurrentPage} 
+          currentPage={currentPage}
+          setItemPerPage={setItemPerPage} 
+          itensPerPage={itensPerPage}
+          pages={pages}
+          pagination={'desable'}
+        />
+        </div>
+    </div>
   )
 }
 
 export default ListEstoque
-

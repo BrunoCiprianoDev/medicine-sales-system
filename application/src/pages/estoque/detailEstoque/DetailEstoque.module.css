@@ -1,0 +1,145 @@
+.MainContainer {
+    /*border: 1px dashed black;*/
+    box-sizing: border-box;
+    height: 100%;
+    display: grid;
+    grid-template-columns: minmax(25em, 40%) minmax(30em, auto);
+    grid-template-rows: 1fr;
+    grid-template-areas: "leftArea rightArea";
+}
+
+.LeftArea {
+    grid-area: leftArea;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    margin: 0.5em;
+    display: grid;
+    grid-template-rows: max-content auto;
+    grid-template-areas: "headerLeftAreas"
+                         "listSearch";
+}
+
+.LeftArea h2 {
+    color: red;
+    margin-left: 1em;
+    text-shadow: 2px 1px 4px rgba(0,0,0,0.24);
+}
+
+.RightArea {
+    grid-area: rightArea;
+    margin: 0.5em;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+}
+
+.RightArea h2 {
+    color: red;
+    margin-left: 1em;
+    text-shadow: 2px 1px 4px rgba(0,0,0,0.24);
+}
+
+.BodyData {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 1em;
+    column-gap: 2em;
+    padding-top: 1em;
+    padding-left: 10%;
+}
+
+.BodyData label {
+    font-size: 1.2em;
+}
+
+.BodyData p {
+    max-width: 30em;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-shadow: 2px 1px 4px rgba(0,0,0,0.24);
+    color: rgba(0, 26, 49, 0.897);
+}
+
+.ComponentGraphic {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ComponentGraphic h2 {
+    color: black;
+}
+
+.HeaderList {
+    background-color: rgba(0, 42, 82, 0.897);
+    border-bottom: 3px solid red;
+    color: white;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    height: 3em;
+    width: 100%;
+    font-weight: bold;
+    word-break: break-all;
+ }
+
+ .HeaderList div {
+    width: 25%;
+ }
+
+ .HeaderList div p {
+    text-align: center;
+}
+
+.ListContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+ }
+
+ .lotListComponent {
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    height: 3em;
+}
+
+.lotListComponent div {
+    width: 25%;
+}
+
+.lotListComponent p {
+    text-align: center;
+    font-weight: bold;
+    word-break: break-all;
+}
+
+.buttonDeletar {
+    cursor: pointer;
+    margin-left: 1em;
+    border-radius: 3px;
+    background-color:  #e20000;
+    border-style: none;
+}
+
+.buttonDeletar img {
+    padding-top: 2px;
+    width: 2em;
+}
+
+
+.buttonDetalhe {
+    cursor: pointer;
+    margin-left: 2em;
+    border-radius: 3px;
+    background-color: rgba(5, 158, 0, 0.897);
+    border-style: none;
+}
+
+
+.buttonDetalhe img {
+    padding-top: 2px;
+    width: 2em;
+}
