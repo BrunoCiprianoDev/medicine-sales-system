@@ -1,156 +1,63 @@
 .MainContainer {
-    box-sizing: border-box;
+    grid-area: list;
+    list-style: none;
+
+}
+
+.MainContainer table {
+    display: flex;
+    flex-direction: column;
     height: 100%;
-    display: grid;
-    grid-template-columns: minmax(25em, 50%) minmax(25em, auto);
-    grid-template-rows: 1fr;
-    grid-template-areas: "leftArea rightArea";
+    table-layout: none;
 }
 
-.MainContainer h3 {
-    margin-left: 1em;
-}
 
-.ListVendas {
-    margin: 0.5em;
-    grid-area: leftArea;
-    font-size: 1.2em;
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
-}
-
-.ListItens {
-    margin: 0.5em;
-    grid-area: rightArea;
-    font-size: 1.0em; 
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
-}
-
-/*List vendas*/
-.ListHeader {
+.HeaderList {
+    display: flex;
     justify-content: space-around;
-    display: flex;
-    flex-direction: row;
-    background-color: rgba(0, 26, 49, 0.897);
-    border-bottom: 2px solid red;
+    font-size: 1.2em;
+    color: black;
+    font-weight: bold;
     padding-top: 0.5em;
-    color: white;
-    word-break: break-all;
-}
-
-.ListHeader div {
-    width: 6em;
-    text-align: center;
-    height: 1.5em;
-}
-
-.ComponentList {
-    cursor: pointer;
-    font-size: 0.8em;
-    display: flex;
-    flex-direction: row;
-    justify-content:space-around;
-    margin: 0.5em;
-    height: max-content;
+    padding-bottom: 0.5em;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
-    align-items: center;
-    word-break: break-all;
-    padding: 0.2em;
-}
-
-.ComponentListSelect {
-    cursor: pointer;
-    font-size: 0.8em;
-    display: flex;
-    flex-direction: row;
-    justify-content:space-around;
-    margin: 0.5em;
-    font-weight: bold;
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
-    align-items: center;
-    word-break: break-all;
-}
-
-.HeaderListItens {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.HeaderListItens h3{
-    margin-right: 2em;
-
-}
-
-.buttonRemove {
-    cursor: pointer;
-    border-style: none;
-    background-color: rgb(255, 0, 0);
+    background-color: rgba(0, 42, 82, 0.897);
+    border-bottom: 5px solid red;
     color: white;
-    font-size: 1.2em;
-    width: 1.8em;
-    height: 1.8em;
-    margin-bottom: 0.2em;
-    border-radius: 0.15em;
-    font-weight: bold;
 }
 
-.buttonRemove:hover {
-    background-color: rgb(201, 2, 2);
-}
-
-.buttonAdd {
-    cursor: pointer;
-    border-style: none;
-    background-color: rgb(0, 177, 38);
-    color: white;
-    width: 1.8em;
-    height: 1.8em;
-    font-size: 1.2em;
-    margin-bottom: 0.2em;
-    border-radius: 0.15em;
-    margin: 0.1em;
-    font-weight: bold;
-}
-
-.buttonAdd:hover {
-    background-color: rgb(3, 163, 38);
-}
-
-.ComponentList:hover {
-    color: rgb(1,7,87);
-}
-
-.ComponentList div {
-    padding-top: 0.3em;
-    text-align: center;
-    height: 100%;
-    width: 30%;
-    text-align: center;
-    padding: 0.5em;
-}
-
-.ComponentListSelect div {
-    padding-top: 0.3em;
-    text-align: center;
-    height: 100%;
-    width: 30%;
-    text-align: center;
-    padding: 0.5em;
-
-}
-
-.ElementData {
+.HeaderList th {
     display: flex;
     justify-content: center;
     width: 20%;
     height: 100%;
     text-align: center;
     word-break: break-all;
-    margin-left: 2em;
+}
+
+.ListComponent {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2em;
+    margin-top: 1px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    min-height: 4em;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    align-items: center;
+
+}
+
+.ListComponent td {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    word-break: break-all;
 }
 
 .buttonDetalhe {
-    cursor: pointer;
     margin-left: 2em;
     border-radius: 3px;
     background-color: rgba(0, 42, 82, 0.897);
@@ -158,8 +65,7 @@
 }
 
 .buttonDeletar {
-    cursor: pointer;
-    margin-left: 0.2em;
+    margin-left: 2em;
     border-radius: 3px;
     background-color:  #e20000;
     border-style: none;
@@ -172,4 +78,12 @@
 
 .PaginationArea {
    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75) ;
+}
+
+.Title {
+    text-shadow: 1px 0px 2px rgba(0,0,0,0.75);
+    display: flex;
+    grid-area: title;
+    padding-left: 2em;
+    color: red;
 }

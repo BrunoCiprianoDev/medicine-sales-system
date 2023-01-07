@@ -36,117 +36,6 @@
       "email": "email31312Funcionario@email.com",
       "dt_admissao": "2021-12-14",
       "funcao": "VENDEDOR"
-    },
-    {
-      "id": 3,
-      "nome": "Maria Antonieta de Las Neves",
-      "cpf": "999.888.777.24",
-      "dt_nascimento": "14/02/2000",
-      "cep": "36.090.450",
-      "uf": "Minas Gerais",
-      "cidade": "Juiz de Fora",
-      "bairro": "Bairro de JF",
-      "logradouro": "Av. juiz",
-      "numero": "Maria Antonieta de Las Neves",
-      "complemento": "302",
-      "telefone_um": "(00)00000-0000",
-      "telefone_dois": "(00)00000-0000",
-      "email": "emailUmFuncionario@email.com",
-      "dt_admissao": "00/00/0000",
-      "funcao": "VENDEDOR"
-    },
-    {
-      "id": 4,
-      "nome": "Rafael Cardoso",
-      "cpf": "999.888.777.66",
-      "dt_nascimento": "1997-02-14",
-      "cep": "36.090.450",
-      "uf": "Minas Gerais",
-      "cidade": "Juiz de Fora",
-      "bairro": "Bairro de JF",
-      "logradouro": "Av. juiz",
-      "numero": "Rafael Cardoso",
-      "complemento": "302",
-      "telefone_um": "(00)00000-0000",
-      "telefone_dois": "(00)00000-0000",
-      "email": "emailUmFuncionario@email.com",
-      "dt_admissao": "00/00/0000",
-      "funcao": "VENDEDOR",
-      "cnpf": "780.630.790.26"
-    },
-    {
-      "id": 5,
-      "nome": "Viviane Bortoni",
-      "cpf": "999.888.777.02",
-      "dt_nascimento": "14/02/2000",
-      "cep": "36.090.450",
-      "uf": "Minas Gerais",
-      "cidade": "Juiz de Fora",
-      "bairro": "Bairro de JF",
-      "logradouro": "Av. juiz",
-      "numero": "Viviane Bortoni",
-      "complemento": "302",
-      "telefone_um": "(00)00000-0000",
-      "telefone_dois": "(00)00000-0000",
-      "email": "emailUmFuncionario@email.com",
-      "dt_admissao": "00/00/0000",
-      "funcao": "VENDEDOR"
-    },
-    {
-      "nome": "Sonia Maria Rodrigues",
-      "cpf": "777.554.254.12",
-      "dt_nascimento": "1980-05-12",
-      "cep": "36090450",
-      "uf": "MG",
-      "cidade": "Juiz de Fora",
-      "bairro": "Fabrica",
-      "logradouro": "Rua My Home",
-      "numero": "565",
-      "complemento": "n/a",
-      "telefone_um": "(32)9888-2545",
-      "telefone_dois": "(32)3222-2521",
-      "email": "sonia991334@gmail.com",
-      "dt_admissao": "2020-12-03",
-      "funcao": "VENDEDOR",
-      "id": 13
-    }
-  ],
-  "categorias": [
-    {
-      "id": 1,
-      "tipo": "Medicamento",
-      "classe": "A",
-      "classificacao": "Antibiotico"
-    },
-    {
-      "tipo": "Livre",
-      "classe": "B",
-      "classificacao": "Antitérmico",
-      "id": 2
-    },
-    {
-      "tipo": "Remedio",
-      "classe": "B",
-      "classificacao": "Antibiotico",
-      "id": 3
-    },
-    {
-      "tipo": "Medicamento",
-      "classe": "C",
-      "classificacao": "Livre",
-      "id": 4
-    },
-    {
-      "tipo": "Remedio",
-      "classe": "B",
-      "classificacao": "Antibiotico",
-      "id": 5
-    },
-    {
-      "tipo": "Remedio",
-      "classe": "B",
-      "classificacao": "Antibiotico",
-      "id": 6
     }
   ],
   "fornecedores": [
@@ -185,601 +74,628 @@
   ],
   "clientes": [
     {
-      "nome": "Jordana Silva",
-      "cpf": "833.444.567.22",
-      "dt_nascimento": "1987-02-14",
+      "nome": "Maria Tavares Edit",
+      "cpf": "848.523.477.20",
+      "dt_nascimento": "2023-02-21",
       "telefone": "(32)3222-9781",
-      "email": "simas_almeida@gmail.com",
+      "email": "email31312Funcionario@email.com",
       "id": 1
+    }
+  ],
+  "gruposFarmacologicos": [
+    {
+      "id": 1,
+      "grupoFarmacologico": "LIVRE"
     },
     {
-      "nome": "Monteiro Lobato",
-      "cpf": "848.567.991.26",
-      "dt_nascimento": "1965-01-15",
-      "telefone": "(32)3222-9781",
-      "email": "monteiro@gmail.com",
-      "id": 2
+      "id": 2,
+      "grupoFarmacologico": "ANALGÉSICO E AINTIPIRÉTICO"
+    },
+    {
+      "id": 3,
+      "grupoFarmacologico": "ANESTÉSICO"
+    },
+    {
+      "id": 4,
+      "grupoFarmacologico": "ANTIALÉRGICO"
+    },
+    {
+      "id": 5,
+      "grupoFarmacologico": "ANTIDOTO EXÓGENO"
+    },
+    {
+      "id": 6,
+      "grupoFarmacologico": "ANTI-INFLAMATÓRIO"
+    },
+    {
+      "id": 7,
+      "grupoFarmacologico": "ANTIMICROBIANOS"
+    },
+    {
+      "id": 8,
+      "grupoFarmacologico": "AMEBICIDA E GIARDICIDA"
+    },
+    {
+      "id": 9,
+      "grupoFarmacologico": "ANTIVERTIGINOSO"
+    },
+    {
+      "id": 10,
+      "grupoFarmacologico": "VITAMINAS"
+    },
+    {
+      "id": 11,
+      "grupoFarmacologico": "CORREÇÃO DE ELETROLITOS"
+    },
+    {
+      "id": 12,
+      "grupoFarmacologico": "SUPLEMENTO MINERAL"
+    },
+    {
+      "id": 13,
+      "grupoFarmacologico": "SOLUÇÃO INTRAVENOSA"
+    },
+    {
+      "id": 14,
+      "grupoFarmacologico": "CARGIOLOGIA"
+    },
+    {
+      "id": 15,
+      "grupoFarmacologico": "SISTEMA DIGESTIVO"
+    },
+    {
+      "id": 16,
+      "grupoFarmacologico": "SISTEMA ENDÓCRINO"
+    },
+    {
+      "id": 17,
+      "grupoFarmacologico": "HORMÔNIO"
+    },
+    {
+      "id": 18,
+      "grupoFarmacologico": "TRATAMETNO OSTEOPOROSE"
+    },
+    {
+      "id": 19,
+      "grupoFarmacologico": "SISTEMA RESPIRATORIO"
+    },
+    {
+      "id": 20,
+      "grupoFarmacologico": "SISTEMA SANGUINEO"
+    },
+    {
+      "id": 21,
+      "grupoFarmacologico": "SISTEMA NERVOSO"
+    },
+    {
+      "id": 22,
+      "grupoFarmacologico": "SISTEMA OCULAR"
+    },
+    {
+      "id": 23,
+      "grupoFarmacologico": "DERMATOLOGICO"
+    },
+    {
+      "id": 24,
+      "grupoFarmacologico": "SISTEMA UROGENITAL"
+    },
+    {
+      "id": 25,
+      "grupoFarmacologico": "HOMEOPÁTICO"
     }
   ],
   "mercadorias": [
     {
-      "id": 1,
-      "nome": "Shampoo",
-      "codigo": "7896714231100",
+      "nome": "Rifotrat Spray",
+      "codigo": "7898133134784",
+      "departamento": "MEDICAMENTO",
+      "classificacao": "SIMILAR",
+      "grupoFarmacologico": "ANESTÉSICO",
+      "tarja": "VERMELHA",
+      "unidade": "ML",
+      "peresivel": "SIM",
+      "registro_anvisa": "",
+      "estoque_minimo": "30",
+      "estoque_maximo": "90",
+      "valor_venda": "22.20",
+      "comissao": "2",
+      "pmc": "25.00",
+      "temp_armazenamento": "15° a 30°",
+      "descricao": "é um antibiótico de elevado poder contra bactérias, utilizada para tratar infecções de superfície (uso externo), pulverizando a área afetada. Atua particularmente nas infecções que não respondem ao emprego de outros antibióticos e mesmo nas causadas pelos estafilococos penicilino,resistentes.",
+      "registro_ms": "188410022004-0",
+      "marca": "NATULAB",
+      "princ_ativo": "Com Rifamicina Sv Sódica",
+      "id": 3,
+      "grupoDesconto": "novo"
+    },
+    {
+      "nome": "Novalgina Solução Oral 50mg/ml com Seringa Dosadora 100 ml",
+      "codigo": "789105800172",
+      "departamento": "MEDICAMENTO",
+      "classificacao": "REFERENCIA",
+      "marca": "SANOFI",
+      "princ_ativo": "Dipirona monoidratada",
+      "grupoFarmacologico": "LIVRE",
+      "tarja": "SEM TARJA",
+      "unidade": "ML",
+      "peresivel": "SIM",
+      "registro_ms": "183260351010-2",
+      "estoque_minimo": "40",
+      "estoque_maximo": "160",
+      "valor_venda": "42.66",
+      "comissao": "3",
+      "pmc": "46.00",
+      "temp_armazenamento": "15 a 30",
+      "descricao": "NOVALGINA É A MARCA MAIS RECOMEDADA POR PEDIATRAS E ESPECIALISTA EM DOR E FEBRE. Com quase 100 anos de tradição, Novalgina é indicado como antitérmico para febre e analgésico para dor. Novalgina é um medicamento à base de dipirona, utilizado no tratamento dor e febre",
+      "id": 4,
+      "grupoDesconto": "novo"
+    },
+    {
+      "nome": "Amora miura",
+      "codigo": "7897270124108",
+      "departamento": "SUPLEMENTOS",
+      "classificacao": "LIVRE",
+      "marca": "DENATURE",
+      "princ_ativo": "Amora miura",
+      "grupoFarmacologico": "LIVRE",
+      "tarja": "SEM TARJA",
+      "peresivel": "SIM",
+      "registro_ms": "240/2018",
+      "estoque_minimo": "20",
+      "estoque_maximo": "60",
+      "valor_venda": "25.09",
+      "comissao": "2",
+      "pmc": "30",
+      "temp_armazenamento": "15° a 30°",
+      "descricao": "Amora Miura da Unilife - É um suplemento alimentar à base de amora, um fruto muito popular no mundo inteiro, além de ser acrescido de outros nutrientes, como: selênio, vitamina C e zinco em sua composição, trazendo outros benefícios para sua saúde.\n",
+      "id": 5,
+      "grupoDesconto": "novo"
+    },
+    {
+      "nome": "Dorflex 36 cps",
+      "codigo": "7898133134785",
+      "departamento": "MEDICAMENTO",
+      "classificacao": "LIVRE",
+      "marca": "DORFLEX",
+      "princ_ativo": "Dipirona monoidratada",
+      "grupoFarmacologico": "LIVRE",
+      "tarja": "SEM TARJA",
+      "peresivel": "SIM",
+      "registro_ms": "183260354",
+      "estoque_minimo": "150",
+      "estoque_maximo": "300",
+      "valor_venda": "20.89",
+      "comissao": "2",
+      "pmc": "30.59",
+      "temp_armazenamento": "15° a 30°",
+      "descricao": "Analgésico Dorflex 36 Comprimidos possui ação analgésica e relaxante muscular. O início da ação ocorre a partir de 30 minutos. Dorflex é indicado no alívio da dor associada a contraturas musculares, incluindo dor de cabeça tensional.",
+      "id": 6,
+      "grupoDesconto": "novo"
+    },
+    {
+      "nome": "Vitamina C Bio-C + Zinco 1000mg União Química 30 Comprimidos Efervescente",
+      "codigo": "7898133131714",
+      "departamento": "SUPLEMENTOS",
+      "classificacao": "LIVRE",
+      "marca": "ÚNIÃO QUIMICA",
+      "princ_ativo": "Vitamina C Bio-C + Zinco 1000mg",
+      "grupoFarmacologico": "LIVRE",
+      "tarja": "SEM TARJA",
+      "peresivel": "SIM",
+      "registro_ms": "188410022114-0",
+      "estoque_minimo": "45",
+      "estoque_maximo": "189",
+      "valor_venda": "35.99",
+      "comissao": "0",
+      "pmc": "40.99",
+      "temp_armazenamento": "15° a 30°",
+      "descricao": "Bio-C + Zinco combina em sua fórmula a vitamina C (ácido ascórbico) e o zinco, dois micronutrientes essenciais que desempenham importantes papeis em inúmeros processos metabólicos e atuam de modo complementar para o adequado funcionamento do sistema imunológico.",
+      "id": 7,
+      "grupoDesconto": "novo"
+    },
+    {
+      "nome": "Venvanse 70mg Shire 28 Cápsulas",
+      "codigo": "7892133134784",
+      "departamento": "MEDICAMENTO",
+      "classificacao": "REFERENCIA",
+      "marca": "FarmaX",
+      "princ_ativo": " Com Dimesilato De Lisdexanfetamina",
+      "grupoFarmacologico": "LIVRE",
+      "tarja": "SEM TARJA",
+      "peresivel": "SIM",
+      "registro_ms": "183260351010-6",
+      "estoque_minimo": "10",
+      "estoque_maximo": "30",
+      "valor_venda": "450.19",
+      "comissao": "2",
+      "pmc": "580",
+      "temp_armazenamento": "15° a 30°",
+      "descricao": "Venvanse 70mg Shire 28 Cápsulas é indicado para o tratamento do Transtorno do Déficit de Atenção / Hiperatividade (TDAH).",
+      "id": 8,
+      "grupoDesconto": "novo"
+    },
+    {
+      "nome": "Ozempic 0,25mg + 0,5mg Novo Nordisk Caixa com 1 Sistema de Aplicação 1,5ml + 6 Agulhas",
+      "codigo": "78981231347584",
+      "departamento": "MEDICAMENTO",
+      "classificacao": "REFERENCIA",
+      "marca": "SUPRAFARMA",
+      "princ_ativo": "Com Semaglutida",
+      "grupoFarmacologico": "SISTEMA ENDÓCRINO",
+      "tarja": "VERMELHA",
+      "peresivel": "SIM",
+      "registro_ms": "183260251010-2",
+      "estoque_minimo": "20",
+      "estoque_maximo": "45",
+      "valor_venda": "945.62",
+      "comissao": "5",
+      "pmc": "1012.99",
+      "temp_armazenamento": "15° a 30°",
+      "descricao": "O medicamento Ozempic, laboratório Novo Nordisk, é indicado para tratamento da diabetes tipo 2 em pessoas com níveis de açúcar muito elevados. Desde então, a caneta com uma agulha na ponta para uma fácil aplicação tem sido uma alternativa importante para os diabéticos.",
+      "id": 9,
+      "grupoDesconto": "novo"
+    },
+    {
+      "nome": "Penetro Daudt Inalante 45ml",
+      "codigo": "7898133134724",
+      "departamento": "MEDICAMENTO",
+      "classificacao": "REFERENCIA",
+      "marca": "DAULT",
+      "princ_ativo": "NF",
+      "grupoFarmacologico": "SISTEMA RESPIRATORIO",
+      "tarja": "SEM TARJA",
+      "peresivel": "SIM",
+      "registro_ms": "1876410022114-0",
+      "estoque_minimo": "50",
+      "estoque_maximo": "130",
+      "valor_venda": "29.71",
+      "comissao": "2",
+      "pmc": "30.59",
+      "temp_armazenamento": "15° a 30°",
+      "descricao": "Penetro Daudt Inalante promove o descongestionamento das vias aéreas superiores imediatamente após o uso, sem efeito vasoconstritor. De uso adulto e pediátrico esse inalante está indicado nos casos de congestão nasal e obstrução nasal.",
+      "id": 10,
+      "grupoDesconto": "novo"
+    },
+    {
+      "nome": "Amoxicilina 500mg Genérico Prati 21 Cápsulas",
+      "codigo": "88198133134784",
+      "departamento": "MEDICAMENTO",
+      "classificacao": "GENERICO",
+      "marca": "",
+      "princ_ativo": "Amoxilina",
+      "grupoFarmacologico": "SISTEMA RESPIRATORIO",
+      "tarja": "VERMELHA",
+      "peresivel": "SIM",
+      "registro_ms": "1884100221204-0",
+      "estoque_minimo": "45",
+      "estoque_maximo": "80",
+      "valor_venda": "29.07",
+      "comissao": "2",
+      "pmc": "55.99",
+      "temp_armazenamento": "15° a 30°",
+      "descricao": " A amoxicilina é usado no tratamento de uma gama de infecções causadas por bactérias, que podem manifestar-se nos pulmões (pneumonia e bronquite),",
+      "id": 11
+    },
+    {
+      "nome": "Chocolate Bis Xtra ao Leite Lacta 45g",
+      "codigo": "7898132134784",
+      "departamento": "OUTROS",
+      "classificacao": "LIVRE",
+      "marca": "LACTA",
+      "princ_ativo": "",
+      "grupoFarmacologico": "LIVRE",
+      "tarja": "SEM TARJA",
+      "peresivel": "SIM",
+      "registro_ms": "",
+      "estoque_minimo": "20",
+      "estoque_maximo": "140",
+      "valor_venda": "2.45",
+      "comissao": "0",
+      "pmc": "5.77",
+      "temp_armazenamento": "15° a 30°",
+      "descricao": "Chocolate Bis Xtra ao Leite Lacta é uma combinação perfeita de wafer crocante, recheado e coberto com uma camada generosa e deliciosa de chocolate ao leite",
+      "id": 12,
+      "grupoDesconto": "Doces "
+    },
+    {
+      "nome": "Chocolate Hersheys Cookie Cream 87g",
+      "codigo": "7898133134784",
+      "departamento": "OUTROS",
+      "classificacao": "LIVRE",
+      "marca": "HERSHEY'S",
+      "princ_ativo": "",
+      "grupoFarmacologico": "LIVRE",
+      "tarja": "SEM TARJA",
+      "peresivel": "SIM",
+      "registro_ms": "188410022114-5",
+      "estoque_minimo": "20",
+      "estoque_maximo": "80",
+      "valor_venda": "8.49",
+      "comissao": "0",
+      "pmc": "12.99",
+      "temp_armazenamento": "15° a 30°",
+      "descricao": "Chocolate Hershey's Cookie Cream é produzido com a combinação perfeita do cremoso chocolate branco Hershey's e um delicioso biscoito sabor chocolate.",
+      "id": 13,
+      "grupoDesconto": "novo"
+    },
+    {
+      "nome": "Coca Cola 220ml",
+      "codigo": "789105800172123",
+      "departamento": "OUTROS",
+      "classificacao": "LIVRE",
+      "marca": "COCA-COLA",
+      "princ_ativo": "",
+      "grupoFarmacologico": "LIVRE",
+      "tarja": "SEM TARJA",
+      "peresivel": "SIM",
+      "registro_ms": "",
+      "estoque_minimo": "10",
+      "estoque_maximo": "80",
+      "valor_venda": "2.99",
+      "comissao": "2",
+      "pmc": "6.7",
+      "temp_armazenamento": "0° a 5°",
+      "descricao": "Para tomar com os amigos, sozinho e até em família, a Coca Cola 220ml é uma ótima pedida! Mata a sua sede e ainda garante ótimos momentos.",
+      "id": 14,
+      "grupoDesconto": "novo"
+    },
+    {
+      "nome": "Desodorante Antitranspirante Aerosol Masculino Rexona Active Dry 72 horas 150ml",
+      "codigo": "789813313124784",
       "departamento": "HIGIENE",
-      "categoria_id": 1,
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "estoque_atual": 242,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": "",
-      "lotes": [
-        {
-          "id": "1701213213-2024-03-17",
-          "fornecedor": "03.778.130/0001-48",
-          "lote": "1701213213",
-          "validade": "2024-03-17",
-          "valor_custo": 10.96,
-          "unidades": 56,
-          "quant": null
-        }
-      ]
+      "classificacao": "LIVRE",
+      "marca": "REXONA",
+      "princ_ativo": "",
+      "grupoFarmacologico": "LIVRE",
+      "tarja": "SEM TARJA",
+      "peresivel": "NÃO",
+      "registro_ms": "",
+      "estoque_minimo": "30",
+      "estoque_maximo": "70",
+      "valor_venda": "13.89",
+      "comissao": "0",
+      "pmc": "20.67",
+      "temp_armazenamento": "15° a 30°",
+      "descricao": "O Desodorante Antitranspirante Aerosol Masculino Rexona Active Dry é ideal para auxiliar nos cuidados com a higiene diária. ",
+      "id": 15,
+      "grupoDesconto": "novo"
+    },
+    {
+      "nome": "Kit Sabonete em Barra Protex Vitamina E 85g 6 Unidades",
+      "codigo": "7891133134784",
+      "departamento": "HIGIENE",
+      "classificacao": "LIVRE",
+      "marca": "",
+      "princ_ativo": "",
+      "grupoFarmacologico": "LIVRE",
+      "tarja": "SEM TARJA",
+      "peresivel": "NÃO",
+      "registro_ms": "188410022024-0",
+      "estoque_minimo": "20",
+      "estoque_maximo": "120",
+      "valor_venda": "20.29",
+      "comissao": "2",
+      "pmc": "32.99",
+      "temp_armazenamento": "15° a 30°",
+      "descricao": "Protex® Nutri Protect Vitamina E oferece proteção antibacteriana natural com óleo de linhaça e elimina 99,9% das bactérias, garantindo proteção por até 12 horas.",
+      "id": 16,
+      "grupoDesconto": "novo"
+    },
+    {
+      "nome": "Roupa íntima Ever Care G/EG 8 Unidades",
+      "codigo": "789105800176",
+      "departamento": "GERIATRIA",
+      "classificacao": "LIVRE",
+      "marca": "EVER",
+      "princ_ativo": "",
+      "grupoFarmacologico": "LIVRE",
+      "tarja": "SEM TARJA",
+      "peresivel": "SIM",
+      "registro_ms": "",
+      "estoque_minimo": "20",
+      "estoque_maximo": "70",
+      "valor_venda": "24.99",
+      "comissao": "0",
+      "pmc": "32.99",
+      "temp_armazenamento": "15° a 30°",
+      "descricao": "Roupa íntima Ever Care G/EG 8 Unidades conta com cobertura hipoalergênica, máxima absorção e formato prático e que oferece mais conforto e segurança.",
+      "id": 17,
+      "grupoDesconto": "novo"
+    },
+    {
+      "nome": "Absorvente Geriátrico Premium - Mais Conforto - Unissex - 20 Unidades",
+      "codigo": "7898133132784",
+      "departamento": "GERIATRIA",
+      "classificacao": "LIVRE",
+      "marca": "MAIS CONFORTO",
+      "princ_ativo": "",
+      "grupoFarmacologico": "LIVRE",
+      "tarja": "SEM TARJA",
+      "peresivel": "SIM",
+      "temp_armazenamento": "15° a 30°",
+      "registro_ms": "",
+      "estoque_minimo": "20",
+      "estoque_maximo": "50",
+      "valor_venda": "13.81",
+      "comissao": "0",
+      "pmc": "22.50",
+      "descricao": "Absorvente Premium descartável, unissex, não provoca alergias e têm alto poder de absorção.",
+      "id": 18,
+      "grupoDesconto": "novo"
+    },
+    {
+      "nome": "Limpador de Dentadura Corega Tabs Branqueador 6 Comprimidos",
+      "codigo": "7897270124178",
+      "departamento": "GERIATRIA",
+      "classificacao": "LIVRE",
+      "marca": "COREGA",
+      "princ_ativo": "",
+      "grupoFarmacologico": "LIVRE",
+      "tarja": "SEM TARJA",
+      "peresivel": "SIM",
+      "temp_armazenamento": "15° a 30°",
+      "registro_ms": "240/2018",
+      "estoque_minimo": "50",
+      "estoque_maximo": "120",
+      "valor_venda": "7.19",
+      "comissao": "2",
+      "pmc": "8.89",
+      "descricao": "Corega Pó 3 em 1 Fixador de Dentadura foi desenvolvido para oferecer maior conforto e confiança, assegurando fixação mais forte e encaixe mais seguro*, além de bloquear as partículas de comida. ",
+      "id": 19,
+      "grupoDesconto": "novo"
+    },
+    {
+      "nome": "Kit Creme Fixador de Dentadura Fixodent Original 68g 2 Unidades",
+      "codigo": "7898133134724",
+      "departamento": "GERIATRIA",
+      "classificacao": "LIVRE",
+      "marca": "",
+      "princ_ativo": "",
+      "grupoFarmacologico": "LIVRE",
+      "tarja": "SEM TARJA",
+      "peresivel": "SIM",
+      "temp_armazenamento": "15° a 30°",
+      "registro_ms": "183260351010-7",
+      "estoque_minimo": "34",
+      "estoque_maximo": "70",
+      "valor_venda": "94.96",
+      "comissao": "0",
+      "pmc": "2",
+      "descricao": "Kit Creme Fixador de Dentadura Fixodent Original 68g 2 Unidades",
+      "id": 20,
+      "grupoDesconto": "novo"
+    },
+    {
+      "nome": "Azelan Creme Dermatológico 200mg/g LEO Pharma 1 Bisnaga com 30g",
+      "codigo": "7898133132784",
+      "departamento": "DERMATOLOGICO",
+      "classificacao": "LIVRE",
+      "marca": "BAYER",
+      "princ_ativo": "",
+      "grupoFarmacologico": "LIVRE",
+      "tarja": "SEM TARJA",
+      "peresivel": "SIM",
+      "temp_armazenamento": "15° a 30°",
+      "registro_ms": "",
+      "estoque_minimo": "20",
+      "estoque_maximo": "70",
+      "valor_venda": "69.29",
+      "comissao": "12",
+      "pmc": "78.99",
+      "descricao": "Azelan Creme Dermatológico 200mg/g Leo Pharma é um medicamento formulado com ácido azelaico, indicado para o tratamento da acne em adultos",
+      "id": 21,
+      "grupoDesconto": "novo"
+    }
+  ],
+  "grupoDescontos": [
+    {
+      "id": 1,
+      "grupoDesconto": "livre",
+      "percentual": 5
     },
     {
       "id": 2,
-      "nome": "Condicionador",
-      "codigo": "7896714231101",
-      "departamento": "HIGIENE",
-      "categoria_id": 1,
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": "",
-      "lotes": [
-        {
-          "id": "255444-11211-02-01",
-          "lote": "255444",
-          "validade": "11211-02-01",
-          "unidades": 2
-        }
-      ]
+      "grupoDesconto": "novo",
+      "percentual": 2
     },
     {
-      "id": 3,
-      "nome": "Sabonete",
-      "codigo": "7896714231102",
-      "departamento": "HIGIENE",
-      "categoria_id": 1,
-      "estoque_minimo": 150,
-      "estoque_maximo": 301,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": "",
-      "lotes": [
-        {
-          "id": "112323012-2023-02-14",
-          "fornecedor": "03.778.130/0001-48",
-          "lote": "112323012",
-          "validade": "2023-02-14",
-          "unidades": 120
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "nome": "Protetor solar",
-      "codigo": "7896714231103",
-      "departamento": "DERMATOLOGICO",
-      "categoria_id": "1",
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "valor_venda": "27.99",
-      "temp_armazenamento": 22,
-      "descricao": "Isso é um protetor solar ",
-      "lotes": [
-        {
-          "id": "255443-",
-          "fornecedor": "03.778.130/0001-48",
-          "lote": "255443",
-          "validade": "",
-          "valor_custo": 5.69,
-          "unidades": 170
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "nome": "Bronzeador",
-      "codigo": "7896714231104",
-      "departamento": "DERMATOLOGICO",
-      "categoria_id": "1",
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": "Isso é um bronzeador",
-      "lotes": [
-        {
-          "id": "255444-0004-12-14",
-          "lote": "255444",
-          "validade": "0004-12-14",
-          "valor_custo": 132,
-          "unidades": 12
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "nome": "Hidratante",
-      "codigo": "7896714231105",
-      "departamento": "DERMATOLOGICO",
-      "categoria_id": 1,
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": "",
-      "lotes": [
-        {
-          "id": "1701213213-0213-03-12",
-          "lote": "1701213213",
-          "validade": "0213-03-12",
-          "valor_custo": 123123,
-          "unidades": 20
-        }
-      ]
-    },
-    {
-      "id": 7,
-      "nome": "Cicatrizante",
-      "codigo": "7896714231106",
-      "departamento": "DERMATOLOGICO",
-      "categoria_id": 1,
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "estoque_atual": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": "",
-      "lotes": []
-    },
-    {
-      "id": 8,
-      "nome": "Esmalte",
-      "codigo": "7896714231107",
-      "departamento": "BELEZA",
-      "categoria_id": 1,
-      "estoque_minimo": "10",
-      "estoque_maximo": "50",
-      "estoque_atual": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": "",
-      "lotes": [
-        {
-          "id": "1701213213-2025-07-20",
-          "fornecedor": "03.778.130/0001-48",
-          "lote": "1701213213",
-          "validade": "2025-07-20",
-          "valor_custo": 10.5,
-          "unidades": 46
-        }
-      ]
-    },
-    {
-      "id": 9,
-      "nome": "Maquiagem",
-      "codigo": "7896714231108",
-      "departamento": "BELEZA",
-      "categoria_id": "1",
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "estoque_atual": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": "13123",
-      "lotes": [
-        {
-          "id": "1701213213-0123-03-12",
-          "fornecedor": "03.778.130/0001-48",
-          "lote": "1701213213",
-          "validade": "0123-03-12",
-          "valor_custo": 12.96,
-          "unidades": 75
-        }
-      ]
-    },
-    {
-      "id": 10,
-      "nome": "Limpaza de pele",
-      "codigo": "7896714231109",
-      "departamento": "BELEZA",
-      "categoria_id": 1,
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "estoque_atual": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": ""
-    },
-    {
-      "id": 11,
-      "nome": "Energetico",
-      "codigo": "7896714231110",
-      "departamento": "OUTROS",
-      "categoria_id": 1,
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "estoque_atual": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": "Suplemento energetico"
-    },
-    {
-      "id": 12,
-      "nome": "Whey",
-      "codigo": "7896714231111",
-      "departamento": "SUPLEMENTOS",
-      "categoria_id": 1,
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "estoque_atual": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": ""
-    },
-    {
-      "id": 13,
-      "nome": "Isotonico",
-      "codigo": "7896714231112",
-      "departamento": "SUPLEMENTOS",
-      "categoria_id": 1,
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "estoque_atual": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": ""
-    },
-    {
-      "id": 14,
-      "nome": "Barra de cereais",
-      "codigo": "7896714231113",
-      "departamento": "SUPLEMENTOS",
-      "categoria_id": 1,
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "estoque_atual": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": ""
-    },
-    {
-      "id": 15,
-      "nome": "Complexo de vitaminas",
-      "codigo": "7896714231114",
-      "departamento": "SUPLEMENTOS",
-      "categoria_id": 1,
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "estoque_atual": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": ""
-    },
-    {
-      "id": 16,
-      "nome": "Vitamina b12",
-      "codigo": "7896714231115",
-      "departamento": "SUPLEMENTOS",
-      "categoria_id": 1,
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "estoque_atual": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": ""
-    },
-    {
-      "id": 17,
-      "nome": "Fraldas geriatricas M",
-      "codigo": "7896714231116",
-      "departamento": "GERIATRIA",
-      "categoria_id": "1",
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "estoque_atual": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": ""
-    },
-    {
-      "id": 18,
-      "nome": "Fixador de dentaduras",
-      "codigo": "7896714231117",
-      "departamento": "GERIATRIA",
-      "categoria_id": "2",
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "estoque_atual": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": "Isso é um fixador de dentaduras"
-    },
-    {
-      "id": 19,
-      "nome": "Suplemento de calcio",
-      "codigo": "7896714231118",
-      "departamento": "GERIATRIA",
-      "categoria_id": 1,
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "estoque_atual": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": ""
-    },
-    {
-      "id": 20,
-      "nome": "Fralda infantil",
-      "codigo": "7896714231119",
-      "departamento": "INFANTIL",
-      "categoria_id": 1,
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "estoque_atual": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": ""
-    },
-    {
-      "id": 21,
-      "nome": "Pasta de dente infantil",
-      "codigo": "7896714231120",
-      "departamento": "INFANTIL",
-      "categoria_id": 1,
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "estoque_atual": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": ""
-    },
-    {
-      "id": 22,
-      "nome": "Lenços umedecidos",
-      "codigo": "7896714231121",
-      "departamento": "INFANTIL",
-      "categoria_id": 1,
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "estoque_atual": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": ""
-    },
-    {
-      "id": 23,
-      "nome": "Pasta de dente infantil 2",
-      "codigo": "7896714231122",
-      "departamento": "INFANTIL",
-      "categoria_id": 1,
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "estoque_atual": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": ""
-    },
-    {
-      "id": 24,
-      "nome": "Desodorante",
-      "codigo": "7896714231123",
-      "departamento": "HIGIENE",
-      "categoria_id": 1,
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "estoque_atual": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": ""
-    },
-    {
-      "id": 25,
-      "nome": "Cartão Steam",
-      "codigo": "7896714231124",
-      "departamento": "OUTROS",
-      "categoria_id": 1,
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "estoque_atual": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": ""
-    },
-    {
-      "id": 26,
-      "nome": "Refrigerante",
-      "codigo": "7896714231125",
-      "departamento": "OUTROS",
-      "categoria_id": 1,
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "estoque_atual": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": ""
-    },
-    {
-      "id": 28,
-      "nome": "Barra de chocolates",
-      "codigo": "7896714231126",
-      "departamento": "OUTROS",
-      "categoria_id": 1,
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "estoque_atual": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": ""
-    },
-    {
-      "id": 29,
-      "nome": "Barra de chocolates",
-      "codigo": "7896714231127",
-      "departamento": "OUTROS",
-      "categoria_id": 1,
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "estoque_atual": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": ""
-    },
-    {
-      "id": 30,
-      "nome": "Dipirona",
-      "codigo": "7896714231128",
-      "departamento": "MEDICAMENTO",
-      "categoria_id": "1",
-      "estoque_minimo": "150.0",
-      "estoque_maximo": 300,
-      "estoque_atual": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n\n"
-    },
-    {
-      "id": 31,
-      "nome": "Neosoro",
-      "codigo": "7896714231129",
-      "departamento": "MEDICAMENTO",
-      "categoria_id": "1",
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "estoque_atual": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": "Remédio Neosoro",
-      "lotes": [
-        {
-          "id": "255444-2025-06-12",
-          "fornecedor": "03.778.130/0001-45",
-          "lote": "255444",
-          "validade": "2025-06-12",
-          "valor_custo": 6.9,
-          "unidades": 250
-        }
-      ]
-    },
-    {
-      "id": 32,
-      "nome": "Dorflex",
-      "codigo": "7896714231131",
-      "departamento": "MEDICAMENTO",
-      "categoria_id": 1,
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "estoque_atual": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": ""
-    },
-    {
-      "id": 33,
-      "nome": "Estomasil",
-      "codigo": "7896714231132",
-      "departamento": "MEDICAMENTO",
-      "categoria_id": 1,
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "estoque_atual": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": ""
-    },
-    {
-      "id": 34,
-      "nome": "Hipertensivo",
-      "codigo": "7896714231133",
-      "departamento": "MEDICAMENTO",
-      "categoria_id": 1,
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
-      "estoque_atual": 300,
-      "valor_venda": 27.99,
-      "temp_armazenamento": 22,
-      "descricao": ""
-    },
-    {
-      "nome": "Batata frita",
-      "codigo": "7896714231134",
-      "departamento": "OUTROS",
-      "categoria_id": "1",
-      "estoque_minimo": "150",
-      "estoque_maximo": "300",
-      "estoque_atual": "300",
-      "valor_venda": "10.50",
-      "temp_armazenamento": "22",
-      "descricao": "Batatas fritas genericas",
-      "id": 35
+      "grupoDesconto": "Doces ",
+      "percentual": "10",
+      "descricao": "Descontos  para produtos do departamento OUROS e que são doces",
+      "id": 3
     }
   ],
-  "compras": [],
-  "vendas": [
+  "lotes": [
     {
-      "id": 1672226261000,
-      "data": "28/12/2022",
-      "total": 111.96,
-      "funcionario": {
-        "cpf": "999.888.777.02",
-        "nome": "Viviane Bortoni"
-      },
-      "cliente": {
-        "cpf": "833.444.567.22",
-        "nome": "Jordana Silva"
-      },
-      "itensVenda": [
-        {
-          "id": 2,
-          "nome": "Condicionador",
-          "valor_venda": 27.99,
-          "codigo": "7896714231101",
-          "quant": 3,
-          "quant_edit": 3,
-          "edit": true
-        }
-      ]
+      "lote": "4756312",
+      "validade": "2024-12-20",
+      "unidades": "4",
+      "custo_unidade": "12",
+      "mercadoriaId": 3,
+      "fornecedoreId": 2,
+      "id": 1
     },
     {
-      "id": 1672235203000,
-      "data": "28/12/2022",
-      "total": 83.97,
-      "funcionario": {
-        "cpf": "848.523.477.21",
-        "nome": "Maria Moura Heliar"
-      },
-      "cliente": {},
-      "itensVenda": [
-        {
-          "id": 15,
-          "nome": "Complexo de vitaminas",
-          "valor_venda": 27.99,
-          "codigo": "7896714231114",
-          "quant": 2,
-          "quant_edit": 2
-        },
-        {
-          "id": 16,
-          "nome": "Vitamina b12",
-          "valor_venda": 27.99,
-          "codigo": "7896714231115",
-          "quant": 1,
-          "quant_edit": 1
-        }
-      ]
+      "lote": "B22F1575",
+      "validade": "2023-02-15",
+      "unidades": "120",
+      "custo_unidade": "33.98",
+      "mercadoriaId": 4,
+      "fornecedoreId": 2,
+      "id": 2
+    },
+    {
+      "lote": "1701213213",
+      "validade": "2023-05-14",
+      "unidades": "20",
+      "custo_unidade": "5.6",
+      "mercadoriaId": 3,
+      "fornecedoreId": 2,
+      "id": 3
+    },
+    {
+      "lote": "1701213213",
+      "validade": "2023-01-15",
+      "unidades": "12",
+      "custo_unidade": "5.6",
+      "mercadoriaId": 5,
+      "fornecedoreId": 1,
+      "id": 4
+    },
+    {
+      "lote": "1701213213",
+      "validade": "2025-02-20",
+      "unidades": "40",
+      "custo_unidade": "4.67",
+      "mercadoriaId": 12,
+      "fornecedoreId": 1,
+      "id": 5
     }
-  ]
+  ],
+  "vendas": [
+    {
+      "id": 1673052149516,
+      "data": "06/01/2023(21:42)",
+      "funcionarioId": 1,
+      "clienteId": "",
+      "total": 64.86
+    },
+    {
+      "id": 1673052271466,
+      "data": "06/01/2023(21:44)",
+      "funcionarioId": 1,
+      "clienteId": 1,
+      "total": 22.2
+    }
+  ],
+  "listaItensVenda": [
+    {
+      "id": 1673052149520,
+      "vendaId": 1673052149516,
+      "mercadoriaId": 4,
+      "nome": "Novalgina Solução Oral 50mg/ml com Seringa Dosadora 100 ml",
+      "valor_venda": "42.66",
+      "codigo": "789105800172",
+      "quant": 1
+    },
+    {
+      "id": 1673052149519,
+      "vendaId": 1673052149516,
+      "mercadoriaId": 3,
+      "nome": "Rifotrat Spray",
+      "valor_venda": "22.20",
+      "codigo": "7898133134784",
+      "quant": 1
+    },
+    {
+      "id": 1673052271469,
+      "vendaId": 1673052271466,
+      "mercadoriaId": 3,
+      "nome": "Rifotrat Spray",
+      "valor_venda": "22.20",
+      "codigo": "7898133134784",
+      "quant": 1
+    }
+  ],
+  "devolucoes": []
 }

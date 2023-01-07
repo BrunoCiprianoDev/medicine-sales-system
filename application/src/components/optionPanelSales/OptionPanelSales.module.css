@@ -1,0 +1,55 @@
+.BoxContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 90%;
+}
+
+.Title {
+    margin-left: 2em;
+    color: red;
+    text-shadow: 1px 0px 3px rgba(0,0,0,0.75);
+}
+
+.BoxOptions {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 70%;
+}
+
+.TitleOption {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+}
+
+.Icon {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.Icon img{
+    width: 30%;
+}
+
+.Option {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 42, 82, 0.897);
+    border-radius: 5px;
+    width: 50%;
+    margin: 2em;
+    height: 90%;
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
+}
+
+.Option:hover{
+   background-color:  rgba(0, 26, 49, 0.897);
+}

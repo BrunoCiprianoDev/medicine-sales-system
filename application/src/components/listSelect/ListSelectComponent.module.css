@@ -1,21 +1,22 @@
 .ComponenteList {
-    justify-content: space-around;
     display: flex;
-    flex-direction: row;
-    margin: 0.2em;
+    justify-content: space-around;
+    font-size: 1.2em;
+    margin-top: 1px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     min-height: 4em;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    align-items: center;
 }
 
-.ComponenteList div {
+.ComponentListDiv {
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-align: center;
     width: 20%;
-    padding-bottom: 0.3em;
-    font-weight: bold;
+    height: 100%;
     text-align: center;
+    word-break: break-all;
 }
 
 .buttonAdd {
@@ -54,3 +55,26 @@
 .buttonRemove:hover {
     background-color: rgb(122, 0, 0);
 }
+
+.buttonLote {
+    cursor: pointer;
+    border-style: none;
+    background-color: rgb(22, 0, 150);
+    color: white;
+    font-size: 1.2em;
+    height: 1.5em;
+    width: 1.8em;
+    margin-bottom: 0.2em;
+    border-radius: 0.15em;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0.2em;
+}
+
+.buttonLote:hover {
+    background-color: rgb(35, 0, 236);
+}
+
+
+
+

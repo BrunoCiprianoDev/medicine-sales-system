@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 //Components
 import Sidebar from './components/sidebar/Sidebar';
@@ -10,10 +10,10 @@ import {ListFuncionarios}  from './pages/funcionarios/listFuncionarios/ListFunci
 import FormFuncionarios from './pages/funcionarios/formFuncionarios/FormFuncionarios';
 import DetailFuncionarios from './pages/funcionarios/detailFuncionarios/DetailFuncionarios';
 
-//Pages/Categorias
-import ListCategorias from './pages/categorias/listCategorias/ListCategorias';
-import FormCategorias from './pages/categorias/formCategorias/FormCategorias';
-import DetailCategorias from './pages/categorias/detailCategorias/DetailCategorias';
+//Pages/Descontos
+import FormDescontos from './pages/descontos/formDescontos/FormDescontos' 
+import ListDescontos from './pages/descontos/listDescontos/ListDescontos';
+import DetailDescontos from './pages/descontos/detailDescontos/DetailDescontos';
 
 //Pages/Fornecedores
 import ListFornecedores from './pages/fornecedores/listFornecedores/ListFornecedores';
@@ -35,16 +35,36 @@ import DetailMercadorias from './pages/mercadorias/detailMercadorias/DetailMerca
 import ConsultarPrecos from './pages/consultarprecos/formConsultarPrecos/ConsultarPrecos';
 import ListConsultarPrecos from './pages/consultarprecos/listConsultarPrecos/ListConsultarPrecos';
 
-
-//Vendas
-import FormVendas from './pages/vendas/formVendas/FormVendas';
-import ListVendas from './pages/vendas/listVendas/ListVendas';
-
 //Estoque
 import FormEstoque from './pages/estoque/formEstoque/FormEstoque';
 import ListEstoque from './pages/estoque/listEstoque/ListEstoque';
 import DetailEstoque from './pages/estoque/detailEstoque/DetailEstoque';
-import Dashboard from './pages/dashboard/Dashboard';
+
+//Venda
+import FormVendas from './pages/vendas/formVendas/FormVendas';
+import ListVendas from './pages/vendas/listVendas/ListVendas';
+import DetailVendas from './pages/vendas/detailVendas/DetailVendas'
+
+//Devolucoes
+import FormDevolucoes from './pages/devolucoes/formDevolucoes/FormDevolucoes';
+import ListDevolucoes from './pages/devolucoes/listDevolucoes/ListDevolucoes';
+import DetailDevolucoes from './pages/devolucoes/detailDevolucoes/DetailDevolucoes';
+
+//Dashboard
+import Dashboard from './pages/dashBoard/Dashboard';
+import LoteEdit from './pages/estoque/loteEdit/LoteEdit';
+
+//Notificacoes
+import Notificacoes from './pages/notificacoes/Notificacoes';
+
+//Relatórios
+import Relatorios from './pages/relatorios/Relatorios';
+import FormRelatorioEstoque from './pages/relatorios/formsRelatorios/FormRelatorioEstoque';
+import FormRelatorioClientes from './pages/relatorios/formsRelatorios/FormRelatorioClientes';
+import FormRelatorioDevolucoes from './pages/relatorios/formsRelatorios/FormRelatorioDevolucoes';
+import FormRelatorioMercadorias from './pages/relatorios/formsRelatorios/FormRelatorioMercadorias';
+import FormRelatorioFornecedor from './pages/relatorios/formsRelatorios/FormRelatorioFornecedor';
+import FormRelatorioFuncionarios from './pages/relatorios/formsRelatorios/FormRelatorioFuncionarios';
 
 function App() {
   return (
@@ -54,25 +74,24 @@ function App() {
        <div className='Sidebar'><Sidebar/></div>
         <div className='Contend'>
           <Routes>
-            <Route path="/" element={<Dashboard/>}/>
+            <Route path='/' element={<Dashboard />}/>
 
-            <Route path="/funcionarios/" element={<ListFuncionarios filter={false}/>}/>
-            <Route path="/funcionarios/search/" element={<ListFuncionarios filter={true}/>}/>
-            <Route path="/funcionarios/form" element={<FormFuncionarios edit={false}/>}/>
-            <Route path="/funcionarios/:id" element={<DetailFuncionarios />}/>
+            <Route path='/funcionarios/' element={<ListFuncionarios filter={false}/>}/>
+            <Route path='/funcionarios/search/' element={<ListFuncionarios filter={true}/>}/>
+            <Route path='/funcionarios/form' element={<FormFuncionarios edit={false}/>}/>
+            <Route path='/funcionarios/:id' element={<DetailFuncionarios />}/>
             <Route path='/funcionarios/edit/:id' element={<FormFuncionarios edit={true}/>}/>
-            
-            <Route path='/categorias/' element={<ListCategorias filter={false}/>}/>
-            <Route path='/categorias/search/' element={<ListCategorias filter={true}/>}/>
-            <Route path='/categorias/form' element={<FormCategorias edit={false}/>}/>
-            <Route path='/categorias/:id' element={<DetailCategorias/>}/>
-            <Route path='/categorias/edit/:id' element={<FormCategorias edit={true}/>}/>
 
             <Route path='/fornecedores/' element={<ListFornecedores filter={false}/>}/>
             <Route path='/fornecedores/search/' element={<ListFornecedores filter={true}/>}/>
             <Route path='/fornecedores/form' element={<FormFornecedores edit={false}/>}/>
             <Route path='/fornecedores/:id' element={<DetailFornecedores/>}/>
             <Route path='/fornecedores/edit/:id' element={<FormFornecedores edit={true}/>}/>
+
+            <Route path='/estoque/form/' element={<FormEstoque/>}/>
+            <Route path='/estoque/:id' element={<DetailEstoque/>}/>
+            <Route path='/estoque/search' element={<ListEstoque/>}/>
+            <Route path='/estoque/lote/:id' element={<LoteEdit/>}/>
           
             <Route path='/clientes/' element={<ListClientes filter={false}/>}/>
             <Route path='/clientes/search/' element={<ListClientes filter={true}/>}/>
@@ -86,17 +105,34 @@ function App() {
             <Route path='/mercadorias/edit/:id' element={<FormMercadorias edit={true}/>}/>
             <Route path='/mercadorias/form/' element={<FormMercadorias edit={false}/>}/>
 
+            <Route path='/vendas/form' element={<FormVendas />}/>
+            <Route path='/vendas/search' element={<ListVendas/>}/>
+            <Route path='/vendas/detail/:id' element={<DetailVendas/>}/>
+
+            <Route path='/devolucoes/' element={<ListDevolucoes filter={false}/>}/>
+            <Route path='/devolucoes/search' element={<ListDevolucoes filter={true}/>}/>
+            <Route path='/devolucoes/form/' element={<FormDevolucoes edit={false}/>}/>
+            <Route path='/devolucoes/edit/:id' element={<FormDevolucoes edit={true}/>}/>
+            <Route path='/devolucoes/detail/:id' element={<DetailDevolucoes />}/>
+            
             <Route path='/consultas/' element={<ConsultarPrecos/>}/>
             <Route path='/consulta/search/' element={<ListConsultarPrecos/>}/>
-          
-            <Route path='/vendas/' element={<ListVendas filter={false}/>}/>
-            <Route path='/vendas/search/' element={<ListVendas filter={true}/>}/>
-            <Route path='/vendas/form/' element={<FormVendas/>}/>
 
-            <Route path='/estoque/form/' element={<FormEstoque/>}/>
-            <Route path='/estoque/' element={<ListEstoque filter={false}/>}/>
-            <Route path='/estoque/search/' element={<ListEstoque filter={true}/>}/>
-            <Route path='/estoque/detail/:id' element={<DetailEstoque/>}/>
+            <Route path='/descontos/' element={<ListDescontos/>}/>
+            <Route path='descontos/search' element={<ListDescontos filter={true}/>}/>
+            <Route path='/descontos/form/' element={<FormDescontos edit={false}/>}/>
+            <Route path='/descontos/edit/:id' element={<FormDescontos edit={true}/>}/>
+            <Route path='/descontos/detail/:id' element={<DetailDescontos/>}/>
+
+            <Route path='/notificacoes/' element={<Notificacoes/>}/>
+
+            <Route path='/relatorios/' element={<Relatorios/>}/>
+            <Route path='/relatorio/estoque' element={<FormRelatorioEstoque/>}/>
+            <Route path='/relatorio/devolucoes' element={<FormRelatorioDevolucoes/>}/>
+            <Route path='/relatorio/clientes' element={<FormRelatorioClientes/>}/>
+            <Route path='/relatorio/mercadorias' element={<FormRelatorioMercadorias/>}/>
+            <Route path='/relatorio/fornecedores' element={<FormRelatorioFornecedor/>}/>
+            <Route path='/relatorio/funcionarios' element={<FormRelatorioFuncionarios/>}/>
           </Routes>
         </div>
       </BrowserRouter>

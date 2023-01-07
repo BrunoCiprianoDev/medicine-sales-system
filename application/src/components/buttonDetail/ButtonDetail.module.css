@@ -1,0 +1,12 @@
+.buttonDetalhe {
+    cursor: pointer;
+    margin-left: 2em;
+    border-radius: 3px;
+    background-color: rgba(0, 42, 82, 0.897);
+    border-style: none;
+}
+
+.buttonDetalhe img {
+    padding-top: 2px;
+    width: 2em;
+}

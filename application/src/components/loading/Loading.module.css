@@ -1,23 +1,24 @@
 .LoadContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90%;
-    
+  z-index: 120;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  top: 40%
 }
 
 .c-loader {
-    animation: is-rotating 1s infinite;
-    border: 8px solid #9c9c9c;
-    border-radius: 50%;
-    border-top-color: rgba(226, 0, 0, 0.897);
-    height: 50px;
-    width: 50px;
-  }
-  
-  @keyframes is-rotating {
-    to {
-      transform: rotate(1turn);
-    }
-  }
+  animation: is-rotating 1s infinite;
+  border: 12px solid #9c9c9c;
+  border-radius: 50%;
+  border-top-color: rgba(226, 0, 0, 0.897);
+  height: 100px;
+  width: 100px;
+}
 
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
