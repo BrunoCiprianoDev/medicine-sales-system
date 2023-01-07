@@ -78,18 +78,14 @@ const ListContainer = ({
                   id={item.id}/>}
             </tr>
           ))}
-      </tbody>
-      </table>
-      <div className={styles.PaginationArea}>
-        <PaginationComponent 
-          setCurrentPage={setCurrentPage} 
-          currentPage={currentPage}
-          setItemPerPage={setItemPerPage} 
-          itensPerPage={itensPerPage}
-          pages={pages}
-          pagination={'desable'}
-        />
-        </div>
+          <div className={styles.PaginationArea}>
+            <PaginationComponent 
+              setCurrentPage={setCurrentPage} 
+              currentPage={currentPage}
+              setItemPerPage={setItemPerPage} 
+              itensPerPage={itensPerPage}
+              pages={pages}/>
+          </div>
       </div>
   )
 }

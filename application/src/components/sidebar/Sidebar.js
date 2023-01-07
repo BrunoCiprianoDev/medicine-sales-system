@@ -18,7 +18,7 @@ import { NavLink} from 'react-router-dom'
 
 
 const parameters = [
-  {id: 1, name: 'Home', to: '/', value:'Home', icon:iconeHome},
+  {id: 1, name: 'Dashboard', to: '/', value:'DASHBOARD', icon:iconeHome},
   {id: 2, name: 'Funcionários', to:"/funcionarios", value:'FUNCIONARIOS', icon:iconeFuncionario},
   {id: 3, name: 'Categorias', to: '/categorias', value:'CATEGORIAS', icon:iconeCategoria},
   {id: 4, name: 'Mercadorias', to: '/mercadorias', value:'MERCADORIAS', icon:iconeMercadorias},
@@ -33,7 +33,7 @@ const parameters = [
 
 const Sidebar = () => {
 
-  const {option, setOption} = useContext(OptionContext);
+  const {setOption} = useContext(OptionContext);
  
   return (
     <div className={styles['MainContainer']}>
@@ -42,7 +42,7 @@ const Sidebar = () => {
             parameters.map((parameter)=>(
               <NavLink 
                 key={parameter.id}
-                className={option === parameter.value ? styles.NavLinkActive : styles.NavLink} 
+                className={styles.NavLink} 
                 to={parameter.to} 
                 onClick={()=>setOption(parameter.value)}>
                 <img src={parameter.icon} alt=''/>

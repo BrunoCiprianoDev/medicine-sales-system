@@ -4,6 +4,8 @@ import styles from './FormContainer.module.css'
 import {useForm} from "react-hook-form";
 import { useFetch } from '../../hooks/useFetch';
 import { useNavigate} from 'react-router-dom'
+import AlertError from '../alertContainer/alertError/AlertError';
+import InputAutoComplete from '../inputAutoComplete/InputAutoComplete';
 
 const FormContainer = ({
       parameters,
@@ -34,6 +36,8 @@ const FormContainer = ({
     } else {
       httpConfig(e, 'PATCH')
     }
+    alert('Dados enviados!')
+    window.location.reload();
   }
     
   const handleBack = () => {
@@ -43,12 +47,12 @@ const FormContainer = ({
   return (
     <div className={styles.MainContainer}>
     {loading && <Loading/>}
-    {error && <p>Falha ao carregar dados....</p>}
+    {error && <AlertError>Falha no carregamento!</AlertError>}
     <form onSubmit={handleSubmit(onSubmit)}>
         <div  className={styles['FormContainer']}>
           {parameters.map((parameter)=>(
             <div key={parameter.id}>
-              <label>{parameter.label}        
+              <label className={styles.LabelsForm}>{parameter.label}        
                 {parameter.type === 'text' && 
                   <input name={parameter.attribute}  
                     {...register(parameter.attribute)} 
@@ -70,32 +74,42 @@ const FormContainer = ({
                 {parameter.type === 'textarea' && 
                   <textarea name={parameter.attribute}  
                     {...register(parameter.attribute)} 
-                    type={parameter.type} rows='10'
+                    type={parameter.type} rows='3' required
                   />
                 }
                 {parameter.type === 'password' && 
                   <input name={parameter.attribute}  
                     {...register(parameter.attribute)} 
-                    type={parameter.type} 
+                    type={parameter.type} required
                   />
                 }
                 {parameter.type === 'select' && 
-                  <select {...register(parameter.attribute)}>
+                  <select {...register(parameter.attribute)} required> 
                     {parameter.options.map((option)=>(
                       <option key={option.id}>{option.value}</option>
                     ))}
                   </select>
+                }
+                {parameter.type === 'autoComplete' &&
+                  <InputAutoComplete
+                    attribute={parameter.attribute}
+                    url={parameter.url}
+                    attributeVisible={parameter.attributeVisible}
+                    register={register}
+                    setValue={setValue}
+                    hookForm={true}
+                  />
                 }
              </label>
             </div>
            ))}
         </div>
         <div className={styles.SubmitArea}>
-          <input type="submit" value='Salvar'/>
+          <input type="submit" value='Salvar' className={styles.SubmitButton}/>
         </div>
       </form>
       <div className={styles.SubmitArea}>
-        <button onClick={()=>(handleBack())}>Voltar</button>
+        <button className={styles.ButtonBack} onClick={()=>(handleBack())}>Voltar</button>
       </div>
     </div>
   )

@@ -165,6 +165,22 @@
       "telefone_um": "(00)00000-0000",
       "telefone_dois": "(32)3222-2521",
       "email": "neoquimica@gmail.com"
+    },
+    {
+      "nome": "INOVAFARMA",
+      "cnpj": "03.778.130/0001-45",
+      "crt": "",
+      "cep": "36.090.452",
+      "cidade": "Belo Horizonte",
+      "uf": "MG",
+      "bairro": "Fabrica",
+      "logradouro": "Av. juiz",
+      "numero": "12313",
+      "complemento": "302",
+      "telefone_um": "(32)98867-0548",
+      "telefone_dois": "",
+      "email": "INOFARMA01@gmail.com",
+      "id": 2
     }
   ],
   "clientes": [
@@ -194,26 +210,19 @@
       "categoria_id": 1,
       "estoque_minimo": 150,
       "estoque_maximo": 300,
-      "estoque_atual": 2,
+      "estoque_atual": 242,
       "valor_venda": 27.99,
       "temp_armazenamento": 22,
       "descricao": "",
       "lotes": [
         {
-          "id": "12-12211-02-12",
+          "id": "1701213213-2024-03-17",
           "fornecedor": "03.778.130/0001-48",
-          "lote": "12",
-          "validade": "12211-02-12",
-          "valor_custo": 1.59,
-          "unidades": 2
-        },
-        {
-          "id": "255444-2025-03-14",
-          "fornecedor": "03.778.130/0001-48",
-          "lote": "255444",
-          "validade": "2025-03-14",
-          "valor_custo": 1.59,
-          "unidades": 80
+          "lote": "1701213213",
+          "validade": "2024-03-17",
+          "valor_custo": 10.96,
+          "unidades": 56,
+          "quant": null
         }
       ]
     },
@@ -225,17 +234,10 @@
       "categoria_id": 1,
       "estoque_minimo": 150,
       "estoque_maximo": 300,
-      "estoque_atual": 2,
       "valor_venda": 27.99,
       "temp_armazenamento": 22,
       "descricao": "",
       "lotes": [
-        {
-          "id": "255444-",
-          "lote": "255444",
-          "validade": "",
-          "unidades": 2
-        },
         {
           "id": "255444-11211-02-01",
           "lote": "255444",
@@ -252,7 +254,6 @@
       "categoria_id": 1,
       "estoque_minimo": 150,
       "estoque_maximo": 301,
-      "estoque_atual": 120,
       "valor_venda": 27.99,
       "temp_armazenamento": 22,
       "descricao": "",
@@ -274,7 +275,6 @@
       "categoria_id": "1",
       "estoque_minimo": 150,
       "estoque_maximo": 300,
-      "estoque_atual": 170,
       "valor_venda": "27.99",
       "temp_armazenamento": 22,
       "descricao": "Isso é um protetor solar ",
@@ -297,10 +297,18 @@
       "categoria_id": "1",
       "estoque_minimo": 150,
       "estoque_maximo": 300,
-      "estoque_atual": 100,
       "valor_venda": 27.99,
       "temp_armazenamento": 22,
-      "descricao": "Isso é um bronzeador"
+      "descricao": "Isso é um bronzeador",
+      "lotes": [
+        {
+          "id": "255444-0004-12-14",
+          "lote": "255444",
+          "validade": "0004-12-14",
+          "valor_custo": 132,
+          "unidades": 12
+        }
+      ]
     },
     {
       "id": 6,
@@ -310,10 +318,18 @@
       "categoria_id": 1,
       "estoque_minimo": 150,
       "estoque_maximo": 300,
-      "estoque_atual": 300,
       "valor_venda": 27.99,
       "temp_armazenamento": 22,
-      "descricao": ""
+      "descricao": "",
+      "lotes": [
+        {
+          "id": "1701213213-0213-03-12",
+          "lote": "1701213213",
+          "validade": "0213-03-12",
+          "valor_custo": 123123,
+          "unidades": 20
+        }
+      ]
     },
     {
       "id": 7,
@@ -326,7 +342,8 @@
       "estoque_atual": 300,
       "valor_venda": 27.99,
       "temp_armazenamento": 22,
-      "descricao": ""
+      "descricao": "",
+      "lotes": []
     },
     {
       "id": 8,
@@ -334,12 +351,22 @@
       "codigo": "7896714231107",
       "departamento": "BELEZA",
       "categoria_id": 1,
-      "estoque_minimo": 150,
-      "estoque_maximo": 300,
+      "estoque_minimo": "10",
+      "estoque_maximo": "50",
       "estoque_atual": 300,
       "valor_venda": 27.99,
       "temp_armazenamento": 22,
-      "descricao": ""
+      "descricao": "",
+      "lotes": [
+        {
+          "id": "1701213213-2025-07-20",
+          "fornecedor": "03.778.130/0001-48",
+          "lote": "1701213213",
+          "validade": "2025-07-20",
+          "valor_custo": 10.5,
+          "unidades": 46
+        }
+      ]
     },
     {
       "id": 9,
@@ -352,7 +379,17 @@
       "estoque_atual": 300,
       "valor_venda": 27.99,
       "temp_armazenamento": 22,
-      "descricao": "13123"
+      "descricao": "13123",
+      "lotes": [
+        {
+          "id": "1701213213-0123-03-12",
+          "fornecedor": "03.778.130/0001-48",
+          "lote": "1701213213",
+          "validade": "0123-03-12",
+          "valor_custo": 12.96,
+          "unidades": 75
+        }
+      ]
     },
     {
       "id": 10,
@@ -625,7 +662,17 @@
       "estoque_atual": 300,
       "valor_venda": 27.99,
       "temp_armazenamento": 22,
-      "descricao": "Remédio Neosoro"
+      "descricao": "Remédio Neosoro",
+      "lotes": [
+        {
+          "id": "255444-2025-06-12",
+          "fornecedor": "03.778.130/0001-45",
+          "lote": "255444",
+          "validade": "2025-06-12",
+          "valor_custo": 6.9,
+          "unidades": 250
+        }
+      ]
     },
     {
       "id": 32,
@@ -683,121 +730,54 @@
   "compras": [],
   "vendas": [
     {
-      "id": 1671906390000,
-      "data": "24/12/2022",
-      "total": 139.95,
+      "id": 1672226261000,
+      "data": "28/12/2022",
+      "total": 111.96,
       "funcionario": {
-        "cpf": "999.888.777.24",
-        "nome": "Maria Antonieta de Las Neves"
-      },
-      "cliente": {},
-      "itensVenda": [
-        {
-          "id": 2,
-          "nome": "Condicionador",
-          "valor_venda": 27.99,
-          "codigo": "000000000",
-          "quant": 4
-        },
-        {
-          "id": 1,
-          "nome": "Shampoo",
-          "valor_venda": 27.99,
-          "codigo": "000000000",
-          "quant": 2
-        }
-      ]
-    },
-    {
-      "id": 1671909416000,
-      "data": "24/12/2022",
-      "total": 0,
-      "funcionario": {
-        "cpf": "899.766.544.22",
-        "nome": "João Jericho"
-      },
-      "cliente": {},
-      "itensVenda": [
-        {
-          "id": 3,
-          "nome": "Sabonete",
-          "valor_venda": 27.99,
-          "codigo": "000000000",
-          "quant": 0
-        },
-        {
-          "id": 4,
-          "nome": "Protetor solar",
-          "valor_venda": "27.99",
-          "codigo": "000000000",
-          "quant": 1
-        }
-      ]
-    },
-    {
-      "id": 1671971371000,
-      "data": "25/12/2022",
-      "total": 55.98,
-      "funcionario": {
-        "cpf": "848.523.477.21",
-        "nome": "Maria Moura Heliar"
-      },
-      "cliente": {},
-      "itensVenda": [
-        {
-          "id": 2,
-          "nome": "Condicionador",
-          "valor_venda": 27.99,
-          "codigo": "000000000",
-          "quant": 1
-        },
-        {
-          "id": 3,
-          "nome": "Sabonete",
-          "valor_venda": 27.99,
-          "codigo": "000000000",
-          "quant": 2
-        }
-      ]
-    },
-    {
-      "id": 1671971564000,
-      "data": "25/12/2022",
-      "total": 27.99,
-      "funcionario": {
-        "cpf": "848.523.477.21",
-        "nome": "Maria Moura Heliar"
-      },
-      "cliente": {},
-      "itensVenda": [
-        {
-          "id": 1,
-          "nome": "Shampoo",
-          "valor_venda": 27.99,
-          "codigo": "000000000",
-          "quant": 1
-        }
-      ]
-    },
-    {
-      "id": 1671979245000,
-      "data": "25/12/2022",
-      "total": 55.98,
-      "funcionario": {
-        "cpf": "999.888.777.24",
-        "nome": "Maria Antonieta de Las Neves"
+        "cpf": "999.888.777.02",
+        "nome": "Viviane Bortoni"
       },
       "cliente": {
-        "cpf": "848.567.991",
-        "nome": "Monteiro Lobato"
+        "cpf": "833.444.567.22",
+        "nome": "Jordana Silva"
       },
       "itensVenda": [
         {
-          "id": 1,
-          "nome": "Shampoo",
+          "id": 2,
+          "nome": "Condicionador",
           "valor_venda": 27.99,
-          "codigo": "000000000",
-          "quant": 2
+          "codigo": "7896714231101",
+          "quant": 3,
+          "quant_edit": 3,
+          "edit": true
+        }
+      ]
+    },
+    {
+      "id": 1672235203000,
+      "data": "28/12/2022",
+      "total": 83.97,
+      "funcionario": {
+        "cpf": "848.523.477.21",
+        "nome": "Maria Moura Heliar"
+      },
+      "cliente": {},
+      "itensVenda": [
+        {
+          "id": 15,
+          "nome": "Complexo de vitaminas",
+          "valor_venda": 27.99,
+          "codigo": "7896714231114",
+          "quant": 2,
+          "quant_edit": 2
+        },
+        {
+          "id": 16,
+          "nome": "Vitamina b12",
+          "valor_venda": 27.99,
+          "codigo": "7896714231115",
+          "quant": 1,
+          "quant_edit": 1
         }
       ]
     }

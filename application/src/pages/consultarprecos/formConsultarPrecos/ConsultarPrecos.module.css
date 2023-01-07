@@ -46,6 +46,7 @@
 }
 
 .MainContainer input[type='submit'] {
+    cursor: pointer;
     box-shadow: -1px 5px 10px rgba(0, 0, 0, 0.45);
     background-color: rgba(0, 42, 82, 0.897);
     border-style: none;

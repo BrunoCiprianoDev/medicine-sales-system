@@ -9,11 +9,11 @@ const ListMercadorias = ({filter}) => {
 
   let [searchParams] = useSearchParams();
   const url = urlServer+"/mercadorias/?"+searchParams;
-  const useParameters = parameters.slice(0,2).concat(parameters.slice(5,8));
+  const useParameters = parameters.slice(0,4);
 
   return (
     <div className={styles.MainContainer}>
-      <h2>{searchParams.toString().substring(2)}</h2>
+      <h2>{searchParams.toString().split('=')[1]}</h2>
       <ListContainer
         url={url}
         parameters={useParameters}
