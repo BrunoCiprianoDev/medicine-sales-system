@@ -1,65 +1,35 @@
 import React from 'react'
-import { urlServer } from '../../serverConfig';
-import {useNavigate, useSearchParams } from 'react-router-dom';
 import PaginationComponent from '../../components/paginationComponent/PaginationComponent';
 import styles from './Notificacoes.module.css'
 import AlertError from '../../components/alertContainer/alertError/AlertError';
-
 import Loading from '../../components/loading/Loading';
 import { useState } from 'react';
-import { useFetch } from '../../hooks/useFetch';
-import NotificacoesComponent from './NotificacoesComponent';
-import {GetSimpleDateNow } from '../../components/dataFormater/DataFormater';
+import useNotificacoes from '../../hooks/notificacoes/useNotificacoes';
+import ButtonDetail from '../../components/buttonDetail/ButtonDetail';
+import { useNavigate } from 'react-router-dom';
 
-const Notificacoes = ({filter}) => {
+const Notificacoes = () => {
 
-  const url = urlServer+"/lotes/";
-
+  const { notificacoes, error, loading } = useNotificacoes('');
   const navigate = useNavigate();
-  let [searchParams] = useSearchParams();
-  const {data, loading, error} = useFetch(
-    filter ? url+"?"+searchParams : url)
-
-  const handleEdit = (id) => {
-    navigate('/estoque/'+id)
-  }
 
   //Params from pagination
   const [itensPerPage, setItemPerPage] = useState(7);
   const [currentPage, setCurrentPage] = useState(0);
-  const pages = Math.ceil(data && data.length / itensPerPage);
+  const pages = Math.ceil(notificacoes && notificacoes.length / itensPerPage);
   const startIndex = currentPage * itensPerPage;
   const endIndex = startIndex + itensPerPage;
-  const currentItens = (data && data.slice(startIndex, endIndex));
+  const currentItens = (notificacoes && notificacoes.slice(startIndex, endIndex));
 
-
-  const verification = (item) => {
-    //Logica provisória para gerar notificações por data de validade (Apenas visual)
-    const dataAtual = GetSimpleDateNow();
-    var anoAtual = dataAtual.split('/')[2];
-    var mesAtual = dataAtual.split('/')[1];
-    var mesValidade = item.validade.split('-')[1];
-    var anoValidade = item.validade.split('-')[0];
-    var proximoVencimento = false;
-    if(anoValidade === anoAtual){
-      if(mesAtual === mesValidade){
-        proximoVencimento = true;
-      }
+  const gerarTextoNotificacao = (notificacao) => {
+    var text = '';
+    if (notificacao.status.alertaValidade) {
+      text = text.concat('Lotes com datas de validade próximas do vencimento\n');
     }
-    var estoqueBaixo = false;
-    if(item.unidades < 10) {
-      estoqueBaixo = true;
+    if (notificacao.status.alertaNivelEstoque) {
+      text = text.concat('Nivel estoque abaixo do minimo');
     }
-
-    if(proximoVencimento || estoqueBaixo){
-    return (<NotificacoesComponent 
-      key={item.id} 
-      item={item} 
-      handleEdit={handleEdit} 
-      vencimento={proximoVencimento}
-      estoqueBaixo={estoqueBaixo}
-      />)
-    }
+    return text;
   }
 
   return (
@@ -67,35 +37,41 @@ const Notificacoes = ({filter}) => {
       <div className={styles.Title}>
         <h2>Notificações</h2>
       </div>
-      {loading && <Loading/>}
+      {loading && <Loading />}
+      {console.log()}
       {error && <AlertError>Falha no carregamento!</AlertError>}
       <table>
         <thead>
-        <tr className={styles.HeaderList}>
-          <th className={styles.ElementData}>Lote</th>
-          <th className={styles.ElementData}>Validade</th>
-          <th className={styles.ElementData}>Unidades</th>
-          <th className={styles.ElementData}>Mercadoria</th>
-          <th className={styles.ElementData}>Obs</th>
-          <th className={styles.ElementData}></th>
-        </tr>
+          <tr className={styles.HeaderList}>
+            <th>Código mercadoria</th>
+            <th>Nome mercadoria</th>
+            <th>Notificação</th>
+            <th></th>
+          </tr>
         </thead>
         <tbody>
-            {currentItens && currentItens.map((item)=>(
-              verification(item)
-            ))}
-      </tbody>
+          {currentItens && currentItens.map((notificacao) => (
+            <tr className={styles.ListComponent} key={notificacao.id}>
+              <td>{notificacao.codigo}</td>
+              <td>{notificacao.nome}</td>
+              <td><pre>{gerarTextoNotificacao(notificacao)}</pre></td>
+              <td>
+                <ButtonDetail handleDetail={navigate} arg={`/estoque/lote/${notificacao.id}`}/>
+              </td>
+            </tr>
+          ))}
+        </tbody>
       </table>
       <div className={styles.PaginationArea}>
-        <PaginationComponent 
-          setCurrentPage={setCurrentPage} 
+        <PaginationComponent
+          setCurrentPage={setCurrentPage}
           currentPage={currentPage}
-          setItemPerPage={setItemPerPage} 
+          setItemPerPage={setItemPerPage}
           itensPerPage={itensPerPage}
           pages={pages}
           pagination={'desable'}
         />
-        </div>
+      </div>
     </div>
   )
 }

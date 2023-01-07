@@ -43,7 +43,7 @@ const ListEstoque = () => {
             <th>Estoque estoque mínimo</th>
             <th>Estoque maximo</th>
             <th>Estoque atual</th>
-            <th></th>
+            <th>Nivel estoque</th>
             <th></th>
           </tr>
         </thead>

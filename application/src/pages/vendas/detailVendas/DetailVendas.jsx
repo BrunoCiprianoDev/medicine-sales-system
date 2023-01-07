@@ -54,8 +54,8 @@ const DetailVendas = () => {
             Nessa área é possivel conferir os detalhes cada venda.
           </p>
         </div>
-        <button className={styles.ButtonVoltar} onClick={() => navigate('/devolucoes/form/')}>Devolução</button>
-        <button className={styles.ButtonVoltar} onClick={() => navigate('/vendas/search')}>Voltar</button>
+        <button className={styles.ButtonVoltar} onClick={() => navigate(`/devolucoes/form/${venda.id}`)}>Devolução</button>
+        <button className={styles.ButtonVoltar} onClick={() => navigate(`/vendas/search`)}>Voltar</button>
       </div>
       <div className={styles.RightArea}>
         <table>

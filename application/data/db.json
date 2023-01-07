@@ -1,41 +1,22 @@
 {
   "funcionarios": [
     {
-      "id": 1,
-      "nome": "Maria Moura Heliar",
-      "cpf": "848.523.477.21",
-      "dt_nascimento": "1998-02-17",
-      "cep": "36.090.452",
-      "uf": "Minas Gerais",
-      "cidade": "Juiz de Fora",
-      "bairro": "Bairro de JF",
-      "logradouro": "Av. juiza",
-      "numero": "Maria Tavares Souza",
-      "complemento": "302",
-      "telefone_um": "(32)98867-0548",
-      "telefone_dois": "(00)00000-0000",
-      "email": "emailUmFuncionario@email.com",
-      "dt_admissao": "2020-06-20",
-      "funcao": "VENDEDOR",
-      "senha": "123213123"
-    },
-    {
-      "id": 2,
-      "nome": "João Jericho",
-      "cpf": "899.766.544.22",
-      "dt_nascimento": "1997-02-14",
+      "nome": "Maria Tavares ",
+      "cpf": "130.799.444.55",
+      "dt_nascimento": "1967-09-14",
       "cep": "36.090.450",
-      "uf": "Minas Gerais",
       "cidade": "Juiz de Fora",
       "bairro": "Bairro de JF",
       "logradouro": "Av. juiz",
-      "numero": "João Anésio",
+      "numero": "450",
       "complemento": "302",
-      "telefone_um": "(00)00000-0000",
+      "telefone_um": "(32)98867-0548",
       "telefone_dois": "(00)00000-0000",
-      "email": "email31312Funcionario@email.com",
-      "dt_admissao": "2021-12-14",
-      "funcao": "VENDEDOR"
+      "email": "Tavares90@gmail.com",
+      "dt_admissao": "2022-06-14",
+      "funcao": "VENDEDOR",
+      "senha": "2134123123",
+      "id": 1
     }
   ],
   "fornecedores": [
@@ -206,7 +187,7 @@
       "marca": "NATULAB",
       "princ_ativo": "Com Rifamicina Sv Sódica",
       "id": 3,
-      "grupoDesconto": "novo"
+      "grupoDesconto": "livre"
     },
     {
       "nome": "Novalgina Solução Oral 50mg/ml com Seringa Dosadora 100 ml",
@@ -589,14 +570,10 @@
   ],
   "grupoDescontos": [
     {
-      "id": 1,
-      "grupoDesconto": "livre",
-      "percentual": 5
-    },
-    {
       "id": 2,
       "grupoDesconto": "novo",
-      "percentual": 2
+      "percentual": 2,
+      "descricao": "Categoria para testes"
     },
     {
       "grupoDesconto": "Doces ",
@@ -606,15 +583,6 @@
     }
   ],
   "lotes": [
-    {
-      "lote": "4756312",
-      "validade": "2024-12-20",
-      "unidades": "4",
-      "custo_unidade": "12",
-      "mercadoriaId": 3,
-      "fornecedoreId": 2,
-      "id": 1
-    },
     {
       "lote": "B22F1575",
       "validade": "2023-02-15",
@@ -654,47 +622,25 @@
   ],
   "vendas": [
     {
-      "id": 1673052149516,
-      "data": "06/01/2023(21:42)",
-      "funcionarioId": 1,
-      "clienteId": "",
-      "total": 64.86
-    },
-    {
-      "id": 1673052271466,
-      "data": "06/01/2023(21:44)",
+      "id": 1673127475939,
+      "data": "07/01/2023(18:37)",
       "funcionarioId": 1,
       "clienteId": 1,
-      "total": 22.2
+      "total": 42.18
     }
   ],
   "listaItensVenda": [
     {
-      "id": 1673052149520,
-      "vendaId": 1673052149516,
-      "mercadoriaId": 4,
-      "nome": "Novalgina Solução Oral 50mg/ml com Seringa Dosadora 100 ml",
-      "valor_venda": "42.66",
-      "codigo": "789105800172",
-      "quant": 1
-    },
-    {
-      "id": 1673052149519,
-      "vendaId": 1673052149516,
+      "id": 1673127475942,
+      "vendaId": 1673127475939,
       "mercadoriaId": 3,
       "nome": "Rifotrat Spray",
       "valor_venda": "22.20",
+      "valor_com_desconto": "21.09",
+      "desconto": 5,
       "codigo": "7898133134784",
-      "quant": 1
-    },
-    {
-      "id": 1673052271469,
-      "vendaId": 1673052271466,
-      "mercadoriaId": 3,
-      "nome": "Rifotrat Spray",
-      "valor_venda": "22.20",
-      "codigo": "7898133134784",
-      "quant": 1
+      "quant": 2,
+      "quant_edit": null
     }
   ],
   "devolucoes": []

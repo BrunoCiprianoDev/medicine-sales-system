@@ -111,7 +111,7 @@ function App() {
 
             <Route path='/devolucoes/' element={<ListDevolucoes filter={false}/>}/>
             <Route path='/devolucoes/search' element={<ListDevolucoes filter={true}/>}/>
-            <Route path='/devolucoes/form/' element={<FormDevolucoes edit={false}/>}/>
+            <Route path='/devolucoes/form/:id' element={<FormDevolucoes edit={false}/>}/>
             <Route path='/devolucoes/edit/:id' element={<FormDevolucoes edit={true}/>}/>
             <Route path='/devolucoes/detail/:id' element={<DetailDevolucoes />}/>
             

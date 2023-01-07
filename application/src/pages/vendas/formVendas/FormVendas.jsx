@@ -25,7 +25,7 @@ const FormVendas = () => {
   useEffect(() => {
     setTotalValue(0)
     listaMercadorias.map((mercadoria) => (
-      setTotalValue(t => t + (parseFloat(mercadoria.valor_venda * mercadoria.quant)))
+      setTotalValue(t => t + (parseFloat(mercadoria.valor_com_desconto * mercadoria.quant)))
     ));
     setVenda(v => ({ ...v, total: totalValue }))
   }, [listaMercadorias, totalValue]);
@@ -51,9 +51,9 @@ const FormVendas = () => {
       {error && <AlertError>Ocorreu um erro ao salvar a venda</AlertError>}
       <div className={styles.LeftArea}>
         <div className={styles.HeaderLeftArea}>
-          <h2 className={styles.Title}>{'Nova venda'}</h2>
+          <h2>{'Nova venda'}</h2>
           <div className={styles.DateArea}>
-            <h4 className={styles.DateNow}>Data: {dataVenda}</h4>
+            <h4 >Data: {dataVenda}</h4>
             <label className={styles.LabelDateArea}> Funcionario:
               <InputAutoComplete
                 attribute={'nome'}
