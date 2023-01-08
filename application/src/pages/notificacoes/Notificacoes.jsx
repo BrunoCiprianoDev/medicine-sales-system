@@ -1,12 +1,14 @@
 import React from 'react'
+import { useState } from 'react';
 import PaginationComponent from '../../components/paginationComponent/PaginationComponent';
+import { useNavigate } from 'react-router-dom';
+
 import styles from './Notificacoes.module.css'
+
 import AlertError from '../../components/alertContainer/alertError/AlertError';
 import Loading from '../../components/loading/Loading';
-import { useState } from 'react';
 import useNotificacoes from '../../hooks/notificacoes/useNotificacoes';
 import ButtonDetail from '../../components/buttonDetail/ButtonDetail';
-import { useNavigate } from 'react-router-dom';
 
 const Notificacoes = () => {
 
@@ -56,7 +58,9 @@ const Notificacoes = () => {
               <td>{notificacao.nome}</td>
               <td><pre>{gerarTextoNotificacao(notificacao)}</pre></td>
               <td>
-                <ButtonDetail handleDetail={navigate} arg={`/estoque/lote/${notificacao.id}`}/>
+                <ButtonDetail
+                  handleDetail={navigate}
+                  arg={`/estoque/${notificacao.id}`} />
               </td>
             </tr>
           ))}

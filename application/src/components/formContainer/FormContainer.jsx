@@ -1,9 +1,12 @@
 import React from 'react'
-import Loading from '../loading/Loading'
-import styles from './FormContainer.module.css'
 import {useForm} from "react-hook-form";
 import { useFetch } from '../../hooks/useFetch';
 import { useNavigate} from 'react-router-dom'
+
+import styles from './FormContainer.module.css'
+
+import Loading from '../loading/Loading'
+
 import AlertError from '../alertContainer/alertError/AlertError';
 import InputAutoComplete from '../inputAutoComplete/InputAutoComplete';
 import SelectBox from '../selectBox/SelectBox';

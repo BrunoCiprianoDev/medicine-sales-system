@@ -1,9 +1,13 @@
 import React from 'react'
-import Loading from '../loading/Loading'
-import styles from './DetailContainer.module.css'
 import { useNavigate} from 'react-router-dom'
+
+import styles from './DetailContainer.module.css'
+
 import { useFetch } from '../../hooks/useFetch'
+
+import Loading from '../loading/Loading'
 import AlertError from '../alertContainer/alertError/AlertError'
+
 const DetailContainer = ({
   parameters,
   url,

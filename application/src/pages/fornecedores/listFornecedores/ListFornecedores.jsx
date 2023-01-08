@@ -1,21 +1,23 @@
 import React from 'react'
-import ListContainer from '../../../components/listContainer/ListContainer';
+
 import { parameters } from '../parameters/pr_fornecedor';
 import { urlServer } from '../../../serverConfig';
 
-const ListFornecedores = ({filter}) => {
+import ListContainer from '../../../components/listContainer/ListContainer';
+
+const ListFornecedores = ({ filter }) => {
 
   const url = `${urlServer}/fornecedores/`;
-  const useParameters = parameters.slice(0, 2).concat(parameters.slice(10,12));
+  const useParameters = parameters.slice(0, 2).concat(parameters.slice(10, 12));
 
   return (
     <ListContainer
       title={'Fornecedores'}
       url={url}
       parameters={useParameters}
-      handleEditUrl={`/fornecedores/`} 
+      handleEditUrl={`/fornecedores/`}
       filter={filter}
-      editable='true'  
+      editable='true'
     />
   )
 }

@@ -1,13 +1,15 @@
 import React from 'react'
+import { useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import PaginationComponent from '../../../components/paginationComponent/PaginationComponent';
+
 import styles from './ListEstoque.module.css'
+
 import AlertError from '../../../components/alertContainer/alertError/AlertError';
+import ButtonDetail from '../../../components/buttonDetail/ButtonDetail';
+import CircleBar from '../../../components/circleBar/CircleBar';
 import Loading from '../../../components/loading/Loading';
 import useMercadoriasJoinLotes from '../../../hooks/lotes/useMercadoriasJoinLotes';
-import { useState } from 'react';
-import CircleBar from '../../../components/circleBar/CircleBar';
-import ButtonDetail from '../../../components/buttonDetail/ButtonDetail';
+import PaginationComponent from '../../../components/paginationComponent/PaginationComponent';
 
 const ListEstoque = () => {
 

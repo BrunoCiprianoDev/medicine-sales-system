@@ -1,7 +1,9 @@
 import React from 'react'
 import { useState } from 'react';
-import PaginationComponent from '../paginationComponent/PaginationComponent';
+
 import styles from './ListSelect.module.css'
+
+import PaginationComponent from '../paginationComponent/PaginationComponent';
 
 const ListSelect = ({ list, setList }) => {
 
@@ -47,14 +49,24 @@ const ListSelect = ({ list, setList }) => {
             <tr key={elemento.id} className={styles.ComponenteList}>
               <td>{elemento.codigo}</td>
               <td>{elemento.nome}</td>
-              <td style={{ color: 'red', fontWeight: 'bold' }}>R${elemento.valor_venda}</td>
-              <td style={{ color: 'blue', fontWeight: 'bold' }}>R${elemento.valor_com_desconto}</td>
+              <td style={{ color: 'red', fontWeight: 'bold' }}>
+                R${elemento.valor_venda}
+              </td>
+              <td style={{ color: 'blue', fontWeight: 'bold' }}>
+                R${elemento.valor_com_desconto}
+              </td>
               <td>{elemento.quant}</td>
               <td>{(elemento.quant * elemento.valor_venda).toFixed(2)}</td>
               <td>
-                <button onClick={() => removeElement(elemento)} className={styles.buttonRemove}>-</button>
-                <button onClick={() => addElement(elemento)} className={styles.buttonAdd}>+</button>
-                <button className={styles.buttonLote}>L</button>
+                <button onClick={() => removeElement(elemento)}
+                  className={styles.buttonRemove}>-
+                </button>
+                <button onClick={() => addElement(elemento)}
+                  className={styles.buttonAdd}>+
+                </button>
+                <button
+                  className={styles.buttonLote}>L
+                </button>
               </td>
             </tr>
           ))}

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 
-
 export const useFetch = (url) => {
   const [data, setData] = useState(null);
   const [config, setConfig] = useState(null);

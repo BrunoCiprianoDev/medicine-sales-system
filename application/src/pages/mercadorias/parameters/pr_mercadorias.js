@@ -51,7 +51,7 @@ export const parameters = [
     {id: 12, attribute:'estoque_minimo', label:'Estoque minimo', type: 'number' },
     {id: 13, attribute:'estoque_maximo', label:'Estoque máximo', type: 'number' },
     {id: 14, attribute:'valor_venda', label:'Valor de venda', type: 'number' },
-    {id: 15, attribute:'grupoDesconto', label: 'Grupo de desconto', type: 'selectBox', url: urlServer+'/grupoDescontos/'},
+    {id: 15, attribute:'grupoDesconto', label: 'Grupo de desconto', type: 'selectBox', url: `${urlServer}/grupoDescontos/`},
     {id: 16, attribute:'comissao', label:'Percentual de comissão', type: 'number' },
     {id: 17, attribute:'pmc', label:'PMC', type: 'number' },
     {id: 18, attribute:'descricao', label:'Descricao', type: 'textarea' }

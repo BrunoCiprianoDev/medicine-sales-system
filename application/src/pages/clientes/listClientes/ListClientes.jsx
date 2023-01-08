@@ -1,7 +1,10 @@
-import React from 'react'
-import ListContainer from '../../../components/listContainer/ListContainer';
-import {parameters} from '../parameters/pr_clientes'
+import React from 'react';
+
+import {parameters} from '../parameters/pr_clientes';
 import { urlServer } from '../../../serverConfig';
+
+import ListContainer from '../../../components/listContainer/ListContainer';
+
 const ListClientes = ({filter}) => {
  
   const url = `${urlServer}/clientes/`;

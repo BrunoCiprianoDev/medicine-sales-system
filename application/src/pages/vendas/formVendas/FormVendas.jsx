@@ -1,13 +1,16 @@
 import React from 'react'
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'
 import { useState } from 'react';
-import ListSearch from '../../../components/listSearch/ListSearch';
+
 import { urlServer } from '../../../serverConfig';
+
 import styles from './FormVendas.module.css'
+
 import InputAutoComplete from '../../../components/inputAutoComplete/InputAutoComplete';
 import { GetDateNow } from '../../../components/dataFormater/DataFormater';
 import ListSelect from '../../../components/listSelect/ListSelect';
-import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'
+import ListSearch from '../../../components/listSearch/ListSearch';
 import useSaveVenda from '../../../hooks/vendas/useSaveVenda';
 import Loading from '../../../components/loading/Loading';
 import AlertError from '../../../components/alertContainer/alertError/AlertError';
@@ -20,7 +23,13 @@ const FormVendas = () => {
   const [funcionarioId, setFuncionarioId] = useState('');
   const [clienteId, setClienteId] = useState('');
   const [totalValue, setTotalValue] = useState(0);
-  const [venda, setVenda] = useState({ id: new Date().getTime(), data: dataVenda, funcionarioId: funcionarioId, clienteId: clienteId, total: '' });
+  const [venda, setVenda] = useState({ 
+    id: new Date().getTime(), 
+    data: dataVenda, 
+    funcionarioId: funcionarioId, 
+    clienteId: clienteId, 
+    total: '' 
+  });
 
   useEffect(() => {
     setTotalValue(0)
@@ -41,7 +50,7 @@ const FormVendas = () => {
       saveVenda(venda, listaMercadorias)
       alert('Venda concluída!');
     } else {
-      alert('Erro! Verifique se o funcionario foi inserido ou se alista de itens não está vazia')
+      alert('Erro! Existem campos não preenchidos')
     }
   }
 

@@ -1,10 +1,12 @@
 import React from 'react'
-import styles from './DetailVendas.module.css'
+import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+
+import styles from './DetailVendas.module.css'
+
 import Loading from '../../../components/loading/Loading';
 import useDetailVendaJoined from '../../../hooks/vendas/useDetailVendaJoined';
 import AlertError from '../../../components/alertContainer/alertError/AlertError';
-import { useState } from 'react';
 import PaginationComponent from '../../../components/paginationComponent/PaginationComponent';
 
 const DetailVendas = () => {
@@ -54,8 +56,14 @@ const DetailVendas = () => {
             Nessa área é possivel conferir os detalhes cada venda.
           </p>
         </div>
-        <button className={styles.ButtonVoltar} onClick={() => navigate(`/devolucoes/form/${venda.id}`)}>Devolução</button>
-        <button className={styles.ButtonVoltar} onClick={() => navigate(`/vendas/search`)}>Voltar</button>
+        <button
+          className={styles.ButtonVoltar}
+          onClick={() => navigate(`/devolucoes/form/${venda.id}`)}>Devolução
+        </button>
+        <button
+          className={styles.ButtonVoltar}
+          onClick={() => navigate(`/vendas/search`)}>Voltar
+        </button>
       </div>
       <div className={styles.RightArea}>
         <table>
@@ -75,7 +83,7 @@ const DetailVendas = () => {
                 <td>{item.codigo}</td>
                 <td>{item.nome}</td>
                 <td>{item.valor_venda}</td>
-                <td>{item.valor_venda-2}</td>
+                <td>{item.valor_venda - 2}</td>
                 <td>{item.quant}</td>
                 <td>{item.quant * parseFloat(item.valor_venda)}</td>
               </tr>
@@ -83,13 +91,13 @@ const DetailVendas = () => {
           </tbody>
         </table>
         <div className={styles.PaginationArea}>
-          {<PaginationComponent 
-          setCurrentPage={setCurrentPage} 
-          currentPage={currentPage}
-          setItemPerPage={setItemPerPage} 
-          itensPerPage={itensPerPage}
-          pages={pages}
-          pagination={'desable'}
+          {<PaginationComponent
+            setCurrentPage={setCurrentPage}
+            currentPage={currentPage}
+            setItemPerPage={setItemPerPage}
+            itensPerPage={itensPerPage}
+            pages={pages}
+            pagination={'desable'}
           />}
         </div>
       </div>

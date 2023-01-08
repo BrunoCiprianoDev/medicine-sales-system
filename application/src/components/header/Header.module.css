@@ -56,15 +56,3 @@
     width: 2em;
     padding-right: 0.5em;
 }
-
-.buttonRequirements {
-    cursor: pointer;
-    background-color: white;
-    align-items: center;
-    border-style: none;
-    display: flex;
-    font-size: 1.2em;
-    font-weight: bold;
-    width: max-content;
-    margin-left: 5%;
-}

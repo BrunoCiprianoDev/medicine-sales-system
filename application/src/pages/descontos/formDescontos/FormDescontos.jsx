@@ -1,8 +1,10 @@
 import { React, useState } from 'react'
-import FormContainer from '../../../components/formContainer/FormContainer';
 import { useParams } from 'react-router-dom'
+
 import { urlServer } from '../../../serverConfig';
 import { parameters } from '../parameters/pr_descontos';
+
+import FormContainer from '../../../components/formContainer/FormContainer';
 
 const FormCategorias = ({ edit }) => {
 

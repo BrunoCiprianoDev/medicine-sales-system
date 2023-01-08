@@ -1,8 +1,10 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
-import FormContainer from '../../../components/formContainer/FormContainer'
+import React from 'react';
+import { useParams } from 'react-router-dom';
+
 import { urlServer } from '../../../serverConfig';
 import { parameters } from '../parameters/pr_devolucoes';
+
+import FormContainer from '../../../components/formContainer/FormContainer';
 
 const Devolucoes = ({edit}) => {
   

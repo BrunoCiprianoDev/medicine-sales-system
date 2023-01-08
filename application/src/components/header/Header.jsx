@@ -2,8 +2,9 @@ import { React, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useOptionContext } from '../../hooks/useOptionContext';
 import { useEffect } from 'react';
-// CSS
+
 import styles from './Header.module.css'
+
 import iconSearch from '../../assets/icon-search.png'
 import iconAdicionar from '../../assets/icon-adicionar.png';
 
@@ -22,6 +23,9 @@ const Header = () => {
     } else {
       setSearchBarVisible(true)
       setAddOptionVisible(true);
+    } 
+    if (option === 'DEVOLUCOES') {
+      setAddOptionVisible(false);
     }
   }, [option]);
 
@@ -76,7 +80,6 @@ const Header = () => {
 
   return (
     <div className={styles.MainContainer}>
-      <button className={styles.buttonRequirements}>?</button>
       {addOptionVisible &&
         <button
           className={styles.buttonNew}

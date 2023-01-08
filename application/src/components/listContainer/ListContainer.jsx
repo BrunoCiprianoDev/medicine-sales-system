@@ -24,7 +24,7 @@ const ListContainer = ({
   const navigate = useNavigate();
   let [searchParams] = useSearchParams();
   const {data, loading, error} = useFetch(
-    filter ? url+"?"+searchParams : url)
+    filter ? `${url}?${searchParams}` : `${url}`)
 
   const {httpConfig} = useFetch(urlDelete)
 
@@ -33,7 +33,7 @@ const ListContainer = ({
   }
   
   const handleRemove = (id) => {
-    setUrlDelete(urlServer+"/"+option.toLowerCase())
+    setUrlDelete(`${urlServer}/${option.toLowerCase()}`)
     httpConfig(id, "DELETE");
     window.location.reload();
   }

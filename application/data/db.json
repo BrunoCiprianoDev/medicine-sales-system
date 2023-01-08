@@ -1,21 +1,21 @@
 {
   "funcionarios": [
     {
-      "nome": "Maria Tavares ",
-      "cpf": "130.799.444.55",
-      "dt_nascimento": "1967-09-14",
+      "nome": "Marceli Bortoni Santos",
+      "cpf": "848.523.477.20",
+      "dt_nascimento": "1996-06-14",
       "cep": "36.090.450",
       "cidade": "Juiz de Fora",
-      "bairro": "Bairro de JF",
-      "logradouro": "Av. juiz",
-      "numero": "450",
-      "complemento": "302",
+      "bairro": "Bairro Fábrica",
+      "logradouro": "R.Bernardo Mascarenhas",
+      "numero": "123",
+      "complemento": "Ap.201",
       "telefone_um": "(32)98867-0548",
-      "telefone_dois": "(00)00000-0000",
-      "email": "Tavares90@gmail.com",
-      "dt_admissao": "2022-06-14",
+      "telefone_dois": "(32)3222-2521",
+      "email": "marceli232o@email.com",
+      "dt_admissao": "2015-02-20",
       "funcao": "VENDEDOR",
-      "senha": "2134123123",
+      "senha": "123145921@#!",
       "id": 1
     }
   ],
@@ -570,12 +570,6 @@
   ],
   "grupoDescontos": [
     {
-      "id": 2,
-      "grupoDesconto": "novo",
-      "percentual": 2,
-      "descricao": "Categoria para testes"
-    },
-    {
       "grupoDesconto": "Doces ",
       "percentual": "10",
       "descricao": "Descontos  para produtos do departamento OUROS e que são doces",
@@ -622,22 +616,22 @@
   ],
   "vendas": [
     {
-      "id": 1673127475939,
-      "data": "07/01/2023(18:37)",
+      "id": 1673141051824,
+      "data": "07/01/2023(22:24)",
       "funcionarioId": 1,
       "clienteId": 1,
-      "total": 42.18
+      "total": 44.4
     }
   ],
   "listaItensVenda": [
     {
-      "id": 1673127475942,
-      "vendaId": 1673127475939,
+      "id": 1673141051827,
+      "vendaId": 1673141051824,
       "mercadoriaId": 3,
       "nome": "Rifotrat Spray",
       "valor_venda": "22.20",
-      "valor_com_desconto": "21.09",
-      "desconto": 5,
+      "valor_com_desconto": "22.20",
+      "desconto": 0,
       "codigo": "7898133134784",
       "quant": 2,
       "quant_edit": null

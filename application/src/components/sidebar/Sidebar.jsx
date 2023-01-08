@@ -1,6 +1,6 @@
 import {React, useContext} from 'react'
 import {OptionContext} from '../../context/OptionContext'
-//CSS
+//Assets
 import styles from './Sidebar.module.css'
 import iconeHome from '../../assets/icon-home.png'
 import iconeFuncionario from '../../assets/icon-funcionario.png'
@@ -21,7 +21,7 @@ import { NavLink} from 'react-router-dom'
 const parameters = [
   {id: 1, name: 'Dashboard', to: '/', value:'DASHBOARD', icon:iconeHome},
   {id: 2, name: 'Funcionários', to:"/funcionarios", value:'FUNCIONARIOS', icon:iconeFuncionario},
-  {id: 3, name: 'Descontos', to: '/descontos', value:'GRUPODESCONTOS', icon:iconeDesconto},
+  {id: 3, name: 'Descontos', to: '/descontos', value:'DESCONTOS', icon:iconeDesconto},
   {id: 4, name: 'Mercadorias', to: '/mercadorias', value:'MERCADORIAS', icon:iconeMercadorias},
   {id: 5, name: 'Fornecedores', to: '/fornecedores', value:'FORNECEDORES', icon:iconeFornecedores},
   {id: 6, name: 'Estoque', to: '/estoque/search/?q=', value:'ESTOQUE', icon:iconeEstoque},
@@ -47,7 +47,7 @@ const Sidebar = () => {
                 className={styles.NavLink} 
                 to={parameter.to} 
                 onClick={()=>setOption(parameter.value)}>
-                <img src={parameter.icon} alt=''/>
+                <img src={parameter.icon} alt={parameter.name}/>
                 <p>{parameter.name}</p>
              </NavLink>
             ))

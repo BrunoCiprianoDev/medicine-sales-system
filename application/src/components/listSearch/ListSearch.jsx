@@ -6,8 +6,16 @@ import Loading from '../loading/Loading'
 import useMercadoriasVenda from '../../hooks/vendas/useMercadoriasVenda'
 
 const ListSearch = ({ list, setList, vendaId }) => {
+
   const [inputSearch, setInputSearch] = useState('');
-  const { mercadorias, getPercentualDesconto, calcularValorComDesconto, loading, error } = useMercadoriasVenda(`${inputSearch}`)
+
+  const {
+    mercadorias,
+    getPercentualDesconto,
+    calcularValorComDesconto,
+    loading,
+    error } = useMercadoriasVenda(`${inputSearch}`)
+
   const currentItens = (mercadorias && mercadorias.slice(0, 5));
 
   const handleList = (element) => {
@@ -30,7 +38,11 @@ const ListSearch = ({ list, setList, vendaId }) => {
     <div className={styles.SearchList}>
       <form >
         {loading && <Loading />}
-        <input onChange={(e) => setInputSearch(e.target.value)} type="text" placeholder='Insira informações sobre a mercadoria' />
+        <input
+          onChange={(e) => setInputSearch(e.target.value)}
+          type="text"
+          placeholder='Insira informações sobre a mercadoria'
+        />
       </form>
       <table>
         <thead>
@@ -45,7 +57,10 @@ const ListSearch = ({ list, setList, vendaId }) => {
         <tbody>
           {error && <AlertError>Erro no carregamento!</AlertError>}
           {currentItens && currentItens.map((item) => (
-            <tr key={item.id} className={styles.ElementList} onClick={() => handleList(item)}>
+            <tr key={item.id}
+              className={styles.ElementList}
+              onClick={() => handleList(item)}
+            >
               <td>{item.nome}</td>
               <td>R${item.valor_venda}</td>
               <td>%{getPercentualDesconto(item.grupoDesconto)}</td>
@@ -55,7 +70,7 @@ const ListSearch = ({ list, setList, vendaId }) => {
           ))}
         </tbody>
       </table>
-    </div>  
+    </div>
   )
 }
 

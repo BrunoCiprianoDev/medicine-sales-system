@@ -1,7 +1,9 @@
 import React from 'react'
-import ListContainer from '../../../components/listContainer/ListContainer'
+
 import { urlServer } from '../../../serverConfig';
 import { parameters } from '../parameters/pr_devolucoes';
+
+import ListContainer from '../../../components/listContainer/ListContainer'
 
 const ListDevolucoes = ({ filter }) => {
 

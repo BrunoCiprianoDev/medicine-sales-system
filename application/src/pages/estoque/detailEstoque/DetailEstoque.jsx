@@ -1,22 +1,16 @@
-import React from 'react'
-import styles from './DetailEstoque.module.css'
-import iconeDeletar from "../../../assets/icon-deletar.png"
-import iconeEditar from '../../../assets/icon-editar.png'
+import React from 'react';
+import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+
+import styles from './DetailEstoque.module.css';
 import { useFetch } from '../../../hooks/useFetch';
 import { urlServer } from '../../../serverConfig';
-import CircleBar from '../../../components/circleBar/CircleBar';
-import Loading from '../../../components/loading/Loading';
-import { useState } from 'react';
 import { SimpleDataFormat } from '../../../components/dataFormater/DataFormater';
 
-const parameters = [
-  { id: 1, attribute: 'nome', label: 'Nome', type: 'text' },
-  { id: 2, attribute: 'codigo', label: 'Código', type: 'text' },
-  { id: 3, attribute: 'estoque_minimo', label: 'Estoque minimo', type: 'text' },
-  { id: 4, attribute: 'estoque_maximo', label: 'Estoque máximo', type: 'text' },
-  { id: 5, attribute: 'valor_venda', label: 'Valor de venda', type: 'number' }
-]
+import CircleBar from '../../../components/circleBar/CircleBar';
+import Loading from '../../../components/loading/Loading';
+import iconeDeletar from '../../../assets/icon-deletar.png';
+import iconeEditar from '../../../assets/icon-editar.png';
 
 const DetailEstoque = () => {
 
@@ -54,14 +48,28 @@ const DetailEstoque = () => {
       {loading && <Loading />}
       {!loading && <div className={styles.LeftArea}>
         <h2>Detalhes Estoque/Mercadoria</h2>
-        <div className={styles['BodyData']}>
-          {parameters && parameters.map((parameter) => (
-            <div key={parameter.id}>
-              <label>{parameter.label}</label>
-              <p>{mercadoria && mercadoria[parameter.attribute]}</p>
+        {mercadoria && <div className={styles['BodyData']}>
+            <div>
+              <label>Código</label>
+              <p>{mercadoria.codigo}</p>
             </div>
-          ))}
-        </div>
+            <div>
+              <label>Mercadoria</label>
+              <p>{mercadoria.nome}</p>
+            </div>
+            <div>
+              <label>Estoque mínimo</label>
+              <p>{mercadoria.estoque_minimo}</p>
+            </div>
+            <div>
+              <label>Estoque máximo</label>
+              <p>{mercadoria.estoque_maximo}</p>
+            </div>
+            <div>
+              <label>Valor de venda</label>
+              <p>{mercadoria.valor_venda}</p>
+            </div>
+        </div>}
         <div className={styles.ComponentGraphic}>
           <h2>Unidades no estoque: {mercadoria && currentItensInventory(mercadoria.lotes)}</h2>
           {mercadoria && <CircleBar

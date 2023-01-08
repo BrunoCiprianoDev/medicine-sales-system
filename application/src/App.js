@@ -1,4 +1,7 @@
+//CSS
 import './App.css';
+
+//Routes
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 //Components
@@ -51,8 +54,6 @@ import ListDevolucoes from './pages/devolucoes/listDevolucoes/ListDevolucoes';
 import DetailDevolucoes from './pages/devolucoes/detailDevolucoes/DetailDevolucoes';
 
 //Dashboard
-
-
 import LoteEdit from './pages/estoque/loteEdit/LoteEdit';
 
 //Notificacoes
@@ -66,6 +67,8 @@ import FormRelatorioDevolucoes from './pages/relatorios/formsRelatorios/FormRela
 import FormRelatorioMercadorias from './pages/relatorios/formsRelatorios/FormRelatorioMercadorias';
 import FormRelatorioFornecedor from './pages/relatorios/formsRelatorios/FormRelatorioFornecedor';
 import FormRelatorioFuncionarios from './pages/relatorios/formsRelatorios/FormRelatorioFuncionarios';
+
+import Pagina404 from './pages/pagina404/Pagina404';
 
 function App() {
   return (
@@ -133,6 +136,8 @@ function App() {
             <Route path='/relatorio/mercadorias' element={<FormRelatorioMercadorias/>}/>
             <Route path='/relatorio/fornecedores' element={<FormRelatorioFornecedor/>}/>
             <Route path='/relatorio/funcionarios' element={<FormRelatorioFuncionarios/>}/>
+          
+            <Route path='*' element={<Pagina404/>}/>
           </Routes>
         </div>
       </BrowserRouter>

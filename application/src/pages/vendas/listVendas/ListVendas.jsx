@@ -1,13 +1,15 @@
 import React from 'react'
 import { useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
+
+import styles from './ListVendas.module.css'
+
 import AlertError from '../../../components/alertContainer/alertError/AlertError';
 import ButtonDelete from '../../../components/buttonDelete/ButtonDelete';
 import ButtonDetail from '../../../components/buttonDetail/ButtonDetail';
 import Loading from '../../../components/loading/Loading';
 import PaginationComponent from '../../../components/paginationComponent/PaginationComponent';
 import useListVendasJoined from '../../../hooks/vendas/useListVendasJoined';
-import styles from './ListVendas.module.css'
 
 const ListVendas = () => {
 

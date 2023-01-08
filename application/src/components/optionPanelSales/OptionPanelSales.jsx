@@ -1,7 +1,10 @@
 import React from 'react'
+
 import styles from './OptionPanelSales.module.css'
+
 import iconeVendas from '../../assets/icon-vendas.png'
 import iconeEstoque from '../../assets/icon-estoque.png'
+
 const OptionPanelSales = () => {
     return (
         <div className={styles.BoxContainer}>
@@ -9,13 +12,13 @@ const OptionPanelSales = () => {
             <div className={styles.BoxOptions}>
                 <button className={styles.Option}>
                     <div className={styles.Icon}>
-                        <img src={iconeVendas} alt=""  />
+                        <img src={iconeVendas} alt="Icone vendas" />
                     </div>
                     <div className={styles.TitleOption}>Nova Venda</div>
                 </button>
                 <button className={styles.Option}>
                     <div className={styles.Icon}>
-                        <img src={iconeEstoque} alt="" />
+                        <img src={iconeEstoque} alt="Icone estoque" />
                     </div>
                     <div className={styles.TitleOption}>Estoque</div>
                 </button>

@@ -1,8 +1,10 @@
 import { React } from 'react'
-import FormContainer from '../../../components/formContainer/FormContainer';
 import { useParams } from 'react-router-dom'
-import { parameters } from '../parameters/pr_mercadorias';
+
 import { urlServer } from '../../../serverConfig';
+import { parameters } from '../parameters/pr_mercadorias';
+
+import FormContainer from '../../../components/formContainer/FormContainer';
 
 const FormMercadorias = ({ edit }) => {
 
