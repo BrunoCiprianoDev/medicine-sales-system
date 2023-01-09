@@ -12,16 +12,17 @@ const ListMercadorias = ({ filter }) => {
 
   let [searchParams] = useSearchParams();
   const url = `${urlServer}/mercadorias/?${searchParams}`;
-  const useParameters = parameters.slice(0, 4);
+  const useParameters = parameters.slice(0, 3).concat(parameters.slice(13,15));
 
   return (
     <div className={styles.MainContainer}>
-      <h2>{searchParams.toString().split('=')[1]}</h2>
       <ListContainer
+        title={searchParams.toString().split('=')[1]}
         url={url}
         parameters={useParameters}
         handleEditUrl={`/mercadorias/detail/`}
         filter={filter}
+        orderBy={'nome'}
         editable='true'
       />
     </div>

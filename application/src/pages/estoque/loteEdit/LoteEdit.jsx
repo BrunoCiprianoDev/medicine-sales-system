@@ -13,11 +13,11 @@ import FormContainer from '../../../components/formContainer/FormContainer';
 const LoteEdit = () => {
 
   const { id } = useParams();
-  const [url] = useState(urlServer + "/lotes/" + id)
-  const urlBack = '/estoque/'
+  const [url] = useState(`${urlServer}/lotes/${id}`)
+  const urlBack = `/estoque/`
 
-  const { data: loteMercadoria } = useFetch(urlServer + '/lotes/' + id + '?_expand=mercadoria')
-  const { data: loteFornecedor } = useFetch(urlServer + '/lotes/' + id + '?_expand=fornecedore')
+  const { data: loteMercadoria } = useFetch(`${urlServer}/lotes/${id}?_expand=mercadoria`)
+  const { data: loteFornecedor } = useFetch(`${urlServer}/lotes/${id}?_expand=fornecedore`)
 
   return (
     <div>
@@ -29,7 +29,7 @@ const LoteEdit = () => {
         <h3>Fornecedor: {loteFornecedor && loteFornecedor.fornecedore.nome}</h3>
       </div>
       <FormContainer
-        parameters={parameters.slice(2, 5)}
+        parameters={parameters.slice(2, 9)}
         url={url}
         urlBack={urlBack}
         edit={true}

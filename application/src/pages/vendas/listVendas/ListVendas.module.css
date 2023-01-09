@@ -20,7 +20,7 @@
     font-weight: bold;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
     background-color: rgba(0, 42, 82, 0.897);
     border-bottom: 5px solid red;
     color: white;
@@ -43,7 +43,7 @@
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     min-height: 4em;
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
     align-items: center;
 
 }
@@ -67,7 +67,7 @@
 .buttonDeletar {
     margin-left: 2em;
     border-radius: 3px;
-    background-color:  #e20000;
+    background-color: #e20000;
     border-style: none;
 }
 
@@ -77,13 +77,14 @@
 }
 
 .PaginationArea {
-   box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75) ;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
 }
 
 .Title {
-    text-shadow: 1px 0px 2px rgba(0,0,0,0.75);
+    text-shadow: 1px 0px 2px rgba(0, 0, 0, 0.75);
     display: flex;
     grid-area: title;
     padding-left: 2em;
     color: red;
+    justify-content: space-between;
 }

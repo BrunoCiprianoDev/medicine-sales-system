@@ -10,11 +10,18 @@ import ButtonDetail from '../../../components/buttonDetail/ButtonDetail';
 import Loading from '../../../components/loading/Loading';
 import PaginationComponent from '../../../components/paginationComponent/PaginationComponent';
 import useListVendasJoined from '../../../hooks/vendas/useListVendasJoined';
+import SortPanel from '../../../components/sortPanel/SortPanel';
 
 const ListVendas = () => {
 
   let [searchParams] = useSearchParams()
-  const { vendas, deleteSaleCascade, fetchData, loading, error } = useListVendasJoined(`?${searchParams}`);
+  const {
+    vendas,
+    deleteSaleCascade,
+    fetchData,
+    loading,
+    error,
+    orderByAttribute } = useListVendasJoined(`?${searchParams}`);
 
   const navigate = useNavigate();
 
@@ -40,8 +47,15 @@ const ListVendas = () => {
     <div className={styles.MainContainer}>
       <div className={styles.Title}>
         <h2>Lista de vendas</h2>
-        {loading && <Loading />}
+        <SortPanel
+          orderByAttribute={orderByAttribute}
+          parameters={[
+            { id: 1, attribute: 'data', label: 'Data' },
+            { id: 2, attribute: 'total', label: 'Valor' }
+          ]}
+        />
       </div>
+      {loading && <Loading />}
       {error && <AlertError>Falha no carregamento!</AlertError>}
       <table>
         <thead>
@@ -61,7 +75,7 @@ const ListVendas = () => {
               <td>{venda.data}</td>
               <td>{venda.funcionario.nome}</td>
               <td>{venda.cliente && venda.cliente.nome}</td>
-              <td>{venda.total}</td>
+              <td>R${venda.total}</td>
               <td>
                 <ButtonDetail handleDetail={handleDetail} arg={venda.id} />
                 <ButtonDelete handleDelete={handleDelete} arg={venda.id} />

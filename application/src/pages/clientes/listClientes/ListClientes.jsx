@@ -16,6 +16,7 @@ const ListClientes = ({filter}) => {
       parameters={parameters}
       handleEditUrl={`/clientes/`} 
       filter={filter}
+      orderBy={'nome'}
       editable='true'    
     />
   )

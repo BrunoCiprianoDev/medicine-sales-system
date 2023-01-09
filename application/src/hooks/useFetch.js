@@ -9,6 +9,34 @@ export const useFetch = (url) => {
   const [error, setError] = useState(false);
   const [itemId, setItemId] = useState(null);
 
+  const orderByAttribute = (orderBy, order) => {
+
+    let arrayDataSort = data.slice();
+    arrayDataSort.sort(function (a, b) {
+      let attributeA = a[orderBy].toLowerCase();
+      let attributeB = b[orderBy].toLowerCase();
+
+      if (order === 'asc') {
+        if (attributeA < attributeB) {
+          return -1;
+        }
+        if (attributeA > attributeB) {
+          return 1;
+        }
+      } else if (order === 'desc') {
+        if (attributeA < attributeB) {
+          return 1;
+        }
+        if (attributeA > attributeB) {
+          return -1;
+        }
+      }
+      return 0;
+    });
+
+    setData(arrayDataSort);
+  }
+
   const httpConfig = (data, method) => {
     if (method === "POST") {
       setConfig({
@@ -57,7 +85,7 @@ export const useFetch = (url) => {
         setLoading(false);
       };
     }
-      fetchData();
+    fetchData();
   }, [url, callFetch]);
   useEffect(() => {
     const httpRequest = async () => {
@@ -81,5 +109,5 @@ export const useFetch = (url) => {
     };
     httpRequest();
   }, [config, itemId, method, url]);
-  return { data, httpConfig, loading, error };
+  return { data, httpConfig, loading, error, orderByAttribute };
 };

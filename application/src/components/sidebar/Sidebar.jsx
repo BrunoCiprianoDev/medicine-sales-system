@@ -19,7 +19,7 @@ import iconeDesconto from '../../assets/icon-desconto.png'
 import { NavLink} from 'react-router-dom'
 
 const parameters = [
-  {id: 1, name: 'Dashboard', to: '/', value:'DASHBOARD', icon:iconeHome},
+  {id: 1, name: 'Painel principal', to: '/', value:'DASHBOARD', icon:iconeHome},
   {id: 2, name: 'Funcionários', to:"/funcionarios", value:'FUNCIONARIOS', icon:iconeFuncionario},
   {id: 3, name: 'Descontos', to: '/descontos', value:'DESCONTOS', icon:iconeDesconto},
   {id: 4, name: 'Mercadorias', to: '/mercadorias', value:'MERCADORIAS', icon:iconeMercadorias},

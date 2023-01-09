@@ -14,9 +14,63 @@
       "telefone_dois": "(32)3222-2521",
       "email": "marceli232o@email.com",
       "dt_admissao": "2015-02-20",
-      "funcao": "VENDEDOR",
+      "funcao": "GERENTE",
       "senha": "123145921@#!",
       "id": 1
+    },
+    {
+      "nome": "Adriana Patricia de Oliveira",
+      "cpf": "145.007.211.15",
+      "dt_nascimento": "1994-04-20",
+      "cep": "36.090.450",
+      "cidade": "Juiz de Fora",
+      "bairro": "Nova Era",
+      "logradouro": "R. Mario de Freitas",
+      "numero": "250",
+      "complemento": "",
+      "telefone_um": "(32)98667-6548",
+      "telefone_dois": "(32)3222-4321",
+      "email": "patricia_oli763@email.com",
+      "dt_admissao": "2018-10-05",
+      "funcao": "VENDEDOR",
+      "senha": "63123412",
+      "id": 2
+    },
+    {
+      "nome": "Bento Filho Junior",
+      "cpf": "132.799.444.55",
+      "dt_nascimento": "1974-04-03",
+      "cep": "36090330",
+      "cidade": "Juiz de Fora",
+      "bairro": "São Mateus",
+      "logradouro": "R. Europa",
+      "numero": "378",
+      "complemento": "Ap.210",
+      "telefone_um": "(32)9867-2545",
+      "telefone_dois": "(32)3222-4021",
+      "email": "bento_comercial@email.com",
+      "dt_admissao": "2003-03-02",
+      "funcao": "VENDEDOR",
+      "senha": "1209348",
+      "id": 3
+    },
+    {
+      "nome": "Carlos Moura Heliar",
+      "cpf": "848.523.477.20",
+      "dt_nascimento": "1995-05-13",
+      "cep": "36.090.450",
+      "cidade": "Juiz de Fora",
+      "bairro": "Centro",
+      "logradouro": "Av.São Tomé",
+      "numero": "1050",
+      "complemento": "302",
+      "telefone_um": "(32)98867-0548",
+      "telefone_dois": "(32)3222-2521",
+      "email": "Heliar_Carlos14@email.com",
+      "dt_admissao": "2010-12-02",
+      "funcao": "VENDEDOR",
+      "senha": "127896843",
+      "id": 4
     }
   ],
   "fornecedores": [
@@ -272,27 +326,6 @@
       "temp_armazenamento": "15° a 30°",
       "descricao": "Bio-C + Zinco combina em sua fórmula a vitamina C (ácido ascórbico) e o zinco, dois micronutrientes essenciais que desempenham importantes papeis em inúmeros processos metabólicos e atuam de modo complementar para o adequado funcionamento do sistema imunológico.",
       "id": 7,
-      "grupoDesconto": "novo"
-    },
-    {
-      "nome": "Venvanse 70mg Shire 28 Cápsulas",
-      "codigo": "7892133134784",
-      "departamento": "MEDICAMENTO",
-      "classificacao": "REFERENCIA",
-      "marca": "FarmaX",
-      "princ_ativo": " Com Dimesilato De Lisdexanfetamina",
-      "grupoFarmacologico": "LIVRE",
-      "tarja": "SEM TARJA",
-      "peresivel": "SIM",
-      "registro_ms": "183260351010-6",
-      "estoque_minimo": "10",
-      "estoque_maximo": "30",
-      "valor_venda": "450.19",
-      "comissao": "2",
-      "pmc": "580",
-      "temp_armazenamento": "15° a 30°",
-      "descricao": "Venvanse 70mg Shire 28 Cápsulas é indicado para o tratamento do Transtorno do Déficit de Atenção / Hiperatividade (TDAH).",
-      "id": 8,
       "grupoDesconto": "novo"
     },
     {
@@ -574,6 +607,18 @@
       "percentual": "10",
       "descricao": "Descontos  para produtos do departamento OUROS e que são doces",
       "id": 3
+    },
+    {
+      "grupoDesconto": "Brasil remedios",
+      "percentual": "15",
+      "descricao": "213",
+      "id": 4
+    },
+    {
+      "grupoDesconto": "novo",
+      "percentual": "3",
+      "descricao": "Teste",
+      "id": 5
     }
   ],
   "lotes": [
@@ -616,6 +661,13 @@
   ],
   "vendas": [
     {
+      "id": 1673202635494,
+      "data": "08/01/2023(15:30)",
+      "funcionarioId": 2,
+      "clienteId": 1,
+      "total": 22.2
+    },
+    {
       "id": 1673141051824,
       "data": "07/01/2023(22:24)",
       "funcionarioId": 1,
@@ -635,6 +687,17 @@
       "codigo": "7898133134784",
       "quant": 2,
       "quant_edit": null
+    },
+    {
+      "id": 1673202635497,
+      "vendaId": 1673202635494,
+      "mercadoriaId": 3,
+      "nome": "Rifotrat Spray",
+      "valor_venda": "22.20",
+      "valor_com_desconto": "22.20",
+      "desconto": 0,
+      "codigo": "7898133134784",
+      "quant": 1
     }
   ],
   "devolucoes": []

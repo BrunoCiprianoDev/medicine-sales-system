@@ -42,6 +42,7 @@ import ListConsultarPrecos from './pages/consultarprecos/listConsultarPrecos/Lis
 import FormEstoque from './pages/estoque/formEstoque/FormEstoque';
 import ListEstoque from './pages/estoque/listEstoque/ListEstoque';
 import DetailEstoque from './pages/estoque/detailEstoque/DetailEstoque';
+import LoteEdit from './pages/estoque/loteEdit/LoteEdit';
 
 //Venda
 import FormVendas from './pages/vendas/formVendas/FormVendas';
@@ -54,7 +55,7 @@ import ListDevolucoes from './pages/devolucoes/listDevolucoes/ListDevolucoes';
 import DetailDevolucoes from './pages/devolucoes/detailDevolucoes/DetailDevolucoes';
 
 //Dashboard
-import LoteEdit from './pages/estoque/loteEdit/LoteEdit';
+import Dashboard from './pages/dashBoard/Dashboard.jsx';
 
 //Notificacoes
 import Notificacoes from './pages/notificacoes/Notificacoes';
@@ -73,11 +74,12 @@ import Pagina404 from './pages/pagina404/Pagina404';
 function App() {
   return (
     <div className="App"> 
-      <BrowserRouter>
+      <BrowserRouter  basename="/">
         <div className='Header'><Header/></div>
        <div className='Sidebar'><Sidebar/></div>
         <div className='Contend'>
           <Routes>
+            <Route path='/' element={<Dashboard/>}/>
 
             <Route path='/funcionarios/' element={<ListFuncionarios filter={false}/>}/>
             <Route path='/funcionarios/search/' element={<ListFuncionarios filter={true}/>}/>

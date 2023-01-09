@@ -15,7 +15,7 @@ export const parameters = [
         {id:8, value: 'OUTROS'}
       ]
     },
-    {id: 4, attribute:'classificacao', label:'Classificação:', type: 'select', 
+    {id: 4, attribute:'classificacao', label:'Classificação', type: 'select', 
       options:[
         {id:1, value: 'LIVRE'},
         {id:2, value: 'GENERICO'},

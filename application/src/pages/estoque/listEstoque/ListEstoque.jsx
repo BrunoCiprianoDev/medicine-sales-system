@@ -10,13 +10,14 @@ import CircleBar from '../../../components/circleBar/CircleBar';
 import Loading from '../../../components/loading/Loading';
 import useMercadoriasJoinLotes from '../../../hooks/lotes/useMercadoriasJoinLotes';
 import PaginationComponent from '../../../components/paginationComponent/PaginationComponent';
+import SortPanel from '../../../components/sortPanel/SortPanel';
 
 const ListEstoque = () => {
 
   const navigate = useNavigate();
   let [searchParams] = useSearchParams();
 
-  const { mercadorias, loading, error } = useMercadoriasJoinLotes(`?${searchParams}`)
+  const { mercadorias, loading, error, orderByAttribute} = useMercadoriasJoinLotes(`?${searchParams}`)
 
   const handleEdit = (id) => {
     navigate(`/estoque/${id}`)
@@ -34,6 +35,15 @@ const ListEstoque = () => {
     <div className={styles.MainContainer}>
       <div className={styles.Title}>
         <h2>Mercadorias / Estoque </h2>
+        <SortPanel 
+        orderByAttribute={orderByAttribute} 
+        parameters={[
+          {id:1, attribute: 'codigo', label: 'Codigo'},
+          {id:2, attribute: 'nome', label: 'Nome'},
+          {id:3, attribute: 'unidades', label: 'Unidades estoque'},
+          {id:4, attribute: 'estoque_minimo', label: 'Estoque mínimo'},
+          {id:5, attribute: 'estoque_maximo', label: 'Estoque máximo'}        
+        ]} />
       </div>
       {loading && <Loading />}
       {error && <AlertError>Falha no carregamento!</AlertError>}

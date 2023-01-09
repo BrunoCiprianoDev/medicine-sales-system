@@ -1,30 +1,48 @@
 .MainContainer {
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
     box-sizing: border-box;
     height: 100%;
     display: grid;
-    grid-template-columns: minmax(40em, 70%) minmax(25em, 30%);
-    grid-template-rows: 70% 30%;
+    grid-template-columns: minmax(50em, auto) minmax(50em, 30%);
+    grid-template-rows: 30% 70%;
     grid-template-areas: "painel-superior painel-lateral"
-                         "painel-inferior painel-lateral";
+        "painel-inferior painel-lateral";
 }
 
 .PainelLateral {
     grid-area: painel-lateral;
     box-sizing: border-box;
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
-
+    padding-top: 0.5em;
 }
 
 .PainelSuperior {
     grid-area: painel-superior;
     box-sizing: border-box;
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    display: flex;
+    flex-direction: column;  
+}
+
+.Title {
+    text-shadow: 1px 0px 2px rgba(0,0,0,0.75);
+    display: flex;
+    grid-area: title;
+    padding-left: 2em;
+    color: red;
+}
+
+.CardsArea {
+    display: flex;
+    flex-direction: row;   
+    height: 100%;
 }
 
 .PainelInferior {
     box-sizing: border-box;
     grid-area: painel-inferior;
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
 }
 
+.GraphicArea {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}

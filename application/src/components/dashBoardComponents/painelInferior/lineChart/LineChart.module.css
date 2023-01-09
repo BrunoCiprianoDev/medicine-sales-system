@@ -1,0 +1,5 @@
+.MainContainer {
+    display: flex;
+    border: 1px dashed green;
+    width: 100%;
+}
