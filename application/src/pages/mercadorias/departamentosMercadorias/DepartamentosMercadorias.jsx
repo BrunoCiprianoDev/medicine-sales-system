@@ -17,7 +17,7 @@ const DepartamentosMercadorias = () => {
   const navigate = useNavigate();
 
   const handleSearchList = (query) => {
-    navigate(`/listMercadorias/search?departamento_like=${query}`);
+    navigate(`/mercadorias/search?departamento_like=${query}`);
   }  
 
   return (

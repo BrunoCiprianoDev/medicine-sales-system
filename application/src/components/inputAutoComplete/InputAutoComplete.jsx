@@ -3,10 +3,10 @@ import { useState } from 'react';
 import { useFetch } from '../../hooks/useFetch';
 import styles from './InputAutoComplete.module.css'
 
-const InputAutoComplete = ({ attribute, url, setValue, attributeVisible, hookForm }) => {
+const InputAutoComplete = ({ attribute, url, setValue, attributeVisible, hookForm}) => {
 
   const [inputSearch, setInputSearch] = useState('');
-  const { data } = useFetch(`${url}?q=${inputSearch}`);
+  const { data } = useFetch(`${url}`, `?q=${inputSearch}`);
   const currentItens = (data && data.slice(0, 3));
   const [visibilityAutoComplete, setVisibiliyAutoComplete] = useState(true)
 

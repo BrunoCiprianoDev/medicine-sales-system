@@ -12,41 +12,37 @@ import iconeDevolucoes from '../../assets/icon-devolucao.png'
 
 const Relatorios = () => {
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    const handleSearch = (query) => {
-        navigate("/relatorio/" + query + "/");
-    }
+  const handleSearch = (query) => {
+    navigate("/relatorio/" + query + "/");
+  }
 
-    return (
-        <div className={styles.MainContainer}>
-            <div className={styles.ContainerTitle}>
-                <h1>CLASSES DE RELATÓRIOS</h1>
-            </div>
-            <div className={styles.ContainerDepartment}>
-                <div className={styles.ContainerMenu}>
-                    <button onClick={() => (handleSearch('funcionarios'))}>
-                        <img src={iconeFuncionarios} alt="" />Funcionarios
-                    </button>
-                    <button onClick={() => (handleSearch('fornecedores'))}>
-                        <img src={iconeFornecedores} alt="" />Fornecedores
-                    </button>
-                    <button onClick={() => (handleSearch('mercadorias'))}>
-                        <img src={iconeMercadorias} alt="" />Mercadorias
-                    </button>
-                    <button onClick={() => (handleSearch('clientes'))}>
-                        <img src={iconeClientes} alt="" />Clientes
-                    </button>
-                    <button onClick={() => (handleSearch('devolucoes'))}>
-                        <img src={iconeDevolucoes} alt="" />Devoluções
-                    </button>
-                    <button onClick={() => (handleSearch('estoque'))}>
-                        <img src={iconeEstoque} alt="" />Estoque
-                    </button>
-                </div>
-            </div>
+  const pr_MenuRelatorios = [
+    { id: 1, urlPagina: 'funcionarios', rotulo: 'Funcionarios', src: iconeFuncionarios, alt: 'Icone funcionarios' },
+    { id: 2, urlPagina: 'fornecedores', rotulo: 'Fornecedores', src: iconeFornecedores, alt: 'Icone fornecedores' },
+    { id: 3, urlPagina: 'mercadorias', rotulo: 'Mercadorias', src: iconeMercadorias, alt: 'Icone mercadorias' },
+    { id: 4, urlPagina: 'clientes', rotulo: 'Clientes', src: iconeClientes, alt: 'Icone clientes' },
+    { id: 5, urlPagina: 'devolucoes', rotulo: 'Devoluções', src: iconeDevolucoes, alt: 'Icone devolucoes' },
+    { id: 6, urlPagina: 'estoque', rotulo: 'Estoque', src: iconeEstoque, alt: 'Icone estoque' },
+  ]
+
+  return (
+    <div className={styles.MainContainer}>
+      <div className={styles.ContainerTitle}>
+        <h1>CLASSES DE RELATÓRIOS</h1>
+      </div>
+      <div className={styles.ContainerDepartment}>
+        <div className={styles.ContainerMenu}>
+          {pr_MenuRelatorios.map((opcao) => (
+            <button key={opcao.id} onClick={() => (handleSearch(opcao.urlPagina))}>
+              <img src={opcao.src} alt="" />{opcao.rotulo}
+            </button>
+          ))}
         </div>
-    )
+      </div>
+    </div>
+  )
 }
 
 export default Relatorios

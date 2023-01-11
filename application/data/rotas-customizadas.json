@@ -1,3 +1,0 @@
-{
-    "/vendas-funcionario/:vendaId": "/vendas?id=:vendaId&_embed=funcionario"
-}

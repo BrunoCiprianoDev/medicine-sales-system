@@ -7,7 +7,7 @@ import { urlServer } from '../../../serverConfig'
 
 const FormRelatorioEstoque = () => {
 
-    const { data } = useFetch(urlServer + '/mercadorias/')
+    const { data } = useFetch(urlServer + '/mercadorias/', ``)
 
     return (
         <div className={styles.FormContainer}>         

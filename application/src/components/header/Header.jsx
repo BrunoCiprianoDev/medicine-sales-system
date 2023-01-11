@@ -1,82 +1,20 @@
-import { React, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
-import { useOptionContext } from '../../hooks/useOptionContext';
-import { useEffect } from 'react';
+import { React } from 'react'
 
 import styles from './Header.module.css'
 
 import iconSearch from '../../assets/icon-search.png'
 import iconAdicionar from '../../assets/icon-adicionar.png';
+import { useHeader } from './useHeader';
 
 const Header = () => {
 
-  const [query, setQuery] = useState('');
-  const navigate = useNavigate();
-  const { option } = useOptionContext();
-  const [searchBarVisible, setSearchBarVisible] = useState(true);
-  const [addOptionVisible, setAddOptionVisible] = useState(true);
-
-  useEffect(() => {
-    if (option === 'CONSULTAR_PRECO' || option === 'NOTIFICACOES' || option === 'RELATORIOS') {
-      setSearchBarVisible(false);
-      setAddOptionVisible(false);
-    } else {
-      setSearchBarVisible(true)
-      setAddOptionVisible(true);
-    } 
-    if (option === 'DEVOLUCOES') {
-      setAddOptionVisible(false);
-    }
-  }, [option]);
-
-  const handleFormSelector = () => {
-    if (option === 'FUNCIONARIOS') {
-      navigate("/funcionarios/form");
-    } else if (option === 'DESCONTOS') {
-      navigate("/descontos/form");
-    } else if (option === 'FORNECEDORES') {
-      navigate('/fornecedores/form');
-    } else if (option === 'CLIENTES') {
-      navigate('/clientes/form');
-    } else if (option === 'MERCADORIAS') {
-      navigate('/mercadorias/form');
-    } else if (option === 'VENDAS') {
-      navigate('vendas/form');
-    } else if (option === 'ESTOQUE') {
-      navigate('estoque/form');
-    } else if (option === 'DEVOLUCOES') {
-      navigate('/devolucoes/form/');
-    }
-  }
-
-  const handleSearch = (e) => {
-    e.preventDefault();
-    if (option === 'FUNCIONARIOS') {
-      navigate("/funcionarios/search?q=" + query);
-      setQuery('');
-    } else if (option === 'DESCONTOS') {
-      navigate("/descontos/search?q=" + query);
-      setQuery('');
-    } else if (option === 'FORNECEDORES') {
-      navigate("/fornecedores/search?q=" + query);
-      setQuery('');
-    } else if (option === 'CLIENTES') {
-      navigate("/clientes/search?q=" + query);
-      setQuery('');
-    } else if (option === 'MERCADORIAS') {
-      navigate("/listMercadorias/search?q=" + query);
-      setQuery('');
-    } else if (option === 'VENDAS') {
-      navigate("/vendas/search?q=" + query);
-      setQuery('');
-    } else if (option === 'ESTOQUE') {
-      navigate("/estoque/search?q=" + query);
-      setQuery('');
-    } else if (option === 'DEVOLUCOES') {
-      navigate('/devolucoes/search?=' + query)
-      setQuery('');
-    }
-  }
+  const {
+    addOptionVisible, 
+    handleFormSelector, 
+    searchBarVisible, 
+    handleSearch, 
+    setQuery, 
+    query} = useHeader()
 
   return (
     <div className={styles.MainContainer}>

@@ -1,9 +1,0 @@
-.MainContainer {
-}
-
-.MainContainer h2 {
-    margin-left: 1em;
-    text-shadow: 1px 0px 3px rgba(0,0,0,0.75);
-    color: red;
-    display: flex;
-}

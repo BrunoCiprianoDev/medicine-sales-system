@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const useFetch = (url) => {
+export const useFetch = (url, filter) => {
   const [data, setData] = useState(null);
   const [config, setConfig] = useState(null);
   const [method, setMethod] = useState(null);
@@ -71,9 +71,8 @@ export const useFetch = (url) => {
   useEffect(() => {
     const fetchData = async () => {
       if (url) {
-        setLoading(true);
         try {
-          const res = await fetch(url);
+          const res = await fetch(`${url}${filter}`);
           const json = await res.json();
           setData(json);
           setMethod(null);
@@ -82,14 +81,15 @@ export const useFetch = (url) => {
           console.log(error.message);
           setError("Houve um erro ao carregar os dados!");
         }
-        setLoading(false);
+       
       };
+       setLoading(false);
     }
     fetchData();
-  }, [url, callFetch]);
+  }, [url, callFetch, filter]);
   useEffect(() => {
-    const httpRequest = async () => {
-      setLoading(true);
+    setLoading(true);
+    const httpRequest = async () => {  
       if (method === "POST") {
         let fetchOptions = [url, config];
         const res = await fetch(...fetchOptions);
@@ -101,13 +101,13 @@ export const useFetch = (url) => {
         const json = await res.json();
         setCallFetch(json);
       } else if (method === "PATCH") {
-        let fetchOptions = [url, config];
+        let fetchOptions = [`${url}${filter}`, config];
         const res = await fetch(...fetchOptions);
         const json = await res.json();
         setCallFetch(json);
       }
     };
     httpRequest();
-  }, [config, itemId, method, url]);
+  }, [config, itemId, method, url, filter]);
   return { data, httpConfig, loading, error, orderByAttribute };
 };

@@ -8,7 +8,6 @@ import iconeReceita from '../../assets/icon-cifrao.png'
 
 import ColumnChart from '../../components/dashBoardComponents/painelInferior/columnChart/ColumnChart'
 import Cards from '../../components/dashBoardComponents/painelSuperior/cards/Cards'
-import ListNotifications from '../../components/listNotifications/ListNotifications'
 
 const Dashboard = () => {
 
@@ -34,7 +33,6 @@ const Dashboard = () => {
         </div>
       </div>
       <div className={styles.PainelLateral}>
-        <ListNotifications />
       </div>
     </div>
   )
