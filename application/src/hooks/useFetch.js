@@ -70,8 +70,8 @@ export const useFetch = (url, filter) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      if (url) {
         try {
+          setLoading(true)
           const res = await fetch(`${url}${filter}`);
           const json = await res.json();
           setData(json);
@@ -81,10 +81,8 @@ export const useFetch = (url, filter) => {
           console.log(error.message);
           setError("Houve um erro ao carregar os dados!");
         }
-       
-      };
-       setLoading(false);
-    }
+        setLoading(false);
+      };    
     fetchData();
   }, [url, callFetch, filter]);
   useEffect(() => {

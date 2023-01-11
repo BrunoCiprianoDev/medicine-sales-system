@@ -15,7 +15,7 @@
       "email": "bento_comercial@email.com",
       "dt_admissao": "2003-03-02",
       "funcao": "VENDEDOR",
-      "senha": "1209348",
+      "senha": "12093411",
       "id": 3
     },
     {
@@ -69,7 +69,7 @@
       "email": "patricia_oli763@email.com",
       "dt_admissao": "2018-10-05",
       "funcao": "VENDEDOR",
-      "senha": "63123412",
+      "senha": "6312341'",
       "id": 2
     }
   ],
@@ -666,14 +666,14 @@
     {
       "grupoDesconto": "Brasil remedios",
       "percentual": "15",
-      "descricao": "213",
+      "descricao": "21322",
       "id": 4
     }
   ],
   "lotes": [
     {
       "lote": "B22F1575",
-      "data_compra": "2023-02-15", 
+      "data_compra": "2023-02-15",
       "validade": "2023-02-15",
       "unidades": "62",
       "custo_unidade": "33.98",
@@ -683,7 +683,7 @@
     },
     {
       "lote": "1701213213",
-      "data_compra": "2023-02-15", 
+      "data_compra": "2023-02-15",
       "validade": "2023-05-14",
       "unidades": "160",
       "custo_unidade": "5.6",
@@ -693,7 +693,7 @@
     },
     {
       "lote": "1701213213",
-      "data_compra": "2023-02-15", 
+      "data_compra": "2023-02-15",
       "validade": "2023-05-14",
       "unidades": "42",
       "custo_unidade": "5.6",
@@ -703,7 +703,7 @@
     },
     {
       "lote": "1701212213",
-      "data_compra": "2023-02-15", 
+      "data_compra": "2023-02-15",
       "validade": "2023-01-15",
       "unidades": "4",
       "custo_unidade": "5.6",
@@ -713,7 +713,7 @@
     },
     {
       "lote": "111213213",
-      "data_compra": "2023-02-15", 
+      "data_compra": "2023-02-15",
       "validade": "2025-02-20",
       "unidades": "100",
       "custo_unidade": "4.67",
@@ -723,7 +723,7 @@
     },
     {
       "lote": "17012131213",
-      "data_compra": "2023-02-15", 
+      "data_compra": "2023-02-15",
       "validade": "2025-02-20",
       "unidades": "190",
       "custo_unidade": "4.67",
@@ -733,7 +733,7 @@
     },
     {
       "lote": "1701213213",
-      "data_compra": "2023-02-15", 
+      "data_compra": "2023-02-15",
       "validade": "2025-02-20",
       "unidades": "130",
       "custo_unidade": "4.67",
@@ -743,7 +743,7 @@
     },
     {
       "lote": "1701213213",
-      "data_compra": "2023-02-15", 
+      "data_compra": "2023-02-15",
       "validade": "2025-02-20",
       "unidades": "30",
       "custo_unidade": "4.67",
@@ -753,17 +753,19 @@
     },
     {
       "lote": "1701213213",
-      "data_compra": "2023-02-15", 
+      "data_compra": "2023-02-15",
       "validade": "2025-02-20",
-      "unidades": "120",
+      "unidades": "121",
       "custo_unidade": "4.67",
       "mercadoriaId": 10,
       "fornecedoreId": 1,
-      "id": 8
+      "id": 8,
+      "numeroNotaFiscal": "123123",
+      "valorNotaFiscal": "123123"
     },
     {
       "lote": "1701213213",
-      "data_compra": "2023-02-15", 
+      "data_compra": "2023-02-15",
       "validade": "2025-02-20",
       "unidades": "30",
       "custo_unidade": "4.67",
@@ -773,7 +775,7 @@
     },
     {
       "lote": "1701213213",
-      "data_compra": "2023-02-15", 
+      "data_compra": "2023-02-15",
       "validade": "2025-02-20",
       "unidades": "30",
       "custo_unidade": "4.67",
@@ -783,7 +785,7 @@
     },
     {
       "lote": "1701213213",
-      "data_compra": "2023-02-15", 
+      "data_compra": "2023-02-15",
       "validade": "2025-02-20",
       "unidades": "60",
       "custo_unidade": "4.67",
@@ -793,7 +795,7 @@
     },
     {
       "lote": "1701213213",
-      "data_compra": "2023-02-15", 
+      "data_compra": "2023-02-15",
       "validade": "2025-02-20",
       "unidades": "10",
       "custo_unidade": "4.67",
@@ -803,7 +805,7 @@
     },
     {
       "lote": "1701213213",
-      "data_compra": "2023-02-15", 
+      "data_compra": "2023-02-15",
       "validade": "2025-02-20",
       "unidades": "60",
       "custo_unidade": "4.67",
@@ -813,7 +815,7 @@
     },
     {
       "lote": "1701213213",
-      "data_compra": "2023-02-15", 
+      "data_compra": "2023-02-15",
       "validade": "2025-02-20",
       "unidades": "20",
       "custo_unidade": "4.67",
@@ -823,7 +825,7 @@
     },
     {
       "lote": "1701213213",
-      "data_compra": "2023-02-15", 
+      "data_compra": "2023-02-15",
       "validade": "2025-02-20",
       "unidades": "100",
       "custo_unidade": "4.67",
@@ -833,7 +835,7 @@
     },
     {
       "lote": "1701213213",
-      "data_compra": "2023-02-15", 
+      "data_compra": "2023-02-15",
       "validade": "2025-02-20",
       "unidades": "70",
       "custo_unidade": "4.67",
@@ -843,7 +845,7 @@
     },
     {
       "lote": "1701213213",
-      "data_compra": "2023-02-15", 
+      "data_compra": "2023-02-15",
       "validade": "2025-02-20",
       "unidades": "30",
       "custo_unidade": "4.67",
@@ -853,7 +855,7 @@
     },
     {
       "lote": "1701213213",
-      "data_compra": "2023-02-15", 
+      "data_compra": "2023-02-15",
       "validade": "2025-02-20",
       "unidades": "30",
       "custo_unidade": "4.67",
@@ -863,7 +865,7 @@
     },
     {
       "lote": "1701213213",
-      "data_compra": "2023-02-15", 
+      "data_compra": "2023-02-15",
       "validade": "2025-02-20",
       "unidades": "40",
       "custo_unidade": "4.67",
@@ -889,7 +891,9 @@
       "custo_unidade": "4.67",
       "mercadoriaId": 20,
       "fornecedoreId": 1,
-      "id": 21
+      "id": 21,
+      "numeroNotaFiscal": "32134123",
+      "valorNotaFiscal": "123123"
     },
     {
       "lote": "1701213213",
@@ -1115,17 +1119,17 @@
       "id": 1
     }
   ],
-  "notificacoes":[
+  "notificacoes": [
     {
-      "id":1,
-      "mercadoriaId":12, 
-      "nome_mercadoria":"Chocolate Bis Xtra ao Leite Lacta 45g", 
+      "id": 1,
+      "mercadoriaId": 12,
+      "nome_mercadoria": "Chocolate Bis Xtra ao Leite Lacta 45g",
       "notificacao": "Nivel de estoque abaixo do mínimo"
     },
     {
-      "id":2,
+      "id": 2,
       "mercadoriaId": 14,
-      "nome_mercadoria":"Coca Cola 220ml", 
+      "nome_mercadoria": "Coca Cola 220ml",
       "notificacao": "Nivel de estoque abaixo do mínimo"
     }
   ]
