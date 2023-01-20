@@ -65,10 +65,13 @@ import FormRelatorioMercadorias from './pages/relatorios/formsRelatorios/FormRel
 import FormRelatorioFornecedor from './pages/relatorios/formsRelatorios/FormRelatorioFornecedor';
 import FormRelatorioFuncionarios from './pages/relatorios/formsRelatorios/FormRelatorioFuncionarios';
 
-import Pagina404 from './pages/pagina404/Pagina404';
+//Compras
 import ListaCompras from './pages/compras/listaCompras/ListaCompras';
 import DetalheCompras from './pages/compras/detalheCompras/DetalheCompras';
 import FormularioCompras from './pages/compras/formularioCompras/FormularioCompras';
+
+//Página 404
+import Pagina404 from './pages/pagina404/Pagina404';
 
 function App() {
   return (

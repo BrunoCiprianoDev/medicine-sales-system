@@ -28,7 +28,7 @@ const FormularioCompras = () => {
   const handleBack = () => {
     navigate('/compras/search/')
   }
-  
+
 
   return (
     <div className={styles.MainContainer}>
@@ -51,7 +51,7 @@ const FormularioCompras = () => {
             <input type="submit" value='Concluir' className={styles.SubmitButton} />
           </div>
         </form>
-        <button className={styles.ButtonCancelar} onClick={()=>{handleBack()}}>Cancelar</button>
+        <button className={styles.ButtonCancelar} onClick={() => { handleBack() }}>Cancelar</button>
       </div>
       <div className={styles.RightArea}>
         {formComprasVisible &&
@@ -68,7 +68,7 @@ const FormularioCompras = () => {
               <th>custo por unidade</th>
               <th>
                 <button
-                className={styles.AddLote}
+                  className={styles.AddLote}
                   onClick={() => setFormComprasVisible(true)}>Adicionar lote
                 </button>
               </th>

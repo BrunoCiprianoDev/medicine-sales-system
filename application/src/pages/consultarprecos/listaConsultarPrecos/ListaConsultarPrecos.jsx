@@ -11,7 +11,7 @@ const ListaConsultarPrecos = () => {
 
   const navigate = useNavigate();
   let [searchParams] = useSearchParams();
-  const parametrosSelecionados = parametrosMercadorias.slice(0, 2).concat(parametrosMercadorias.slice(5, 8));
+  const parametrosSelecionados = parametrosMercadorias.slice(0, 3).concat(parametrosMercadorias.slice(13, 15));
 
   return (
     <div className={styles.MainContainer}>
@@ -21,6 +21,7 @@ const ListaConsultarPrecos = () => {
         {'<< Nova Consulta'}
       </button>
       <ComponenteLista
+        titulo={'Resultados da pesquisa'}
         urlFetch={`${urlServer}/mercadorias/`}
         parametros={parametrosSelecionados}
         urlDetalhe={`/mercadorias/detail/`}
