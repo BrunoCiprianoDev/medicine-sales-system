@@ -1,0 +1,200 @@
+.MainContainer {
+    box-sizing: border-box;
+    height: 100%;
+    display: grid;
+    grid-template-columns: minmax(30em, 40%) minmax(40em, auto);
+    grid-template-rows: 1fr;
+    grid-template-areas: "leftArea rightArea";
+}
+
+.LeftArea {
+    grid-area: leftArea;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.HeaderLeftAreas {
+    grid-area: headerLeftAreas;
+}
+
+.RightArea {
+    grid-area: rightArea;
+    margin: 0.5em;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+}
+
+.DateArea{
+    padding: 1em;
+    margin: 0.5em;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+}
+
+.LabelDateArea {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    text-shadow: 2px 1px 4px rgba(0,0,0,0.24);
+    color: rgb(97 97 97);
+    font-size: 1.1em;
+}
+
+.MainContainer table {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    table-layout: none;
+}
+
+.HeaderList {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2em;
+    color: black;
+    font-weight: bold;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    background-color: rgba(0, 42, 82, 0.897);
+    border-bottom: 5px solid red;
+    color: white;
+}
+
+.HeaderList th {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    word-break: break-all;
+}
+
+.ListComponent {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2em;
+    margin-top: 1px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    min-height: 4em;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    align-items: center;
+
+}
+
+.ListComponent td {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    word-break: break-all;
+}
+
+
+.PaginationArea {
+   box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75) ;
+}
+
+.AddLote {
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    border-style: none;
+    height: 2em;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.45);
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.Title {
+    text-shadow: 1px 0px 2px rgba(0,0,0,0.75);
+    display: flex;
+    grid-area: title;
+    padding-left: 2em;
+    color: red;
+    justify-content: space-between;
+}
+
+.FormContainer {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.LabelLocal {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.24);
+    color: rgb(97 97 97);
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+
+.FormContainer input[type=text] {
+    height: 1.5em;
+    border-style: none;
+    border-bottom: 2px solid rgba(0, 26, 49, 0.897);
+    background-color: white;
+    margin-right: 2px;
+    font-size: 1em;
+}
+
+.FormContainer input[type=date] {
+    height: 1.7em;
+    border-style: none;
+    border-bottom: 2px solid rgba(0, 26, 49, 0.897);
+    background-color: white;
+    margin-right: 2px;
+    font-size: 1em;
+}
+
+.FormContainer input[type=number] {
+    height: 1.7em;
+    border-style: none;
+    border-bottom: 2px solid rgba(0, 26, 49, 0.897);
+    background-color: white;
+    margin-right: 2px;
+    font-size: 1em;
+}
+
+.FormContainer input[type='submit'] {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    border: none;
+    width: 12em;
+    height: 3em;
+    margin-top: 6px;
+    background-color: rgba(0, 42, 82, 0.897);
+    box-shadow: -1px 5px 10px rgba(0, 0, 0, 0.45);
+    color: white;
+    font-size: 1em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ButtonCancelar {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 12em;
+    height: 3em;
+    margin-top: 6px;
+    background-color: rgba(0, 42, 82, 0.897);
+    box-shadow: -1px 5px 10px rgba(0, 0, 0, 0.45);
+    color: white;
+    font-size: 1em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  
+
+
+

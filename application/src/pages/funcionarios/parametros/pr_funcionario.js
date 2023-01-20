@@ -10,7 +10,7 @@ export const parametrosFuncionarios = [
     {id: 10, atributo:'complemento', rotulo:'Complemento', tipo: 'text'},
     {id: 11, atributo:'telefone_um', rotulo:'Telefone um', tipo: 'text'},
     {id: 12, atributo:'telefone_dois', rotulo:'Telefone dois', tipo: 'text'},
-    {id: 13, atributo:'email', rotulo:'E-mail', tipo: 'text'},
+    {id: 13, atributo:'email', rotulo:'E-mail', tipo: 'email'},
     {id: 14, atributo:'dt_admissao', rotulo:'Data admissão', tipo: 'date'},
     {id: 15, atributo:'funcao', rotulo:'Função', tipo: 'select', 
       opcoes: [

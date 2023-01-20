@@ -4,16 +4,16 @@ import { useParams } from 'react-router-dom'
 import { urlServer } from '../../../serverConfig';
 import { parametrosDescontos } from '../parametros/pr_descontos';
 
-import CompoenenteFormulario from '../../../components/componenteFormulario/ComponenteFormulario';
+import ComponenteFormulario from '../../../components/componenteFormulario/ComponenteFormulario';
 
 const FormCategorias = () => {
 
   const { id } = useParams();
 
   return (
-    <CompoenenteFormulario
+    <ComponenteFormulario
       parametros={parametrosDescontos}
-      idFetch={id !== ':id' ? `${id}` : ``}
+      idFetch={`${id}`}
       urlFetch={`${urlServer}/grupoDescontos/`}
       urlVoltar={'/descontos/search/'}
     />

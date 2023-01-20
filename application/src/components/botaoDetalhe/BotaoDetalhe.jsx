@@ -4,10 +4,10 @@ import styles from './BotaoDetalhe.module.css'
 
 import iconeDetalhe from '../../assets/icon-detalhe.png'
 
-const BotaoDetalhe = ({ handleDetail, arg }) => {
+const BotaoDetalhe = ({handleDetalhe, arg}) => {
     return (
-        <button className={styles.buttonDetalhe} onClick={() => handleDetail(arg)}>
-            <img src={iconeDetalhe} alt='' />
+        <button className={styles.buttonDetalhe} >
+            <img src={iconeDetalhe} alt='' onClick={()=>handleDetalhe(arg)}/>
         </button>
     )
 }

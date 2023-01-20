@@ -39,7 +39,6 @@ import ConsultarPrecos from './pages/consultarprecos/formularioConsultarPrecos/C
 import ListaConsultarPrecos from './pages/consultarprecos/listaConsultarPrecos/ListaConsultarPrecos';
 
 //Estoque
-import FormularioEstoque from './pages/estoque/formularioEstoque/FormularioEstoque';
 import ListEstoque from './pages/estoque/listaEstoque/ListaEstoque';
 import DetalheEstoque from './pages/estoque/detalheEstoque/DetalheEstoque';
 import LoteEdit from './pages/estoque/loteEdit/LoteEdit';
@@ -57,9 +56,6 @@ import DetalheDevolucoes from './pages/devolucoes/detalheDevolucoes/DetalheDevol
 //Dashboard
 import Dashboard from './pages/dashBoard/Dashboard';
 
-//Notificacoes
-import Notificacoes from './pages/notificacoes/Notificacoes';
-
 //Relatórios
 import Relatorios from './pages/relatorios/Relatorios';
 import FormRelatorioEstoque from './pages/relatorios/formsRelatorios/FormRelatorioEstoque';
@@ -70,6 +66,9 @@ import FormRelatorioFornecedor from './pages/relatorios/formsRelatorios/FormRela
 import FormRelatorioFuncionarios from './pages/relatorios/formsRelatorios/FormRelatorioFuncionarios';
 
 import Pagina404 from './pages/pagina404/Pagina404';
+import ListaCompras from './pages/compras/listaCompras/ListaCompras';
+import DetalheCompras from './pages/compras/detalheCompras/DetalheCompras';
+import FormularioCompras from './pages/compras/formularioCompras/FormularioCompras';
 
 function App() {
   return (
@@ -89,18 +88,21 @@ function App() {
             <Route path='/fornecedores/form/:id' element={<FormularioFornecedores/>}/>
             <Route path='/fornecedores/:id' element={<DetalheFornecedores/>}/>
 
-            <Route path='/estoque/form/' element={<FormularioEstoque/>}/>
+            <Route path='/compras/search/' element={<ListaCompras/>}/>
+            <Route path='/compras/form/' element={<FormularioCompras/>}/>
+            <Route path='/compras/detail/:id' element={<DetalheCompras/>}/>
+
             <Route path='/estoque/:id' element={<DetalheEstoque/>}/>
             <Route path='/estoque/search' element={<ListEstoque/>}/>
             <Route path='/estoque/lote/:id' element={<LoteEdit/>}/>
-          
+            
             <Route path='/clientes/search/' element={<ListaClientes/>}/>
             <Route path='/clientes/form/:id' element={<FormularioClientes/>}/>
             <Route path='/clientes/:id' element={<DetalheClientes/>}/>
 
             <Route path='/mercadorias/departamentos/' element={<DepartamentosMercadorias/>}/>
             <Route path='/mercadorias/search/' element={<ListaMercadorias/>}/>
-            <Route path='mercadorias/detail/:id' element={<DetalheMercadorias/>}/>
+            <Route path='/mercadorias/detail/:id' element={<DetalheMercadorias/>}/>
             <Route path='/mercadorias/form/:id' element={<FormularioMercadorias/>}/>
 
             <Route path='/vendas/form/:id' element={<FormularioVendas />}/>
@@ -114,11 +116,9 @@ function App() {
             <Route path='/consultas/' element={<ConsultarPrecos/>}/>
             <Route path='/consulta/search/' element={<ListaConsultarPrecos/>}/>
 
-            <Route path='descontos/search' element={<ListaDescontos/>}/>
+            <Route path='/descontos/search' element={<ListaDescontos/>}/>
             <Route path='/descontos/form/:id' element={<FormularioDescontos/>}/>
             <Route path='/descontos/detail/:id' element={<DetalheDescontos/>}/>
-
-            <Route path='/notificacoes/search/' element={<Notificacoes/>}/>
 
             <Route path='/relatorios/' element={<Relatorios/>}/>
             <Route path='/relatorio/estoque' element={<FormRelatorioEstoque/>}/>

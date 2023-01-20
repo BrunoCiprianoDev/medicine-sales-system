@@ -9,8 +9,7 @@ export const parametrosEstoque = [
     { id: 6, atributo: 'valorNotaFiscal', rotulo: 'Valor da nota fiscal', tipo: 'number' },
     { id: 7, atributo: 'validade', rotulo: 'Validade', tipo: 'date' },
     { id: 8, atributo: 'unidades', rotulo: 'Unidades', tipo: 'number' },
-    { id: 9, atributo: 'custo_unidade', rotulo: 'Custo p/unidade', tipo: 'number' },
-    { id: 10, atributo: 'local', rotulo: 'Local', tipo: 'textarea' },
+    { id: 9, atributo: 'custo_unidade', rotulo: 'Custo p/unidade', tipo: 'number' }
 ]
 
 export const parametrosOrdencacao = [
@@ -19,5 +18,4 @@ export const parametrosOrdencacao = [
     { id: 3, atributo: 'estoque_minimo', rotulo: 'Estoque mínimo' },
     { id: 4, atributo: 'estoque_maximo', rotulo: 'Estoque máximo' },
     { id: 5, atributo: 'estoque_atual', rotulo: 'Estoque atual' }
-
 ]

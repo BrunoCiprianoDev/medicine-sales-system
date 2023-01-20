@@ -13,7 +13,7 @@ const Devolucoes = () => {
   return (
     <ComponenteFormulario
       parametros={parametrosDevolucoes}
-      idFetch={id !== ':id' ? `${id}` : ``}
+      idFetch={`${id}`}
       urlFetch={`${urlServer}/devolucoes/`}
       urlVoltar={'/devolucoes/search/'}
     />

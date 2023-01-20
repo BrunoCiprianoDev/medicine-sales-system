@@ -5,7 +5,7 @@ import { useFetch } from "../../hooks/useFetch";
 export const useComponenteFormulario = (parametros, idFetch, urlFetch, urlVoltar) => {
   
   const navigate = useNavigate();
-  const { data, httpConfig, loading, error } = useFetch(`${urlFetch}`, `${idFetch}`);
+  const { data, httpConfig, loading, error } = useFetch(`${urlFetch}`, idFetch !== 'adicionar' ? `${idFetch}` : ``);
   const { register, handleSubmit, reset, setValue } = useForm();
 
   if (idFetch) {
@@ -15,7 +15,7 @@ export const useComponenteFormulario = (parametros, idFetch, urlFetch, urlVoltar
   }
 
   const onSubmit = (e) => {
-    if (!idFetch) {
+    if (idFetch === 'adicionar') {
       httpConfig(e, "POST");
       parametros.map((parametro) => (
         reset(formValues => ({

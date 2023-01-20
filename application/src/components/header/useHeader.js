@@ -11,43 +11,46 @@ export const useHeader = () => {
   const [addOptionVisible, setAddOptionVisible] = useState(true);
 
   useEffect(() => {
-    if (option === 'CONSULTAR_PRECO' || option === 'RELATORIOS') {
+    if (option === 'CONSULTAR_PRECO' || option === 'RELATORIOS' || option === 'DASHBOARD') {
       setSearchBarVisible(false);
       setAddOptionVisible(false);
     } else {
       setSearchBarVisible(true)
       setAddOptionVisible(true);
     }
+
   }, [option]);
 
-  const handleFormSelector = (id) => {
+  const handleFormSelector = () => {
     switch (option) {
       case 'FUNCIONARIOS':
-        navigate(`/funcionarios/form/${id}`);
+        navigate(`/funcionarios/form/adicionar`);
         break;
       case 'DESCONTOS':
-        navigate(`/descontos/form/${id}`);
+        navigate(`/descontos/form/adicionar`);
         break;
       case 'FORNECEDORES':
-        navigate(`/fornecedores/form/${id}`);
+        navigate(`/fornecedores/form/adicionar`);
+        break;
+      case 'COMPRAS':
+        navigate(`/compras/form/`);
         break;
       case 'CLIENTES':
-        navigate(`/clientes/form/${id}`);
+        navigate(`/clientes/form/adicionar`);
         break;
       case 'MERCADORIAS':
-        navigate(`/mercadorias/form/${id}`);
+        navigate(`/mercadorias/form/adicionar`);
         break;
       case 'VENDAS':
-        navigate(`/vendas/form/${id}`);
+        navigate(`/vendas/form/adicionar`);
         break;
       case 'ESTOQUE':
-        navigate(`/estoque/form/${id}`);
+        navigate(`/compras/form/`);
         break;
       case 'DEVOLUCOES':
-        navigate(`/devolucoes/form/${id}`);
+        navigate(`/devolucoes/form/adicionar`);
         break;
       default:
-        
         break;
     }
   }
@@ -71,6 +74,10 @@ export const useHeader = () => {
         navigate("/clientes/search?q=" + query);
         setQuery('');
         break;
+      case 'COMPRAS':
+        navigate("/compras/search?q=" + query);
+        setQuery('');
+        break;
       case 'MERCADORIAS':
         navigate("/mercadorias/search?q=" + query);
         setQuery('');
@@ -85,10 +92,6 @@ export const useHeader = () => {
         break;
       case 'DEVOLUCOES':
         navigate('/devolucoes/search?q=' + query)
-        setQuery('');
-        break;
-      case 'NOTIFICACOES':
-        navigate('/notificacoes/search?q=' + query)
         setQuery('');
         break;
       default:

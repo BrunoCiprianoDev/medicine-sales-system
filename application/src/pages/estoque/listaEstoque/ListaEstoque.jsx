@@ -67,9 +67,8 @@ const {
                 />}
               </td>
               <td
-                className={styles.ElementData}
-                onClick={() => handleEdit(mercadoria.id)}>
-                <BotaoDetalhe />
+                className={styles.ElementData}>
+                <BotaoDetalhe handleDetalhe={handleEdit} arg={mercadoria.id}/>
               </td>
             </tr>
           ))}

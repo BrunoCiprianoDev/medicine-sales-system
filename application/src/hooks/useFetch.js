@@ -86,7 +86,7 @@ export const useFetch = (url, filter) => {
     fetchData();
   }, [url, callFetch, filter]);
   useEffect(() => {
-    setLoading(true);
+  
     const httpRequest = async () => {  
       if (method === "POST") {
         let fetchOptions = [url, config];

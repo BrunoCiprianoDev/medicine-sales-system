@@ -3,7 +3,7 @@
     box-sizing: border-box;
     height: 100%;
     display: grid;
-    grid-template-columns: minmax(50em, auto) minmax(50em, 30%);
+    grid-template-columns: minmax(40em, auto) minmax(60em, 30%);
     grid-template-rows: 30% 70%;
     grid-template-areas: "painel-superior painel-lateral"
         "painel-inferior painel-lateral";

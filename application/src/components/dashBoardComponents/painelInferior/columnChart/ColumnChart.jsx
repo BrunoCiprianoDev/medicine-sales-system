@@ -35,7 +35,7 @@ const ColumnChart = () => {
 
   return (
     <div className={styles.MainContainer}>
-      <Chart chartType="ColumnChart" width="80%" height="600px" data={data} />
+      <Chart chartType="ColumnChart" width="95%" height="600px" data={data} />
     </div>
   )
 }

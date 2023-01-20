@@ -1,4 +1,4 @@
-import { React} from 'react'
+import { React } from 'react'
 import { useParams } from 'react-router-dom'
 
 import { parametrosFuncionarios } from '../parametros/pr_funcionario'
@@ -13,8 +13,8 @@ const FormularioFuncionarios = () => {
   return (
     <ComponenteFormulario
       parametros={parametrosFuncionarios}
-      idFetch={id !== ':id'? `${id}` : ``}
-      urlFetch={ `${urlServer}/funcionarios/`}
+      idFetch={`${id}`}
+      urlFetch={`${urlServer}/funcionarios/`}
       urlVoltar={'/funcionarios/search/'}
     />
   )

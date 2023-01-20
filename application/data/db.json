@@ -115,6 +115,14 @@
       "telefone": "(32)3222-9781",
       "email": "email31312Funcionario@email.com",
       "id": 1
+    },
+    {
+      "nome": "Carlos Almeida Simas",
+      "cpf": "156.867.555.23",
+      "dt_nascimento": "1993-03-12",
+      "telefone": "(32)3222-9781",
+      "email": "carlosSimas21_jf@gmail.com",
+      "id": 2
     }
   ],
   "gruposFarmacologicos": [
@@ -670,6 +678,36 @@
       "id": 4
     }
   ],
+  "compras": [
+    {
+      "id": 1,
+      "data": "2023-01-05",
+      "total": "0.00",
+      "fornecedor":"Neo Quimica",
+      "numero_nota_fiscal": 123124124123
+    },
+    {
+      "id": 2,
+      "data": "2023-01-05",
+      "total": "0.00",
+      "fornecedor":"Neo Quimica",
+      "numero_nota_fiscal": 12312412412323
+    },
+    {
+      "id": 3,
+      "data": "2023-01-05",
+      "total": "0.00",
+      "fornecedor":"INOVAFARMA",
+      "numero_nota_fiscal": 123124121231
+    },
+    {
+      "id": 4,
+      "data": "2023-01-05",
+      "total": "0.00",
+      "fornecedor":"INOVAFARMA",
+      "numero_nota_fiscal": 12312411224123
+    }
+  ],
   "lotes": [
     {
       "lote": "B22F1575",
@@ -679,7 +717,10 @@
       "custo_unidade": "33.98",
       "mercadoriaId": 3,
       "fornecedoreId": 2,
-      "id": 1
+      "id": 1,
+      "compraId": 1,
+      "numeroNotaFiscal": "21309122312",
+      "valorNotaFiscal": "2106.76"
     },
     {
       "lote": "1701213213",
@@ -689,7 +730,8 @@
       "custo_unidade": "5.6",
       "mercadoriaId": 4,
       "fornecedoreId": 2,
-      "id": 2
+      "id": 2,
+      "compraId": 2
     },
     {
       "lote": "1701213213",
@@ -699,6 +741,7 @@
       "custo_unidade": "5.6",
       "mercadoriaId": 5,
       "fornecedoreId": 2,
+      "compraId": 3,
       "id": 3
     },
     {
@@ -709,6 +752,7 @@
       "custo_unidade": "5.6",
       "mercadoriaId": 5,
       "fornecedoreId": 1,
+      "compraId": 4,
       "id": 4
     },
     {
@@ -719,6 +763,7 @@
       "custo_unidade": "4.67",
       "mercadoriaId": 6,
       "fornecedoreId": 1,
+      "compraId": 1,
       "id": 5
     },
     {
@@ -729,7 +774,8 @@
       "custo_unidade": "4.67",
       "mercadoriaId": 6,
       "fornecedoreId": 1,
-      "id": 5
+      "compraId": 1,
+      "id": 511
     },
     {
       "lote": "1701213213",
@@ -739,6 +785,7 @@
       "custo_unidade": "4.67",
       "mercadoriaId": 7,
       "fornecedoreId": 1,
+      "compraId": 2,
       "id": 6
     },
     {
@@ -749,6 +796,7 @@
       "custo_unidade": "4.67",
       "mercadoriaId": 9,
       "fornecedoreId": 1,
+      "compraId": 3,
       "id": 7
     },
     {
@@ -759,6 +807,7 @@
       "custo_unidade": "4.67",
       "mercadoriaId": 10,
       "fornecedoreId": 1,
+      "compraId": 2,
       "id": 8,
       "numeroNotaFiscal": "123123",
       "valorNotaFiscal": "123123"
@@ -771,6 +820,7 @@
       "custo_unidade": "4.67",
       "mercadoriaId": 11,
       "fornecedoreId": 1,
+      "compraId": 3,
       "id": 9
     },
     {
@@ -781,6 +831,7 @@
       "custo_unidade": "4.67",
       "mercadoriaId": 11,
       "fornecedoreId": 1,
+      "compraId": 2,
       "id": 10
     },
     {
@@ -791,6 +842,7 @@
       "custo_unidade": "4.67",
       "mercadoriaId": 13,
       "fornecedoreId": 1,
+      "compraId": 4,
       "id": 11
     },
     {
@@ -801,6 +853,7 @@
       "custo_unidade": "4.67",
       "mercadoriaId": 14,
       "fornecedoreId": 1,
+      "compraId": 4,
       "id": 12
     },
     {
@@ -811,6 +864,7 @@
       "custo_unidade": "4.67",
       "mercadoriaId": 15,
       "fornecedoreId": 1,
+      "compraId": 2,
       "id": 13
     },
     {
@@ -821,6 +875,7 @@
       "custo_unidade": "4.67",
       "mercadoriaId": 12,
       "fornecedoreId": 1,
+      "compraId": 3,
       "id": 14
     },
     {
@@ -831,6 +886,7 @@
       "custo_unidade": "4.67",
       "mercadoriaId": 16,
       "fornecedoreId": 1,
+      "compraId": 5,
       "id": 15
     },
     {
@@ -841,6 +897,7 @@
       "custo_unidade": "4.67",
       "mercadoriaId": 17,
       "fornecedoreId": 1,
+      "compraId": 2,
       "id": 16
     },
     {
@@ -851,6 +908,7 @@
       "custo_unidade": "4.67",
       "mercadoriaId": 18,
       "fornecedoreId": 1,
+      "compraId": 3,
       "id": 17
     },
     {
@@ -861,6 +919,7 @@
       "custo_unidade": "4.67",
       "mercadoriaId": 19,
       "fornecedoreId": 1,
+      "compraId": 2,
       "id": 18
     },
     {
@@ -871,6 +930,7 @@
       "custo_unidade": "4.67",
       "mercadoriaId": 19,
       "fornecedoreId": 1,
+      "compraId": 2,
       "id": 19
     },
     {
@@ -881,6 +941,7 @@
       "custo_unidade": "4.67",
       "mercadoriaId": 20,
       "fornecedoreId": 1,
+      "compraId": 1,
       "id": 20
     },
     {
@@ -892,6 +953,7 @@
       "mercadoriaId": 20,
       "fornecedoreId": 1,
       "id": 21,
+      "compraId": 3,
       "numeroNotaFiscal": "32134123",
       "valorNotaFiscal": "123123"
     },
@@ -903,6 +965,7 @@
       "custo_unidade": "4.67",
       "mercadoriaId": 21,
       "fornecedoreId": 1,
+      "compraId": 1,
       "id": 22
     }
   ],
@@ -1111,12 +1174,11 @@
   ],
   "devolucoes": [
     {
-      "data": "2022-12-12",
-      "unidades": "1",
-      "valorDevolvido": "2.99",
-      "vendaId": 3,
-      "mercadoriaId": 3,
-      "id": 1
+      "data": "112312-02-14",
+      "id": 2,
+      "nome": "Rifotrat Spray",
+      "unidades": "2",
+      "valorDevolvido": "1"
     }
   ],
   "notificacoes": [

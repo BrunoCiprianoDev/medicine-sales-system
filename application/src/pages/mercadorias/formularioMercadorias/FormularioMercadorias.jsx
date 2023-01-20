@@ -12,10 +12,10 @@ const FormularioMercadorias = () => {
 
   return (
     <ComponenteFormulario
-    parametros={parametrosMercadorias}
-    idFetch={id !== ':id' ? `${id}` : ``}
-    urlFetch={`${urlServer}/mercadorias/`}
-    urlVoltar={'/mercadorias/search/'}
+      parametros={parametrosMercadorias}
+      idFetch={`${id}`}
+      urlFetch={`${urlServer}/mercadorias/`}
+      urlVoltar={'/mercadorias/search/'}
     />
   )
 }

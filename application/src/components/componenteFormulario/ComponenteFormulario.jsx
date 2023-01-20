@@ -16,7 +16,7 @@ const ComponenteFormulario = ({
   urlVoltar,
 }) => {
 
-  const { 
+  const {
     loading,
     error,
     register,
@@ -62,6 +62,12 @@ const ComponenteFormulario = ({
                       />;
 
                     case "password":
+                      return <input name={parametro.atributo}
+                        {...register(parametro.atributo)}
+                        type={parametro.tipo} required
+                      />;
+
+                    case "email":
                       return <input name={parametro.atributo}
                         {...register(parametro.atributo)}
                         type={parametro.tipo} required
