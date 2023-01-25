@@ -41,6 +41,9 @@ export const useHeader = () => {
       case 'MERCADORIAS':
         navigate(`/mercadorias/form/adicionar`);
         break;
+      case 'PERDAS':
+        navigate(`/perdas/form/adicionar`);
+        break;
       case 'VENDAS':
         navigate(`/vendas/form/adicionar`);
         break;
@@ -80,6 +83,10 @@ export const useHeader = () => {
         break;
       case 'MERCADORIAS':
         navigate("/mercadorias/search?q=" + query);
+        setQuery('');
+        break;
+      case 'PERDAS':
+        navigate("/perdas/search?q=" + query);
         setQuery('');
         break;
       case 'VENDAS':

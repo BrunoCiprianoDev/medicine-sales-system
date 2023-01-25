@@ -13,7 +13,7 @@ const InputAutoComplete = ({ attribute, url, setValue, attributeVisible, hookFor
   const handleInsert = (item) => {
     setInputSearch(item[attributeVisible])
     setVisibiliyAutoComplete(false)
-    hookForm ? setValue(attribute, item[attribute]) : setValue(item.id)
+    hookForm ? setValue(attribute, item[attributeVisible]) : setValue(item.id)
   }
   const handleOnChange = (event) => {
     hookForm ? setValue(attribute, '') : setValue("")

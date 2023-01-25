@@ -4,6 +4,7 @@ import iconeFuncionario from '../../assets/icon-funcionario.png'
 import iconeVendas from '../../assets/icon-vendas.png'
 import iconeMercadorias from '../../assets/icon-mercadorias.png'
 import iconeFornecedores from '../../assets/icon-fornecedores.png'
+import iconePerdas from '../../assets/icon-perdas.png'
 import iconeCompras from '../../assets/icon-compras.png'
 import iconeEstoque from '../../assets/icon-estoque.png'
 import iconePreco from '../../assets/icon-preco.png'
@@ -20,9 +21,10 @@ export const parametrosSideBar = [
   { id: 5, name: 'Fornecedores', to: '/fornecedores/search/?q=', value: 'FORNECEDORES', icon: iconeFornecedores },
   { id: 6, name: 'Compras', to: "/compras/search/?q=", value: 'COMPRAS', icon: iconeCompras },
   { id: 7, name: 'Estoque', to: '/estoque/search/?q=', value: 'ESTOQUE', icon: iconeEstoque },
-  { id: 8, name: 'Consultar preço', to: '/consultas/', value: 'CONSULTAR_PRECO', icon: iconePreco },
-  { id: 9, name: 'Vendas', to: '/vendas/search/?q=', value: 'VENDAS', icon: iconeVendas },
-  { id: 10, name: 'Devoluções', to: '/devolucoes/search/?q=', value: 'DEVOLUCOES', icon: iconeDevolucao },
-  { id: 11, name: 'Clientes', to: '/clientes/search/?q=', value: 'CLIENTES', icon: iconeClientes },
-  { id: 12, name: 'Relatórios', to: '/relatorios/', value: 'RELATORIOS', icon: iconeRelatorios }
+  { id: 8, name: 'Perdas', to: '/perdas/search/?q=', value: 'PERDAS', icon: iconePerdas },
+  { id: 9, name: 'Consultar preço', to: '/consultas/', value: 'CONSULTAR_PRECO', icon: iconePreco },
+  { id: 10, name: 'Vendas', to: '/vendas/search/?q=', value: 'VENDAS', icon: iconeVendas },
+  { id: 11, name: 'Devoluções', to: '/devolucoes/search/?q=', value: 'DEVOLUCOES', icon: iconeDevolucao },
+  { id: 12, name: 'Clientes', to: '/clientes/search/?q=', value: 'CLIENTES', icon: iconeClientes },
+  { id: 13, name: 'Relatórios', to: '/relatorios/', value: 'RELATORIOS', icon: iconeRelatorios }
 ]
