@@ -4,19 +4,19 @@
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 10% 90%;
-    grid-template-areas: "title""menu";
+    grid-template-areas: "title" "menu";
 }
 
 .ContainerTitle {
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
-    text-shadow: 0px 0px 3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.75);
     display: flex;
     justify-content: center;
     grid-area: title;
     color: red;
 }
 
-.ContainerDepartment{
+.ContainerDepartment {
     display: flex;
     justify-content: center;
     height: 100%;
@@ -35,11 +35,11 @@
     row-gap: 2%;
 }
 
-.ContainerMenu button{
+.ContainerMenu button {
     cursor: pointer;
     width: 10em;
     height: 10em;
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
     background-color: rgba(0, 42, 82, 0.897);
     color: white;
     border-radius: 3px;
@@ -48,7 +48,7 @@
 
 .ContainerMenu button:hover {
     background-color: rgba(0, 26, 49, 0.897);
-    color:white;
+    color: white;
 }
 
 .ContainerMenu img {
@@ -56,14 +56,14 @@
 }
 
 @media screen and (max-width: 800px) {
-    .ContainerMenu div{
+    .ContainerMenu div {
         width: 8em;
         height: 8em;
         background-color: blue;
         border: 1px dashed rgb(236, 3, 3);
     }
 
-    .ContainerMenu button{
+    .ContainerMenu button {
         width: 10em;
         height: 10em;
         box-shadow: -1px 5px 10px rgba(0, 0, 0, 0.45);
@@ -75,23 +75,24 @@
 
     .ContainerMenu button:hover {
         background-color: rgba(0, 26, 49, 0.897);
-        color:white;
-        box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+        color: white;
+        box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
     }
 }
 
 .FormContainer {
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
-    height: 100%;
+    height: 50%;
 }
 
-.FormContainer button{
+.FormContainer button {
     cursor: pointer;
     width: 5em;
     height: 5em;
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
     background-color: rgba(0, 42, 82, 0.897);
     color: white;
     border-radius: 3px;
@@ -100,4 +101,57 @@
 
 .FormContainer img {
     width: 70%;
+}
+
+.FormContainer label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.24);
+    color: rgb(97 97 97);
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+
+.FormContainer input[type=text] {
+    height: 1.5em;
+    border-style: none;
+    border-bottom: 2px solid rgba(0, 26, 49, 0.897);
+    background-color: white;
+    margin-right: 2px;
+    font-size: 1em;
+}
+
+.FormContainer input[type=date] {
+    height: 1.7em;
+    border-style: none;
+    border-bottom: 2px solid rgba(0, 26, 49, 0.897);
+    background-color: white;
+    margin-right: 2px;
+    font-size: 1em;
+}
+
+.FormContainer input[type=number] {
+    height: 1.7em;
+    border-style: none;
+    border-bottom: 2px solid rgba(0, 26, 49, 0.897);
+    background-color: white;
+    margin-right: 2px;
+    font-size: 1em;
+}
+
+.FormContainer input[type='submit'] {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    border: none;
+    width: 12em;
+    height: 3em;
+    margin-top: 6px;
+    background-color: rgba(0, 42, 82, 0.897);
+    box-shadow: -1px 5px 10px rgba(0, 0, 0, 0.45);
+    color: white;
+    font-size: 1em;
+    margin-left: auto;
+    margin-right: auto;
 }

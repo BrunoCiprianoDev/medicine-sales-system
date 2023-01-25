@@ -29,7 +29,7 @@
       "numero": "1050",
       "complemento": "302",
       "telefone_um": "(32)98867-0548",
-      "telefone_dois": "(32)3222-2521",
+      "telefone_dois": "(32)3222-9501",
       "email": "Heliar_Carlos14@email.com",
       "dt_admissao": "2010-12-02",
       "funcao": "VENDEDOR",
@@ -252,7 +252,7 @@
       "marca": "NATULAB",
       "princ_ativo": "Com Rifamicina Sv Sódica",
       "id": 3,
-      "grupoDesconto": "livre"
+      "grupoDesconto": "Brasil remedios"
     },
     {
       "nome": "Novalgina Solução Oral 50mg/ml com Seringa Dosadora 100 ml",
@@ -669,13 +669,17 @@
       "grupoDesconto": "Doces ",
       "percentual": "10",
       "descricao": "Descontos  para produtos do departamento OUROS e que são doces",
-      "id": 3
+      "id": 3,
+      "data_inicio": "2023-01-14",
+      "data_final": "2023-02-14"
     },
     {
       "grupoDesconto": "Brasil remedios",
       "percentual": "15",
       "descricao": "21322",
-      "id": 4
+      "id": 4,
+      "data_inicio": "2023-01-20",
+      "data_final": "2023-03-15"
     }
   ],
   "compras": [
@@ -683,28 +687,28 @@
       "id": 1,
       "data": "2023-01-05",
       "total": "0.00",
-      "fornecedor":"Neo Quimica",
+      "fornecedor": "Neo Quimica",
       "numero_nota_fiscal": 123124124123
     },
     {
       "id": 2,
       "data": "2023-01-05",
       "total": "0.00",
-      "fornecedor":"Neo Quimica",
+      "fornecedor": "Neo Quimica",
       "numero_nota_fiscal": 12312412412323
     },
     {
       "id": 3,
       "data": "2023-01-05",
       "total": "0.00",
-      "fornecedor":"INOVAFARMA",
+      "fornecedor": "INOVAFARMA",
       "numero_nota_fiscal": 123124121231
     },
     {
       "id": 4,
       "data": "2023-01-05",
       "total": "0.00",
-      "fornecedor":"INOVAFARMA",
+      "fornecedor": "INOVAFARMA",
       "numero_nota_fiscal": 12312411224123
     }
   ],
@@ -882,17 +886,6 @@
       "lote": "1701213213",
       "data_compra": "2023-02-15",
       "validade": "2025-02-20",
-      "unidades": "100",
-      "custo_unidade": "4.67",
-      "mercadoriaId": 16,
-      "fornecedoreId": 1,
-      "compraId": 5,
-      "id": 15
-    },
-    {
-      "lote": "1701213213",
-      "data_compra": "2023-02-15",
-      "validade": "2025-02-20",
       "unidades": "70",
       "custo_unidade": "4.67",
       "mercadoriaId": 17,
@@ -967,6 +960,15 @@
       "fornecedoreId": 1,
       "compraId": 1,
       "id": 22
+    }
+  ],
+  "perdas": [
+    {
+      "data": "0213-03-12",
+      "mercadoriaId": "Rifotrat Spray",
+      "unidades": "1",
+      "funcionarioId": "Carlos Moura Heliar",
+      "id": 1
     }
   ],
   "vendas": [
@@ -1174,11 +1176,20 @@
   ],
   "devolucoes": [
     {
+      "id": 1,
       "data": "112312-02-14",
-      "id": 2,
-      "nome": "Rifotrat Spray",
+      "nome": "Amora miura",
       "unidades": "2",
-      "valorDevolvido": "1"
+      "valorDevolvido": "1",
+      "venda": "01/01/2023(8:40)"
+    },
+    {
+      "id": 2,
+      "data": "2023-02-14",
+      "nome": "Novalgina Solução Oral 50mg/ml com Seringa Dosadora 100 ml",
+      "unidades": "2",
+      "venda": "04/01/2023(10:26)",
+      "valorDevolvido": "2.5"
     }
   ],
   "notificacoes": [

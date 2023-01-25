@@ -7,10 +7,13 @@ import { urlServer } from '../../../serverConfig'
 
 const FormRelatorioClientes = () => {
 
-    const { data } = useFetch(urlServer + '/clientes/',``)
+    const { data } = useFetch(urlServer + '/clientes/', ``)
 
     return (
-        <div className={styles.FormContainer}>  
+        <div className={styles.FormContainer}>
+            <form className={styles['FormContainer']}>
+                <label >Nome do cliente:<input type="text" /></label>
+           </form>
             {data && <button onClick={() => clientePDF(data)}><img src={iconePDF} alt="" /></button>}
         </div>
     )

@@ -11,6 +11,10 @@ const FormRelatorioFuncionarios = () => {
 
     return (
         <div className={styles.FormContainer}>
+            <form className={styles['FormContainer']}>
+                <label >CPF do funcionario <input type="text" /></label>
+                <label >A partid de: <input type="date" /></label>
+                <label >Até: <input type="date" /></label>            </form>
             {data && <button onClick={() => funcionarioPDF(data)}><img src={iconePDF} alt="" /></button>}
         </div>
     )

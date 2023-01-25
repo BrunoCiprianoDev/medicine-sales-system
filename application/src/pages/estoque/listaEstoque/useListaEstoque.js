@@ -17,7 +17,7 @@ export const useListaEstoque = () => {
     }
 
     //Params from pagination
-    const [itensPerPage, setItemPerPage] = useState(7);
+    const [itensPerPage, setItemPerPage] = useState(6);
     const [currentPage, setCurrentPage] = useState(0);
     const pages = Math.ceil(data && data.length / itensPerPage);
     const startIndex = currentPage * itensPerPage;

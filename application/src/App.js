@@ -43,6 +43,11 @@ import ListEstoque from './pages/estoque/listaEstoque/ListaEstoque';
 import DetalheEstoque from './pages/estoque/detalheEstoque/DetalheEstoque';
 import LoteEdit from './pages/estoque/loteEdit/LoteEdit';
 
+//Perdas
+import DetalhePerdas from './pages/perdas/detalhePerdas/DetalhePerdas';
+import FormularioPerdas from './pages/perdas/formularioPerdas/FormularioPerdas';
+import ListaPerdas from './pages/perdas/listaPerdas/ListaPerdas';
+
 //Venda
 import FormularioVendas from './pages/vendas/formularioVendas/FormularioVendas';
 import ListaVendas from './pages/vendas/listaVendas/ListaVendas';
@@ -99,6 +104,10 @@ function App() {
             <Route path='/estoque/search' element={<ListEstoque/>}/>
             <Route path='/estoque/lote/:id' element={<LoteEdit/>}/>
             
+            <Route path='/perdas/:id' element={<DetalhePerdas/>}/>
+            <Route path='/perdas/form/:id' element={<FormularioPerdas/>}/>
+            <Route path='/perdas/search/' element={<ListaPerdas/>}/>
+
             <Route path='/clientes/search/' element={<ListaClientes/>}/>
             <Route path='/clientes/form/:id' element={<FormularioClientes/>}/>
             <Route path='/clientes/:id' element={<DetalheClientes/>}/>

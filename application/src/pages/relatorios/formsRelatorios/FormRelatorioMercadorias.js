@@ -10,7 +10,10 @@ const FormRelatorioEstoque = () => {
     const { data } = useFetch(urlServer + '/mercadorias/', ``)
 
     return (
-        <div className={styles.FormContainer}>         
+        <div className={styles.FormContainer}>
+            <form className={styles['FormContainer']}>
+                <label >Gerar relatório</label>
+            </form>
             {data && <button onClick={() => mercadoriaPDF(data)}><img src={iconePDF} alt="" /></button>}
         </div>
     )

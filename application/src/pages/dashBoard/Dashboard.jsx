@@ -4,7 +4,6 @@ import styles from './Dashboard.module.css'
 
 import iconeVendas from '../../assets/icon-vendas.png'
 import iconeDesconto from '../../assets/icon-desconto.png'
-import iconeReceita from '../../assets/icon-cifrao.png'
 
 import Cards from '../../components/dashBoardComponents/painelSuperior/cards/Cards'
 import { urlServer } from '../../serverConfig'
@@ -22,11 +21,8 @@ const Dashboard = () => {
           <Cards data={'10050'} title={'Vendas'} >
             <img src={iconeVendas} alt="Vendas" />
           </Cards>
-          <Cards data={'2075.00'} title={'Receita'}>
-            <img src={iconeDesconto} alt="Descontos" />
-          </Cards>
           <Cards data={'560.00'} title={'Descontos'} >
-            <img src={iconeReceita} alt="Receita" />
+            <img src={iconeDesconto} alt="Receita" />
           </Cards>
         </div>
       </div>
