@@ -686,28 +686,28 @@
     {
       "id": 1,
       "data": "2023-01-05",
-      "total": "0.00",
+      "total": "25000.00",
       "fornecedor": "Neo Quimica",
       "numero_nota_fiscal": 123124124123
     },
     {
       "id": 2,
       "data": "2023-01-05",
-      "total": "0.00",
+      "total": "10500.00",
       "fornecedor": "Neo Quimica",
       "numero_nota_fiscal": 12312412412323
     },
     {
       "id": 3,
       "data": "2023-01-05",
-      "total": "0.00",
+      "total": "15200.00",
       "fornecedor": "INOVAFARMA",
       "numero_nota_fiscal": 123124121231
     },
     {
       "id": 4,
       "data": "2023-01-05",
-      "total": "0.00",
+      "total": "12000.00",
       "fornecedor": "INOVAFARMA",
       "numero_nota_fiscal": 12312411224123
     }
