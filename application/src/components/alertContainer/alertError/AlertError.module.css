@@ -1,10 +1,11 @@
 .MainContainer {
     z-index: 99;
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
+    left: 3em;
     top: 0em;
     height: 2em;
 }

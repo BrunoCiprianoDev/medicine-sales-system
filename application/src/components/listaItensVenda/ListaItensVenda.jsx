@@ -4,6 +4,7 @@ import styles from './ListaItensVenda.module.css'
 
 import { useListaItensVenda } from './useListaItensVenda';
 import ComponentePaginacao from '../componentePaginacao/ComponentePaginacao';
+import SeletorLotes from '../seletorLotes/SeletorLotes';
 
 const ListaItensVenda = ({ list, setList }) => {
 
@@ -15,10 +16,17 @@ const {
   currentPage, 
   setItemPerPage, 
   itensPerPage, 
-  pages } = useListaItensVenda(list, setList)
+  pages,
+  seletorLotes,
+  setSeletorLotes,
+  mercadoriaLotes,
+  callSeletorLote
+} = useListaItensVenda(list, setList)
+
 
   return (
     <div className={styles.MainContainer}>
+      {seletorLotes && <SeletorLotes mercadoriaLotes={mercadoriaLotes} setSeletorLotes={setSeletorLotes} />}
       <table>
         <thead>
           <tr className={styles.HeaderList}>
@@ -51,7 +59,7 @@ const {
                 <button onClick={() => addElement(elemento)}
                   className={styles.buttonAdd}>+
                 </button>
-                <button
+                <button onClick={() => callSeletorLote(elemento)}
                   className={styles.buttonLote}>L
                 </button>
               </td>

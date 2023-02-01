@@ -10,6 +10,9 @@ export const useListaItensVenda = (list, setList) => {
   const endIndex = startIndex + itensPerPage;
   const currentItens = (list && list.slice(startIndex, endIndex));
 
+  const [seletorLotes, setSeletorLotes] = useState(false);
+  const [mercadoriaLotes, setMercadoriasLotes] = useState('');
+
   const removeElement = (elemento) => {
     elemento.quant--;
     elemento.quant_edit--;
@@ -25,6 +28,11 @@ export const useListaItensVenda = (list, setList) => {
     setList(arr => [...arr])
   }
 
+  const callSeletorLote = (elemento) =>{
+    setMercadoriasLotes(elemento.mercadoriaId);
+    setSeletorLotes(true);
+  }
+
   return {
     currentItens, 
     removeElement, 
@@ -34,5 +42,10 @@ export const useListaItensVenda = (list, setList) => {
     setItemPerPage, 
     itensPerPage, 
     pages,
+    seletorLotes,
+    setSeletorLotes,
+    mercadoriaLotes,
+    setMercadoriasLotes,
+    callSeletorLote
 }
 }
