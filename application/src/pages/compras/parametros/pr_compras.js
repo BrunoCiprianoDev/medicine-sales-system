@@ -1,8 +1,10 @@
 export const parametrosCompras = [
-    {id: 1, atributo:'data', rotulo:'Data ', tipo: 'date'},
+    {id: 1, atributo:'purchaseDate', rotulo:'Data ', tipo: 'date'},
     {id: 2, atributo:'total', rotulo:'Total', tipo: 'number'},
-    {id: 3, atributo:'fornecedor', rotulo:'Fornecedor', tipo: 'text' },
-    {id: 4, atributo:'numero_nota_fiscal', rotulo:'Nota fiscal', tipo: 'text' }
+    {id: 3, atributo:'supplierName', rotulo:'Fornecedor', tipo: 'text' },
+    {id: 4, atributo:'supplierCNPJ', rotulo:'CNPJ', tipo: 'text' },
+    {id: 5, atributo:'supplierId', rotulo:'ID', tipo: 'text' },
+    {id: 6, atributo:'noteNumber', rotulo:'Nota fiscal', tipo: 'text' }
   ]
 
 export const parametrosItensCompra = [

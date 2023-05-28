@@ -14,7 +14,7 @@ const FormCategorias = () => {
     <ComponenteFormulario
       parametros={parametrosDescontos}
       idFetch={`${id}`}
-      urlFetch={`${urlServer}/grupoDescontos/`}
+      urlFetch={`${urlServer}/discounts/`}
       urlVoltar={'/descontos/search/'}
     />
   )

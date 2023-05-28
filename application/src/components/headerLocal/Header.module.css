@@ -1,0 +1,58 @@
+.Disable {
+    display: none;
+}
+
+.MainContainer {
+    display: flex;
+    align-items: center;
+    height: 6em;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+}
+
+.FormContainer {
+    margin-right: auto ;
+    margin-left: 12%;
+    display: flex;
+    width: 50%;
+    height: 50%;
+}
+
+.FormContainer input[type='text'] {
+    width: 80%;
+    font-size: 1.2em;
+    border-style: none;
+    border-bottom: 2px solid rgba(0, 26, 49, 0.897);
+}
+
+.FormContainer input:focus {
+    outline-style: none;
+}
+
+.FormContainer button { 
+    cursor: pointer;
+    width: 20%;
+    border-style: none;
+    background-color: white;
+    border-bottom: 2px solid rgba(0, 26, 49, 0.897);
+}
+
+.FormContainer button img { 
+    width: 1.5em;
+}
+
+.buttonNew {
+    cursor: pointer;
+    background-color: white;
+    align-items: center;
+    border-style: none;
+    display: flex;
+    font-size: 1em;
+    font-weight: bold;
+    width: max-content;
+    margin-left: 5%;
+}
+
+.buttonNew img {
+    width: 2em;
+    padding-right: 0.5em;
+}

@@ -5,15 +5,8 @@
   display: grid;
   grid-template-columns: max-content auto;
   grid-template-rows: 6em auto;
-  grid-template-areas: "sidebar header "
-    "sidebar contend"
+  grid-template-areas:"sidebar contend"
     "sidebar contend";
-}
-
-.Header {
-  box-sizing: border-box;
-  grid-area: header;
-  width: 100%;
 }
 
 .Sidebar {
@@ -25,9 +18,4 @@
 .Contend {
   box-sizing: border-box;
   grid-area: contend;
-}
-
-.Footer {
-  grid-area: footer;
-  box-sizing: border-box;
 }

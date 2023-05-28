@@ -12,7 +12,7 @@ const DetalheClientes = () => {
     <ComponenteDetalhe
       parametros={parametrosClientes}
       idFetch={id}
-      urlFetch={`${urlServer}/clientes/`}
+      urlFetch={`${urlServer}/clients/`}
       urlEditar={'/clientes/form/' + id}
       urlVoltar={'/clientes/search'}
     />

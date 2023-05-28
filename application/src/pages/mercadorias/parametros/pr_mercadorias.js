@@ -10,10 +10,10 @@ import iconeSuplemento from '../../../assets/icon-suplemento.png'
 import iconeIdoso from '../../../assets/icon-idoso.png'
 
 export const parametrosMercadorias = [
-  { id: 1, atributo: 'nome', rotulo: 'Nome', tipo: 'text' },
-  { id: 2, atributo: 'codigo', rotulo: 'Código', tipo: 'text' },
+  { id: 1, atributo: 'name', rotulo: 'Nome', tipo: 'text' },
+  { id: 2, atributo: 'code', rotulo: 'Código', tipo: 'text' },
   {
-    id: 3, atributo: 'departamento', rotulo: 'Departamento', tipo: 'select',
+    id: 3, atributo: 'department', rotulo: 'Departamento', tipo: 'select',
     opcoes: [
       { id: 1, valor: 'MEDICAMENTO' },
       { id: 2, valor: 'SUPLEMENTOS' },
@@ -26,7 +26,7 @@ export const parametrosMercadorias = [
     ]
   },
   {
-    id: 4, atributo: 'classificacao', rotulo: 'Classificação', tipo: 'select',
+    id: 4, atributo: 'classification', rotulo: 'Classificação', tipo: 'select',
     opcoes: [
       { id: 1, valor: 'LIVRE' },
       { id: 2, valor: 'GENERICO' },
@@ -34,11 +34,10 @@ export const parametrosMercadorias = [
       { id: 4, valor: 'REFERENCIA' },
     ]
   },
-  { id: 5, atributo: 'marca', rotulo: 'Marca', tipo: 'text' },
-  { id: 6, atributo: 'princ_ativo', rotulo: 'Principio ativo', tipo: 'text' },
-  { id: 7, atributo: 'grupoFarmacologico', rotulo: 'Grupos Framacologicos', tipo: 'selectBox', urlFetch: `${urlServer}/gruposFarmacologicos/` },
+  { id: 5, atributo: 'brand', rotulo: 'Marca', tipo: 'text' },
+  { id: 6, atributo: 'formule', rotulo: 'Principio ativo', tipo: 'text' },
   {
-    id: 8, atributo: 'tarja', rotulo: 'Tarja:', tipo: 'select',
+    id: 8, atributo: 'stripé', rotulo: 'Tarja:', tipo: 'select',
     opcoes: [
       { id: 4, valor: 'SEM TARJA' },
       { id: 1, valor: 'AMARELA' },
@@ -47,28 +46,20 @@ export const parametrosMercadorias = [
     ]
   },
   {
-    id: 9, atributo: 'peresivel', rotulo: 'Peresivel', tipo: 'select',
-    opcoes: [
-      { id: 1, valor: 'SIM' },
-      { id: 2, valor: 'NÃO' },
-    ]
-  },
-  {
-    id: 10, atributo: 'temp_armazenamento', rotulo: 'Temperatura de armazenamento', tipo: 'select',
+    id: 10, atributo: 'storageTemperature', rotulo: 'Temperatura de armazenamento', tipo: 'select',
     opcoes: [
       { id: 1, valor: '15° a 30°' },
       { id: 2, valor: '0° a 15°' },
       { id: 3, valor: '-15° a 0°' },
     ]
   },
-  { id: 11, atributo: 'registro_ms', rotulo: 'Registro MS', tipo: 'text' },
-  { id: 12, atributo: 'estoque_minimo', rotulo: 'Estoque minimo', tipo: 'number' },
-  { id: 13, atributo: 'estoque_maximo', rotulo: 'Estoque máximo', tipo: 'number' },
-  { id: 16, atributo: 'preco_com_desconto', rotulo: 'Valor de venda', tipo: 'number' },
-  { id: 17, atributo: 'grupoDesconto', rotulo: 'Grupo de desconto', tipo: 'selectBox', urlFetch: `${urlServer}/grupoDescontos/` },
-  { id: 18, atributo: 'comissao', rotulo: 'Percentual de comissão', tipo: 'number' },
+  { id: 11, atributo: 'rms', rotulo: 'Registro MS', tipo: 'text' },
+  { id: 12, atributo: 'minimumStock', rotulo: 'Estoque minimo', tipo: 'number' },
+  { id: 13, atributo: 'maximumStock', rotulo: 'Estoque máximo', tipo: 'number' },
+  { id: 17, atributo: 'fullPrice', rotulo: 'Preço', tipo: 'number' },
+  { id: 18, atributo: 'comission', rotulo: 'Percentual de comissão', tipo: 'number' },
   { id: 19, atributo: 'pmc', rotulo: 'PMC', tipo: 'number' },
-  { id: 20, atributo: 'descricao', rotulo: 'Descricao', tipo: 'textarea' }
+  { id: 20, atributo: 'description', rotulo: 'Descricao', tipo: 'textarea' }
 ]
 
 export const menuDepartamentos = [

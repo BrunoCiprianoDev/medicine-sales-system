@@ -14,7 +14,7 @@ const FormularioFornecedores = () => {
     <ComponenteFormulario
       parametros={parametrosFornecedores}
       idFetch={`${id}`}
-      urlFetch={`${urlServer}/fornecedores/`}
+      urlFetch={`${urlServer}/suppliers/`}
       urlVoltar={'/fornecedores/search/'}
     />
   )

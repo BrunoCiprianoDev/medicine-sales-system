@@ -7,20 +7,15 @@ import ComponenteLista from '../../../components/componenteLista/ComponenteLista
 
 const ListaMercadorias = () => {
 
-  let [searchParams] = useSearchParams();
-  
-  const parametrosSelecionados = parametrosMercadorias.slice(0, 3).concat(parametrosMercadorias.slice(13,15));
-
-  return (
+   return (
       <ComponenteLista
-        titulo={searchParams.toString().split('=')[1]}
-        urlFetch={ `${urlServer}/mercadorias/`}
-        parametros={parametrosSelecionados}
-        urlDetalhe={`/mercadorias/detail/`}
-        filtro={`?${searchParams}`}
-        opcaoEditar={true}
+         titulo={'Mercadorias'}
+         urlFetch={`${urlServer}/merchandises/search`}
+         parametros={parametrosMercadorias.slice(0, 3).concat(parametrosMercadorias.slice(13, 15))}
+         sessao={'mercadorias'}
+         opcaoEditar={true}
       />
-  )
+   )
 }
 
 export default ListaMercadorias

@@ -7,15 +7,12 @@ import { useSearchParams } from 'react-router-dom';
 
 const ListClientes = () => {
 
-  let [searchParams] = useSearchParams();
-
   return (
     <ComponenteLista
       titulo={'Clientes'}
-      urlFetch={`${urlServer}/clientes/`}
+      urlFetch={`${urlServer}/clients/search`}
       parametros={parametrosClientes}
-      urlDetalhe={`/clientes/`}
-      filtro={`?${searchParams}`}
+      sessao={"clientes"}
       opcaoEditar={true}
     />
   )

@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
-import { useFetch } from "../../hooks/useFetch";
+import { useFetchDetail } from "../../hooks/useFetchDetail";
 
 export const useComponenteDetalhe = (urlFetch, idFetch, urlEditar, urlVoltar) => {
     const navigate = useNavigate();
-    const {data, loading, error} = useFetch(urlFetch, idFetch);
+    const {data, loading, error} = useFetchDetail(urlFetch, idFetch);
   
     const funcaoEditar = () => {
       navigate(urlEditar);

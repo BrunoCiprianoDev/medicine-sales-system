@@ -9,34 +9,6 @@ export const useFetch = (url, filter) => {
   const [error, setError] = useState(false);
   const [itemId, setItemId] = useState(null);
 
-  const orderByAttribute = (orderBy, order) => {
-
-    let arrayDataSort = data.slice();
-    arrayDataSort.sort(function (a, b) {
-      let attributeA = a[orderBy].toLowerCase();
-      let attributeB = b[orderBy].toLowerCase();
-
-      if (order === 'asc') {
-        if (attributeA < attributeB) {
-          return -1;
-        }
-        if (attributeA > attributeB) {
-          return 1;
-        }
-      } else if (order === 'desc') {
-        if (attributeA < attributeB) {
-          return 1;
-        }
-        if (attributeA > attributeB) {
-          return -1;
-        }
-      }
-      return 0;
-    });
-
-    setData(arrayDataSort);
-  }
-
   const httpConfig = (data, method) => {
     if (method === "POST") {
       setConfig({
@@ -107,5 +79,5 @@ export const useFetch = (url, filter) => {
     };
     httpRequest();
   }, [config, itemId, method, url, filter]);
-  return { data, httpConfig, loading, error, orderByAttribute };
+  return { data, httpConfig, loading, error};
 };

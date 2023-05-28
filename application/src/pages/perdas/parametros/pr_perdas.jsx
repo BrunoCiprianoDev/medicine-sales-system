@@ -1,9 +1,8 @@
-import { urlServer } from "../../../serverConfig";
-
 export const parametrosPerdas = [
-    { id: 1, atributo: 'data', rotulo: 'Data', tipo: 'date' },
-    { id: 2, atributo: 'mercadoriaId', atributoVisivel: 'nome', url: `${urlServer}/mercadorias/`, rotulo: 'Mercadoria', tipo: 'autoComplete' },
-    { id: 3, atributo: 'loteId', atributoVisivel: 'lote', url: `${urlServer}/lotes/`, rotulo: 'Lote', tipo: 'autoComplete' },
-    { id: 4, atributo: 'unidades', rotulo: 'Unidades', tipo: 'number' },
-    { id: 5, atributo: 'funcionarioId', atributoVisivel: 'nome', url: `${urlServer}/funcionarios/`, rotulo: 'Funcionario', tipo: 'autoComplete' }
+    { id: 1, atributo: 'registerDate', rotulo: 'Data', tipo: 'date' },
+    { id: 2, atributo: 'merchandiseName', rotulo: 'Mercadoria', tipo: 'text' },
+    { id: 3, atributo: 'lotId', rotulo: 'Lote', tipo: 'text' },
+    { id: 5, atributo: 'units', rotulo: 'Unidades', tipo: 'text' },
+    { id: 6, atributo: 'employeeName', rotulo: 'Funcionario', tipo: 'text' },
+    { id: 7, atributo: 'description', rotulo: 'Descrição', tipo: 'text' }
 ]

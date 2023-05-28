@@ -15,7 +15,7 @@ const DetalheFuncionarios = () => {
     <ComponenteDetalhe
       parametros={parametrosFuncionarios}
       idFetch={id}
-      urlFetch={`${urlServer}/funcionarios/`}
+      urlFetch={`${urlServer}/employees/`}
       urlEditar={'/funcionarios/form/' + id}
       urlVoltar={'/funcionarios/search/'}
     />

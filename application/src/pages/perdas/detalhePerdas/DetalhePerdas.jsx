@@ -14,7 +14,7 @@ const DetalhePerdas = () => {
     <ComponenteDetalhe
       parametros={parametrosPerdas}
       idFetch={id}
-      urlFetch={`${urlServer}/perdas/`}
+      urlFetch={`${urlServer}/losses/`}
       urlEditar={'/perdas/form/' + id}
       urlVoltar={'/perdas/search'}
     />

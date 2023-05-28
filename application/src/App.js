@@ -6,7 +6,6 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 //Components
 import Sidebar from './components/sidebar/Sidebar';
-import Header from './components/header/Header';
 
 //Pages/funcionarios
 import ListaFuncionarios  from './pages/funcionarios/listaFuncionarios/ListaFuncionarios';
@@ -33,10 +32,6 @@ import ListaMercadorias from './pages/mercadorias/listaMercadorias/ListaMercador
 import DepartamentosMercadorias from './pages/mercadorias/departamentosMercadorias/DepartamentosMercadorias';
 import FormularioMercadorias from './pages/mercadorias/formularioMercadorias/FormularioMercadorias';
 import DetalheMercadorias from './pages/mercadorias/detalheMercadorias/DetalheMercadorias';
-
-//Consultar preco
-import ConsultarPrecos from './pages/consultarprecos/formularioConsultarPrecos/ConsultarPrecos';
-import ListaConsultarPrecos from './pages/consultarprecos/listaConsultarPrecos/ListaConsultarPrecos';
 
 //Estoque
 import ListEstoque from './pages/estoque/listaEstoque/ListaEstoque';
@@ -82,7 +77,6 @@ function App() {
   return (
     <div className="App"> 
       <BrowserRouter  basename="/">
-        <div className='Header'><Header/></div>
        <div className='Sidebar'><Sidebar/></div>
         <div className='Contend'>
           <Routes>
@@ -98,7 +92,7 @@ function App() {
 
             <Route path='/compras/search/' element={<ListaCompras/>}/>
             <Route path='/compras/form/' element={<FormularioCompras/>}/>
-            <Route path='/compras/detail/:id' element={<DetalheCompras/>}/>
+            <Route path='/compras/:id' element={<DetalheCompras/>}/>
 
             <Route path='/estoque/:id' element={<DetalheEstoque/>}/>
             <Route path='/estoque/search' element={<ListEstoque/>}/>
@@ -114,7 +108,7 @@ function App() {
 
             <Route path='/mercadorias/departamentos/' element={<DepartamentosMercadorias/>}/>
             <Route path='/mercadorias/search/' element={<ListaMercadorias/>}/>
-            <Route path='/mercadorias/detail/:id' element={<DetalheMercadorias/>}/>
+            <Route path='/mercadorias/:id' element={<DetalheMercadorias/>}/>
             <Route path='/mercadorias/form/:id' element={<FormularioMercadorias/>}/>
 
             <Route path='/vendas/form/:id' element={<FormularioVendas />}/>
@@ -123,14 +117,12 @@ function App() {
 
             <Route path='/devolucoes/search' element={<ListaDevolucoes />}/>
             <Route path='/devolucoes/form/:id' element={<FormularioDevolucoes/>}/>
-            <Route path='/devolucoes/detail/:id' element={<DetalheDevolucoes />}/>
-            
-            <Route path='/consultas/' element={<ConsultarPrecos/>}/>
-            <Route path='/consulta/search/' element={<ListaConsultarPrecos/>}/>
+            <Route path='/devolucoes/:id' element={<DetalheDevolucoes />}/>
+          
 
             <Route path='/descontos/search' element={<ListaDescontos/>}/>
             <Route path='/descontos/form/:id' element={<FormularioDescontos/>}/>
-            <Route path='/descontos/detail/:id' element={<DetalheDescontos/>}/>
+            <Route path='/descontos/:id' element={<DetalheDescontos/>}/>
 
             <Route path='/relatorios/' element={<Relatorios/>}/>
             <Route path='/relatorio/estoque' element={<FormRelatorioEstoque/>}/>

@@ -62,7 +62,7 @@ export const useHeader = () => {
     e.preventDefault();
     switch (option) {
       case 'FUNCIONARIOS':
-        navigate("/funcionarios/search?q=" + query);
+        navigate("/funcionarios/search?query=" + query);
         setQuery('');
         break;
       case 'DESCONTOS':

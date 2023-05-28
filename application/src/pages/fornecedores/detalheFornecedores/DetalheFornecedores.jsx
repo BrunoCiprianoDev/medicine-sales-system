@@ -15,7 +15,7 @@ const DetalheFornecedores = () => {
     <ComponenteDetalhe
       parametros={parametrosFornecedores}
       idFetch={id}
-      urlFetch={`${urlServer}/fornecedores/`}
+      urlFetch={`${urlServer}/suppliers/`}
       urlEditar={'/fornecedores/form/' + id}
       urlVoltar={'/fornecedores/search'}
     />

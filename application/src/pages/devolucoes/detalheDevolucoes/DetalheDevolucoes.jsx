@@ -15,7 +15,7 @@ const DetalheDevolucoes = () => {
     <ComponenteDetalhe
       parametros={useParameters}
       idFetch={id}
-      urlFetch={`${urlServer}/devolucoes/`}
+      urlFetch={`${urlServer}/returns/`}
       urlEditar={'/devolucoes/form/' + id}
       urlVoltar={'/devolucoes/search'}
     />

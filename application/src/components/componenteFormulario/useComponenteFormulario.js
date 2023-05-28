@@ -23,10 +23,10 @@ export const useComponenteFormulario = (parametros, idFetch, urlFetch, urlVoltar
           [parametro.atributo]: ''
         }))
       ))
+      alert('Dados adicionado!')
     } else {
-      httpConfig(e, 'PATCH')
+      httpConfig(e, 'PUT')
     }
-    alert('Dados enviados!')
   }
 
   const handleBack = () => {
