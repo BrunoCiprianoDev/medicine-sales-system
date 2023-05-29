@@ -91,7 +91,7 @@ function App() {
             <Route path='/fornecedores/:id' element={<DetalheFornecedores/>}/>
 
             <Route path='/compras/search/' element={<ListaCompras/>}/>
-            <Route path='/compras/form/' element={<FormularioCompras/>}/>
+            <Route path='/compras/form/adicionar' element={<FormularioCompras/>}/>
             <Route path='/compras/:id' element={<DetalheCompras/>}/>
 
             <Route path='/estoque/:id' element={<DetalheEstoque/>}/>

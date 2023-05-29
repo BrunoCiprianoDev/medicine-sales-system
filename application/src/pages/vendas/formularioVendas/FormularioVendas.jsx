@@ -32,7 +32,7 @@ const FormularioVendas = () => {
               <InputAutoComplete
                 attribute={'nome'}
                 attributeVisible={'nome'}
-                url={`${urlServer}/funcionarios`}
+                url={`${urlServer}/employees`}
                 setValue={setFuncionarioId}
               />
             </label>
@@ -40,7 +40,7 @@ const FormularioVendas = () => {
               <InputAutoComplete
                 attribute={'nome'}
                 attributeVisible={'nome'}
-                url={`${urlServer}/clientes`}
+                url={`${urlServer}/clients`}
                 setValue={setClienteId}
               />
             </label>

@@ -28,10 +28,7 @@ const ListaPesquisa = ({ list, setList, vendaId }) => {
         <thead>
           <tr className={styles.HeaderList}>
             <th>Nome</th>
-            <th>Preço inteiro</th>
-            <th>Desconto</th>
             <th>Preço c/desconto</th>
-            <th>Unidades disponiveis</th>
           </tr>
         </thead>
         <tbody>
@@ -41,11 +38,8 @@ const ListaPesquisa = ({ list, setList, vendaId }) => {
               className={styles.ElementList}
               onClick={() => handleList(item)}
             >
-              <td>{item.nome}</td>
-              <td>R${item.preco_sem_desconto}</td>
-              <td>%{item.desconto}</td>
-              <td>R${item.preco_com_desconto}</td>
-              <td>{item.unidades}</td>
+              <td>{item.name}</td>
+              <td>R${item.fullPrice}</td>
             </tr>
           ))}
         </tbody>

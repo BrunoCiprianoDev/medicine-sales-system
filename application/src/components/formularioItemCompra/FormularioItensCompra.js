@@ -45,7 +45,7 @@ const handleSubmit = (e) => {
           <InputAutoComplete
             attribute={'nome'}
             attributeVisible={'nome'}
-            url={`${urlServer}/mercadorias/`}
+            url={`${urlServer}/merchandises/`}
             setValue={setMercadoria}
           />
         </label>

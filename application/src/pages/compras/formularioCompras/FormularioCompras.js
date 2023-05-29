@@ -41,7 +41,7 @@ const FormularioCompras = () => {
             <InputAutoComplete
               attribute={'nome'}
               attributeVisible={'nome'}
-              url={`${urlServer}/fornecedores/`}
+              url={`${urlServer}/employees/`}
               setValue={setFornecedor}
             />
           </label>

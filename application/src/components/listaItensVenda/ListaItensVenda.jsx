@@ -32,8 +32,7 @@ const {
           <tr className={styles.HeaderList}>
             <th>Código</th>
             <th>Nome</th>
-            <th>Valor s/desc</th>
-            <th>Valor c/desc</th>
+            <th>Valor</th>
             <th>Unidade</th>
             <th>Total Item</th>
             <th></th>
@@ -42,16 +41,13 @@ const {
         <tbody>
           {currentItens && currentItens.map((elemento) => (
             <tr key={elemento.id} className={styles.ComponenteList}>
-              <td>{elemento.codigo}</td>
-              <td>{elemento.nome}</td>
+              <td>{elemento.code}</td>
+              <td>{elemento.name}</td>
               <td style={{ color: 'red', fontWeight: 'bold' }}>
-                R${elemento.preco_sem_desconto}
-              </td>
-              <td style={{ color: 'blue', fontWeight: 'bold' }}>
-                R${elemento.preco_com_desconto}
+                R${elemento.fullPrice}
               </td>
               <td>{elemento.quant}</td>
-              <td>{(elemento.quant * elemento.preco_com_desconto).toFixed(2)}</td>
+              <td>{(elemento.quant * elemento.fullPrice).toFixed(2)}</td>
               <td>
                 <button onClick={() => removeElement(elemento)}
                   className={styles.buttonRemove}>-

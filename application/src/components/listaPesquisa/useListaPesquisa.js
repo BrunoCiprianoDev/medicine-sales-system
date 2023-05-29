@@ -7,7 +7,7 @@ export const useListaPesquisa = (list, setList, vendaId) => {
   const [inputSearch, setInputSearch] = useState('');
 
 
-  const { data, loading, error } = useFetch(`${urlServer}/mercadorias/`, `?q=${inputSearch}`);
+  const { data, loading, error } = useFetch(`${urlServer}/merchandises/search`, `?query=${inputSearch}`);
 
   const currentItens = (data && data.slice(0, 5));
 
@@ -17,11 +17,9 @@ export const useListaPesquisa = (list, setList, vendaId) => {
         id: elemento.id + vendaId,
         vendaId: vendaId,
         mercadoriaId: elemento.id,
-        nome: elemento.nome,
-        preco_com_desconto: parseFloat(elemento.preco_com_desconto),
-        desconto: parseFloat(elemento.desconto),
-        preco_sem_desconto: parseFloat(elemento.preco_sem_desconto),
-        codigo: elemento.codigo,
+        name: elemento.name,
+        fullPrice: parseFloat(elemento.fullPrice),
+        code: elemento.code,
         quant: 1
       }]);
     }
