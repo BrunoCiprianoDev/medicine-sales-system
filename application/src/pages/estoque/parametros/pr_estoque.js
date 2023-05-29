@@ -1,15 +1,10 @@
 import { urlServer } from "../../../serverConfig"
 
 export const parametrosEstoque = [
-    { id: 1, atributo: 'mercadoriaId', rotulo: 'Mercadoria', tipo: 'autoComplete', url: urlServer + "/mercadorias/", atributoVisivel: 'nome' },
-    { id: 2, atributo: 'fornecedoreId', rotulo: 'Fornecedor', tipo: 'autoComplete', url: urlServer + "/fornecedores/", atributoVisivel: 'nome' },
-    { id: 3, atributo: 'lote', rotulo: 'Lote', tipo: 'text' },
-    { id: 4, atributo: 'data_compra', rotulo: 'Data da compra', tipo: 'date' },
-    { id: 5, atributo: 'numeroNotaFiscal', rotulo: 'Número nota fiscal', tipo: 'number' },
-    { id: 6, atributo: 'valorNotaFiscal', rotulo: 'Valor da nota fiscal', tipo: 'number' },
-    { id: 7, atributo: 'validade', rotulo: 'Validade', tipo: 'date' },
-    { id: 8, atributo: 'unidades', rotulo: 'Unidades', tipo: 'number' },
-    { id: 9, atributo: 'custo_unidade', rotulo: 'Custo p/unidade', tipo: 'number' }
+    { id: 1, atributo: 'merchandiseName', rotulo: 'Mercadoria', tipo: 'autoComplete', url: urlServer + "/merchandises/", atributoVisivel: 'nome' },
+    { id: 2, atributo: 'units', rotulo: 'Unidades', tipo: 'autoComplete', atributoVisivel: 'nome' },
+    { id: 3, atributo: 'number', rotulo: 'Lote', tipo: 'text' },
+    { id: 4, atributo: 'expirationDate', rotulo: 'Validade', tipo: 'date' },
 ]
 
 export const parametrosOrdencacao = [

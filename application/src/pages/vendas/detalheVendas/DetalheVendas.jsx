@@ -8,7 +8,8 @@ import AlertError from '../../../components/alertContainer/alertError/AlertError
 import {parametrosVenda, parametrosItensVenda } from '../parametros/pr_vendas';
 import { urlServer } from '../../../serverConfig';
 import ComponenteLista from '../../../components/componenteLista/ComponenteLista';
-import { useFetch } from '../../../hooks/useFetch';
+import useFetchList from '../../../hooks/useFetchList';
+import { useEffect } from 'react';
 
 const DetalheVendas = () => {
 
@@ -16,11 +17,15 @@ const DetalheVendas = () => {
 
   const navigate = useNavigate();
 
-  const {data, loading, error} = useFetch(`${urlServer}/vendas/`, `${id}`)
+  const {data, fetchData, isLoading, error} = useFetchList();
+
+  useEffect(()=> {
+    fetchData(`${urlServer}/sales/${id}`); // eslint-disable-next-line
+  },[])
 
   return (
     <div className={styles.MainContainer}>
-      {loading && <Loading/>}
+      {isLoading && <Loading/>}
       {error && <AlertError>{error}</AlertError>}
       {<div className={styles.LeftArea}>
         <h2>Detalhes da venda</h2>
@@ -49,7 +54,7 @@ const DetalheVendas = () => {
       <div className={styles.RightArea}>
         <ComponenteLista
           titulo={'Vendas'}
-          urlFetch={`${urlServer}/itensVendas/`}
+          urlFetch={`${urlServer}/saleItems/sale/${id}`}
           filtro={`?vendaId=${id}`}
           parametros={parametrosItensVenda}
           urlDetalhe={`/vendas/detail/`}

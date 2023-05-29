@@ -113,7 +113,7 @@ function App() {
 
             <Route path='/vendas/form/:id' element={<FormularioVendas />}/>
             <Route path='/vendas/search' element={<ListaVendas/>}/>
-            <Route path='/vendas/detail/:id' element={<DetalheVendas/>}/>
+            <Route path='/vendas/:id' element={<DetalheVendas/>}/>
 
             <Route path='/devolucoes/search' element={<ListaDevolucoes />}/>
             <Route path='/devolucoes/form/:id' element={<FormularioDevolucoes/>}/>

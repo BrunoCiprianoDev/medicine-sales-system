@@ -8,7 +8,10 @@ import AlertError from '../../../components/alertContainer/alertError/AlertError
 import { parametrosCompras, parametrosItensCompra } from '../parametros/pr_compras';
 import { urlServer } from '../../../serverConfig';
 import ComponenteLista from '../../../components/componenteLista/ComponenteLista';
-import { useFetch } from '../../../hooks/useFetch';
+
+import { parametrosEstoque } from '../../estoque/parametros/pr_estoque';
+import useFetchList from '../../../hooks/useFetchList';
+import { useEffect } from 'react';
 
 const DetalheCompras = () => {
 
@@ -16,11 +19,16 @@ const DetalheCompras = () => {
 
   const navigate = useNavigate();
 
-  const {data, loading, error} = useFetch(`${urlServer}/compras/`, `${id}`)
+  const {data, fetchData, isLoading, error} = useFetchList();
+
+  useEffect(()=> {
+    fetchData(`${urlServer}/purchases/${id}`); // eslint-disable-next-line
+  },[])
+
 
   return (
     <div className={styles.MainContainer}>
-      {loading && <Loading/>}
+      {isLoading && <Loading/>}
       {error && <AlertError>{error}</AlertError>}
       {<div className={styles.LeftArea}>
         <h2>Detalhes da compra</h2>
@@ -45,9 +53,8 @@ const DetalheCompras = () => {
       <div className={styles.RightArea}>
         <ComponenteLista
           titulo={'Itens da compra'}
-          urlFetch={`${urlServer}/lotes/`}
-          filtro={`?compraId=${id}`}
-          parametros={parametrosItensCompra}
+          urlFetch={`${urlServer}/lots/purchase/${id}`}
+          parametros={parametrosEstoque}
           urlDetalhe={`/compras/detail/`}
           opcaoEditar={false}
         />
